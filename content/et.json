@@ -1,0 +1,153 @@
+{
+  "header": { "cta": "Telli" },
+  "hero": {
+    "eyebrow": "MAANDUMISLEHED BALTI ETTEVÕTETELE",
+    "title": "Müüv maandumisleht 200 € eest. Valmis 5 tööpäevaga.",
+    "subtitle": "Täielik veebisait, kontaktivorm, domeen, majutus ja tugi. Ilma varjatud tasudeta, ilma viivitusteta.",
+    "ctaPrimary": "Telli veebisait",
+    "ctaSecondary": "Vaata näiteid"
+  },
+  "trust": {
+    "label": "Usaldavad ettevõtted Leedus, Lätis, Eestis",
+    "stats": [
+      { "value": "35+", "label": "käivitatud lehte" },
+      { "value": "50+", "label": "klienti Baltikumis" },
+      { "value": "4.9★", "label": "keskmine hinnang" },
+      { "value": "5 tp.", "label": "keskmine tähtaeg" }
+    ]
+  },
+  "included": {
+    "h2": "Mis sisaldub 200 €-s — ilma tärnideta",
+    "subtitle": "Konkreetne nimekiri. Ilma 'lepime hiljem kokku' ja lisatasudeta.",
+    "yes": [
+      { "title": "Kohanduv mobiilne disain", "body": "Üle 70% külastajatest tuleb telefonist — alustame mobile-first lähenemisega." },
+      { "title": "Kontaktivorm", "body": "Teatis Telegrami + e-posti teel kohe, kui keegi kontaktid jätab." },
+      { "title": "Domeeni ühendamine", "body": ".lt, .lv, .ee, .com — milline vajad." },
+      { "title": "Majutus esimesel kuul", "body": "Sisaldub 200 €-s. Edasi — Care või Growthiga." },
+      { "title": "Põhilised SEO seaded", "body": "Metatagid, sitemap.xml, robots.txt, Open Graph sotsiaalvõrgustikele." },
+      { "title": "Favikon ja sotsiaalne pilt", "body": "Näeb linki jagades korralik välja." },
+      { "title": "Kuni 2 parandusvooru", "body": "Pärast üleandmist. Lisatasudeta." },
+      { "title": "30 päeva tehniline tugi", "body": "Kui midagi läheb katki — parandame tasuta." }
+    ],
+    "no": [
+      "Mitmelehelised kataloogid või e-poodid",
+      "Kasutajakontod, registreerimine või sisselogimine",
+      "Keerulised CRM-integratsioonid",
+      "Mobiilirakendused",
+      "Tekstide kirjutamine nullist"
+    ],
+    "noNote": "Kui vajad midagi sellest nimekirjast — ütle briifingu ajal. Teeme eraldi projektihinnas."
+  },
+  "pricing": {
+    "h2": "Lihtsad tariifid. Ilma aastase lepinguta.",
+    "subtitle": "Ühekordne tasu maandumislehe eest — ja vaba valik, kas soovid edasist tuge.",
+    "note": "Tellimus algab 2. kuust. Esimene kuu sisaldub 200 €-s. Saab igal ajal tühistada — sait jääb sinule.",
+    "setup": {
+      "title": "Setup",
+      "subtitle": "Veebisait ise. Ühekordne.",
+      "price": "200",
+      "period": "ühekordne tasu",
+      "bullets": ["Täielik maandumislehe tootmine", "Domeen + esimese kuu majutus", "Vorm + teated Telegrami/e-posti teel", "Põhilised SEO seaded", "30 p. tehniline tugi"],
+      "cta": "Telli Setup"
+    },
+    "growth": {
+      "badge": "★ Populaarseim",
+      "title": "Growth",
+      "subtitle": "Sait + igakuine arendus",
+      "price": "30",
+      "period": "/k.",
+      "bullets": ["Kõik Care'ist", "Kuni 2 tundi muudatusi kuus", "Uute plokkide lisamine", "Igakuine aruanne (külastajad/päringud)", "1 SEO uuendus kuus", "Vastus 12 t. jooksul"],
+      "cta": "Vali Growth"
+    },
+    "care": {
+      "title": "Care",
+      "subtitle": "Sait + tugi",
+      "price": "15",
+      "period": "/k.",
+      "bullets": ["Majutus ja domeen", "Kuni 30 min. muudatusi kuus", "Vastus 48 t. jooksul", "Kättesaadavuse monitooring", "Iganädalased varukoopiad"],
+      "cta": "Vali Care"
+    }
+  },
+  "portfolio": {
+    "h2": "Näited päris projektidest",
+    "subtitle": "Kõik maandumislehed käivitati 5 tööpäevaga. Kõik töötavad täna.",
+    "moreLink": "+ rohkem projekte näitan isikliku vestluse käigus",
+    "items": [
+      { "name": "Terratech", "niche": "B2B seadmed", "days": "5 tp.", "url": "terratech.lt" },
+      { "name": "IPOOLGO", "niche": "Täispuhutavad basseinid", "days": "5 tp.", "url": "ipoolgo.lt" },
+      { "name": "Applecitylab", "niche": "Kohalikud teenused", "days": "4 tp.", "url": "applecitylab.lt" }
+    ]
+  },
+  "process": {
+    "h2": "Kuidas see toimub 5 tööpäevaga",
+    "subtitle": "Ilma viivitusteta, ilma 'tulen järgmisel nädalal tagasi'. Selged etapid, selge vastutus.",
+    "guarantee": "Kui hilineme oma poolel — järgmine Care kuu tasuta.",
+    "steps": [
+      { "day": "1. p.", "title": "Briifing", "body": "30-minutiline kõne. Täidame mini-ankeedi: kellele maandumisleht, milline pakkumine, milliseid kontakte kogume." },
+      { "day": "2.–3. p.", "title": "Disain", "body": "Teeme kogu struktuuri Figmas. Üks parandusvooru — lepime lõpliku versiooni kokku." },
+      { "day": "4. p.", "title": "Arendus", "body": "Paneme saidi kokku. Ühendame vormi, analüütika, domeeni." },
+      { "day": "5. p.", "title": "Käivitamine", "body": "Kontrollime mobiiliversiooni, anname juurdepääsud üle, käivitame reaalajas." }
+    ]
+  },
+  "forWhom": {
+    "h2": "Kellele see maandumisleht sobib",
+    "subtitle": "Kolm segmenti, kellele meie formaat annab kiireima tulemuse.",
+    "items": [
+      { "icon": "factory", "title": "Väike B2B", "body": "Tootjad, tarnijad, turustajad. Veebisait on vajalik suurematele klientidele ja partneritele — näidata juhtumeid, tooteid, kontakte.", "examples": "seadmete müüjad · eksport · materjalide tootmine" },
+      { "icon": "user-check", "title": "Eraspetsialistid", "body": "Treenerid, psühholoogid, juristid, toitumisnõustajad. Veebisait on peamine broneerimis- ja usalduskanal.", "examples": "coaching · konsultatsioonid · eraõpe" },
+      { "icon": "map-pin", "title": "Kohalikud teenused", "body": "Autoremondikojad, juuksurisalongid, kliinikud. Sait kogub päringuid Google Mapsist ja reklaamist.", "examples": "auto · ilu · tervis · koduteenused" }
+    ]
+  },
+  "faq": {
+    "h2": "Korduma kippuvad küsimused",
+    "subtitle": "Küsimused, mis korduvad enne ostu. Kui sinu oma pole siin — kirjuta.",
+    "items": [
+      { "q": "Mis siis, kui disain ei meeldi?", "a": "See on kõige levinum mure. Enne programmeerimist loome disaini Figmas — seal on lihtne muuta. 200 € sisaldab 2 parandusvooru. Kui pärast neid ikka ei sobi — tagastan 50% kulutatud tundide eest." },
+      { "q": "Mis juhtub, kui lõpetan 15 € maksmise Care eest?", "a": "Sait jääb sinule. Domeen antakse üle sinu nimele 7 päeva jooksul. Saad saidi teise majutusele viia, igal ajal Care/Growthi naasta või konto kuni 3 kuuks külmutada." },
+      { "q": "Kas saate teha mitmes keeles?", "a": "Jah. Standardvalikud: LT + EN või LT + RU — sisaldub 200 €-s. 3+ keele puhul — +50 € iga lisakeele eest. Kõik meie saidid toetavad 5 keelt karbist välja: LT, LV, ET, EN, RU." },
+      { "q": "Millist tehnoloogiat kasutate? Kas saab migreerida?", "a": "Kasutame Next.js 14 — avatud lähtekood, populaarseim raamistik 2026. aastal. Kood on sinu, majutus Verceli peal. Anname kogu koodi GitHubis sinu nimele. Me pole suletud süsteem nagu Wix või Tilda." },
+      { "q": "Kas hiljem saab laiendada mitmeleheliseks?", "a": "Jah, tavaline olukord. Alustame maandumislehega (käivitame kiirelt), siis kasvame: +Meist leht (50 €), +Blogi CMSiga (150 €), +Kataloog (200 €), +E-pood (alates 500 €). Ilma nullist ümberehitamiseta." },
+      { "q": "Kas teete ametliku lepingu ja arve?", "a": "Jah. Leping — allkirjastatakse digitaalselt enne algust. KM-arve pärast maksmist. Makse pangaülekandega või kaardiga Stripe kaudu. EL ettevõtetele KM-numbriga — pöördmaksustamine." },
+      { "q": "Millised on makseviisid?", "a": "Pangaülekanne (SEPA), kaart Stripe kaudu (Visa, Mastercard, Amex), Apple Pay / Google Pay, Revolut Business." },
+      { "q": "Kellele kuulub domeen?", "a": "Sulle esimesest päevast. Registreerime sinu või sinu ettevõtte nimele. Kui domeen on juba olemas — lihtsalt ühendame. Aastane uuendus (~10–15 €) sisaldub Care/Growth tellimuses." },
+      { "q": "Mis siis, kui maandumisleht ei toimi — vähe päringuid?", "a": "Kõigepealt mõõdame. Igasse saiti paneme analüütika ja konversioonide jälgimise. Kui konversioon on alla 1%, teeme Growth tariifis ilma lisatasuta A/B teste ja muudame tekste andmete põhjal." },
+      { "q": "Kui palju aega mul endal kulub?", "a": "Reaalselt — 3–4 tundi kogu protsessi jaoks: Briifing (1 t.), tekstide ülevaatus (1 t.), disaini ülevaatus (30 min.), lõplik ülevaatus (1 t.). Kõik Telegrami + 2 lühikese Zoomi kõne kaudu." }
+    ]
+  },
+  "cta": {
+    "h2": "Alustame",
+    "subtitle": "Saadame tunni jooksul isikliku pakkumise konkreetsete tähtaegadega.",
+    "formTitle": "Jäta kontaktid",
+    "fields": {
+      "name": { "label": "Nimi", "placeholder": "Sinu nimi" },
+      "business": { "label": "Millega tegeled?", "placeholder": "Nt. juuksurisalong Tallinnas või B2B seadmete müük" },
+      "contact": { "label": "Telegram või telefon", "placeholder": "@kasutajanimi või +372..." },
+      "site": { "label": "Praegune veebisait", "placeholder": "Kui on — jäta link" }
+    },
+    "submit": "Saa pakkumine 1 t. jooksul",
+    "submitting": "Saadan...",
+    "successMsg": "Tänan! Võtan sinuga tunni jooksul ühendust.",
+    "errorMsg": "Midagi läks valesti. Kirjuta mulle otse: @balticlanding",
+    "replyNote": "Vastame tunni jooksul tööajal (9:00–18:00 EET). Õhtul — järgmisel hommikul.",
+    "required": "See väli on kohustuslik",
+    "callTitle": "Soovid esmalt rääkida?",
+    "callBody": "15-minutiline Zoomi kõne. Ilma kohustuseta. Näitan, kuidas see sinu konkreetsel juhul välja näeks.",
+    "callCta": "Broneeri 15-minutiline kõne",
+    "signature": { "name": "Denis · Vilnius", "email": "denis@balticlanding.com", "telegram": "@balticlanding" }
+  },
+  "sticky": {
+    "price": "200 €",
+    "days": "5 tp.",
+    "cta": "Telli"
+  },
+  "footer": {
+    "copy": "© 2026 Baltic Landing · Tehtud Vilniuses",
+    "links": { "privacy": "Privaatsuspoliitika", "terms": "Kasutustingimused", "cookies": "Küpsised" },
+    "legal": "Ettevõtte kood: XXXXXXXXX · KM: LTXXXXXXXX · IBAN: LTXX XXXX XXXX XXXX XXXX",
+    "contact": "Küsimused? Telegram: @balticlanding"
+  },
+  "seo": {
+    "title": "Maandumisleht 200 € eest 5 päevaga · Baltic Landing",
+    "description": "Müüvad maandumislehed Balti ettevõtetele. Täielik sait, vorm, domeen ja tugi 200 € eest. Valmis 5 tööpäevaga."
+  }
+}

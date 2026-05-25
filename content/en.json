@@ -1,0 +1,153 @@
+{
+  "header": { "cta": "Order" },
+  "hero": {
+    "eyebrow": "LANDING PAGES FOR BALTIC BUSINESSES",
+    "title": "A converting landing page for €200. Ready in 5 business days.",
+    "subtitle": "Full website, contact form, domain, hosting and support. No hidden fees, no delays.",
+    "ctaPrimary": "Order your website",
+    "ctaSecondary": "See examples"
+  },
+  "trust": {
+    "label": "Trusted by businesses in Lithuania, Latvia, Estonia",
+    "stats": [
+      { "value": "35+", "label": "landing pages launched" },
+      { "value": "50+", "label": "clients in the Baltics" },
+      { "value": "4.9★", "label": "average rating" },
+      { "value": "5 days", "label": "average delivery" }
+    ]
+  },
+  "included": {
+    "h2": "What's included in €200 — no asterisks",
+    "subtitle": "A concrete list. No 'we'll figure it out later', no extra fees.",
+    "yes": [
+      { "title": "Responsive mobile design", "body": "Over 70% of visitors come from mobile — we start mobile-first." },
+      { "title": "Contact form", "body": "You get a Telegram + email notification instantly when someone submits." },
+      { "title": "Domain connection", "body": ".lt, .lv, .ee, .com — whatever you need." },
+      { "title": "First month of hosting", "body": "Included in €200. After that — with Care or Growth." },
+      { "title": "Basic SEO setup", "body": "Meta tags, sitemap.xml, robots.txt, Open Graph for social media." },
+      { "title": "Favicon and social image", "body": "Looks right when your link is shared." },
+      { "title": "Up to 2 revision rounds", "body": "After delivery. No extra charges." },
+      { "title": "30 days of technical support", "body": "If something breaks — we fix it for free." }
+    ],
+    "no": [
+      "Multi-page catalogs or e-commerce stores",
+      "User accounts, registration or login",
+      "Complex CRM integrations",
+      "Mobile apps",
+      "Writing content from scratch"
+    ],
+    "noNote": "If you need something from this list — let us know during the brief. We'll price it separately."
+  },
+  "pricing": {
+    "h2": "Simple pricing. No annual contracts.",
+    "subtitle": "A one-time fee for the landing — and a free choice of whether you want ongoing support.",
+    "note": "Subscription starts from month 2. First month is included in the €200. Cancel anytime — your site stays yours.",
+    "setup": {
+      "title": "Setup",
+      "subtitle": "The site itself. Once.",
+      "price": "200",
+      "period": "one-time fee",
+      "bullets": ["Full landing page production", "Domain + first month hosting", "Form + Telegram/email notifications", "Basic SEO setup", "30 days technical support"],
+      "cta": "Order Setup"
+    },
+    "growth": {
+      "badge": "★ Most popular",
+      "title": "Growth",
+      "subtitle": "Site + monthly development",
+      "price": "30",
+      "period": "/mo",
+      "bullets": ["Everything in Care", "Up to 2 hours of edits per month", "New sections added", "Monthly report (traffic/leads)", "1 SEO update per month", "Reply within 12 hrs"],
+      "cta": "Choose Growth"
+    },
+    "care": {
+      "title": "Care",
+      "subtitle": "Site + support",
+      "price": "15",
+      "period": "/mo",
+      "bullets": ["Hosting and domain", "Up to 30 min of edits per month", "Reply within 48 hrs", "Uptime monitoring", "Weekly backups"],
+      "cta": "Choose Care"
+    }
+  },
+  "portfolio": {
+    "h2": "Examples from real projects",
+    "subtitle": "All landing pages launched within 5 business days. All live today.",
+    "moreLink": "+ more projects — I'll show them on a call",
+    "items": [
+      { "name": "Terratech", "niche": "B2B Equipment", "days": "5 days", "url": "terratech.lt" },
+      { "name": "IPOOLGO", "niche": "Inflatable Pools", "days": "5 days", "url": "ipoolgo.lt" },
+      { "name": "Applecitylab", "niche": "Local Services", "days": "4 days", "url": "applecitylab.lt" }
+    ]
+  },
+  "process": {
+    "h2": "How it works in 5 business days",
+    "subtitle": "No delays, no 'I'll get back to you next week'. Clear stages, clear accountability.",
+    "guarantee": "If we're late due to our side — next month of Care is free.",
+    "steps": [
+      { "day": "Day 1", "title": "Brief", "body": "30-min call. We fill out a mini-questionnaire: who the landing is for, what the offer is, what contacts we're collecting." },
+      { "day": "Days 2–3", "title": "Design", "body": "We build the full layout in Figma. One revision round — we agree on the final version." },
+      { "day": "Day 4", "title": "Development", "body": "We build the site. Connect the form, analytics, domain." },
+      { "day": "Day 5", "title": "Launch", "body": "We check the mobile version, hand over access, go live." }
+    ]
+  },
+  "forWhom": {
+    "h2": "Who this landing page is for",
+    "subtitle": "Three segments where our format delivers the fastest results.",
+    "items": [
+      { "icon": "factory", "title": "Small B2B", "body": "Manufacturers, suppliers, distributors. A website is needed for major clients and partners — to showcase cases, products, contacts.", "examples": "equipment sellers · exports · material manufacturing" },
+      { "icon": "user-check", "title": "Private specialists", "body": "Coaches, psychologists, lawyers, nutritionists. The website is the primary booking and trust channel.", "examples": "coaching · consulting · private practice" },
+      { "icon": "map-pin", "title": "Local services", "body": "Auto shops, barbershops, clinics. The site collects leads from Google Maps and ads.", "examples": "auto · beauty · health · home services" }
+    ]
+  },
+  "faq": {
+    "h2": "Frequently asked questions",
+    "subtitle": "Questions that come up before every purchase. If yours isn't here — just ask.",
+    "items": [
+      { "q": "What if I don't like the design?", "a": "That's the most common concern. Before any coding we create the design in Figma — easy to change there. 2 revision rounds are included in the €200. If it still doesn't work after that — I refund 50% for the hours spent." },
+      { "q": "What happens if I stop paying €15 for Care?", "a": "The site stays yours. Domain transferred to your name within 7 days. You can move the site to your own hosting, come back to Care/Growth anytime, or freeze the account for up to 3 months." },
+      { "q": "Can you build it in multiple languages?", "a": "Yes. Standard options: LT + EN or LT + RU — included in €200. For 3+ languages — +€50 per additional language. All our sites support 5 languages out of the box: LT, LV, ET, EN, RU." },
+      { "q": "What technology do you use? Can I migrate?", "a": "We use Next.js 14 — open source, the most popular framework in 2026. The code is yours, hosted on Vercel. We hand over all code on GitHub in your name. We're not a closed system like Wix or Tilda." },
+      { "q": "Can it be expanded to multiple pages later?", "a": "Yes, common scenario. We start with a landing (quick launch), then grow: +About page (€50), +Blog with CMS (€150), +Catalog (€200), +E-commerce (from €500). No rebuilding from scratch." },
+      { "q": "Do you provide an official contract and invoice?", "a": "Yes. Contract — signed digitally before we start. VAT invoice after payment. Payment by bank transfer or card via Stripe. EU businesses with VAT ID — reverse charge applies." },
+      { "q": "What payment methods do you accept?", "a": "Bank transfer (SEPA), card via Stripe (Visa, Mastercard, Amex), Apple Pay / Google Pay, Revolut Business." },
+      { "q": "Who owns the domain?", "a": "You do, from day one. We register it in your name or your company's. If you already have a domain — we just connect it. Annual renewal (~€10–15) included in Care/Growth subscription." },
+      { "q": "What if the landing page doesn't work — too few leads?", "a": "First we measure. Every site gets analytics and conversion tracking. If conversion is below 1%, on the Growth plan we run A/B tests and update copy based on data — at no extra charge." },
+      { "q": "How much of my time does this require?", "a": "Realistically — 3–4 hours total: Brief (1 hr), copy review (1 hr), design review (30 min), final check (1 hr). Everything via Telegram + 2 short Zoom calls." }
+    ]
+  },
+  "cta": {
+    "h2": "Let's start",
+    "subtitle": "We'll send you a personal proposal with exact timelines within an hour.",
+    "formTitle": "Leave your contact",
+    "fields": {
+      "name": { "label": "Name", "placeholder": "Your name" },
+      "business": { "label": "What do you do?", "placeholder": "E.g., barbershop in Vilnius or B2B equipment sales" },
+      "contact": { "label": "Telegram or phone", "placeholder": "@username or +370..." },
+      "site": { "label": "Current website", "placeholder": "If you have one — drop the link" }
+    },
+    "submit": "Get proposal within 1 hr",
+    "submitting": "Sending...",
+    "successMsg": "Thank you! I'll reach out within 1 hour.",
+    "errorMsg": "Something went wrong. Write to me directly: @balticlanding",
+    "replyNote": "We reply within 1 hour during business hours (9:00–18:00 EET). After hours — next morning.",
+    "required": "This field is required",
+    "callTitle": "Want to talk first?",
+    "callBody": "15-min Zoom call. No obligations. I'll show you exactly what it would look like for your specific case.",
+    "callCta": "Book a 15-min call",
+    "signature": { "name": "Denis · Vilnius", "email": "denis@balticlanding.com", "telegram": "@balticlanding" }
+  },
+  "sticky": {
+    "price": "€200",
+    "days": "5 days",
+    "cta": "Order"
+  },
+  "footer": {
+    "copy": "© 2026 Baltic Landing · Made in Vilnius",
+    "links": { "privacy": "Privacy Policy", "terms": "Terms of Use", "cookies": "Cookies" },
+    "legal": "Company code: XXXXXXXXX · VAT: LTXXXXXXXX · IBAN: LTXX XXXX XXXX XXXX XXXX",
+    "contact": "Questions? Telegram: @balticlanding"
+  },
+  "seo": {
+    "title": "Landing page for €200 in 5 days · Baltic Landing",
+    "description": "Converting landing pages for Baltic businesses. Full site, form, domain and support for €200. Ready in 5 business days."
+  }
+}
