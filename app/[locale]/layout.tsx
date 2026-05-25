@@ -12,7 +12,7 @@ import type { Metadata } from "next";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
-  subsets: ["latin", "latin-ext", "cyrillic", "cyrillic-ext"],
+  subsets: ["latin", "latin-ext"],
   display: "swap",
 });
 
