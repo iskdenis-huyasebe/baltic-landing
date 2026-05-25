@@ -1,4 +1,5 @@
 import { useTranslations } from "next-intl";
+import { FadeIn } from "@/components/ui/FadeIn";
 import { Factory, UserCheck, MapPin } from "lucide-react";
 
 const icons: Record<string, React.ElementType> = {

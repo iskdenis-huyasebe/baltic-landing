@@ -1,5 +1,7 @@
 {
-  "header": { "cta": "Užsisakyti" },
+  "header": {
+    "cta": "Užsisakyti"
+  },
   "hero": {
     "eyebrow": "LANDINGAI BALTIJOS VERSLUI",
     "title": "Parduodantis landingas už 200 €. Paruoštas per 5 darbo dienas.",
@@ -10,24 +12,60 @@
   "trust": {
     "label": "Patikimi verslo Lietuvoje, Latvijoje, Estijoje",
     "stats": [
-      { "value": "35+", "label": "landingai paleisti" },
-      { "value": "50+", "label": "klientų Baltijoje" },
-      { "value": "4.9★", "label": "vidut. reitingas" },
-      { "value": "5 d.d.", "label": "vidutinis terminas" }
+      {
+        "value": "35+",
+        "label": "landingai paleisti"
+      },
+      {
+        "value": "50+",
+        "label": "klientų Baltijoje"
+      },
+      {
+        "value": "4.9★",
+        "label": "vidut. reitingas"
+      },
+      {
+        "value": "5 d.d.",
+        "label": "vidutinis terminas"
+      }
     ]
   },
   "included": {
     "h2": "Kas įeina į 200 € — be žvaigždučių",
     "subtitle": "Konkretus sąrašas. Be 'aptarsim vėliau' ir be papildomų mokesčių.",
     "yes": [
-      { "title": "Adaptyvi mobili versija", "body": "Daugiau nei 70 % lankytojų ateis iš telefono — pradedam nuo mobile-first." },
-      { "title": "Užklausos forma", "body": "Pranešimas tau ateis į Telegram + el. paštą iškart, kai kas nors palieka kontaktus." },
-      { "title": "Domeno prijungimas", "body": ".lt, .lv, .ee, .com — koks tau reikia." },
-      { "title": "Hostingas pirmą mėnesį", "body": "Įskaičiuotas į 200 €. Toliau — su Care arba Growth." },
-      { "title": "Baziniai SEO nustatymai", "body": "Meta žymos, sitemap.xml, robots.txt, Open Graph socialiniams tinklams." },
-      { "title": "Favicon ir socialinis paveikslėlis", "body": "Tinkamai atrodys dalinant nuorodą." },
-      { "title": "Iki 2 taisymų raundų", "body": "Po pristatymo. Be papildomų mokesčių." },
-      { "title": "30 dienų techninė pagalba", "body": "Jeigu kas nors lūžta — taisom nemokamai." }
+      {
+        "title": "Adaptyvi mobili versija",
+        "body": "Daugiau nei 70 % lankytojų ateis iš telefono — pradedam nuo mobile-first."
+      },
+      {
+        "title": "Užklausos forma",
+        "body": "Pranešimas tau ateis į Telegram + el. paštą iškart, kai kas nors palieka kontaktus."
+      },
+      {
+        "title": "Domeno prijungimas",
+        "body": ".lt, .lv, .ee, .com — koks tau reikia."
+      },
+      {
+        "title": "Hostingas pirmą mėnesį",
+        "body": "Įskaičiuotas į 200 €. Toliau — su Care arba Growth."
+      },
+      {
+        "title": "Baziniai SEO nustatymai",
+        "body": "Meta žymos, sitemap.xml, robots.txt, Open Graph socialiniams tinklams."
+      },
+      {
+        "title": "Favicon ir socialinis paveikslėlis",
+        "body": "Tinkamai atrodys dalinant nuorodą."
+      },
+      {
+        "title": "Iki 2 taisymų raundų",
+        "body": "Po pristatymo. Be papildomų mokesčių."
+      },
+      {
+        "title": "30 dienų techninė pagalba",
+        "body": "Jeigu kas nors lūžta — taisom nemokamai."
+      }
     ],
     "no": [
       "Daugiapusliai katalogai ar internetinė parduotuvė",
@@ -36,7 +74,8 @@
       "Mobilios programėlės",
       "Tekstų rašymas nuo nulio"
     ],
-    "noNote": "Jeigu reikia kažko iš šio sąrašo — pasakyk per brief'ą. Padarysim atskira projektine kaina."
+    "noNote": "Jeigu reikia kažko iš šio sąrašo — pasakyk per brief'ą. Padarysim atskira projektine kaina.",
+    "noTitle": "KAS NEĮEINA"
   },
   "pricing": {
     "h2": "Paprasti tarifai. Be sutarties metams.",
@@ -47,7 +86,13 @@
       "subtitle": "Pati svetainė. Vienkartiškai.",
       "price": "200",
       "period": "vienkartinis mokestis",
-      "bullets": ["Visa landingo gamyba", "Domenas + hostingas pirmą mėn.", "Forma + pranešimai į Telegram/el. paštą", "Baziniai SEO nustatymai", "30 d. techninė pagalba"],
+      "bullets": [
+        "Visa landingo gamyba",
+        "Domenas + hostingas pirmą mėn.",
+        "Forma + pranešimai į Telegram/el. paštą",
+        "Baziniai SEO nustatymai",
+        "30 d. techninė pagalba"
+      ],
       "cta": "Užsisakyti Setup"
     },
     "growth": {
@@ -56,7 +101,14 @@
       "subtitle": "Svetainė + plėtra kas mėnesį",
       "price": "30",
       "period": "/mėn.",
-      "bullets": ["Viskas iš Care", "Iki 2 valandų taisymų per mėnesį", "Naujų blokų pridėjimas", "Mėnesinė ataskaita (lankytojai/užklausos)", "1 SEO atnaujinimas per mėn.", "Atsakymas per 12 val."],
+      "bullets": [
+        "Viskas iš Care",
+        "Iki 2 valandų taisymų per mėnesį",
+        "Naujų blokų pridėjimas",
+        "Mėnesinė ataskaita (lankytojai/užklausos)",
+        "1 SEO atnaujinimas per mėn.",
+        "Atsakymas per 12 val."
+      ],
       "cta": "Pasirinkti Growth"
     },
     "care": {
@@ -64,7 +116,13 @@
       "subtitle": "Svetainė + palaikymas",
       "price": "15",
       "period": "/mėn.",
-      "bullets": ["Hostingas ir domenas", "Iki 30 min. taisymų per mėn.", "Atsakymas per 48 val.", "Pasiekiamumo monitoringas", "Atsarginės kopijos kartą per savaitę"],
+      "bullets": [
+        "Hostingas ir domenas",
+        "Iki 30 min. taisymų per mėn.",
+        "Atsakymas per 48 val.",
+        "Pasiekiamumo monitoringas",
+        "Atsarginės kopijos kartą per savaitę"
+      ],
       "cta": "Pasirinkti Care"
     }
   },
@@ -73,9 +131,24 @@
     "subtitle": "Visi landingai paleisti per 5 darbo dienas. Visi veikia šiandien.",
     "moreLink": "+ daugiau projektų pristatysiu per asmeninį pokalbį",
     "items": [
-      { "name": "Terratech", "niche": "B2B įranga", "days": "5 d.d.", "url": "terratech.lt" },
-      { "name": "IPOOLGO", "niche": "Pripučiami baseinai", "days": "5 d.d.", "url": "ipoolgo.lt" },
-      { "name": "Applecitylab", "niche": "Vietos paslaugos", "days": "4 d.d.", "url": "applecitylab.lt" }
+      {
+        "name": "Terratech",
+        "niche": "B2B įranga",
+        "days": "5 d.d.",
+        "url": "terratech.lt"
+      },
+      {
+        "name": "IPOOLGO",
+        "niche": "Pripučiami baseinai",
+        "days": "5 d.d.",
+        "url": "ipoolgo.lt"
+      },
+      {
+        "name": "Applecitylab",
+        "niche": "Vietos paslaugos",
+        "days": "4 d.d.",
+        "url": "applecitylab.lt"
+      }
     ]
   },
   "process": {
@@ -83,35 +156,96 @@
     "subtitle": "Be vilkinimo, be 'grįšiu kitą savaitę'. Aiškūs etapai, aiški atskaitomybė.",
     "guarantee": "Jeigu vėluojam dėl mūsų — kitas mėnuo Care nemokamai.",
     "steps": [
-      { "day": "1 d.", "title": "Brief'as", "body": "30 min. pokalbis. Užpildom mini-anketą: kam landingas, koks pasiūlymas, kokius kontaktus rinksim." },
-      { "day": "2–3 d.", "title": "Dizainas", "body": "Padarom visą struktūrą Figma'oje. Vienas taisymų raundas — sutariam galutinai." },
-      { "day": "4 d.", "title": "Programavimas", "body": "Surenkam svetainę. Prijungiam formą, analitiką, domeną." },
-      { "day": "5 d.", "title": "Paleidimas", "body": "Patikrinam mobilią versiją, perduodam prieigas, paleidžiam į gyvą." }
+      {
+        "day": "1 d.",
+        "title": "Brief'as",
+        "body": "30 min. pokalbis. Užpildom mini-anketą: kam landingas, koks pasiūlymas, kokius kontaktus rinksim."
+      },
+      {
+        "day": "2–3 d.",
+        "title": "Dizainas",
+        "body": "Padarom visą struktūrą Figma'oje. Vienas taisymų raundas — sutariam galutinai."
+      },
+      {
+        "day": "4 d.",
+        "title": "Programavimas",
+        "body": "Surenkam svetainę. Prijungiam formą, analitiką, domeną."
+      },
+      {
+        "day": "5 d.",
+        "title": "Paleidimas",
+        "body": "Patikrinam mobilią versiją, perduodam prieigas, paleidžiam į gyvą."
+      }
     ]
   },
   "forWhom": {
     "h2": "Kam šitas landingas tinka",
     "subtitle": "Trys segmentai, kuriems mūsų formatas duoda greičiausią rezultatą.",
     "items": [
-      { "icon": "factory", "title": "Smulkus B2B", "body": "Gamintojai, tiekėjai, distributoriai. Svetainė reikalinga stambiems klientams ir partneriams — parodyti atvejus, produkciją, kontaktus.", "examples": "įrangos pardavėjai · eksportas · medžiagų gamyba" },
-      { "icon": "user-check", "title": "Privatūs specialistai", "body": "Coachai, psichologai, teisininkai, mitybos specialistai. Svetainė — pagrindinis registracijos ir patikimumo kanalas.", "examples": "coachingas · konsultacijos · privati praktika" },
-      { "icon": "map-pin", "title": "Vietos paslaugos", "body": "Auto servisai, kirpyklos, klinikos. Svetainė renka užklausas iš Google Maps ir reklamos.", "examples": "auto · grožis · sveikata · namų paslaugos" }
+      {
+        "icon": "factory",
+        "title": "Smulkus B2B",
+        "body": "Gamintojai, tiekėjai, distributoriai. Svetainė reikalinga stambiems klientams ir partneriams — parodyti atvejus, produkciją, kontaktus.",
+        "examples": "įrangos pardavėjai · eksportas · medžiagų gamyba"
+      },
+      {
+        "icon": "user-check",
+        "title": "Privatūs specialistai",
+        "body": "Coachai, psichologai, teisininkai, mitybos specialistai. Svetainė — pagrindinis registracijos ir patikimumo kanalas.",
+        "examples": "coachingas · konsultacijos · privati praktika"
+      },
+      {
+        "icon": "map-pin",
+        "title": "Vietos paslaugos",
+        "body": "Auto servisai, kirpyklos, klinikos. Svetainė renka užklausas iš Google Maps ir reklamos.",
+        "examples": "auto · grožis · sveikata · namų paslaugos"
+      }
     ]
   },
   "faq": {
     "h2": "Dažni klausimai",
     "subtitle": "Klausimai, kurie kartojasi prieš pirkimą. Jeigu tavo nėra — parašyk.",
     "items": [
-      { "q": "O kas, jeigu nepatiks dizainas?", "a": "Tai dažniausia baimė. Prieš programavimą kuriame dizainą Figma'oje — ten lengva keisti. Į 200 € įtraukti 2 taisymų raundai. Jeigu po jų vis tiek netinka — grąžinu 50 % už įdėtas valandas. Iki šiol nė karto neprireikė." },
-      { "q": "Kas atsitiks, jeigu nustosiu mokėti 15 € už Care?", "a": "Svetainė lieka tau. Domenas perduodamas į tavo vardą per 7 dienas. Gali persikelti pas kitą hostingą, grįžti į Care/Growth bet kada, arba užšaldyti sąskaitą iki 3 mėn." },
-      { "q": "Ar galit padaryti svetainę keliomis kalbomis?", "a": "Taip. Standartiniai variantai: LT + EN arba LT + RU — įtraukta į 200 €. 3+ kalboms — +50 € už kiekvieną papildomą. Visi mūsų landingai palaiko 5 kalbas iš dėžutės: LT, LV, ET, EN, RU." },
-      { "q": "Kokia technologija naudojama? Ar galima persikelti?", "a": "Naudojam Next.js 14 — atvirojo kodo, populiariausia sistema 2026 m. Kodas tavo, hostingas Vercel. Atiduodam visą kodą GitHub'e tavo vardu. Nesame uždaryta sistema kaip Wix ar Tilda." },
-      { "q": "Ar vėliau galima išplėsti į kelis puslapius?", "a": "Taip. Pradedam nuo landing'o (greitai paleidžiam), tada augam: +Apie mus (50 €), +Tinklaraštis su CMS (150 €), +Katalogas (200 €), +E-commerce (nuo 500 €). Be perdarymo nuo nulio." },
-      { "q": "Ar darai oficialią sutartį ir PVM sąskaitą faktūrą?", "a": "Taip. Sutartis — pasirašom el. parašu prieš pradedant. PVM sąskaita faktūra po apmokėjimo. Apmokėjimas — pavedimu arba kortele per Stripe. Įmonėms iš ES su PVM kodu — reverse charge." },
-      { "q": "Kokie atsiskaitymo būdai?", "a": "Banko pavedimu (SEPA), kortele per Stripe (Visa, Mastercard, Amex), Apple Pay / Google Pay, Revolut Business." },
-      { "q": "Kam priklauso domenas?", "a": "Tau nuo pirmo dienos. Registruojam ant tavo vardo arba įmonės. Jeigu domenas jau tavo — tiesiog prijungiam. Po metų pratęsimas (~10–15 €) — įtrauktas į Care/Growth prenumeratą." },
-      { "q": "Kas, jeigu landingas neveiks — bus mažai užklausų?", "a": "Pirma — pamatuojam. Į kiekvieną svetainę įdedam analitiką ir konversijų sekimą. Jeigu konversija žemiau 1 %, Growth tarife be papildomo mokesčio padarom A/B testus ir keičiam tekstus pagal duomenis." },
-      { "q": "Kiek laiko man pačiam reikės skirti?", "a": "Realiai — 3–4 valandos per visą procesą: Brief'as (1 val.), tekstų peržiūra (1 val.), dizaino peržiūra (30 min.), galutinė peržiūra (1 val.). Viskas per Telegram + 2 trumpi Zoom skambučiai." }
+      {
+        "q": "O kas, jeigu nepatiks dizainas?",
+        "a": "Tai dažniausia baimė. Prieš programavimą kuriame dizainą Figma'oje — ten lengva keisti. Į 200 € įtraukti 2 taisymų raundai. Jeigu po jų vis tiek netinka — grąžinu 50 % už įdėtas valandas. Iki šiol nė karto neprireikė."
+      },
+      {
+        "q": "Kas atsitiks, jeigu nustosiu mokėti 15 € už Care?",
+        "a": "Svetainė lieka tau. Domenas perduodamas į tavo vardą per 7 dienas. Gali persikelti pas kitą hostingą, grįžti į Care/Growth bet kada, arba užšaldyti sąskaitą iki 3 mėn."
+      },
+      {
+        "q": "Ar galit padaryti svetainę keliomis kalbomis?",
+        "a": "Taip. Standartiniai variantai: LT + EN arba LT + RU — įtraukta į 200 €. 3+ kalboms — +50 € už kiekvieną papildomą. Visi mūsų landingai palaiko 5 kalbas iš dėžutės: LT, LV, ET, EN, RU."
+      },
+      {
+        "q": "Kokia technologija naudojama? Ar galima persikelti?",
+        "a": "Naudojam Next.js 14 — atvirojo kodo, populiariausia sistema 2026 m. Kodas tavo, hostingas Vercel. Atiduodam visą kodą GitHub'e tavo vardu. Nesame uždaryta sistema kaip Wix ar Tilda."
+      },
+      {
+        "q": "Ar vėliau galima išplėsti į kelis puslapius?",
+        "a": "Taip. Pradedam nuo landing'o (greitai paleidžiam), tada augam: +Apie mus (50 €), +Tinklaraštis su CMS (150 €), +Katalogas (200 €), +E-commerce (nuo 500 €). Be perdarymo nuo nulio."
+      },
+      {
+        "q": "Ar darai oficialią sutartį ir PVM sąskaitą faktūrą?",
+        "a": "Taip. Sutartis — pasirašom el. parašu prieš pradedant. PVM sąskaita faktūra po apmokėjimo. Apmokėjimas — pavedimu arba kortele per Stripe. Įmonėms iš ES su PVM kodu — reverse charge."
+      },
+      {
+        "q": "Kokie atsiskaitymo būdai?",
+        "a": "Banko pavedimu (SEPA), kortele per Stripe (Visa, Mastercard, Amex), Apple Pay / Google Pay, Revolut Business."
+      },
+      {
+        "q": "Kam priklauso domenas?",
+        "a": "Tau nuo pirmo dienos. Registruojam ant tavo vardo arba įmonės. Jeigu domenas jau tavo — tiesiog prijungiam. Po metų pratęsimas (~10–15 €) — įtrauktas į Care/Growth prenumeratą."
+      },
+      {
+        "q": "Kas, jeigu landingas neveiks — bus mažai užklausų?",
+        "a": "Pirma — pamatuojam. Į kiekvieną svetainę įdedam analitiką ir konversijų sekimą. Jeigu konversija žemiau 1 %, Growth tarife be papildomo mokesčio padarom A/B testus ir keičiam tekstus pagal duomenis."
+      },
+      {
+        "q": "Kiek laiko man pačiam reikės skirti?",
+        "a": "Realiai — 3–4 valandos per visą procesą: Brief'as (1 val.), tekstų peržiūra (1 val.), dizaino peržiūra (30 min.), galutinė peržiūra (1 val.). Viskas per Telegram + 2 trumpi Zoom skambučiai."
+      }
     ]
   },
   "cta": {
@@ -119,10 +253,22 @@
     "subtitle": "Per valandą atsiųsim asmeninę pasiūlymą su konkretiniais terminais.",
     "formTitle": "Palik kontaktus",
     "fields": {
-      "name": { "label": "Vardas", "placeholder": "Tavo vardas" },
-      "business": { "label": "Kuo užsiimi?", "placeholder": "Pvz., kirpykla Vilniuje arba B2B įrangos pardavimas" },
-      "contact": { "label": "Telegram arba telefonas", "placeholder": "@vardas arba +370..." },
-      "site": { "label": "Dabartinė svetainė", "placeholder": "Jei turi nuorodą — paliek" }
+      "name": {
+        "label": "Vardas",
+        "placeholder": "Tavo vardas"
+      },
+      "business": {
+        "label": "Kuo užsiimi?",
+        "placeholder": "Pvz., kirpykla Vilniuje arba B2B įrangos pardavimas"
+      },
+      "contact": {
+        "label": "Telegram arba telefonas",
+        "placeholder": "@vardas arba +370..."
+      },
+      "site": {
+        "label": "Dabartinė svetainė",
+        "placeholder": "Jei turi nuorodą — paliek"
+      }
     },
     "submit": "Gauti pasiūlymą per 1 val.",
     "submitting": "Siunčiama...",
@@ -133,7 +279,11 @@
     "callTitle": "Nori pirma pakalbėti?",
     "callBody": "15 min. pokalbis Zoom'u. Be įsipareigojimų. Aš parodysiu, kaip tavo atveju tai atrodytų konkrečiai.",
     "callCta": "Rezervuoti 15 min pokalbį",
-    "signature": { "name": "Denisas · Vilnius", "email": "denis@balticlanding.com", "telegram": "@balticlanding" }
+    "signature": {
+      "name": "Denisas · Vilnius",
+      "email": "denis@balticlanding.com",
+      "telegram": "@balticlanding"
+    }
   },
   "sticky": {
     "price": "200 €",
@@ -142,7 +292,11 @@
   },
   "footer": {
     "copy": "© 2026 Baltic Landing · Pagaminta Vilniuje",
-    "links": { "privacy": "Privatumo politika", "terms": "Naudojimo sąlygos", "cookies": "Slapukai" },
+    "links": {
+      "privacy": "Privatumo politika",
+      "terms": "Naudojimo sąlygos",
+      "cookies": "Slapukai"
+    },
     "legal": "Įmonės kodas: XXXXXXXXX · PVM: LTXXXXXXXX · IBAN: LTXX XXXX XXXX XXXX XXXX",
     "contact": "Klausimai? Telegram: @balticlanding"
   },

@@ -1,5 +1,7 @@
 {
-  "header": { "cta": "Pasūtīt" },
+  "header": {
+    "cta": "Pasūtīt"
+  },
   "hero": {
     "eyebrow": "MĀJAS LAPAS BALTIJAS UZŅĒMUMIEM",
     "title": "Pārdodošs landing page par 200 €. Gatavs 5 darba dienās.",
@@ -10,24 +12,60 @@
   "trust": {
     "label": "Uzticības partneri Lietuvā, Latvijā, Igaunijā",
     "stats": [
-      { "value": "35+", "label": "palaisti landing pages" },
-      { "value": "50+", "label": "klienti Baltijā" },
-      { "value": "4.9★", "label": "vidējais vērtējums" },
-      { "value": "5 d.d.", "label": "vidējais termiņš" }
+      {
+        "value": "35+",
+        "label": "palaisti landing pages"
+      },
+      {
+        "value": "50+",
+        "label": "klienti Baltijā"
+      },
+      {
+        "value": "4.9★",
+        "label": "vidējais vērtējums"
+      },
+      {
+        "value": "5 d.d.",
+        "label": "vidējais termiņš"
+      }
     ]
   },
   "included": {
     "h2": "Kas iekļauts 200 € — bez zvaigznītēm",
     "subtitle": "Konkrēts saraksts. Bez 'vienosimies vēlāk' un papildu maksājumiem.",
     "yes": [
-      { "title": "Responsīvs mobilais dizains", "body": "Vairāk nekā 70% apmeklētāju nāks no telefona — sākam ar mobile-first." },
-      { "title": "Kontaktforma", "body": "Paziņojums Telegram + e-pastā uzreiz, kad kāds atstāj kontaktus." },
-      { "title": "Domēna pievienošana", "body": ".lt, .lv, .ee, .com — kāds nepieciešams." },
-      { "title": "Hostings pirmo mēnesi", "body": "Iekļauts 200 €. Tālāk — ar Care vai Growth." },
-      { "title": "Pamata SEO iestatījumi", "body": "Meta tagi, sitemap.xml, robots.txt, Open Graph sociālajiem tīkliem." },
-      { "title": "Favicons un sociālais attēls", "body": "Pareizi izskatās, daloties ar saiti." },
-      { "title": "Līdz 2 labojumu kārtām", "body": "Pēc nodošanas. Bez papildu maksas." },
-      { "title": "30 dienu tehniskais atbalsts", "body": "Ja kaut kas sabojājas — labojam bez maksas." }
+      {
+        "title": "Responsīvs mobilais dizains",
+        "body": "Vairāk nekā 70% apmeklētāju nāks no telefona — sākam ar mobile-first."
+      },
+      {
+        "title": "Kontaktforma",
+        "body": "Paziņojums Telegram + e-pastā uzreiz, kad kāds atstāj kontaktus."
+      },
+      {
+        "title": "Domēna pievienošana",
+        "body": ".lt, .lv, .ee, .com — kāds nepieciešams."
+      },
+      {
+        "title": "Hostings pirmo mēnesi",
+        "body": "Iekļauts 200 €. Tālāk — ar Care vai Growth."
+      },
+      {
+        "title": "Pamata SEO iestatījumi",
+        "body": "Meta tagi, sitemap.xml, robots.txt, Open Graph sociālajiem tīkliem."
+      },
+      {
+        "title": "Favicons un sociālais attēls",
+        "body": "Pareizi izskatās, daloties ar saiti."
+      },
+      {
+        "title": "Līdz 2 labojumu kārtām",
+        "body": "Pēc nodošanas. Bez papildu maksas."
+      },
+      {
+        "title": "30 dienu tehniskais atbalsts",
+        "body": "Ja kaut kas sabojājas — labojam bez maksas."
+      }
     ],
     "no": [
       "Daudzlappušu katalogi vai e-komercijas veikali",
@@ -36,7 +74,8 @@
       "Mobilās lietotnes",
       "Tekstu rakstīšana no nulles"
     ],
-    "noNote": "Ja nepieciešams kaut kas no šī saraksta — pastāsti briefingas laikā. Piedāvāsim atsevišķu projekta cenu."
+    "noNote": "Ja nepieciešams kaut kas no šī saraksta — pastāsti briefingas laikā. Piedāvāsim atsevišķu projekta cenu.",
+    "noTitle": "KAS NEIETILPST"
   },
   "pricing": {
     "h2": "Vienkārši tarifi. Bez gada līguma.",
@@ -47,7 +86,13 @@
       "subtitle": "Pati mājas lapa. Vienreizēji.",
       "price": "200",
       "period": "vienreizēja maksa",
-      "bullets": ["Pilna landing page izstrāde", "Domēns + pirmā mēneša hostings", "Forma + paziņojumi Telegram/e-pastā", "Pamata SEO iestatījumi", "30 d. tehniskais atbalsts"],
+      "bullets": [
+        "Pilna landing page izstrāde",
+        "Domēns + pirmā mēneša hostings",
+        "Forma + paziņojumi Telegram/e-pastā",
+        "Pamata SEO iestatījumi",
+        "30 d. tehniskais atbalsts"
+      ],
       "cta": "Pasūtīt Setup"
     },
     "growth": {
@@ -56,7 +101,14 @@
       "subtitle": "Mājas lapa + ikmēneša attīstība",
       "price": "30",
       "period": "/mēn.",
-      "bullets": ["Viss no Care", "Līdz 2 stundām labojumu mēnesī", "Jaunu bloku pievienošana", "Ikmēneša atskaite (apmeklētāji/pieprasījumi)", "1 SEO atjauninājums mēnesī", "Atbilde 12 st. laikā"],
+      "bullets": [
+        "Viss no Care",
+        "Līdz 2 stundām labojumu mēnesī",
+        "Jaunu bloku pievienošana",
+        "Ikmēneša atskaite (apmeklētāji/pieprasījumi)",
+        "1 SEO atjauninājums mēnesī",
+        "Atbilde 12 st. laikā"
+      ],
       "cta": "Izvēlēties Growth"
     },
     "care": {
@@ -64,7 +116,13 @@
       "subtitle": "Mājas lapa + atbalsts",
       "price": "15",
       "period": "/mēn.",
-      "bullets": ["Hostings un domēns", "Līdz 30 min. labojumu mēnesī", "Atbilde 48 st. laikā", "Pieejamības monitorings", "Iknedēļas rezerves kopijas"],
+      "bullets": [
+        "Hostings un domēns",
+        "Līdz 30 min. labojumu mēnesī",
+        "Atbilde 48 st. laikā",
+        "Pieejamības monitorings",
+        "Iknedēļas rezerves kopijas"
+      ],
       "cta": "Izvēlēties Care"
     }
   },
@@ -73,9 +131,24 @@
     "subtitle": "Visi landing pages palaisti 5 darba dienās. Visi darbojas šodien.",
     "moreLink": "+ vairāk projektu parādīšu personīgā sarunā",
     "items": [
-      { "name": "Terratech", "niche": "B2B tehnika", "days": "5 d.d.", "url": "terratech.lt" },
-      { "name": "IPOOLGO", "niche": "Piepūšamie baseini", "days": "5 d.d.", "url": "ipoolgo.lt" },
-      { "name": "Applecitylab", "niche": "Vietējie pakalpojumi", "days": "4 d.d.", "url": "applecitylab.lt" }
+      {
+        "name": "Terratech",
+        "niche": "B2B tehnika",
+        "days": "5 d.d.",
+        "url": "terratech.lt"
+      },
+      {
+        "name": "IPOOLGO",
+        "niche": "Piepūšamie baseini",
+        "days": "5 d.d.",
+        "url": "ipoolgo.lt"
+      },
+      {
+        "name": "Applecitylab",
+        "niche": "Vietējie pakalpojumi",
+        "days": "4 d.d.",
+        "url": "applecitylab.lt"
+      }
     ]
   },
   "process": {
@@ -83,35 +156,96 @@
     "subtitle": "Bez kavēšanās, bez 'atgriezīšos nākamnedēļ'. Skaidri posmi, skaidra atbildība.",
     "guarantee": "Ja kavējam mūsu vainas dēļ — nākamais Care mēnesis bez maksas.",
     "steps": [
-      { "day": "1. d.", "title": "Briefings", "body": "30 min. saruna. Aizpildām mini-anketu: kam paredzēts landing, kāds piedāvājums, kādus kontaktus vācam." },
-      { "day": "2.–3. d.", "title": "Dizains", "body": "Izstrādājam visu struktūru Figmā. Viena labojumu kārta — vienojamies par gala versiju." },
-      { "day": "4. d.", "title": "Izstrāde", "body": "Saliekam mājas lapu. Pievienojam formu, analītiku, domēnu." },
-      { "day": "5. d.", "title": "Palaišana", "body": "Pārbaudām mobilo versiju, nododam piekļuves, palaidam dzīvē." }
+      {
+        "day": "1. d.",
+        "title": "Briefings",
+        "body": "30 min. saruna. Aizpildām mini-anketu: kam paredzēts landing, kāds piedāvājums, kādus kontaktus vācam."
+      },
+      {
+        "day": "2.–3. d.",
+        "title": "Dizains",
+        "body": "Izstrādājam visu struktūru Figmā. Viena labojumu kārta — vienojamies par gala versiju."
+      },
+      {
+        "day": "4. d.",
+        "title": "Izstrāde",
+        "body": "Saliekam mājas lapu. Pievienojam formu, analītiku, domēnu."
+      },
+      {
+        "day": "5. d.",
+        "title": "Palaišana",
+        "body": "Pārbaudām mobilo versiju, nododam piekļuves, palaidam dzīvē."
+      }
     ]
   },
   "forWhom": {
     "h2": "Kam šis landing page ir piemērots",
     "subtitle": "Trīs segmenti, kuriem mūsu formāts dod ātrāko rezultātu.",
     "items": [
-      { "icon": "factory", "title": "Mazais B2B", "body": "Ražotāji, piegādātāji, izplatītāji. Mājas lapa vajadzīga lieliem klientiem un partneriem — parādīt gadījumus, produktus, kontaktus.", "examples": "tehnikas pārdevēji · eksports · materiālu ražošana" },
-      { "icon": "user-check", "title": "Privātie speciālisti", "body": "Kouči, psihologi, juristi, uztura speciālisti. Mājas lapa — galvenais rezervācijas un uzticamības kanāls.", "examples": "kučings · konsultācijas · privātā prakse" },
-      { "icon": "map-pin", "title": "Vietējie pakalpojumi", "body": "Auto servisi, barbershopi, klīnikas. Mājas lapa vāc pieprasījumus no Google Maps un reklāmas.", "examples": "auto · skaistums · veselība · mājas pakalpojumi" }
+      {
+        "icon": "factory",
+        "title": "Mazais B2B",
+        "body": "Ražotāji, piegādātāji, izplatītāji. Mājas lapa vajadzīga lieliem klientiem un partneriem — parādīt gadījumus, produktus, kontaktus.",
+        "examples": "tehnikas pārdevēji · eksports · materiālu ražošana"
+      },
+      {
+        "icon": "user-check",
+        "title": "Privātie speciālisti",
+        "body": "Kouči, psihologi, juristi, uztura speciālisti. Mājas lapa — galvenais rezervācijas un uzticamības kanāls.",
+        "examples": "kučings · konsultācijas · privātā prakse"
+      },
+      {
+        "icon": "map-pin",
+        "title": "Vietējie pakalpojumi",
+        "body": "Auto servisi, barbershopi, klīnikas. Mājas lapa vāc pieprasījumus no Google Maps un reklāmas.",
+        "examples": "auto · skaistums · veselība · mājas pakalpojumi"
+      }
     ]
   },
   "faq": {
     "h2": "Biežāk uzdotie jautājumi",
     "subtitle": "Jautājumi, kas atkārtojas pirms pirkuma. Ja tava nav — raksti.",
     "items": [
-      { "q": "Ko darīt, ja nepatīk dizains?", "a": "Tas ir visbiežākais bažas. Pirms programmēšanas izstrādājam dizainu Figmā — tur viegli mainīt. 200 € iekļautas 2 labojumu kārtas. Ja pēc tam joprojām neder — atmaksāju 50% par ieguldītajām stundām." },
-      { "q": "Kas notiks, ja pārstāšu maksāt 15 € par Care?", "a": "Mājas lapa paliek tava. Domēns tiek nodots uz tavu vārdu 7 dienu laikā. Vari pārvietot uz savu hostingu, atgriezties Care/Growth jebkurā laikā vai iesaldēt kontu uz 3 mēnešiem." },
-      { "q": "Vai varat izveidot vairākās valodās?", "a": "Jā. Standarta varianti: LT + EN vai LT + RU — iekļauts 200 €. 3+ valodām — +50 € par katru papildu. Visi mūsu landing pages atbalsta 5 valodas no kastes: LT, LV, ET, EN, RU." },
-      { "q": "Kādu tehnoloģiju izmantojat? Vai var pārcelt?", "a": "Izmantojam Next.js 14 — atvērtā koda, populārākā sistēma 2026. gadā. Kods ir tavs, hostings Vercel. Nododam visu kodu GitHub uz tava vārda. Mēs neesam slēgta sistēma kā Wix vai Tilda." },
-      { "q": "Vai vēlāk var paplašināt līdz vairākām lapām?", "a": "Jā, bieža situācija. Sākam ar landing (ātri palaižam), tad augam: +Par mums (50 €), +Blogs ar CMS (150 €), +Katalogs (200 €), +E-komercija (no 500 €). Bez pārtaisīšanas no nulles." },
-      { "q": "Vai nodrošiniet oficiālu līgumu un rēķinu?", "a": "Jā. Līgums — parakstām elektroniski pirms sākuma. PVN rēķins pēc apmaksas. Maksājums ar bankas pārskaitījumu vai karti caur Stripe. ES uzņēmumiem ar PVN numuru — reversā maksa." },
-      { "q": "Kādas maksāšanas metodes?", "a": "Bankas pārskaitījums (SEPA), karte caur Stripe (Visa, Mastercard, Amex), Apple Pay / Google Pay, Revolut Business." },
-      { "q": "Kam pieder domēns?", "a": "Tev no pirmās dienas. Reģistrējam uz tava vārda vai uzņēmuma. Ja domēns jau ir — vienkārši pievienojam. Gada atjaunošana (~10–15 €) iekļauta Care/Growth abonementā." },
-      { "q": "Ko darīt, ja landing page nedarbosies — maz pieprasījumu?", "a": "Vispirms mēram. Katrā mājas lapā ievietojam analītiku un konversiju izsekošanu. Ja konversija zem 1%, Growth tarifā bez papildu maksas veicam A/B testus un mainām tekstus pēc datiem." },
-      { "q": "Cik daudz laika man pašam jāvelta?", "a": "Reāli — 3–4 stundas visam procesam: Briefings (1 st.), tekstu pārskats (1 st.), dizaina pārskats (30 min.), gala pārskats (1 st.). Viss caur Telegram + 2 īsi Zoom zvani." }
+      {
+        "q": "Ko darīt, ja nepatīk dizains?",
+        "a": "Tas ir visbiežākais bažas. Pirms programmēšanas izstrādājam dizainu Figmā — tur viegli mainīt. 200 € iekļautas 2 labojumu kārtas. Ja pēc tam joprojām neder — atmaksāju 50% par ieguldītajām stundām."
+      },
+      {
+        "q": "Kas notiks, ja pārstāšu maksāt 15 € par Care?",
+        "a": "Mājas lapa paliek tava. Domēns tiek nodots uz tavu vārdu 7 dienu laikā. Vari pārvietot uz savu hostingu, atgriezties Care/Growth jebkurā laikā vai iesaldēt kontu uz 3 mēnešiem."
+      },
+      {
+        "q": "Vai varat izveidot vairākās valodās?",
+        "a": "Jā. Standarta varianti: LT + EN vai LT + RU — iekļauts 200 €. 3+ valodām — +50 € par katru papildu. Visi mūsu landing pages atbalsta 5 valodas no kastes: LT, LV, ET, EN, RU."
+      },
+      {
+        "q": "Kādu tehnoloģiju izmantojat? Vai var pārcelt?",
+        "a": "Izmantojam Next.js 14 — atvērtā koda, populārākā sistēma 2026. gadā. Kods ir tavs, hostings Vercel. Nododam visu kodu GitHub uz tava vārda. Mēs neesam slēgta sistēma kā Wix vai Tilda."
+      },
+      {
+        "q": "Vai vēlāk var paplašināt līdz vairākām lapām?",
+        "a": "Jā, bieža situācija. Sākam ar landing (ātri palaižam), tad augam: +Par mums (50 €), +Blogs ar CMS (150 €), +Katalogs (200 €), +E-komercija (no 500 €). Bez pārtaisīšanas no nulles."
+      },
+      {
+        "q": "Vai nodrošiniet oficiālu līgumu un rēķinu?",
+        "a": "Jā. Līgums — parakstām elektroniski pirms sākuma. PVN rēķins pēc apmaksas. Maksājums ar bankas pārskaitījumu vai karti caur Stripe. ES uzņēmumiem ar PVN numuru — reversā maksa."
+      },
+      {
+        "q": "Kādas maksāšanas metodes?",
+        "a": "Bankas pārskaitījums (SEPA), karte caur Stripe (Visa, Mastercard, Amex), Apple Pay / Google Pay, Revolut Business."
+      },
+      {
+        "q": "Kam pieder domēns?",
+        "a": "Tev no pirmās dienas. Reģistrējam uz tava vārda vai uzņēmuma. Ja domēns jau ir — vienkārši pievienojam. Gada atjaunošana (~10–15 €) iekļauta Care/Growth abonementā."
+      },
+      {
+        "q": "Ko darīt, ja landing page nedarbosies — maz pieprasījumu?",
+        "a": "Vispirms mēram. Katrā mājas lapā ievietojam analītiku un konversiju izsekošanu. Ja konversija zem 1%, Growth tarifā bez papildu maksas veicam A/B testus un mainām tekstus pēc datiem."
+      },
+      {
+        "q": "Cik daudz laika man pašam jāvelta?",
+        "a": "Reāli — 3–4 stundas visam procesam: Briefings (1 st.), tekstu pārskats (1 st.), dizaina pārskats (30 min.), gala pārskats (1 st.). Viss caur Telegram + 2 īsi Zoom zvani."
+      }
     ]
   },
   "cta": {
@@ -119,10 +253,22 @@
     "subtitle": "Stundas laikā nosūtīsim personīgu piedāvājumu ar konkrētiem termiņiem.",
     "formTitle": "Atstāj kontaktus",
     "fields": {
-      "name": { "label": "Vārds", "placeholder": "Tavs vārds" },
-      "business": { "label": "Ar ko nodarbojies?", "placeholder": "Piem., barbershops Rīgā vai B2B tehnikas pārdošana" },
-      "contact": { "label": "Telegram vai telefons", "placeholder": "@vārds vai +371..." },
-      "site": { "label": "Pašreizējā mājas lapa", "placeholder": "Ja ir — atstāj saiti" }
+      "name": {
+        "label": "Vārds",
+        "placeholder": "Tavs vārds"
+      },
+      "business": {
+        "label": "Ar ko nodarbojies?",
+        "placeholder": "Piem., barbershops Rīgā vai B2B tehnikas pārdošana"
+      },
+      "contact": {
+        "label": "Telegram vai telefons",
+        "placeholder": "@vārds vai +371..."
+      },
+      "site": {
+        "label": "Pašreizējā mājas lapa",
+        "placeholder": "Ja ir — atstāj saiti"
+      }
     },
     "submit": "Saņemt piedāvājumu 1 st. laikā",
     "submitting": "Sūta...",
@@ -133,7 +279,11 @@
     "callTitle": "Vēlies vispirms parunāt?",
     "callBody": "15 min. saruna Zoom. Bez saistībām. Parādīšu, kā tas izskatītos konkrēti tavā gadījumā.",
     "callCta": "Rezervēt 15 min. sarunu",
-    "signature": { "name": "Deniss · Viļņa", "email": "denis@balticlanding.com", "telegram": "@balticlanding" }
+    "signature": {
+      "name": "Deniss · Viļņa",
+      "email": "denis@balticlanding.com",
+      "telegram": "@balticlanding"
+    }
   },
   "sticky": {
     "price": "200 €",
@@ -142,7 +292,11 @@
   },
   "footer": {
     "copy": "© 2026 Baltic Landing · Veidots Viļņā",
-    "links": { "privacy": "Privātuma politika", "terms": "Lietošanas noteikumi", "cookies": "Sīkfaili" },
+    "links": {
+      "privacy": "Privātuma politika",
+      "terms": "Lietošanas noteikumi",
+      "cookies": "Sīkfaili"
+    },
     "legal": "Uzņēmuma kods: XXXXXXXXX · PVN: LTXXXXXXXX · IBAN: LTXX XXXX XXXX XXXX XXXX",
     "contact": "Jautājumi? Telegram: @balticlanding"
   },

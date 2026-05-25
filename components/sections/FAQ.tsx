@@ -2,6 +2,7 @@
 
 import { useTranslations } from "next-intl";
 import { useState } from "react";
+import { FadeIn } from "@/components/ui/FadeIn";
 import { ChevronDown } from "lucide-react";
 
 function AccordionItem({

@@ -1,4 +1,5 @@
 import { useTranslations } from "next-intl";
+import { FadeIn } from "@/components/ui/FadeIn";
 import { MessageSquare, Palette, Code2, Rocket } from "lucide-react";
 
 const stepIcons = [MessageSquare, Palette, Code2, Rocket];

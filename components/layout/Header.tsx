@@ -25,8 +25,21 @@ export function Header() {
       <div className="max-w-6xl mx-auto px-6 md:px-8 h-16 flex items-center justify-between">
         <a
           href="#"
-          className="text-base font-medium text-[var(--foreground)] hover:text-[var(--accent)] transition-colors"
+          className="flex items-center gap-2.5 text-base font-medium text-[var(--foreground)] hover:text-[var(--accent)] transition-colors group"
         >
+          {/* Logo mark */}
+          <span
+            className="flex items-center justify-center rounded-lg text-sm font-bold text-[var(--accent-foreground)] leading-none select-none transition-transform duration-200 group-hover:scale-105"
+            style={{
+              width: "30px",
+              height: "30px",
+              background: "var(--accent)",
+              fontFamily: "var(--font-geist-sans)",
+            }}
+            aria-hidden="true"
+          >
+            B
+          </span>
           Baltic Landing
         </a>
 

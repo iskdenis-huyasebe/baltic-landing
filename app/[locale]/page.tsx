@@ -8,9 +8,61 @@ import { ForWhom } from "@/components/sections/ForWhom";
 import { FAQ } from "@/components/sections/FAQ";
 import { ContactCTA } from "@/components/sections/ContactCTA";
 
-export default function LandingPage() {
+const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://balticlanding.com";
+
+export default async function LandingPage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    name: "Baltic Landing",
+    description:
+      "Landing pages for Baltic businesses — €200, ready in 5 business days.",
+    url: `${BASE_URL}/${locale}`,
+    inLanguage: locale,
+    priceRange: "€200",
+    areaServed: ["LT", "LV", "EE"],
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: "Vilnius",
+      addressCountry: "LT",
+    },
+    offers: [
+      {
+        "@type": "Offer",
+        name: "Setup",
+        price: "200",
+        priceCurrency: "EUR",
+        category: "OneTime",
+      },
+      {
+        "@type": "Offer",
+        name: "Care",
+        price: "15",
+        priceCurrency: "EUR",
+        category: "Subscription",
+      },
+      {
+        "@type": "Offer",
+        name: "Growth",
+        price: "30",
+        priceCurrency: "EUR",
+        category: "Subscription",
+      },
+    ],
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <Hero />
       <TrustStrip />
       <WhatsIncluded />

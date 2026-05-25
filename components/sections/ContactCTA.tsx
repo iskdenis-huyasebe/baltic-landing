@@ -1,11 +1,12 @@
 "use client";
 
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 import { useState } from "react";
 import { Send, Calendar, Check } from "lucide-react";
 
 export function ContactCTA() {
   const t = useTranslations("cta");
+  const locale = useLocale();
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
   const [form, setForm] = useState({ name: "", business: "", contact: "", site: "" });
   const [errors, setErrors] = useState<Record<string, string>>({});
@@ -27,7 +28,7 @@ export function ContactCTA() {
       const res = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(form),
+        body: JSON.stringify({ ...form, locale }),
       });
       if (res.ok) { setStatus("success"); }
       else { setStatus("error"); }

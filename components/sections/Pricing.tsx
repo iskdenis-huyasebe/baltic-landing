@@ -1,5 +1,11 @@
-import { useTranslations } from "next-intl";
+"use client";
+
+import { useTranslations, useLocale } from "next-intl";
 import { Check } from "lucide-react";
+import { useState } from "react";
+import { FadeIn } from "@/components/ui/FadeIn";
+
+type Plan = "setup" | "setup+care" | "setup+growth";
 
 function PricingCard({
   title,
@@ -10,6 +16,9 @@ function PricingCard({
   cta,
   badge,
   accent,
+  plan,
+  onCheckout,
+  loading,
 }: {
   title: string;
   subtitle: string;
@@ -19,7 +28,12 @@ function PricingCard({
   cta: string;
   badge?: string;
   accent?: boolean;
+  plan: Plan;
+  onCheckout: (plan: Plan) => void;
+  loading: Plan | null;
 }) {
+  const isLoading = loading === plan;
+
   return (
     <div
       className={`relative flex flex-col p-6 md:p-8 rounded-2xl border transition-all duration-200 hover:bg-[var(--surface-elevated)] ${
@@ -51,25 +65,55 @@ function PricingCard({
           </li>
         ))}
       </ul>
-      <a
-        href="#contact"
-        className={`inline-flex items-center justify-center rounded-xl px-6 py-3.5 text-base font-medium transition-all duration-200 hover:scale-[1.02] active:scale-[0.98] min-h-[44px] ${
+      <button
+        onClick={() => onCheckout(plan)}
+        disabled={isLoading}
+        className={`inline-flex items-center justify-center rounded-xl px-6 py-3.5 text-base font-medium transition-all duration-200 hover:scale-[1.02] active:scale-[0.98] min-h-[44px] disabled:opacity-60 disabled:cursor-not-allowed disabled:scale-100 ${
           accent
             ? "bg-[var(--accent)] text-[var(--accent-foreground)] hover:opacity-90"
             : "bg-transparent text-[var(--foreground)] border border-[var(--border-strong)] hover:bg-[var(--surface-elevated)]"
         }`}
       >
-        {cta}
-      </a>
+        {isLoading ? "..." : cta}
+      </button>
     </div>
   );
 }
 
 export function Pricing() {
   const t = useTranslations("pricing");
+  const locale = useLocale();
+  const [loading, setLoading] = useState<Plan | null>(null);
+
   const setup = t.raw("setup") as { title: string; subtitle: string; price: string; period: string; bullets: string[]; cta: string };
   const growth = t.raw("growth") as { badge: string; title: string; subtitle: string; price: string; period: string; bullets: string[]; cta: string };
   const care = t.raw("care") as { title: string; subtitle: string; price: string; period: string; bullets: string[]; cta: string };
+
+  const handleCheckout = async (plan: Plan) => {
+    // If Stripe keys not configured — fall back to contact form
+    if (!process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY) {
+      window.location.href = "#contact";
+      return;
+    }
+    setLoading(plan);
+    try {
+      const res = await fetch("/api/checkout", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ plan, locale }),
+      });
+      const data = await res.json();
+      if (data.url) {
+        window.location.href = data.url;
+      } else {
+        window.location.href = "#contact";
+      }
+    } catch {
+      window.location.href = "#contact";
+    } finally {
+      setLoading(null);
+    }
+  };
 
   return (
     <section id="pricing" className="py-20 md:py-32 px-6 md:px-8">
@@ -82,9 +126,9 @@ export function Pricing() {
         </div>
 
         <div className="grid md:grid-cols-3 gap-4 md:gap-6 items-stretch">
-          <PricingCard {...setup} />
-          <PricingCard {...growth} badge={growth.badge} accent />
-          <PricingCard {...care} />
+          <PricingCard {...setup} plan="setup" onCheckout={handleCheckout} loading={loading} />
+          <PricingCard {...growth} badge={growth.badge} accent plan="setup+growth" onCheckout={handleCheckout} loading={loading} />
+          <PricingCard {...care} plan="setup+care" onCheckout={handleCheckout} loading={loading} />
         </div>
 
         <p className="text-center text-sm text-[var(--subtle)] mt-6">{t("note")}</p>
