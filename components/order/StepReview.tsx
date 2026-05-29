@@ -3,14 +3,16 @@
 import { useState } from "react";
 import { useTranslations, useLocale } from "next-intl";
 import { Check, ShieldCheck } from "lucide-react";
-import type { OrderState } from "@/app/[locale]/order/page";
+import type { OrderState, OrderFiles } from "@/app/[locale]/order/page";
 
 export function StepReview({
   state,
   update,
+  files,
 }: {
   state: OrderState;
   update: (p: Partial<OrderState>) => void;
+  files: OrderFiles;
 }) {
   const t = useTranslations("order.review");
   const locale = useLocale();
@@ -21,16 +23,28 @@ export function StepReview({
   const basePrice = prices[state.plan] || 200;
   const bundlePrice = state.bundle ? 60 : 0;
   const total = basePrice + bundlePrice;
-  const fmtPrice = (p: number) => locale === "en" ? `€${p}` : `${p} €`;
+  const fmtPrice = (p: number) => `${p} €`;
 
   const handlePay = async () => {
     setLoading(true);
     setError("");
     try {
+      const formData = new FormData();
+      formData.append("data", JSON.stringify(state));
+
+      if (files.logo && files.logo.name !== "__skip__") {
+        formData.append("logo", files.logo);
+      }
+      files.photos.forEach((p, i) => {
+        if (p.name !== "__skip__") formData.append(`photo_${i}`, p);
+      });
+      if (files.texts && files.texts.name !== "__skip__") {
+        formData.append("texts", files.texts);
+      }
+
       const res = await fetch("/api/order", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(state),
+        body: formData,
       });
       const data = await res.json();
       if (data.checkoutUrl) {
@@ -44,6 +58,11 @@ export function StepReview({
       setLoading(false);
     }
   };
+
+  const hasFiles =
+    (files.logo && files.logo.name !== "__skip__") ||
+    files.photos.some((p) => p.name !== "__skip__") ||
+    (files.texts && files.texts.name !== "__skip__");
 
   return (
     <div>
@@ -63,6 +82,16 @@ export function StepReview({
           <span className="text-[var(--muted)]">{t("language")}</span>
           <span className="font-medium uppercase">{state.siteLocale}</span>
         </div>
+        <div className="flex justify-between text-sm">
+          <span className="text-[var(--muted)]">{t("contact")}</span>
+          <span className="font-medium">{state.contact}</span>
+        </div>
+        {hasFiles && (
+          <div className="flex justify-between text-sm">
+            <span className="text-[var(--muted)]">{t("files")}</span>
+            <span className="font-medium text-[var(--accent)]">✓</span>
+          </div>
+        )}
 
         <label className="flex items-start gap-3 cursor-pointer pt-4 border-t border-[var(--border)]">
           <input
@@ -72,7 +101,7 @@ export function StepReview({
             className="mt-1 size-4 accent-[#bef264]"
           />
           <div>
-            <div className="text-sm font-medium text-[var(--foreground)]">{t("bundle")}</div>
+            <div className="text-sm font-medium">{t("bundle")}</div>
             <div className="text-xs text-[var(--muted)] mt-0.5">{t("bundleNote")}</div>
           </div>
         </label>

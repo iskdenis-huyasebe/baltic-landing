@@ -9,7 +9,7 @@ export function Footer() {
         <div className="flex flex-col md:flex-row md:items-center justify-between gap-6">
           <div>
             <p className="text-sm font-medium text-[var(--foreground)] mb-1">
-              Baltic Landing
+              Terratech
             </p>
             <p className="text-xs text-[var(--subtle)]">{t("legal")}</p>
           </div>

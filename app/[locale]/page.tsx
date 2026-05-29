@@ -8,7 +8,7 @@ import { ForWhom } from "@/components/sections/ForWhom";
 import { FAQ } from "@/components/sections/FAQ";
 import { ContactCTA } from "@/components/sections/ContactCTA";
 
-const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://balticlanding.com";
+const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://terratech.eu";
 
 export default async function LandingPage({
   params,
@@ -20,7 +20,7 @@ export default async function LandingPage({
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
-    name: "Baltic Landing",
+    name: "Terratech",
     description:
       "Landing pages for Baltic businesses — €200, ready in 3 business days.",
     url: `${BASE_URL}/${locale}`,

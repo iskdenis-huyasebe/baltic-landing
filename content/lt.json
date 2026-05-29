@@ -131,7 +131,7 @@
         "Unikalios iliustracijos ar fotosesija",
         "90 dienų techninė pagalba"
       ],
-      "cta": "Pakalbėti su Denisu"
+      "cta": "Aptarti projektą"
     }
   },
   "portfolio": {
@@ -276,7 +276,7 @@
     "submit": "Gauti pasiūlymą per 1 val.",
     "submitting": "Siunčiama...",
     "successMsg": "Ačiū! Susisieksiu su tavimi per 1 valandą.",
-    "errorMsg": "Kažkas nepavyko. Parašyk man tiesiogiai: @balticlanding",
+    "errorMsg": "Kažkas nepavyko. Parašyk man tiesiogiai: @terratech",
     "replyNote": "Atsakom per 1 valandą darbo metu (9:00–18:00 EET). Vakare — kitą rytą.",
     "required": "Šis laukas privalomas",
     "callTitle": "Nori pirma pakalbėti?",
@@ -284,8 +284,8 @@
     "callCta": "Rezervuoti 15 min pokalbį",
     "signature": {
       "name": "Denisas · Vilnius",
-      "email": "denis@balticlanding.com",
-      "telegram": "@balticlanding"
+      "email": "denis@terratech.eu",
+      "telegram": "@terratech"
     }
   },
   "sticky": {
@@ -294,16 +294,16 @@
     "cta": "Užsisakyti"
   },
   "footer": {
-    "copy": "© 2026 Baltic Landing · Pagaminta Vilniuje",
+    "copy": "© 2026 Terratech · Pagaminta Vilniuje",
     "links": {
       "privacy": "Privatumo politika",
       "terms": "Naudojimo sąlygos",
       "cookies": "Slapukai"
     },
-    "contact": "Klausimai? Telegram: @balticlanding"
+    "contact": "Klausimai? Telegram: @terratech"
   },
   "seo": {
-    "title": "Landingas už 200 € per 3 dienas · Baltic Landing",
+    "title": "Landingas už 200 € per 3 dienas · Terratech",
     "description": "Parduodantis landingas Baltijos verslui. Visa svetainė, forma, domenas ir palaikymas už 200 €. Paruošta per 3 darbo dienas."
   },
   "comparison": {
@@ -313,7 +313,7 @@
     "colHead": "Ką gaunate",
     "freelancer": "Freelanceris",
     "agency": "Agentūra",
-    "us": "Baltic Landing",
+    "us": "Terratech",
     "rows": [
       {
         "label": "Kaina",
@@ -426,21 +426,34 @@
       "photoLabel": "Nuotraukos (komanda, darbai, produktai) — iki 10",
       "textsLabel": "Esami tekstai (neprivaloma)",
       "uploadPlaceholder": "Spustelėk arba vilk failą",
-      "skipLabel": "Praleisti dabar"
+      "skipLabel": "Praleisti dabar",
+      "logoHint": "Spustelėk arba vilk — SVG, PNG, AI, PDF",
+      "photoHint": "Spustelėk arba vilk nuotraukas (iki 10)",
+      "textsHint": "Spustelėk arba vilk — DOC, DOCX, TXT, PDF",
+      "skipped": "praleista",
+      "change": "pakeisti"
     },
     "review": {
       "title": "Patvirtink ir apmokėk",
-      "subtitle": "Po apmokėjimo atsiųsim Trello nuorodą.",
+      "subtitle": "Brifas bus išsaugotas iš karto. Jei reikės – grąžinsim pinigus.",
       "plan": "Tarifas",
       "design": "Dizainas",
       "language": "Svetainės kalba",
       "bundle": "Pridėti 6 mėn. Care už €60 (sutaupyk €30)",
       "bundleNote": "Hostingas + domenas + taisymai 6 mėn. Galima atsisakyti bet kada.",
       "total": "Iš viso šiandien",
-      "payButton": "Apmokėti per Stripe",
+      "payButton": "Apmokėti",
       "redirecting": "Perkeliame į Stripe...",
-      "secure": "Saugus mokėjimas per Stripe.",
-      "error": "Kažkas nepavyko. Parašyk @balticlanding Telegram."
+      "secure": "Saugus mokėjimas. Pinigai grąžinami jei negalim padėti.",
+      "error": "Kažkas nepavyko. Parašyk @terratech Telegram.",
+      "files": "Failai",
+      "submitButton": "Siųsti paraišką",
+      "sending": "Siunčiama...",
+      "sentTitle": "Paraiška gauta!",
+      "sentSubtitle": "Peržiūrėsim per 24 val. ir parašysim į Telegram arba el. paštą — ar imamės, ir kiek kainuos.",
+      "backHome": "Grįžti į pradžią",
+      "noPaymentYet": "Mokėjimas tik po patvirtinimo.",
+      "contact": "Kontaktas"
     },
     "success": {
       "title": "Užsakymas gautas. Pradedame.",

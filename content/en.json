@@ -131,7 +131,7 @@
         "Custom illustrations or photo session",
         "90 days of technical support"
       ],
-      "cta": "Talk to Denis"
+      "cta": "Discuss the project"
     }
   },
   "portfolio": {
@@ -276,7 +276,7 @@
     "submit": "Get proposal within 1 hr",
     "submitting": "Sending...",
     "successMsg": "Thank you! I'll reach out within 1 hour.",
-    "errorMsg": "Something went wrong. Write to me directly: @balticlanding",
+    "errorMsg": "Something went wrong. Write to me directly: @terratech",
     "replyNote": "We reply within 1 hour during business hours (9:00–18:00 EET). After hours — next morning.",
     "required": "This field is required",
     "callTitle": "Want to talk first?",
@@ -284,8 +284,8 @@
     "callCta": "Book a 15-min call",
     "signature": {
       "name": "Denis · Vilnius",
-      "email": "denis@balticlanding.com",
-      "telegram": "@balticlanding"
+      "email": "denis@terratech.eu",
+      "telegram": "@terratech"
     }
   },
   "sticky": {
@@ -294,16 +294,16 @@
     "cta": "Order"
   },
   "footer": {
-    "copy": "© 2026 Baltic Landing · Made in Vilnius",
+    "copy": "© 2026 Terratech · Made in Vilnius",
     "links": {
       "privacy": "Privacy Policy",
       "terms": "Terms of Use",
       "cookies": "Cookies"
     },
-    "contact": "Questions? Telegram: @balticlanding"
+    "contact": "Questions? Telegram: @terratech"
   },
   "seo": {
-    "title": "Landing page for €200 in 3 days · Baltic Landing",
+    "title": "Landing page for €200 in 3 days · Terratech",
     "description": "Converting landing pages for Baltic businesses. Full site, form, domain and support for €200. Ready in 3 business days."
   },
   "comparison": {
@@ -313,7 +313,7 @@
     "colHead": "What you get",
     "freelancer": "Freelancer",
     "agency": "Agency",
-    "us": "Baltic Landing",
+    "us": "Terratech",
     "rows": [
       {
         "label": "Price",
@@ -426,21 +426,34 @@
       "photoLabel": "Photos (team, work, products) — up to 10",
       "textsLabel": "Existing texts (optional — Word/PDF/Google Doc link)",
       "uploadPlaceholder": "Click to upload or drag & drop",
-      "skipLabel": "Skip for now"
+      "skipLabel": "Skip for now",
+      "logoHint": "Click or drag — SVG, PNG, AI, PDF",
+      "photoHint": "Click or drag photos (up to 10)",
+      "textsHint": "Click or drag — DOC, DOCX, TXT, PDF",
+      "skipped": "skipped",
+      "change": "change"
     },
     "review": {
-      "title": "Confirm and pay",
-      "subtitle": "After payment we'll send a Trello link where you'll see your project progress in real-time.",
+      "title": "Review and pay",
+      "subtitle": "Brief is saved immediately. We'll refund if we can't help.",
       "plan": "Plan",
       "design": "Design",
       "language": "Site language",
       "bundle": "Add 6 months of Care for €60 (save €30)",
       "bundleNote": "Hosting + domain + edits for the next 6 months. Cancel anytime.",
       "total": "Total today",
-      "payButton": "Pay securely with Stripe",
+      "payButton": "Pay now",
       "redirecting": "Redirecting to Stripe...",
-      "secure": "Secure payment by Stripe. VAT applied automatically for EU companies.",
-      "error": "Something went wrong. Try again or write to @balticlanding on Telegram."
+      "secure": "Secure payment. Refundable if we can't take the order.",
+      "error": "Something went wrong. Write @terratech on Telegram.",
+      "files": "Files",
+      "submitButton": "Submit brief",
+      "sending": "Sending...",
+      "sentTitle": "Brief received!",
+      "sentSubtitle": "We'll review within 24h and reach out via Telegram or email — whether we take it and what it costs.",
+      "backHome": "Back to home",
+      "noPaymentYet": "Payment only after approval.",
+      "contact": "Contact"
     },
     "success": {
       "title": "Order received. Let's build.",

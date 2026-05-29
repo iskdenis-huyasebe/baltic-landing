@@ -13,9 +13,6 @@ const OrderSchema = z.object({
   headline: z.string().min(2).max(500),
   bullets: z.string().min(2).max(2000),
   leadEmail: z.string().email().optional().or(z.literal("")),
-  logoUrl: z.string().optional(),
-  photoUrls: z.array(z.string()),
-  textsUrl: z.string().optional(),
   locale: z.string(),
 });
 
@@ -36,32 +33,31 @@ async function createTrelloCard(data: z.infer<typeof OrderSchema>): Promise<stri
     pro: process.env.TRELLO_LABEL_SETUP_PRO,
   };
 
-  const desc = `**Plan:** ${data.plan}${data.bundle ? " + 6mo Care bundle" : ""}
-**Locale:** ${data.locale} · **Site language:** ${data.siteLocale}
+  const planLabel = data.plan === "setup" ? "Setup €200" : "Setup Pro €500";
 
-**Contact**
-- Name: ${data.name}
-- Business: ${data.business}
-- Telegram/phone: ${data.contact}
-- Lead email: ${data.leadEmail || "—"}
+  const desc = `**План:** ${planLabel}${data.bundle ? " + 6 мес. Care" : ""}
+**Язык клиента:** ${data.locale.toUpperCase()} · **Язык сайта:** ${data.siteLocale.toUpperCase()}
 
-**Design**
-- Selected: ${data.designId}
-- Notes: ${data.designNote || "—"}
+---
 
-**Content**
-- Headline: ${data.headline}
-- Key points:
-${data.bullets.split("\n").map((l) => `  - ${l}`).join("\n")}
+**Контакт**
+- Имя: ${data.name}
+- Бизнес: ${data.business}
+- Telegram/телефон: ${data.contact}
+- Email: ${data.leadEmail || "—"}
 
-**Files**
-- Logo: ${data.logoUrl || "—"}
-- Photos: ${data.photoUrls.filter((u) => u !== "skip").join(", ") || "—"}
-- Texts: ${data.textsUrl || "—"}`;
+**Дизайн**
+- Выбран: ${data.designId}
+- Пожелания: ${data.designNote || "—"}
+
+**Контент**
+- Заголовок: ${data.headline}
+- Ключевые пункты:
+${data.bullets.split("\n").map((l) => `  - ${l.trim()}`).filter(Boolean).join("\n")}`;
 
   const params = new URLSearchParams({
     idList: listId,
-    name: `${esc(data.name)} — ${data.plan.toUpperCase()} — ${esc(data.business)}`,
+    name: `${esc(data.name)} — ${planLabel} — ${esc(data.business)}`,
     desc,
     key,
     token,
@@ -72,12 +68,32 @@ ${data.bullets.split("\n").map((l) => `  - ${l}`).join("\n")}
     const res = await fetch(`https://api.trello.com/1/cards?${params.toString()}`, {
       method: "POST",
     });
-    if (!res.ok) return null;
+    if (!res.ok) {
+      console.error("Trello error:", await res.text());
+      return null;
+    }
     const card = await res.json();
     return card.id as string;
   } catch {
     return null;
   }
+}
+
+async function attachFileToTrello(cardId: string, file: File, name: string) {
+  const key = process.env.TRELLO_API_KEY;
+  const token = process.env.TRELLO_TOKEN;
+  if (!key || !token) return;
+
+  const form = new FormData();
+  form.append("key", key);
+  form.append("token", token);
+  form.append("name", name);
+  form.append("file", file, file.name);
+
+  await fetch(`https://api.trello.com/1/cards/${cardId}/attachments`, {
+    method: "POST",
+    body: form,
+  }).catch(() => {});
 }
 
 async function notifyTelegram(
@@ -89,21 +105,28 @@ async function notifyTelegram(
   const chatId = process.env.TELEGRAM_CHAT_ID;
   if (!botToken || !chatId) return;
 
-  const text = `🔥 <b>NEW ORDER — ${data.plan.toUpperCase()}${data.bundle ? " + bundle" : ""}</b>
+  const planLabel = data.plan === "setup" ? "Setup €200" : "Setup Pro €500";
+
+  const text = `🔥 <b>НОВЫЙ ЗАКАЗ — ${planLabel}${data.bundle ? " + Care" : ""}</b>
 
 👤 ${esc(data.name)}
 💼 ${esc(data.business)}
 📞 ${esc(data.contact)}
-🌍 ${data.locale.toUpperCase()} → site: ${data.siteLocale.toUpperCase()}
-🎨 Design: ${data.designId}
+🌍 ${data.locale.toUpperCase()} → сайт: ${data.siteLocale.toUpperCase()}
+🎨 Дизайн: ${data.designId}
 
-${cardId ? `📋 Trello: https://trello.com/c/${cardId}` : "⚠️ Trello not configured"}
-💳 Status: <i>Awaiting payment</i>`;
+${cardId ? `📋 Trello: https://trello.com/c/${cardId}` : "⚠️ Trello не настроен"}
+💳 Статус: <i>Ожидает оплаты</i>`;
 
   fetch(`https://api.telegram.org/bot${botToken}/sendMessage`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ chat_id: chatId, text, parse_mode: "HTML", disable_web_page_preview: true }),
+    body: JSON.stringify({
+      chat_id: chatId,
+      text,
+      parse_mode: "HTML",
+      disable_web_page_preview: true,
+    }),
   }).catch(() => {});
 }
 
@@ -114,8 +137,13 @@ export async function POST(request: Request) {
   }
 
   try {
-    const body = await request.json();
-    const parsed = OrderSchema.safeParse(body);
+    const formData = await request.formData();
+    const raw = formData.get("data");
+    if (!raw || typeof raw !== "string") {
+      return NextResponse.json({ error: "Missing data" }, { status: 400 });
+    }
+
+    const parsed = OrderSchema.safeParse(JSON.parse(raw));
     if (!parsed.success) {
       return NextResponse.json(
         { error: "Invalid input", details: parsed.error.flatten() },
@@ -124,35 +152,52 @@ export async function POST(request: Request) {
     }
     const data = parsed.data;
 
-    // 1. Create Trello card
+    // 1. Создать карточку в Trello
     const trelloCardId = await createTrelloCard(data);
 
-    // 2. Stripe checkout
+    // 2. Прикрепить файлы к карточке
+    if (trelloCardId) {
+      const logo = formData.get("logo");
+      if (logo instanceof File) {
+        await attachFileToTrello(trelloCardId, logo, `logo — ${logo.name}`);
+      }
+      let i = 0;
+      while (true) {
+        const photo = formData.get(`photo_${i}`);
+        if (!(photo instanceof File)) break;
+        await attachFileToTrello(trelloCardId, photo, `фото ${i + 1} — ${photo.name}`);
+        i++;
+      }
+      const texts = formData.get("texts");
+      if (texts instanceof File) {
+        await attachFileToTrello(trelloCardId, texts, `тексты — ${texts.name}`);
+      }
+    }
+
+    // 3. Stripe Checkout
     const Stripe = (await import("stripe")).default;
     const stripe = new Stripe(stripeKey, {
       apiVersion: "2025-01-27.acacia" as import("stripe").Stripe.LatestApiVersion,
     });
 
     const lineItems: import("stripe").Stripe.Checkout.SessionCreateParams.LineItem[] = [];
-
     if (data.plan === "setup") {
       lineItems.push({ price: process.env.STRIPE_PRICE_SETUP!, quantity: 1 });
-    } else if (data.plan === "pro") {
+    } else {
       lineItems.push({ price: process.env.STRIPE_PRICE_SETUP_PRO!, quantity: 1 });
     }
-
     if (data.bundle) {
       lineItems.push({ price: process.env.STRIPE_PRICE_CARE_6MO!, quantity: 1 });
     }
 
-    const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://balticlanding.com";
-    const stripeLocale = (["lt", "lv", "et", "ru"].includes(data.locale) ? data.locale : "en") as
+    const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://terratech.eu";
+    const stripeLocale = (["lt", "lv", "et"].includes(data.locale) ? data.locale : "en") as
       import("stripe").Stripe.Checkout.SessionCreateParams.Locale;
 
     const session = await stripe.checkout.sessions.create({
       mode: "payment",
       line_items: lineItems,
-      success_url: `${baseUrl}/${data.locale}/order/success?session_id={CHECKOUT_SESSION_ID}${trelloCardId ? `&card=${trelloCardId}` : ""}`,
+      success_url: `${baseUrl}/${data.locale}/order/success?session_id={CHECKOUT_SESSION_ID}`,
       cancel_url: `${baseUrl}/${data.locale}/order?plan=${data.plan}${data.bundle ? "&bundle=care6" : ""}`,
       locale: stripeLocale,
       automatic_tax: { enabled: true },
@@ -167,7 +212,7 @@ export async function POST(request: Request) {
       },
     });
 
-    // 3. Notify Telegram
+    // 4. Уведомить в Telegram
     notifyTelegram(data, trelloCardId, session.url || "");
 
     return NextResponse.json({ checkoutUrl: session.url });

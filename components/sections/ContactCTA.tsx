@@ -107,8 +107,8 @@ export function ContactCTA() {
 
                 {/* Alternative channels */}
                 <div className="pt-2 flex flex-col gap-2 border-t border-[var(--border)]">
-                  <a href="https://t.me/balticlanding" className="text-sm text-[var(--muted)] hover:text-[var(--accent)] transition-colors flex items-center gap-2">
-                    <span className="text-base">💬</span> Telegram: @balticlanding
+                  <a href="https://t.me/terratech" className="text-sm text-[var(--muted)] hover:text-[var(--accent)] transition-colors flex items-center gap-2">
+                    <span className="text-base">💬</span> Telegram: @terratech
                   </a>
                 </div>
               </form>
@@ -124,7 +124,7 @@ export function ContactCTA() {
               <h3 className="text-xl font-medium text-[var(--foreground)] mb-3">{t("callTitle")}</h3>
               <p className="text-sm text-[var(--muted)] leading-relaxed mb-6">{t("callBody")}</p>
               <a
-                href="https://cal.com/balticlanding/15min"
+                href="https://cal.com/terratech/15min"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 bg-transparent text-[var(--foreground)] border border-[var(--border-strong)] rounded-xl px-6 py-3.5 text-base font-medium transition-all duration-200 hover:bg-[var(--surface-elevated)] hover:border-[var(--foreground)]/30 min-h-[44px]"

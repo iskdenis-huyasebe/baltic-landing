@@ -50,7 +50,8 @@ export function Comparison() {
         </FadeIn>
 
         <FadeIn delay={0.1}>
-          <div className="bg-[var(--surface)] border border-[var(--border)] rounded-2xl overflow-hidden">
+          <div className="overflow-x-auto -mx-6 md:mx-0 px-6 md:px-0">
+          <div className="min-w-[560px] bg-[var(--surface)] border border-[var(--border)] rounded-2xl overflow-hidden">
             {/* Header row */}
             <div className="grid grid-cols-5 border-b border-[var(--border)]">
               <div className="p-4 md:p-5 text-xs uppercase tracking-widest text-[var(--subtle)]">
@@ -96,6 +97,7 @@ export function Comparison() {
                 </div>
               </div>
             ))}
+          </div>
           </div>
         </FadeIn>
 

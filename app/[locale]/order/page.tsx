@@ -2,7 +2,7 @@
 
 import { useState, useEffect, Suspense } from "react";
 import { useLocale, useTranslations } from "next-intl";
-import { useSearchParams, useRouter } from "next/navigation";
+import { useSearchParams } from "next/navigation";
 import { ArrowLeft } from "lucide-react";
 import { StepBasics } from "@/components/order/StepBasics";
 import { StepDesign } from "@/components/order/StepDesign";
@@ -22,10 +22,13 @@ export type OrderState = {
   headline: string;
   bullets: string;
   leadEmail: string;
-  logoUrl: string;
-  photoUrls: string[];
-  textsUrl: string;
   locale: string;
+};
+
+export type OrderFiles = {
+  logo?: File;
+  photos: File[];
+  texts?: File;
 };
 
 const STORAGE_KEY = "baltic-order-v1";
@@ -45,8 +48,11 @@ function OrderPageInner() {
     bundle: initialBundle,
     name: "", business: "", contact: "", siteLocale: locale,
     designId: "", designNote: "", headline: "", bullets: "", leadEmail: "",
-    logoUrl: "", photoUrls: [], textsUrl: "", locale,
+    locale,
   });
+
+  // Files are NOT in localStorage — File objects can't be serialized
+  const [files, setFiles] = useState<OrderFiles>({ photos: [] });
 
   useEffect(() => {
     try {
@@ -95,8 +101,8 @@ function OrderPageInner() {
           {step === 1 && <StepBasics state={state} update={update} />}
           {step === 2 && <StepDesign state={state} update={update} />}
           {step === 3 && <StepContent state={state} update={update} />}
-          {step === 4 && <StepFiles state={state} update={update} />}
-          {step === 5 && <StepReview state={state} update={update} />}
+          {step === 4 && <StepFiles files={files} setFiles={setFiles} />}
+          {step === 5 && <StepReview state={state} update={update} files={files} />}
         </div>
 
         {/* Navigation */}

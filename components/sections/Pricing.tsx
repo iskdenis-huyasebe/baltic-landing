@@ -131,39 +131,33 @@ export function Pricing() {
           </div>
         </FadeIn>
 
-        <div className="grid md:grid-cols-3 gap-4 md:gap-6 items-stretch">
-          <FadeIn delay={0}>
-            <PricingCard
-              data={setup}
-              onAction={() => goOrder("setup")}
-              bundleToggle={
-                <label className="flex items-start gap-2.5 mb-5 cursor-pointer group">
-                  <input
-                    type="checkbox"
-                    checked={bundle}
-                    onChange={(e) => setBundle(e.target.checked)}
-                    className="mt-0.5 size-4 accent-[#bef264]"
-                  />
-                  <span className="text-xs text-[var(--muted)] group-hover:text-[var(--foreground)] transition-colors leading-relaxed">
-                    {t("bundleToggleLabel")}
-                  </span>
-                </label>
-              }
-            />
-          </FadeIn>
-          <FadeIn delay={0.1}>
-            <PricingCard
-              data={pro}
-              highlight
-              onAction={() => goOrder("pro")}
-            />
-          </FadeIn>
-          <FadeIn delay={0.2}>
-            <PricingCard
-              data={custom}
-              onAction={() => goOrder("custom")}
-            />
-          </FadeIn>
+        <div className="grid md:grid-cols-3 gap-4 md:gap-6 md:items-stretch">
+          <PricingCard
+            data={setup}
+            onAction={() => goOrder("setup")}
+            bundleToggle={
+              <label className="flex items-start gap-2.5 mb-5 cursor-pointer group">
+                <input
+                  type="checkbox"
+                  checked={bundle}
+                  onChange={(e) => setBundle(e.target.checked)}
+                  className="mt-0.5 size-4 accent-[#bef264]"
+                />
+                <span className="text-xs text-[var(--muted)] group-hover:text-[var(--foreground)] transition-colors leading-relaxed">
+                  {t("bundleToggleLabel")}
+                </span>
+              </label>
+            }
+          />
+          <PricingCard
+            data={pro}
+            highlight
+            onAction={() => goOrder("pro")}
+          />
+          <PricingCard
+            data={custom}
+            onAction={() => goOrder("custom")}
+          />
         </div>
 
         <p className="text-center text-sm text-[var(--subtle)] mt-8 max-w-2xl mx-auto italic">

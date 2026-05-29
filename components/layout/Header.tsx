@@ -33,9 +33,9 @@ export function Header() {
             style={{ width: "30px", height: "30px", background: "var(--accent)", fontFamily: "var(--font-geist-sans)" }}
             aria-hidden="true"
           >
-            B
+            T
           </span>
-          Baltic Landing
+          Terratech
         </a>
 
         <div className="flex items-center gap-6">

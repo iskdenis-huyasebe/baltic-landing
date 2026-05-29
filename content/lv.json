@@ -131,7 +131,7 @@
         "Unikālas ilustrācijas vai fotosesija",
         "90 dienu tehniskais atbalsts"
       ],
-      "cta": "Runāt ar Denisu"
+      "cta": "Apspriest projektu"
     }
   },
   "portfolio": {
@@ -276,7 +276,7 @@
     "submit": "Saņemt piedāvājumu 1 st. laikā",
     "submitting": "Sūta...",
     "successMsg": "Paldies! Sazināšos stundas laikā.",
-    "errorMsg": "Kaut kas nogāja greizi. Raksti man tieši: @balticlanding",
+    "errorMsg": "Kaut kas nogāja greizi. Raksti man tieši: @terratech",
     "replyNote": "Atbildam stundas laikā darba laikā (9:00–18:00 EET). Vakarā — nākamajā rītā.",
     "required": "Šis lauks ir obligāts",
     "callTitle": "Vēlies vispirms parunāt?",
@@ -284,8 +284,8 @@
     "callCta": "Rezervēt 15 min. sarunu",
     "signature": {
       "name": "Deniss · Viļņa",
-      "email": "denis@balticlanding.com",
-      "telegram": "@balticlanding"
+      "email": "denis@terratech.eu",
+      "telegram": "@terratech"
     }
   },
   "sticky": {
@@ -294,16 +294,16 @@
     "cta": "Pasūtīt"
   },
   "footer": {
-    "copy": "© 2026 Baltic Landing · Veidots Viļņā",
+    "copy": "© 2026 Terratech · Veidots Viļņā",
     "links": {
       "privacy": "Privātuma politika",
       "terms": "Lietošanas noteikumi",
       "cookies": "Sīkfaili"
     },
-    "contact": "Jautājumi? Telegram: @balticlanding"
+    "contact": "Jautājumi? Telegram: @terratech"
   },
   "seo": {
-    "title": "Landing page par 200 € 3 dienās · Baltic Landing",
+    "title": "Landing page par 200 € 3 dienās · Terratech",
     "description": "Pārdodošas mājas lapas Baltijas uzņēmumiem. Pilna lapa, forma, domēns un atbalsts par 200 €. Gatavs 3 darba dienās."
   },
   "comparison": {
@@ -313,7 +313,7 @@
     "colHead": "Ko jūs saņemat",
     "freelancer": "Freelanceris",
     "agency": "Aģentūra",
-    "us": "Baltic Landing",
+    "us": "Terratech",
     "rows": [
       {
         "label": "Cena",
@@ -426,21 +426,34 @@
       "photoLabel": "Fotogrāfijas — līdz 10",
       "textsLabel": "Esošie teksti (pēc izvēles)",
       "uploadPlaceholder": "Noklikšķini vai velc failu",
-      "skipLabel": "Izlaist pagaidām"
+      "skipLabel": "Izlaist pagaidām",
+      "logoHint": "Noklikšķini vai velc — SVG, PNG, AI, PDF",
+      "photoHint": "Noklikšķini vai velc fotogrāfijas (līdz 10)",
+      "textsHint": "Noklikšķini vai velc — DOC, DOCX, TXT, PDF",
+      "skipped": "izlaists",
+      "change": "mainīt"
     },
     "review": {
-      "title": "Apstiprini un apmaksa",
-      "subtitle": "Pēc apmaksas nosūtīsim Trello saiti.",
+      "title": "Apstiprini un apmaksā",
+      "subtitle": "Briefs tiks saglabāts uzreiz. Ja nepieciešams — atgriezīsim naudu.",
       "plan": "Tarifs",
       "design": "Dizains",
       "language": "Mājas lapas valoda",
       "bundle": "Pievienot 6 mēn. Care par €60 (ietaupi €30)",
       "bundleNote": "Hostings + domēns + labojumi 6 mēn. Var atcelt jebkurā laikā.",
       "total": "Kopā šodien",
-      "payButton": "Apmaksāt caur Stripe",
-      "redirecting": "Pāradresē uz Stripe...",
-      "secure": "Droša apmaksa caur Stripe.",
-      "error": "Kaut kas nogāja greizi. Raksti @balticlanding Telegram."
+      "payButton": "Apmaksāt",
+      "redirecting": "Pāreja uz Stripe...",
+      "secure": "Droša maksājums. Nauda atgriežama ja nevaram palīdzēt.",
+      "error": "Kaut kas nogāja greizi. Raksti @terratech Telegram.",
+      "files": "Faili",
+      "submitButton": "Nosūtīt pieteikumu",
+      "sending": "Nosūta...",
+      "sentTitle": "Pieteikums saņemts!",
+      "sentSubtitle": "Pārskatīsim 24 st. laikā un rakstīsim Telegram vai e-pastā — vai ņemam un cik maksā.",
+      "backHome": "Atpakaļ uz sākumu",
+      "noPaymentYet": "Maksājums tikai pēc apstiprināšanas.",
+      "contact": "Kontakts"
     },
     "success": {
       "title": "Pasūtījums saņemts. Sākam.",

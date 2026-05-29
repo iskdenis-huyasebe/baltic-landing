@@ -131,7 +131,7 @@
         "Unikaalsed illustratsioonid või fotosessioon",
         "90 päeva tehniline tugi"
       ],
-      "cta": "Räägi Denisega"
+      "cta": "Arutada projekti"
     }
   },
   "portfolio": {
@@ -276,7 +276,7 @@
     "submit": "Saa pakkumine 1 t. jooksul",
     "submitting": "Saadan...",
     "successMsg": "Tänan! Võtan sinuga tunni jooksul ühendust.",
-    "errorMsg": "Midagi läks valesti. Kirjuta mulle otse: @balticlanding",
+    "errorMsg": "Midagi läks valesti. Kirjuta mulle otse: @terratech",
     "replyNote": "Vastame tunni jooksul tööajal (9:00–18:00 EET). Õhtul — järgmisel hommikul.",
     "required": "See väli on kohustuslik",
     "callTitle": "Soovid esmalt rääkida?",
@@ -284,8 +284,8 @@
     "callCta": "Broneeri 15-minutiline kõne",
     "signature": {
       "name": "Denis · Vilnius",
-      "email": "denis@balticlanding.com",
-      "telegram": "@balticlanding"
+      "email": "denis@terratech.eu",
+      "telegram": "@terratech"
     }
   },
   "sticky": {
@@ -294,16 +294,16 @@
     "cta": "Telli"
   },
   "footer": {
-    "copy": "© 2026 Baltic Landing · Tehtud Vilniuses",
+    "copy": "© 2026 Terratech · Tehtud Vilniuses",
     "links": {
       "privacy": "Privaatsuspoliitika",
       "terms": "Kasutustingimused",
       "cookies": "Küpsised"
     },
-    "contact": "Küsimused? Telegram: @balticlanding"
+    "contact": "Küsimused? Telegram: @terratech"
   },
   "seo": {
-    "title": "Maandumisleht 200 € eest 3 päevaga · Baltic Landing",
+    "title": "Maandumisleht 200 € eest 3 päevaga · Terratech",
     "description": "Müüvad maandumislehed Balti ettevõtetele. Täielik sait, vorm, domeen ja tugi 200 € eest. Valmis 3 tööpäevaga."
   },
   "comparison": {
@@ -313,7 +313,7 @@
     "colHead": "Mida saate",
     "freelancer": "Vabakutseline",
     "agency": "Agentuur",
-    "us": "Baltic Landing",
+    "us": "Terratech",
     "rows": [
       {
         "label": "Hind",
@@ -426,21 +426,34 @@
       "photoLabel": "Fotod — kuni 10",
       "textsLabel": "Olemasolevad tekstid (valikuline)",
       "uploadPlaceholder": "Kliki või lohista fail",
-      "skipLabel": "Jäta praegu vahele"
+      "skipLabel": "Jäta praegu vahele",
+      "logoHint": "Klõpsa või lohista — SVG, PNG, AI, PDF",
+      "photoHint": "Klõpsa või lohista fotosid (kuni 10)",
+      "textsHint": "Klõpsa või lohista — DOC, DOCX, TXT, PDF",
+      "skipped": "vahele jäetud",
+      "change": "muuda"
     },
     "review": {
       "title": "Kinnita ja maksa",
-      "subtitle": "Pärast maksmist saadame Trello lingi.",
+      "subtitle": "Briif salvestatakse kohe. Vajaduse korral tagastame raha.",
       "plan": "Tariif",
       "design": "Disain",
       "language": "Saidi keel",
       "bundle": "Lisa 6 kuud Care'i €60 eest (säästa €30)",
       "bundleNote": "Majutus + domeen + muudatused 6 kuud. Saab igal ajal tühistada.",
       "total": "Kokku täna",
-      "payButton": "Maksa Stripe kaudu",
-      "redirecting": "Suuname Stripe'i...",
-      "secure": "Turvaline makse Stripe kaudu.",
-      "error": "Midagi läks valesti. Kirjuta @balticlanding Telegramis."
+      "payButton": "Maksa",
+      "redirecting": "Suunamine Stripe'i...",
+      "secure": "Turvaline makse. Raha tagastatakse kui ei saa aidata.",
+      "error": "Midagi läks valesti. Kirjuta @terratech Telegram.",
+      "files": "Failid",
+      "submitButton": "Saada taotlus",
+      "sending": "Saatmine...",
+      "sentTitle": "Taotlus vastu võetud!",
+      "sentSubtitle": "Vaatame 24 tunni jooksul üle ja kirjutame Telegrami või e-posti teel — kas võtame ja mis see maksab.",
+      "backHome": "Tagasi avalehele",
+      "noPaymentYet": "Makse alles pärast kinnitamist.",
+      "contact": "Kontakt"
     },
     "success": {
       "title": "Tellimus vastu võetud. Alustame.",

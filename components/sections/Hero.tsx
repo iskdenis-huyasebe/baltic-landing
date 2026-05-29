@@ -88,7 +88,7 @@ export function Hero() {
                 className="flex-1 mx-4 rounded-full text-[10px] text-[var(--subtle)] flex items-center px-3"
                 style={{ background: "rgba(255,255,255,0.05)", height: "20px" }}
               >
-                balticlanding.com
+                terratech.eu
               </div>
             </div>
 

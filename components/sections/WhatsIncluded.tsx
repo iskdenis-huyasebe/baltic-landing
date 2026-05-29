@@ -11,7 +11,7 @@ export function WhatsIncluded() {
     <section id="included" className="pt-20 md:pt-32 pb-12 md:pb-20 px-6 md:px-8">
       <div className="max-w-6xl mx-auto">
         <FadeIn>
-          <div className="mb-12 md:mb-16">
+          <div className="mb-12 md:mb-16 text-center">
             <h2 className="text-3xl md:text-5xl tracking-tight font-medium text-[var(--foreground)] mb-4">
               {t("h2")}
             </h2>
