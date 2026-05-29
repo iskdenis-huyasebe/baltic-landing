@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" width="1200" height="750" role="img" aria-label="Dental clinic landing page concept">
+  <!-- Background — clinical clean off-white -->
+  <rect width="1200" height="750" fill="#fafbfc"/>
+
+  <!-- Browser chrome -->
+  <rect x="0" y="0" width="1200" height="44" fill="#ffffff" stroke="#e5e9ef" stroke-width="1"/>
+  <circle cx="22" cy="22" r="6" fill="#ff5f57" opacity="0.7"/>
+  <circle cx="42" cy="22" r="6" fill="#febc2e" opacity="0.7"/>
+  <circle cx="62" cy="22" r="6" fill="#28c840" opacity="0.7"/>
+  <rect x="100" y="12" width="280" height="20" rx="10" fill="#f1f4f8"/>
+  <text x="120" y="26" font-family="-apple-system, system-ui, sans-serif" font-size="11" fill="#8b96a8">denta-care.lv</text>
+
+  <!-- Header -->
+  <rect x="60" y="82" width="36" height="36" rx="10" fill="#2563eb"/>
+  <path d="M 73 92 Q 78 100 73 110 Q 68 100 73 92 Z" fill="#fafbfc"/>
+  <path d="M 81 92 Q 86 100 81 110 Q 76 100 81 92 Z" fill="#fafbfc"/>
+  <text x="108" y="106" font-family="-apple-system, system-ui, sans-serif" font-size="17" font-weight="700" fill="#0f172a">DentaCare</text>
+  <text x="780" y="106" font-family="-apple-system, system-ui, sans-serif" font-size="13" fill="#64748b">Services · Doctors · Prices · Contacts</text>
+  <rect x="1080" y="84" width="80" height="32" rx="8" fill="#0f172a"/>
+  <text x="1120" y="105" font-family="-apple-system, system-ui, sans-serif" font-size="12" font-weight="600" fill="#fafbfc" text-anchor="middle">Pieteikties</text>
+
+  <!-- Hero -->
+  <text x="60" y="210" font-family="-apple-system, system-ui, sans-serif" font-size="11" font-weight="600" fill="#2563eb" letter-spacing="2">RĪGAS ZOBĀRSTNIECĪBAS KLĪNIKA · KOPŠ 2012</text>
+
+  <text x="60" y="280" font-family="Georgia, 'Times New Roman', serif" font-size="56" font-weight="500" fill="#0f172a" letter-spacing="-1.5">Smaids, kas atmaksājas</text>
+  <text x="60" y="345" font-family="Georgia, 'Times New Roman', serif" font-size="56" font-weight="500" fill="#0f172a" letter-spacing="-1.5">visu mūžu.</text>
+
+  <!-- Subtitle -->
+  <text x="60" y="395" font-family="-apple-system, system-ui, sans-serif" font-size="17" fill="#475569">Implants, ortodontija, estētiskā zobārstniecība</text>
+  <text x="60" y="420" font-family="-apple-system, system-ui, sans-serif" font-size="17" fill="#475569">vienā vietā. Bez gaidīšanas.</text>
+
+  <!-- CTAs -->
+  <rect x="60" y="455" width="220" height="52" rx="12" fill="#2563eb"/>
+  <text x="170" y="488" font-family="-apple-system, system-ui, sans-serif" font-size="14" font-weight="600" fill="#fafbfc" text-anchor="middle">Pieteikt vizīti</text>
+  <rect x="296" y="455" width="180" height="52" rx="12" fill="none" stroke="#cbd5e1" stroke-width="1"/>
+  <text x="386" y="488" font-family="-apple-system, system-ui, sans-serif" font-size="14" fill="#0f172a" text-anchor="middle">Cenas →</text>
+
+  <!-- Trust row -->
+  <g transform="translate(60, 555)">
+    <text x="0" y="0" font-family="-apple-system, system-ui, sans-serif" font-size="12" font-weight="600" fill="#0f172a">✓ Apdrošināšana</text>
+    <text x="160" y="0" font-family="-apple-system, system-ui, sans-serif" font-size="12" font-weight="600" fill="#0f172a">✓ Maksāšana daļās</text>
+    <text x="340" y="0" font-family="-apple-system, system-ui, sans-serif" font-size="12" font-weight="600" fill="#0f172a">✓ 24h zvans</text>
+  </g>
+
+  <!-- Right side: stat cards -->
+  <g transform="translate(720, 180)">
+    <!-- Card 1 -->
+    <rect x="0" y="0" width="200" height="220" rx="16" fill="#ffffff" stroke="#e5e9ef" stroke-width="1"/>
+    <text x="20" y="40" font-family="-apple-system, system-ui, sans-serif" font-size="11" font-weight="600" fill="#64748b" letter-spacing="1">PACIENTU</text>
+    <text x="20" y="100" font-family="Georgia, serif" font-size="56" font-weight="500" fill="#2563eb">8K+</text>
+    <text x="20" y="135" font-family="-apple-system, system-ui, sans-serif" font-size="13" fill="#475569">apkalpoti kopš 2012</text>
+    <line x1="20" y1="165" x2="180" y2="165" stroke="#e5e9ef" stroke-width="1"/>
+    <text x="20" y="190" font-family="-apple-system, system-ui, sans-serif" font-size="11" fill="#64748b">★ 4.9 — 1240 atsauksmes</text>
+
+    <!-- Card 2 -->
+    <rect x="220" y="0" width="200" height="220" rx="16" fill="#0f172a"/>
+    <text x="240" y="40" font-family="-apple-system, system-ui, sans-serif" font-size="11" font-weight="600" fill="#cbd5e1" letter-spacing="1">PIRMĀ KONSULTĀCIJA</text>
+    <text x="240" y="100" font-family="Georgia, serif" font-size="56" font-weight="500" fill="#fafbfc">BEZ</text>
+    <text x="240" y="140" font-family="Georgia, serif" font-size="56" font-weight="500" fill="#fafbfc">MAKSAS</text>
+    <rect x="240" y="170" width="160" height="36" rx="8" fill="#2563eb"/>
+    <text x="320" y="193" font-family="-apple-system, system-ui, sans-serif" font-size="13" font-weight="600" fill="#fafbfc" text-anchor="middle">Rezervēt →</text>
+
+    <!-- Card 3 (under, full width) -->
+    <rect x="0" y="240" width="420" height="100" rx="16" fill="#f1f4f8"/>
+    <text x="20" y="275" font-family="-apple-system, system-ui, sans-serif" font-size="11" font-weight="600" fill="#64748b" letter-spacing="1">DARBA LAIKS</text>
+    <text x="20" y="305" font-family="-apple-system, system-ui, sans-serif" font-size="14" font-weight="600" fill="#0f172a">Pirm–Piekt 8:00–20:00</text>
+    <text x="20" y="325" font-family="-apple-system, system-ui, sans-serif" font-size="13" fill="#475569">Sestd 9:00–15:00 · Svētd brīvs</text>
+  </g>
+</svg>

@@ -48,7 +48,7 @@ export function FAQ() {
   const [openIndex, setOpenIndex] = useState(0);
 
   return (
-    <section id="faq" className="py-20 md:py-32 px-6 md:px-8">
+    <section id="faq" className="py-16 md:py-24 px-6 md:px-8">
       <div className="max-w-6xl mx-auto">
         <div className="mb-12 md:mb-16">
           <h2 className="text-3xl md:text-5xl tracking-tight font-medium text-[var(--foreground)] mb-4">

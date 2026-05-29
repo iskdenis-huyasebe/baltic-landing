@@ -45,7 +45,7 @@ export function ContactCTA() {
   const fields = t.raw("fields") as Record<string, { label: string; placeholder: string }>;
 
   return (
-    <section id="contact" className="py-20 md:py-32 px-6 md:px-8 bg-[var(--surface)]/30">
+    <section id="contact" className="py-16 md:py-24 px-6 md:px-8 bg-[var(--surface)]/30">
       <div className="max-w-6xl mx-auto">
         <div className="mb-12 md:mb-16 text-center">
           <h2 className="text-3xl md:text-5xl tracking-tight font-medium text-[var(--foreground)] mb-4">

@@ -4,12 +4,14 @@
   },
   "hero": {
     "eyebrow": "LANDING PAGES FOR BALTIC BUSINESSES",
-    "title": "A converting landing page for €200. Ready in 5 business days.",
+    "title": "A landing page that brings real leads. €200. 3 business days.",
     "subtitle": "Full website, contact form, domain, hosting and support. No hidden fees, no delays.",
     "ctaPrimary": "Order your website",
-    "ctaSecondary": "See examples"
+    "ctaSecondary": "See examples",
+    "trustNote": "35+ landings launched in the Baltics"
   },
   "trust": {
+    "eyebrow": "VILNIUS-BASED · BUILT FOR THE BALTICS",
     "label": "Trusted by businesses in Lithuania, Latvia, Estonia",
     "stats": [
       {
@@ -25,7 +27,7 @@
         "label": "average rating"
       },
       {
-        "value": "5 days",
+        "value": "3 days",
         "label": "average delivery"
       }
     ]
@@ -36,7 +38,7 @@
     "yes": [
       {
         "title": "Responsive mobile design",
-        "body": "Over 70% of visitors come from mobile — we start mobile-first."
+        "body": "Looks sharp on every device — phone, tablet, desktop. We start mobile-first because that's where 70% of your visitors come from."
       },
       {
         "title": "Contact form",
@@ -47,12 +49,12 @@
         "body": ".lt, .lv, .ee, .com — whatever you need."
       },
       {
-        "title": "First month of hosting",
-        "body": "Included in €200. After that — with Care or Growth."
+        "title": "First month of hosting — free",
+        "body": "Included in €200. Keep your site live with Care or Growth from month 2 (€15/mo)."
       },
       {
-        "title": "Basic SEO setup",
-        "body": "Meta tags, sitemap.xml, robots.txt, Open Graph for social media."
+        "title": "Built-in SEO foundation",
+        "body": "Meta tags, sitemap.xml, robots.txt, Open Graph for social media — set up properly from day one."
       },
       {
         "title": "Favicon and social image",
@@ -78,103 +80,104 @@
     "noTitle": "WHAT'S NOT INCLUDED"
   },
   "pricing": {
-    "h2": "Simple pricing. No annual contracts.",
-    "subtitle": "A one-time fee for the landing — and a free choice of whether you want ongoing support.",
-    "note": "Subscription starts from month 2. First month is included in the €200. Cancel anytime — your site stays yours.",
+    "h2": "Three ways to launch. Pick your level.",
+    "subtitle": "Same quality, different scope. All include 5 languages, hosting, domain, support.",
+    "note": "All prices include VAT. EU companies with VAT ID — reverse charge (0% VAT applied automatically).",
+    "bundleToggleLabel": "Add 6 months of Care for €60 (save €30)",
     "setup": {
       "title": "Setup",
-      "subtitle": "The site itself. Once.",
+      "subtitle": "Pick from our proven designs",
       "price": "200",
-      "period": "one-time fee",
+      "period": "one-time",
+      "tagline": "Start here",
       "bullets": [
-        "Full landing page production",
-        "Domain + first month hosting",
+        "We fill a proven layout with your content + brand",
+        "Domain + first month hosting included",
         "Form + Telegram/email notifications",
-        "Basic SEO setup",
-        "30 days technical support"
+        "Built-in SEO foundation",
+        "5 languages out of the box",
+        "30 days of technical support"
       ],
       "cta": "Order Setup"
     },
-    "growth": {
-      "badge": "★ Most popular",
-      "title": "Growth",
-      "subtitle": "Site + monthly development",
-      "price": "30",
-      "period": "/mo",
+    "pro": {
+      "title": "Setup Pro",
+      "subtitle": "Customized to your brand",
+      "price": "500",
+      "period": "one-time",
+      "tagline": "Most chosen for B2B",
+      "badge": "★ Best value",
       "bullets": [
-        "Everything in Care",
-        "Up to 2 hours of edits per month",
-        "New sections added",
-        "Monthly report (traffic/leads)",
-        "1 SEO update per month",
-        "Reply within 12 hrs"
+        "Everything in Setup",
+        "Layout customization (rearrange sections)",
+        "Your own illustrations or photography",
+        "Custom typography pairing",
+        "Up to 3 unique sections built from scratch",
+        "60 days of technical support"
       ],
-      "cta": "Choose Growth"
+      "cta": "Order Pro"
     },
-    "care": {
-      "title": "Care",
-      "subtitle": "Site + support",
-      "price": "15",
-      "period": "/mo",
+    "custom": {
+      "title": "Custom",
+      "subtitle": "Designed from scratch for your brand",
+      "price": "1200+",
+      "period": "starting from",
+      "tagline": "Full creative direction",
       "bullets": [
-        "Hosting and domain",
-        "Up to 30 min of edits per month",
-        "Reply within 48 hrs",
-        "Uptime monitoring",
-        "Weekly backups"
+        "Brand audit + competitor analysis",
+        "Unique design language (not template)",
+        "Multiple design rounds",
+        "Up to 6 unique sections",
+        "Custom illustrations or photo session",
+        "90 days of technical support"
       ],
-      "cta": "Choose Care"
+      "cta": "Talk to Denis"
     }
   },
   "portfolio": {
     "h2": "Examples from real projects",
-    "subtitle": "All landing pages launched within 5 business days. All live today.",
+    "subtitle": "All landing pages launched within 3 business days. All live today.",
     "moreLink": "+ more projects — I'll show them on a call",
     "items": [
       {
         "name": "Terratech",
         "niche": "B2B Equipment",
-        "days": "5 days",
+        "days": "3 days",
         "url": "terratech.lt"
       },
       {
         "name": "IPOOLGO",
         "niche": "Inflatable Pools",
-        "days": "5 days",
+        "days": "3 days",
         "url": "ipoolgo.lt"
       },
       {
         "name": "Applecitylab",
         "niche": "Local Services",
-        "days": "4 days",
+        "days": "2 days",
         "url": "applecitylab.lt"
       }
     ]
   },
   "process": {
-    "h2": "How it works in 5 business days",
+    "h2": "How it works in 3 business days",
     "subtitle": "No delays, no 'I'll get back to you next week'. Clear stages, clear accountability.",
     "guarantee": "If we're late due to our side — next month of Care is free.",
     "steps": [
       {
         "day": "Day 1",
-        "title": "Brief",
-        "body": "30-min call. We fill out a mini-questionnaire: who the landing is for, what the offer is, what contacts we're collecting."
+        "title": "Brief & Design",
+        "body": "30-min Zoom call + design layout in Figma — same day. One revision round — we agree on the final."
       },
       {
-        "day": "Days 2–3",
-        "title": "Design",
-        "body": "We build the full layout in Figma. One revision round — we agree on the final version."
-      },
-      {
-        "day": "Day 4",
-        "title": "Development",
+        "day": "Day 2",
+        "title": "Build",
         "body": "We build the site. Connect the form, analytics, domain."
       },
       {
-        "day": "Day 5",
+        "day": "Day 3",
         "title": "Launch",
-        "body": "We check the mobile version, hand over access, go live."
+        "body": "We check the mobile version, hand over access, push to live."
       }
     ]
   },
@@ -208,7 +211,7 @@
     "items": [
       {
         "q": "What if I don't like the design?",
-        "a": "That's the most common concern. Before any coding we create the design in Figma — easy to change there. 2 revision rounds are included in the €200. If it still doesn't work after that — I refund 50% for the hours spent."
+        "a": "That's the most common concern. Before any coding we create the design in Figma — easy to change there. 2 revision rounds are included in the €200. If it still doesn't fit after 2 rounds — full refund within 7 days, no questions asked. So far this has never happened."
       },
       {
         "q": "What happens if I stop paying €15 for Care?",
@@ -220,11 +223,11 @@
       },
       {
         "q": "What technology do you use? Can I migrate?",
-        "a": "We use Next.js 14 — open source, the most popular framework in 2026. The code is yours, hosted on Vercel. We hand over all code on GitHub in your name. We're not a closed system like Wix or Tilda."
+        "a": "We use Next.js 15 — open source, the most popular framework in 2026. The code is yours, hosted on Vercel. We hand over all code on GitHub in your name. We're not a closed system like Wix or Tilda."
       },
       {
         "q": "Can it be expanded to multiple pages later?",
-        "a": "Yes, common scenario. We start with a landing (quick launch), then grow: +About page (€50), +Blog with CMS (€150), +Catalog (€200), +E-commerce (from €500). No rebuilding from scratch."
+        "a": "Yes. We start with a landing (quick launch), then grow: +About page (€50), +Blog with CMS (€150), +Catalog (€200), +E-commerce (from €500). No rebuilding from scratch."
       },
       {
         "q": "Do you provide an official contract and invoice?",
@@ -249,8 +252,8 @@
     ]
   },
   "cta": {
-    "h2": "Let's start",
-    "subtitle": "We'll send you a personal proposal with exact timelines within an hour.",
+    "h2": "Not ready? Let's talk.",
+    "subtitle": "If you're not sure which tier fits, or want to show me your existing site first — book a 15-min call.",
     "formTitle": "Leave your contact",
     "fields": {
       "name": {
@@ -287,7 +290,7 @@
   },
   "sticky": {
     "price": "€200",
-    "days": "5 days",
+    "days": "3 days",
     "cta": "Order"
   },
   "footer": {
@@ -297,11 +300,158 @@
       "terms": "Terms of Use",
       "cookies": "Cookies"
     },
-    "legal": "Company code: XXXXXXXXX · VAT: LTXXXXXXXX · IBAN: LTXX XXXX XXXX XXXX XXXX",
     "contact": "Questions? Telegram: @balticlanding"
   },
   "seo": {
-    "title": "Landing page for €200 in 5 days · Baltic Landing",
-    "description": "Converting landing pages for Baltic businesses. Full site, form, domain and support for €200. Ready in 5 business days."
+    "title": "Landing page for €200 in 3 days · Baltic Landing",
+    "description": "Converting landing pages for Baltic businesses. Full site, form, domain and support for €200. Ready in 3 business days."
+  },
+  "comparison": {
+    "eyebrow": "WHY US",
+    "h2": "Compare: there's no closer alternative",
+    "subtitle": "All 4 paths to a landing page. We sit in the only sweet spot.",
+    "colHead": "What you get",
+    "freelancer": "Freelancer",
+    "agency": "Agency",
+    "us": "Baltic Landing",
+    "rows": [
+      {
+        "label": "Price",
+        "diy": "€0 + €15/mo",
+        "freelancer": "€500–800",
+        "agency": "€1500+",
+        "us": "€200"
+      },
+      {
+        "label": "Time to launch",
+        "diy": "2–4 weeks",
+        "freelancer": "2–3 weeks",
+        "agency": "4–6 weeks",
+        "us": "3 days"
+      },
+      {
+        "label": "Built-for-conversion design",
+        "diy": false,
+        "freelancer": "Sometimes",
+        "agency": true,
+        "us": true
+      },
+      {
+        "label": "Done-for-you (no DIY)",
+        "diy": false,
+        "freelancer": true,
+        "agency": true,
+        "us": true
+      },
+      {
+        "label": "Includes hosting + domain",
+        "diy": false,
+        "freelancer": false,
+        "agency": "Sometimes",
+        "us": true
+      },
+      {
+        "label": "5 languages out of the box",
+        "diy": false,
+        "freelancer": false,
+        "agency": "Custom quote",
+        "us": true
+      },
+      {
+        "label": "Ongoing care (€15/mo)",
+        "diy": false,
+        "freelancer": false,
+        "agency": "€100+/mo",
+        "us": true
+      }
+    ],
+    "footnote": "Not pictured: 24 weekends of 'I'll get back to you next Monday' on Upwork."
+  },
+  "order": {
+    "step": "Step",
+    "of": "of",
+    "back": "Back",
+    "backToPricing": "Back to pricing",
+    "next": "Next →",
+    "basics": {
+      "title": "Tell us about you",
+      "subtitle": "Takes about 2 minutes.",
+      "fields": {
+        "name": {
+          "label": "Your name",
+          "placeholder": "Anna Smith"
+        },
+        "business": {
+          "label": "Your business + niche",
+          "placeholder": "Coaching for executives, Vilnius"
+        },
+        "contact": {
+          "label": "Telegram or phone",
+          "placeholder": "@username or +370..."
+        },
+        "siteLocale": {
+          "label": "Site language",
+          "placeholder": "Pick one"
+        }
+      }
+    },
+    "design": {
+      "title": "Choose your starting design",
+      "subtitle": "We'll customize it with your brand and content. Don't worry about pixel-perfect — you can request changes.",
+      "noteLabel": "Anything you want changed about it? (optional)",
+      "notePlaceholder": "E.g. 'Make the hero darker, more corporate feel'..."
+    },
+    "content": {
+      "title": "What goes on your site",
+      "subtitle": "We'll write the polished copy — you give us the substance.",
+      "fields": {
+        "headline": {
+          "label": "One-sentence pitch",
+          "placeholder": "What you do, in plain language"
+        },
+        "bullets": {
+          "label": "3–5 key things you offer",
+          "placeholder": "One per line"
+        },
+        "leadEmail": {
+          "label": "Where to send leads from the form?",
+          "placeholder": "your@email.com"
+        }
+      }
+    },
+    "files": {
+      "title": "Files and branding",
+      "subtitle": "Drop your logo, photos, existing texts. Skip anything you don't have — we'll work with what you give us.",
+      "logoLabel": "Logo (SVG/PNG preferred)",
+      "photoLabel": "Photos (team, work, products) — up to 10",
+      "textsLabel": "Existing texts (optional — Word/PDF/Google Doc link)",
+      "uploadPlaceholder": "Click to upload or drag & drop",
+      "skipLabel": "Skip for now"
+    },
+    "review": {
+      "title": "Confirm and pay",
+      "subtitle": "After payment we'll send a Trello link where you'll see your project progress in real-time.",
+      "plan": "Plan",
+      "design": "Design",
+      "language": "Site language",
+      "bundle": "Add 6 months of Care for €60 (save €30)",
+      "bundleNote": "Hosting + domain + edits for the next 6 months. Cancel anytime.",
+      "total": "Total today",
+      "payButton": "Pay securely with Stripe",
+      "redirecting": "Redirecting to Stripe...",
+      "secure": "Secure payment by Stripe. VAT applied automatically for EU companies.",
+      "error": "Something went wrong. Try again or write to @balticlanding on Telegram."
+    },
+    "success": {
+      "title": "Order received. Let's build.",
+      "subtitle": "Payment confirmed. Here's what happens next.",
+      "step1Label": "Within 1 hour",
+      "step1": "Denis will message you on Telegram with a Trello board link.",
+      "step2Label": "Day 1",
+      "step2": "30-minute call to confirm the brief and start design.",
+      "step3Label": "Day 3",
+      "step3": "Your landing is live. You get domain + admin access.",
+      "backHome": "Back to homepage"
+    }
   }
 }

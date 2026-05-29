@@ -1,11 +1,12 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 
 export function StickyMobileCTA() {
   const [visible, setVisible] = useState(false);
   const t = useTranslations("sticky");
+  const locale = useLocale();
 
   useEffect(() => {
     const hero = document.querySelector("#hero");
@@ -39,7 +40,7 @@ export function StickyMobileCTA() {
         <span className="text-xs text-[var(--muted)]">{t("days")}</span>
       </div>
       <a
-        href="#contact"
+        href={`/${locale}/order?plan=setup`}
         className="inline-flex items-center justify-center bg-[var(--accent)] text-[var(--accent-foreground)] rounded-xl px-5 py-2.5 text-sm font-medium transition-all hover:opacity-90 active:scale-[0.98] min-h-[44px]"
       >
         {t("cta")}

@@ -4,12 +4,14 @@
   },
   "hero": {
     "eyebrow": "MAANDUMISLEHED BALTI ETTEVÕTETELE",
-    "title": "Müüv maandumisleht 200 € eest. Valmis 5 tööpäevaga.",
+    "title": "Müüv maandumisleht 200 € eest. Valmis 3 tööpäevaga.",
     "subtitle": "Täielik veebisait, kontaktivorm, domeen, majutus ja tugi. Ilma varjatud tasudeta, ilma viivitusteta.",
     "ctaPrimary": "Telli veebisait",
-    "ctaSecondary": "Vaata näiteid"
+    "ctaSecondary": "Vaata näiteid",
+    "trustNote": "35+ veebilehte käivitatud Baltikumis"
   },
   "trust": {
+    "eyebrow": "BAASIS VILNIUSES · LOODUD BALTIKUMILE",
     "label": "Usaldavad ettevõtted Leedus, Lätis, Eestis",
     "stats": [
       {
@@ -25,7 +27,7 @@
         "label": "keskmine hinnang"
       },
       {
-        "value": "5 tp.",
+        "value": "3 tp.",
         "label": "keskmine tähtaeg"
       }
     ]
@@ -36,7 +38,7 @@
     "yes": [
       {
         "title": "Kohanduv mobiilne disain",
-        "body": "Üle 70% külastajatest tuleb telefonist — alustame mobile-first lähenemisega."
+        "body": "Näeb hea välja igal seadmel — telefonil, tahvelarvutil, arvutil. Alustame mobile-first lähenemisega, sest 70% sinu külastajatest tuleb telefonist."
       },
       {
         "title": "Kontaktivorm",
@@ -47,12 +49,12 @@
         "body": ".lt, .lv, .ee, .com — milline vajad."
       },
       {
-        "title": "Majutus esimesel kuul",
-        "body": "Sisaldub 200 €-s. Edasi — Care või Growthiga."
+        "title": "Majutus esimesel kuul — tasuta",
+        "body": "Sisaldub 200 €-s. Jätka Care'i või Growthiga alates 2. kuust (15 €/k.)."
       },
       {
-        "title": "Põhilised SEO seaded",
-        "body": "Metatagid, sitemap.xml, robots.txt, Open Graph sotsiaalvõrgustikele."
+        "title": "Sisseehitatud SEO alus",
+        "body": "Metatagid, sitemap.xml, robots.txt, Open Graph sotsiaalvõrgustikele — korralikult seadistatud esimesest päevast."
       },
       {
         "title": "Favikon ja sotsiaalne pilt",
@@ -75,106 +77,107 @@
       "Tekstide kirjutamine nullist"
     ],
     "noNote": "Kui vajad midagi sellest nimekirjast — ütle briifingu ajal. Teeme eraldi projektihinnas.",
-    "noTitle": "MIS EI SISALDU"
+    "noTitle": "EI SISALDU"
   },
   "pricing": {
-    "h2": "Lihtsad tariifid. Ilma aastase lepinguta.",
-    "subtitle": "Ühekordne tasu maandumislehe eest — ja vaba valik, kas soovid edasist tuge.",
-    "note": "Tellimus algab 2. kuust. Esimene kuu sisaldub 200 €-s. Saab igal ajal tühistada — sait jääb sinule.",
+    "h2": "Kolm käivitusviisi. Vali oma tase.",
+    "subtitle": "Sama kvaliteet, erinev maht. Kõik sisaldavad 5 keelt, majutust, domeeni, tuge.",
+    "note": "Kõik hinnad sisaldavad KM-i. EL ettevõtetele KM-numbriga — pöördmaksustamine (0% KM automaatselt).",
+    "bundleToggleLabel": "Lisa 6 kuud Care'i €60 eest (säästa €30)",
     "setup": {
       "title": "Setup",
-      "subtitle": "Veebisait ise. Ühekordne.",
+      "subtitle": "Vali meie tõestatud disainide hulgast",
       "price": "200",
-      "period": "ühekordne tasu",
+      "period": "ühekordne",
+      "tagline": "Alusta siit",
       "bullets": [
-        "Täielik maandumislehe tootmine",
-        "Domeen + esimese kuu majutus",
+        "Täidame tõestatud paigutuse sinu sisu ja brendiga",
+        "Domeen + esimese kuu majutus sisalduvad",
         "Vorm + teated Telegrami/e-posti teel",
-        "Põhilised SEO seaded",
-        "30 p. tehniline tugi"
+        "Sisseehitatud SEO alus",
+        "5 keelt karbist välja",
+        "30 päeva tehniline tugi"
       ],
       "cta": "Telli Setup"
     },
-    "growth": {
-      "badge": "★ Populaarseim",
-      "title": "Growth",
-      "subtitle": "Sait + igakuine arendus",
-      "price": "30",
-      "period": "/k.",
+    "pro": {
+      "title": "Setup Pro",
+      "subtitle": "Kohandatud sinu brendile",
+      "price": "500",
+      "period": "ühekordne",
+      "tagline": "Populaarseim B2B",
+      "badge": "★ Parim valik",
       "bullets": [
-        "Kõik Care'ist",
-        "Kuni 2 tundi muudatusi kuus",
-        "Uute plokkide lisamine",
-        "Igakuine aruanne (külastajad/päringud)",
-        "1 SEO uuendus kuus",
-        "Vastus 12 t. jooksul"
+        "Kõik Setup'ist",
+        "Paigutuse kohandamine (sektsioonide ümberpaigutamine)",
+        "Sinu illustratsioonid või fotograafia",
+        "Tüpograafia valik brendile",
+        "Kuni 3 unikaalset sektsiooni nullist",
+        "60 päeva tehniline tugi"
       ],
-      "cta": "Vali Growth"
+      "cta": "Telli Pro"
     },
-    "care": {
-      "title": "Care",
-      "subtitle": "Sait + tugi",
-      "price": "15",
-      "period": "/k.",
+    "custom": {
+      "title": "Custom",
+      "subtitle": "Disain nullist sinu brendile",
+      "price": "1200+",
+      "period": "alates",
+      "tagline": "Täielik loomeprotsess",
       "bullets": [
-        "Majutus ja domeen",
-        "Kuni 30 min. muudatusi kuus",
-        "Vastus 48 t. jooksul",
-        "Kättesaadavuse monitooring",
-        "Iganädalased varukoopiad"
+        "Brendi audit + konkurentide analüüs",
+        "Unikaalne disainistiil (mitte mall)",
+        "Mitu disainivooru",
+        "Kuni 6 unikaalset sektsiooni",
+        "Unikaalsed illustratsioonid või fotosessioon",
+        "90 päeva tehniline tugi"
       ],
-      "cta": "Vali Care"
+      "cta": "Räägi Denisega"
     }
   },
   "portfolio": {
     "h2": "Näited päris projektidest",
-    "subtitle": "Kõik maandumislehed käivitati 5 tööpäevaga. Kõik töötavad täna.",
+    "subtitle": "Kõik maandumislehed käivitati 3 tööpäevaga. Kõik töötavad täna.",
     "moreLink": "+ rohkem projekte näitan isikliku vestluse käigus",
     "items": [
       {
         "name": "Terratech",
         "niche": "B2B seadmed",
-        "days": "5 tp.",
+        "days": "3 tp.",
         "url": "terratech.lt"
       },
       {
         "name": "IPOOLGO",
         "niche": "Täispuhutavad basseinid",
-        "days": "5 tp.",
+        "days": "3 tp.",
         "url": "ipoolgo.lt"
       },
       {
         "name": "Applecitylab",
         "niche": "Kohalikud teenused",
-        "days": "4 tp.",
+        "days": "2 tp.",
         "url": "applecitylab.lt"
       }
     ]
   },
   "process": {
-    "h2": "Kuidas see toimub 5 tööpäevaga",
+    "h2": "Kuidas see toimub 3 tööpäevaga",
     "subtitle": "Ilma viivitusteta, ilma 'tulen järgmisel nädalal tagasi'. Selged etapid, selge vastutus.",
     "guarantee": "Kui hilineme oma poolel — järgmine Care kuu tasuta.",
     "steps": [
       {
-        "day": "1. p.",
-        "title": "Briifing",
-        "body": "30-minutiline kõne. Täidame mini-ankeedi: kellele maandumisleht, milline pakkumine, milliseid kontakte kogume."
+        "day": "1. pv",
+        "title": "Brif ja disain",
+        "body": "30-min Zoom kõne + disaini struktuur Figmas — samal päeval. Üks paranduste voor — lepime kokku lõpliku."
       },
       {
-        "day": "2.–3. p.",
-        "title": "Disain",
-        "body": "Teeme kogu struktuuri Figmas. Üks parandusvooru — lepime lõpliku versiooni kokku."
+        "day": "2. pv",
+        "title": "Ehitus",
+        "body": "Ehitame veebilehe. Ühendame vormi, analüütika, domeeni."
       },
       {
-        "day": "4. p.",
-        "title": "Arendus",
-        "body": "Paneme saidi kokku. Ühendame vormi, analüütika, domeeni."
-      },
-      {
-        "day": "5. p.",
+        "day": "3. pv",
         "title": "Käivitamine",
-        "body": "Kontrollime mobiiliversiooni, anname juurdepääsud üle, käivitame reaalajas."
+        "body": "Kontrollime mobiilset versiooni, anname üle ligipääsud, paneme live'i."
       }
     ]
   },
@@ -208,7 +211,7 @@
     "items": [
       {
         "q": "Mis siis, kui disain ei meeldi?",
-        "a": "See on kõige levinum mure. Enne programmeerimist loome disaini Figmas — seal on lihtne muuta. 200 € sisaldab 2 parandusvooru. Kui pärast neid ikka ei sobi — tagastan 50% kulutatud tundide eest."
+        "a": "See on kõige levinum mure. Enne programmeerimist loome disaini Figmas — seal on lihtne muuta. 200 € sisaldab 2 parandusvooru. Kui pärast 2 vooru ikka ei sobi — täielik tagastus 7 päeva jooksul, ilma küsimusteta. Seni pole seda vaja läinud."
       },
       {
         "q": "Mis juhtub, kui lõpetan 15 € maksmise Care eest?",
@@ -220,11 +223,11 @@
       },
       {
         "q": "Millist tehnoloogiat kasutate? Kas saab migreerida?",
-        "a": "Kasutame Next.js 14 — avatud lähtekood, populaarseim raamistik 2026. aastal. Kood on sinu, majutus Verceli peal. Anname kogu koodi GitHubis sinu nimele. Me pole suletud süsteem nagu Wix või Tilda."
+        "a": "Kasutame Next.js 15 — avatud lähtekood, populaarseim raamistik 2026. aastal. Kood on sinu, majutus Verceli peal. Anname kogu koodi GitHubis sinu nimele. Me pole suletud süsteem nagu Wix või Tilda."
       },
       {
         "q": "Kas hiljem saab laiendada mitmeleheliseks?",
-        "a": "Jah, tavaline olukord. Alustame maandumislehega (käivitame kiirelt), siis kasvame: +Meist leht (50 €), +Blogi CMSiga (150 €), +Kataloog (200 €), +E-pood (alates 500 €). Ilma nullist ümberehitamiseta."
+        "a": "Jah. Alustame maandumislehega (käivitame kiirelt), siis kasvame: +Meist leht (50 €), +Blogi CMSiga (150 €), +Kataloog (200 €), +E-pood (alates 500 €). Ilma nullist ümberehitamiseta."
       },
       {
         "q": "Kas teete ametliku lepingu ja arve?",
@@ -249,8 +252,8 @@
     ]
   },
   "cta": {
-    "h2": "Alustame",
-    "subtitle": "Saadame tunni jooksul isikliku pakkumise konkreetsete tähtaegadega.",
+    "h2": "Pole valmis tellima? Räägime.",
+    "subtitle": "Kui pole kindel, milline tariif sobib, või soovid esmalt oma praegust saiti näidata — broneeri 15-minutiline kõne.",
     "formTitle": "Jäta kontaktid",
     "fields": {
       "name": {
@@ -287,7 +290,7 @@
   },
   "sticky": {
     "price": "200 €",
-    "days": "5 tp.",
+    "days": "3 tp.",
     "cta": "Telli"
   },
   "footer": {
@@ -297,11 +300,158 @@
       "terms": "Kasutustingimused",
       "cookies": "Küpsised"
     },
-    "legal": "Ettevõtte kood: XXXXXXXXX · KM: LTXXXXXXXX · IBAN: LTXX XXXX XXXX XXXX XXXX",
     "contact": "Küsimused? Telegram: @balticlanding"
   },
   "seo": {
-    "title": "Maandumisleht 200 € eest 5 päevaga · Baltic Landing",
-    "description": "Müüvad maandumislehed Balti ettevõtetele. Täielik sait, vorm, domeen ja tugi 200 € eest. Valmis 5 tööpäevaga."
+    "title": "Maandumisleht 200 € eest 3 päevaga · Baltic Landing",
+    "description": "Müüvad maandumislehed Balti ettevõtetele. Täielik sait, vorm, domeen ja tugi 200 € eest. Valmis 3 tööpäevaga."
+  },
+  "comparison": {
+    "eyebrow": "MIKS MEIE",
+    "h2": "Võrdle: lähemat alternatiivi pole",
+    "subtitle": "4 teed maandumisleheni. Meie oleme ainsas õiges kohas.",
+    "colHead": "Mida saate",
+    "freelancer": "Vabakutseline",
+    "agency": "Agentuur",
+    "us": "Baltic Landing",
+    "rows": [
+      {
+        "label": "Hind",
+        "diy": "€0 + €15/k",
+        "freelancer": "€500–800",
+        "agency": "€1500+",
+        "us": "€200"
+      },
+      {
+        "label": "Aeg käivitamiseni",
+        "diy": "2–4 näd.",
+        "freelancer": "2–3 näd.",
+        "agency": "4–6 näd.",
+        "us": "3 p."
+      },
+      {
+        "label": "Konversiooni disain",
+        "diy": false,
+        "freelancer": "Mõnikord",
+        "agency": true,
+        "us": true
+      },
+      {
+        "label": "Tehtud sinu eest",
+        "diy": false,
+        "freelancer": true,
+        "agency": true,
+        "us": true
+      },
+      {
+        "label": "Majutus + domeen",
+        "diy": false,
+        "freelancer": false,
+        "agency": "Mõnikord",
+        "us": true
+      },
+      {
+        "label": "5 keelt karbist välja",
+        "diy": false,
+        "freelancer": false,
+        "agency": "Eraldi hind",
+        "us": true
+      },
+      {
+        "label": "Tugi (€15/k)",
+        "diy": false,
+        "freelancer": false,
+        "agency": "€100+/k",
+        "us": true
+      }
+    ],
+    "footnote": "Pole näidatud: 24 nädalavahetust 'vastan esmaspäeval' Upworkis."
+  },
+  "order": {
+    "step": "Samm",
+    "of": "/",
+    "back": "Tagasi",
+    "backToPricing": "Tagasi tariifide juurde",
+    "next": "Edasi →",
+    "basics": {
+      "title": "Räägi meile endast",
+      "subtitle": "Võtab umbes 2 minutit.",
+      "fields": {
+        "name": {
+          "label": "Sinu nimi",
+          "placeholder": "Anna Smith"
+        },
+        "business": {
+          "label": "Äri + niš",
+          "placeholder": "Coaching juhtidele, Vilnius"
+        },
+        "contact": {
+          "label": "Telegram või telefon",
+          "placeholder": "@kasutajanimi või +372..."
+        },
+        "siteLocale": {
+          "label": "Saidi keel",
+          "placeholder": "Vali üks"
+        }
+      }
+    },
+    "design": {
+      "title": "Vali algdisain",
+      "subtitle": "Kohandame sinu brendi ja sisuga. Saad muudatusi paluda.",
+      "noteLabel": "Mida soovid muuta? (valikuline)",
+      "notePlaceholder": "Nt. 'Tee hero tumedamaks, korporatiivsem stiil'..."
+    },
+    "content": {
+      "title": "Mis tuleb saidile",
+      "subtitle": "Kirjutame lihvitud teksti — sina annad meile sisu.",
+      "fields": {
+        "headline": {
+          "label": "Üks lause sinu kohta",
+          "placeholder": "Mida teed, lihtsa keelega"
+        },
+        "bullets": {
+          "label": "3–5 peamist eelist",
+          "placeholder": "Üks rida ühe kohta"
+        },
+        "leadEmail": {
+          "label": "Kuhu saata päringud vormilt?",
+          "placeholder": "sinu@email.com"
+        }
+      }
+    },
+    "files": {
+      "title": "Failid ja brend",
+      "subtitle": "Lae üles logo, fotod, tekstid. Jäta vahele mida pole — töötame sellega mis on.",
+      "logoLabel": "Logo (SVG/PNG eelistatud)",
+      "photoLabel": "Fotod — kuni 10",
+      "textsLabel": "Olemasolevad tekstid (valikuline)",
+      "uploadPlaceholder": "Kliki või lohista fail",
+      "skipLabel": "Jäta praegu vahele"
+    },
+    "review": {
+      "title": "Kinnita ja maksa",
+      "subtitle": "Pärast maksmist saadame Trello lingi.",
+      "plan": "Tariif",
+      "design": "Disain",
+      "language": "Saidi keel",
+      "bundle": "Lisa 6 kuud Care'i €60 eest (säästa €30)",
+      "bundleNote": "Majutus + domeen + muudatused 6 kuud. Saab igal ajal tühistada.",
+      "total": "Kokku täna",
+      "payButton": "Maksa Stripe kaudu",
+      "redirecting": "Suuname Stripe'i...",
+      "secure": "Turvaline makse Stripe kaudu.",
+      "error": "Midagi läks valesti. Kirjuta @balticlanding Telegramis."
+    },
+    "success": {
+      "title": "Tellimus vastu võetud. Alustame.",
+      "subtitle": "Makse kinnitatud. Mis järgmiseks:",
+      "step1Label": "1 tunni jooksul",
+      "step1": "Denis kirjutab Telegramis Trello lingi.",
+      "step2Label": "1. päev",
+      "step2": "30 min. kõne briifi kinnitamiseks.",
+      "step3Label": "3. päev",
+      "step3": "Sinu leht on live. Saad domeeni + juurdepääsud.",
+      "backHome": "Avaleht"
+    }
   }
 }

@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" width="1200" height="750" role="img" aria-label="Barbershop landing page concept">
+  <!-- Background -->
+  <rect width="1200" height="750" fill="#15110d"/>
+
+  <!-- Browser chrome -->
+  <rect x="0" y="0" width="1200" height="44" fill="#1f1a14"/>
+  <circle cx="22" cy="22" r="6" fill="#ff5f57" opacity="0.7"/>
+  <circle cx="42" cy="22" r="6" fill="#febc2e" opacity="0.7"/>
+  <circle cx="62" cy="22" r="6" fill="#28c840" opacity="0.7"/>
+  <rect x="100" y="12" width="280" height="20" rx="10" fill="#2a221a"/>
+  <text x="120" y="26" font-family="-apple-system, system-ui, sans-serif" font-size="11" fill="#8a7f6e">cutshop.lt</text>
+
+  <!-- Header -->
+  <g transform="translate(60, 90)">
+    <rect width="28" height="28" rx="6" fill="#f5a623"/>
+    <text x="14" y="20" font-family="-apple-system, system-ui, sans-serif" font-size="16" font-weight="800" fill="#15110d" text-anchor="middle">✂</text>
+  </g>
+  <text x="100" y="110" font-family="'Helvetica Neue', sans-serif" font-size="18" font-weight="700" fill="#f5e9d0" letter-spacing="3">CUTSHOP</text>
+  <text x="900" y="110" font-family="-apple-system, system-ui, sans-serif" font-size="12" fill="#8a7f6e">Services · Team · Hours</text>
+  <rect x="1080" y="88" width="80" height="32" rx="8" fill="#f5a623"/>
+  <text x="1120" y="109" font-family="-apple-system, system-ui, sans-serif" font-size="12" font-weight="700" fill="#15110d" text-anchor="middle">Book</text>
+
+  <!-- Hero -->
+  <text x="60" y="220" font-family="-apple-system, system-ui, sans-serif" font-size="11" font-weight="600" fill="#f5a623" letter-spacing="3">SINCE 2019 · VILNIUS, OLD TOWN</text>
+
+  <text x="60" y="300" font-family="'Helvetica Neue', sans-serif" font-size="76" font-weight="900" fill="#f5e9d0" letter-spacing="-2">SHARP CUTS.</text>
+  <text x="60" y="380" font-family="'Helvetica Neue', sans-serif" font-size="76" font-weight="900" fill="#f5a623" letter-spacing="-2">HOT TOWELS.</text>
+  <text x="60" y="460" font-family="'Helvetica Neue', sans-serif" font-size="76" font-weight="900" fill="#f5e9d0" letter-spacing="-2">NO SMALL TALK.</text>
+
+  <!-- Subtitle -->
+  <text x="60" y="510" font-family="-apple-system, system-ui, sans-serif" font-size="16" fill="#a89a82">Walk in, walk out a different man. 30 min average.</text>
+
+  <!-- CTAs -->
+  <rect x="60" y="550" width="220" height="56" rx="0" fill="#f5a623"/>
+  <text x="170" y="585" font-family="'Helvetica Neue', sans-serif" font-size="14" font-weight="800" fill="#15110d" text-anchor="middle" letter-spacing="2">BOOK ONLINE</text>
+  <rect x="296" y="550" width="200" height="56" rx="0" fill="none" stroke="#a89a82" stroke-width="1"/>
+  <text x="396" y="585" font-family="'Helvetica Neue', sans-serif" font-size="14" font-weight="700" fill="#f5e9d0" text-anchor="middle" letter-spacing="2">PRICES</text>
+
+  <!-- Price strip -->
+  <text x="60" y="660" font-family="-apple-system, system-ui, sans-serif" font-size="13" fill="#a89a82">Classic cut <tspan fill="#f5e9d0" font-weight="600">25€</tspan>  ·  Beard <tspan fill="#f5e9d0" font-weight="600">18€</tspan>  ·  The Full Treatment <tspan fill="#f5e9d0" font-weight="600">55€</tspan></text>
+  <text x="60" y="685" font-family="-apple-system, system-ui, sans-serif" font-size="13" fill="#a89a82">★★★★★  4.9 on Google · 412 reviews</text>
+
+  <!-- Right: tall image placeholder (barber chair feel) -->
+  <rect x="760" y="170" width="380" height="510" rx="0" fill="url(#warmTone)"/>
+  <defs>
+    <linearGradient id="warmTone" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#2a221a"/>
+      <stop offset="100%" stop-color="#15110d"/>
+    </linearGradient>
+  </defs>
+  <!-- abstract chair shape -->
+  <rect x="850" y="280" width="200" height="280" rx="20" fill="#1f1a14"/>
+  <rect x="870" y="320" width="160" height="40" rx="6" fill="#2a221a"/>
+  <rect x="890" y="380" width="120" height="180" rx="8" fill="#15110d"/>
+  <!-- Stripe pole -->
+  <rect x="770" y="200" width="14" height="470" rx="7" fill="#1f1a14"/>
+  <rect x="770" y="200" width="14" height="470" rx="7" fill="url(#stripes)" opacity="0.4"/>
+  <defs>
+    <pattern id="stripes" patternUnits="userSpaceOnUse" width="20" height="20" patternTransform="rotate(45)">
+      <rect width="10" height="20" fill="#f5a623"/>
+      <rect x="10" width="10" height="20" fill="#f5e9d0"/>
+    </pattern>
+  </defs>
+</svg>

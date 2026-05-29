@@ -2,7 +2,7 @@ import { Hero } from "@/components/sections/Hero";
 import { TrustStrip } from "@/components/sections/TrustStrip";
 import { WhatsIncluded } from "@/components/sections/WhatsIncluded";
 import { Pricing } from "@/components/sections/Pricing";
-import { Portfolio } from "@/components/sections/Portfolio";
+import { Comparison } from "@/components/sections/Comparison";
 import { Process } from "@/components/sections/Process";
 import { ForWhom } from "@/components/sections/ForWhom";
 import { FAQ } from "@/components/sections/FAQ";
@@ -22,7 +22,7 @@ export default async function LandingPage({
     "@type": "ProfessionalService",
     name: "Baltic Landing",
     description:
-      "Landing pages for Baltic businesses — €200, ready in 5 business days.",
+      "Landing pages for Baltic businesses — €200, ready in 3 business days.",
     url: `${BASE_URL}/${locale}`,
     inLanguage: locale,
     priceRange: "€200",
@@ -33,27 +33,9 @@ export default async function LandingPage({
       addressCountry: "LT",
     },
     offers: [
-      {
-        "@type": "Offer",
-        name: "Setup",
-        price: "200",
-        priceCurrency: "EUR",
-        category: "OneTime",
-      },
-      {
-        "@type": "Offer",
-        name: "Care",
-        price: "15",
-        priceCurrency: "EUR",
-        category: "Subscription",
-      },
-      {
-        "@type": "Offer",
-        name: "Growth",
-        price: "30",
-        priceCurrency: "EUR",
-        category: "Subscription",
-      },
+      { "@type": "Offer", name: "Setup", price: "200", priceCurrency: "EUR", category: "OneTime" },
+      { "@type": "Offer", name: "Care", price: "15", priceCurrency: "EUR", category: "Subscription" },
+      { "@type": "Offer", name: "Growth", price: "30", priceCurrency: "EUR", category: "Subscription" },
     ],
   };
 
@@ -67,7 +49,7 @@ export default async function LandingPage({
       <TrustStrip />
       <WhatsIncluded />
       <Pricing />
-      <Portfolio />
+      <Comparison />
       <Process />
       <ForWhom />
       <FAQ />

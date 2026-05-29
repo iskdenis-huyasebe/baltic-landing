@@ -1,8 +1,9 @@
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 import { ArrowRight } from "lucide-react";
 
 export function Hero() {
   const t = useTranslations("hero");
+  const locale = useLocale();
 
   return (
     <section
@@ -31,9 +32,9 @@ export function Hero() {
           <p className="text-lg md:text-xl text-[var(--muted)] leading-relaxed mb-10 max-w-xl">
             {t("subtitle")}
           </p>
-          <div className="flex flex-col sm:flex-row gap-3">
+          <div className="flex flex-col sm:flex-row gap-3 mb-8">
             <a
-              href="#contact"
+              href={`/${locale}/order?plan=setup`}
               className="inline-flex items-center justify-center gap-2 bg-[var(--accent)] text-[var(--accent-foreground)] rounded-xl px-8 py-4 text-base font-medium transition-all duration-200 hover:opacity-90 hover:scale-[1.02] active:scale-[0.98] min-h-[52px] focus-visible:ring-2 focus-visible:ring-[var(--accent)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--background)]"
             >
               {t("ctaPrimary")}
@@ -45,6 +46,19 @@ export function Hero() {
             >
               {t("ctaSecondary")}
             </a>
+          </div>
+          {/* Trust note */}
+          <div className="flex items-center gap-3 text-sm text-[var(--muted)]">
+            <div className="flex -space-x-1.5">
+              {[0, 1, 2].map((i) => (
+                <div
+                  key={i}
+                  className="size-7 rounded-full border-2 border-[var(--background)]"
+                  style={{ background: i === 1 ? "var(--surface-elevated)" : "var(--surface)" }}
+                />
+              ))}
+            </div>
+            <span>{t("trustNote")}</span>
           </div>
         </div>
 

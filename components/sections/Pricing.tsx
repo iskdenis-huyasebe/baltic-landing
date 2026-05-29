@@ -1,80 +1,98 @@
 "use client";
 
 import { useTranslations, useLocale } from "next-intl";
-import { Check } from "lucide-react";
 import { useState } from "react";
+import { Check, ArrowRight } from "lucide-react";
 import { FadeIn } from "@/components/ui/FadeIn";
 
-type Plan = "setup" | "setup+care" | "setup+growth";
-
-function PricingCard({
-  title,
-  subtitle,
-  price,
-  period,
-  bullets,
-  cta,
-  badge,
-  accent,
-  plan,
-  onCheckout,
-  loading,
-}: {
+type PlanData = {
   title: string;
   subtitle: string;
   price: string;
   period: string;
+  tagline: string;
   bullets: string[];
-  cta: string;
   badge?: string;
-  accent?: boolean;
-  plan: Plan;
-  onCheckout: (plan: Plan) => void;
-  loading: Plan | null;
+  cta: string;
+};
+
+function PricingCard({
+  data,
+  highlight,
+  onAction,
+  bundleToggle,
+}: {
+  data: PlanData;
+  highlight?: boolean;
+  onAction: () => void;
+  bundleToggle?: React.ReactNode;
 }) {
-  const isLoading = loading === plan;
+  const locale = useLocale();
+  const isCustom = data.price.includes("+");
+  const priceFormatted = isCustom
+    ? data.price
+    : locale === "en"
+    ? `€${data.price}`
+    : `${data.price} €`;
 
   return (
     <div
-      className={`relative flex flex-col p-6 md:p-8 rounded-2xl border transition-all duration-200 hover:bg-[var(--surface-elevated)] ${
-        accent
-          ? "bg-[var(--surface)] border-[var(--accent)]/40 hover:border-[var(--accent)]"
-          : "bg-[var(--surface)] border-[var(--border)] hover:border-[var(--border-strong)]"
+      className={`relative flex flex-col p-6 md:p-8 rounded-2xl border transition-all duration-300 ${
+        highlight
+          ? "bg-gradient-to-b from-[var(--surface)] to-[var(--surface)]/60 border-[var(--accent)]/60 hover:border-[var(--accent)] md:scale-[1.04] md:-my-2 shadow-[0_0_60px_-15px_rgba(190,242,100,0.18)]"
+          : "bg-[var(--surface)] border-[var(--border)] hover:border-[var(--border-strong)] hover:bg-[var(--surface-elevated)]"
       }`}
     >
-      {badge && (
-        <span className="absolute -top-3 left-1/2 -translate-x-1/2 bg-[var(--accent)] text-[var(--accent-foreground)] text-xs font-medium px-3 py-1 rounded-full whitespace-nowrap">
-          {badge}
+      {data.badge && (
+        <span className="absolute -top-3 left-1/2 -translate-x-1/2 bg-[var(--accent)] text-[var(--accent-foreground)] text-xs font-semibold px-4 py-1.5 rounded-full whitespace-nowrap shadow-lg">
+          {data.badge}
         </span>
       )}
-      <div className="mb-6">
-        <p className="text-lg font-medium text-[var(--foreground)] mb-1">{title}</p>
-        <p className="text-sm text-[var(--muted)]">{subtitle}</p>
+
+      <div className="mb-3">
+        <h3 className="text-xl font-medium text-[var(--foreground)]">{data.title}</h3>
+        <p className="text-sm text-[var(--muted)] mt-1">{data.subtitle}</p>
       </div>
+
+      <p className="text-[10px] uppercase tracking-widest text-[var(--accent)] mb-5 font-medium">
+        {data.tagline}
+      </p>
+
       <div className="mb-6">
-        <div className="flex items-baseline gap-1">
-          <span className="text-4xl font-medium text-[var(--foreground)]">{price} €</span>
-          <span className="text-[var(--muted)] text-sm">{period}</span>
+        <div className="flex items-baseline gap-2">
+          <span className="text-4xl md:text-5xl font-medium text-[var(--foreground)]">
+            {priceFormatted}
+          </span>
+          <span className="text-sm text-[var(--muted)]">{data.period}</span>
         </div>
       </div>
+
       <ul className="space-y-3 mb-8 flex-1">
-        {bullets.map((b, i) => (
+        {data.bullets.map((b, i) => (
           <li key={i} className="flex gap-3 items-start text-sm">
-            <Check className="size-4 text-[var(--accent)] shrink-0 mt-0.5" aria-hidden="true" />
+            <Check
+              className="size-4 text-[var(--accent)] shrink-0 mt-0.5"
+              aria-hidden="true"
+            />
             <span className="text-[var(--muted)]">{b}</span>
           </li>
         ))}
       </ul>
+
+      {bundleToggle}
+
       <button
-        onClick={() => onCheckout(plan)}
-        disabled={isLoading}
-        className={`inline-flex items-center justify-center rounded-xl px-6 py-3.5 text-base font-medium transition-all duration-200 hover:scale-[1.02] active:scale-[0.98] min-h-[44px] disabled:opacity-60 disabled:cursor-not-allowed disabled:scale-100 ${
-          accent
+        onClick={onAction}
+        className={`inline-flex items-center justify-center gap-2 rounded-xl px-6 py-3.5 text-base font-medium transition-all duration-200 hover:scale-[1.02] active:scale-[0.98] min-h-[48px] ${
+          highlight
             ? "bg-[var(--accent)] text-[var(--accent-foreground)] hover:opacity-90"
+            : isCustom
+            ? "bg-transparent text-[var(--foreground)] border border-[var(--border-strong)] hover:bg-[var(--surface-elevated)]"
             : "bg-transparent text-[var(--foreground)] border border-[var(--border-strong)] hover:bg-[var(--surface-elevated)]"
         }`}
       >
-        {isLoading ? "..." : cta}
+        {data.cta}
+        <ArrowRight className="size-4" aria-hidden="true" />
       </button>
     </div>
   );
@@ -83,55 +101,74 @@ function PricingCard({
 export function Pricing() {
   const t = useTranslations("pricing");
   const locale = useLocale();
-  const [loading, setLoading] = useState<Plan | null>(null);
+  const [bundle, setBundle] = useState(false);
 
-  const setup = t.raw("setup") as { title: string; subtitle: string; price: string; period: string; bullets: string[]; cta: string };
-  const growth = t.raw("growth") as { badge: string; title: string; subtitle: string; price: string; period: string; bullets: string[]; cta: string };
-  const care = t.raw("care") as { title: string; subtitle: string; price: string; period: string; bullets: string[]; cta: string };
+  const setup = t.raw("setup") as PlanData;
+  const pro = t.raw("pro") as PlanData;
+  const custom = t.raw("custom") as PlanData;
 
-  const handleCheckout = async (plan: Plan) => {
-    // If Stripe keys not configured — fall back to contact form
-    if (!process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY) {
+  const goOrder = (plan: string) => {
+    if (plan === "custom") {
       window.location.href = "#contact";
       return;
     }
-    setLoading(plan);
-    try {
-      const res = await fetch("/api/checkout", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ plan, locale }),
-      });
-      const data = await res.json();
-      if (data.url) {
-        window.location.href = data.url;
-      } else {
-        window.location.href = "#contact";
-      }
-    } catch {
-      window.location.href = "#contact";
-    } finally {
-      setLoading(null);
-    }
+    const params = new URLSearchParams({
+      plan,
+      ...(bundle && plan === "setup" ? { bundle: "care6" } : {}),
+    });
+    window.location.href = `/${locale}/order?${params.toString()}`;
   };
 
   return (
-    <section id="pricing" className="py-20 md:py-32 px-6 md:px-8">
+    <section id="pricing" className="py-16 md:py-24 px-6 md:px-8">
       <div className="max-w-6xl mx-auto">
-        <div className="mb-12 md:mb-16 text-center">
-          <h2 className="text-3xl md:text-5xl tracking-tight font-medium text-[var(--foreground)] mb-4">
-            {t("h2")}
-          </h2>
-          <p className="text-lg text-[var(--muted)] max-w-xl mx-auto">{t("subtitle")}</p>
-        </div>
+        <FadeIn>
+          <div className="mb-12 md:mb-16 text-center">
+            <h2 className="text-3xl md:text-5xl tracking-tight font-medium text-[var(--foreground)] mb-4">
+              {t("h2")}
+            </h2>
+            <p className="text-lg text-[var(--muted)] max-w-2xl mx-auto">{t("subtitle")}</p>
+          </div>
+        </FadeIn>
 
         <div className="grid md:grid-cols-3 gap-4 md:gap-6 items-stretch">
-          <PricingCard {...setup} plan="setup" onCheckout={handleCheckout} loading={loading} />
-          <PricingCard {...growth} badge={growth.badge} accent plan="setup+growth" onCheckout={handleCheckout} loading={loading} />
-          <PricingCard {...care} plan="setup+care" onCheckout={handleCheckout} loading={loading} />
+          <FadeIn delay={0}>
+            <PricingCard
+              data={setup}
+              onAction={() => goOrder("setup")}
+              bundleToggle={
+                <label className="flex items-start gap-2.5 mb-5 cursor-pointer group">
+                  <input
+                    type="checkbox"
+                    checked={bundle}
+                    onChange={(e) => setBundle(e.target.checked)}
+                    className="mt-0.5 size-4 accent-[#bef264]"
+                  />
+                  <span className="text-xs text-[var(--muted)] group-hover:text-[var(--foreground)] transition-colors leading-relaxed">
+                    {t("bundleToggleLabel")}
+                  </span>
+                </label>
+              }
+            />
+          </FadeIn>
+          <FadeIn delay={0.1}>
+            <PricingCard
+              data={pro}
+              highlight
+              onAction={() => goOrder("pro")}
+            />
+          </FadeIn>
+          <FadeIn delay={0.2}>
+            <PricingCard
+              data={custom}
+              onAction={() => goOrder("custom")}
+            />
+          </FadeIn>
         </div>
 
-        <p className="text-center text-sm text-[var(--subtle)] mt-6">{t("note")}</p>
+        <p className="text-center text-sm text-[var(--subtle)] mt-8 max-w-2xl mx-auto italic">
+          {t("note")}
+        </p>
       </div>
     </section>
   );
