@@ -28,17 +28,6 @@ export function TrustStrip() {
             </FadeIn>
           ))}
         </div>
-        {/* Client logos placeholder */}
-        <div className="mt-10 flex flex-wrap items-center justify-center gap-8 md:gap-12 opacity-50">
-          {["TERRATECH", "IPOOLGO", "APPLECITYLAB"].map((name) => (
-            <span
-              key={name}
-              className="text-sm font-medium tracking-widest text-[var(--subtle)]"
-            >
-              {name}
-            </span>
-          ))}
-        </div>
       </div>
     </section>
   );
