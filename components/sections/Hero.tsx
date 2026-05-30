@@ -1,9 +1,15 @@
 import { useTranslations, useLocale } from "next-intl";
 import { ArrowRight } from "lucide-react";
+import { TEMPLATES } from "@/components/templates/templates";
+import { TemplatePreview } from "@/components/templates/TemplatePreview";
 
 export function Hero() {
   const t = useTranslations("hero");
   const locale = useLocale();
+
+  // showcase two contrasting templates (light + dark) so the hero feels finished
+  const front = TEMPLATES.find((x) => x.id === "aurora")!;
+  const back = TEMPLATES.find((x) => x.id === "pulse")!;
 
   return (
     <section
@@ -62,92 +68,48 @@ export function Hero() {
           </div>
         </div>
 
-        {/* Right: CSS-only browser/landing mockup */}
-        <div className="relative hidden md:block" aria-hidden="true">
-          {/* Glow behind mockup */}
+        {/* Right: showcase of real templates (tilted stack) */}
+        <div className="relative hidden md:block h-[420px]" aria-hidden="true">
           <div
-            className="absolute inset-0 -z-10 blur-3xl opacity-20 rounded-2xl"
+            className="absolute inset-6 -z-10 blur-3xl opacity-20 rounded-full"
             style={{ background: "var(--accent)" }}
           />
-          <div
-            className="rounded-2xl border border-[var(--border)] overflow-hidden shadow-2xl"
-            style={{
-              background: "linear-gradient(180deg, #1c1c1c 0%, #141414 100%)",
-              aspectRatio: "16 / 10",
-            }}
-          >
-            {/* Browser chrome */}
+
+          {/* back card */}
+          <div className="absolute top-0 right-0 w-[72%] rotate-6 rounded-2xl overflow-hidden border border-[var(--border)] shadow-2xl">
+            <TemplatePreview template={back} />
             <div
-              className="flex items-center gap-1.5 px-4 border-b border-[var(--border)]"
-              style={{ height: "36px", background: "#1a1a1a" }}
+              className="flex items-center justify-between px-4 py-2.5"
+              style={{ background: back.theme.surface }}
             >
-              <div className="size-2.5 rounded-full bg-red-400/60" />
-              <div className="size-2.5 rounded-full bg-yellow-400/60" />
-              <div className="size-2.5 rounded-full bg-green-400/60" />
-              <div
-                className="flex-1 mx-4 rounded-full text-[10px] text-[var(--subtle)] flex items-center px-3"
-                style={{ background: "rgba(255,255,255,0.05)", height: "20px" }}
+              <span className="text-xs font-medium" style={{ color: back.theme.fg }}>
+                {back.id.charAt(0).toUpperCase() + back.id.slice(1)}
+              </span>
+              <span
+                className="text-[11px] px-2 py-0.5 rounded-md font-semibold"
+                style={{ background: `${back.accent}26`, color: back.accent }}
               >
-                terratech.eu
-              </div>
+                €200
+              </span>
             </div>
+          </div>
 
-            {/* Page content mockup */}
-            <div className="p-6 flex flex-col gap-5">
-              {/* Hero block */}
-              <div className="space-y-2">
-                <div
-                  className="h-2 rounded-full w-20"
-                  style={{ background: "var(--accent)", opacity: 0.8 }}
-                />
-                <div className="h-6 rounded-md bg-white/10 w-3/4" />
-                <div className="h-3 rounded-md bg-white/5 w-1/2" />
-                <div className="flex gap-2 pt-2">
-                  <div
-                    className="h-8 w-24 rounded-lg"
-                    style={{ background: "var(--accent)" }}
-                  />
-                  <div className="h-8 w-24 rounded-lg border border-white/15" />
-                </div>
-              </div>
-
-              {/* Stats strip */}
-              <div className="grid grid-cols-4 gap-2">
-                {[35, 50, "4.9★", "5d"].map((v, i) => (
-                  <div
-                    key={i}
-                    className="rounded-lg p-2 flex flex-col gap-1"
-                    style={{ background: "rgba(255,255,255,0.04)" }}
-                  >
-                    <div className="h-3 rounded bg-white/15 w-8" />
-                    <div className="h-2 rounded bg-white/5 w-full" />
-                  </div>
-                ))}
-              </div>
-
-              {/* Cards row */}
-              <div className="grid grid-cols-3 gap-2">
-                {[0, 1, 2].map((i) => (
-                  <div
-                    key={i}
-                    className="rounded-lg p-3 space-y-1.5"
-                    style={{
-                      background: "rgba(255,255,255,0.04)",
-                      border: i === 1 ? "1px solid var(--accent)" : "1px solid rgba(255,255,255,0.08)",
-                    }}
-                  >
-                    <div className="h-3 rounded bg-white/15 w-3/4" />
-                    <div className="h-2 rounded bg-white/5 w-full" />
-                    <div className="h-2 rounded bg-white/5 w-2/3" />
-                    {i === 1 && (
-                      <div
-                        className="h-5 rounded w-full mt-2"
-                        style={{ background: "var(--accent)", opacity: 0.9 }}
-                      />
-                    )}
-                  </div>
-                ))}
-              </div>
+          {/* front card */}
+          <div className="absolute bottom-0 left-0 w-[78%] -rotate-3 rounded-2xl overflow-hidden border border-[var(--border)] shadow-2xl">
+            <TemplatePreview template={front} />
+            <div
+              className="flex items-center justify-between px-4 py-2.5"
+              style={{ background: front.theme.surface }}
+            >
+              <span className="text-xs font-medium" style={{ color: front.theme.fg }}>
+                {front.id.charAt(0).toUpperCase() + front.id.slice(1)}
+              </span>
+              <span
+                className="text-[11px] px-2 py-0.5 rounded-md font-semibold"
+                style={{ background: `${front.accent}26`, color: front.accent }}
+              >
+                €200
+              </span>
             </div>
           </div>
         </div>
