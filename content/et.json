@@ -135,7 +135,7 @@
     }
   },
   "templates": {
-    "h2": "Viis malli. Üks hind — 200 €.",
+    "h2": "Kuus malli. Üks hind — 200 €.",
     "subtitle": "Vali meelepärane paigutus — täidame selle sinu brändi, sisu ja keelega. Sama 200 €, sama 3 tööpäeva.",
     "preview": "Eelvaade",
     "choose": "Vali",
@@ -160,6 +160,10 @@
       {
         "name": "Split",
         "tagline": "Poolitatud ekraan, toimetuslik — tekst ühel pool, visuaal teisel."
+      },
+      {
+        "name": "Pulse",
+        "tagline": "Kaasaegne SaaS esiletõst — gradientne kuma, toode keskmes."
       }
     ]
   },

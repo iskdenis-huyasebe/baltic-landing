@@ -135,7 +135,7 @@
     }
   },
   "templates": {
-    "h2": "Pieci šabloni. Viena cena — 200 €.",
+    "h2": "Seši šabloni. Viena cena — 200 €.",
     "subtitle": "Izvēlies sev tīkamo izkārtojumu — piepildīsim to ar tavu zīmolu, saturu un valodu. Tie paši 200 €, tās pašas 3 d.d.",
     "preview": "Priekšskatījums",
     "choose": "Izvēlēties",
@@ -160,6 +160,10 @@
       {
         "name": "Split",
         "tagline": "Dalīts ekrāns, redakcionāls — teksts vienā pusē, vizuālis otrā."
+      },
+      {
+        "name": "Pulse",
+        "tagline": "Moderns SaaS uzsvars — gradienta mirdzums, produkts centrā."
       }
     ]
   },

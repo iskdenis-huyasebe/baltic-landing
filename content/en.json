@@ -135,7 +135,7 @@
     }
   },
   "templates": {
-    "h2": "Five templates. One price — €200.",
+    "h2": "Six templates. One price — €200.",
     "subtitle": "Pick a layout you like — we fill it with your brand, content and language. Same €200, same 3-day delivery.",
     "preview": "Preview",
     "choose": "Choose",
@@ -160,6 +160,10 @@
       {
         "name": "Split",
         "tagline": "Split-screen, editorial — text on one side, visual on the other."
+      },
+      {
+        "name": "Pulse",
+        "tagline": "Modern SaaS spotlight — gradient glow, product front and center."
       }
     ]
   },

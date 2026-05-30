@@ -135,7 +135,7 @@
     }
   },
   "templates": {
-    "h2": "Penki šablonai. Viena kaina — 200 €.",
+    "h2": "Šeši šablonai. Viena kaina — 200 €.",
     "subtitle": "Pasirink patikusį maketą — užpildysim jį tavo brandu, turiniu ir kalba. Tie patys 200 €, tie patys 3 d.d.",
     "preview": "Peržiūra",
     "choose": "Pasirinkti",
@@ -160,6 +160,10 @@
       {
         "name": "Split",
         "tagline": "Padalintas ekranas, redakcinis — tekstas vienoje pusėje, vizualas kitoje."
+      },
+      {
+        "name": "Pulse",
+        "tagline": "Modernus SaaS dėmesio centras — gradientinis švytėjimas, produktas pirmame plane."
       }
     ]
   },
