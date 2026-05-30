@@ -41,7 +41,7 @@ export function Hero() {
               <ArrowRight className="size-4" aria-hidden="true" />
             </a>
             <a
-              href="#portfolio"
+              href="#templates"
               className="inline-flex items-center justify-center gap-2 bg-transparent text-[var(--foreground)] border border-[var(--border-strong)] rounded-xl px-8 py-4 text-base font-medium transition-all duration-200 hover:bg-[var(--surface)] hover:border-[var(--foreground)]/30 min-h-[52px]"
             >
               {t("ctaSecondary")}

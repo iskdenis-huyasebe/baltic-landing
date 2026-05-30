@@ -7,7 +7,7 @@
     "title": "Parduodantis landingas už 200 €. Paruoštas per 3 darbo dienas.",
     "subtitle": "Pilna svetainė, užklausos forma, domenas, hostingas ir palaikymas. Be paslėptų mokesčių, be vilkinimo terminų.",
     "ctaPrimary": "Užsisakyti svetainę",
-    "ctaSecondary": "Žiūrėti pavyzdžius",
+    "ctaSecondary": "Žiūrėti šablonus",
     "trustNote": "35+ landingai paleisti Baltijoje"
   },
   "trust": {
@@ -134,28 +134,32 @@
       "cta": "Aptarti projektą"
     }
   },
-  "portfolio": {
-    "h2": "Pavyzdžiai iš realių projektų",
-    "subtitle": "Visi landingai paleisti per 3 darbo dienas. Visi veikia šiandien.",
-    "moreLink": "+ daugiau projektų pristatysiu per asmeninį pokalbį",
+  "templates": {
+    "h2": "Penki šablonai. Viena kaina — 200 €.",
+    "subtitle": "Pasirink patikusį maketą — užpildysim jį tavo brandu, turiniu ir kalba. Tie patys 200 €, tie patys 3 d.d.",
+    "preview": "Peržiūra",
+    "choose": "Pasirinkti",
+    "note": "Kiekvienas šablonas adaptyvus, daugiakalbis ir orientuotas į konversiją. Spalvas ir turinį priderinam per brief'ą.",
     "items": [
       {
-        "name": "Terratech",
-        "niche": "B2B įranga",
-        "days": "3 d.d.",
-        "url": "terratech.lt"
+        "name": "Aurora",
+        "tagline": "Minimalistinis ir erdvus — daug oro, viena aiški žinutė."
       },
       {
-        "name": "IPOOLGO",
-        "niche": "Pripučiami baseinai",
-        "days": "3 d.d.",
-        "url": "ipoolgo.lt"
+        "name": "Monolith",
+        "tagline": "Klasikinis ir struktūruotas — korporatyvinis pasitikėjimas, aiški hierarchija."
       },
       {
-        "name": "Applecitylab",
-        "niche": "Vietos paslaugos",
-        "days": "2 d.d.",
-        "url": "applecitylab.lt"
+        "name": "Halo",
+        "tagline": "Stambi tipografija — parduoda pati antraštė."
+      },
+      {
+        "name": "Mosaic",
+        "tagline": "Modulinė kortelių sistema — tinka keliems pasiūlymams ar privalumams."
+      },
+      {
+        "name": "Split",
+        "tagline": "Padalintas ekranas, redakcinis — tekstas vienoje pusėje, vizualas kitoje."
       }
     ]
   },

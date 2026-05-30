@@ -1,7 +1,6 @@
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages, getTranslations } from "next-intl/server";
 import { notFound } from "next/navigation";
-import { Geist } from "next/font/google";
 import { routing } from "@/i18n/routing";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
@@ -9,12 +8,6 @@ import { StickyMobileCTA } from "@/components/layout/StickyMobileCTA";
 import "../globals.css";
 import { Analytics } from "@vercel/analytics/next";
 import type { Metadata } from "next";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin", "latin-ext"],
-  display: "swap",
-});
 
 export async function generateMetadata({
   params,
@@ -60,7 +53,7 @@ export default async function LocaleLayout({
   const messages = await getMessages();
 
   return (
-    <html lang={locale} className={geistSans.variable} suppressHydrationWarning>
+    <html lang={locale} suppressHydrationWarning>
       <body className="min-h-screen flex flex-col bg-[var(--background)] text-[var(--foreground)]">
         <NextIntlClientProvider messages={messages} locale={locale}>
           <Header />

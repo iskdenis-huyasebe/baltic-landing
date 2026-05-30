@@ -41,13 +41,14 @@ function OrderPageInner() {
 
   const initialPlan = (params.get("plan") as "setup" | "pro") || "setup";
   const initialBundle = params.get("bundle") === "care6";
+  const initialDesign = params.get("design") || "";
 
   const [step, setStep] = useState(1);
   const [state, setState] = useState<OrderState>({
     plan: initialPlan,
     bundle: initialBundle,
     name: "", business: "", contact: "", siteLocale: locale,
-    designId: "", designNote: "", headline: "", bullets: "", leadEmail: "",
+    designId: initialDesign, designNote: "", headline: "", bullets: "", leadEmail: "",
     locale,
   });
 
@@ -59,7 +60,13 @@ function OrderPageInner() {
       const saved = localStorage.getItem(STORAGE_KEY);
       if (saved) {
         const parsed = JSON.parse(saved);
-        setState((prev) => ({ ...prev, ...parsed, plan: initialPlan, bundle: initialBundle }));
+        setState((prev) => ({
+          ...prev,
+          ...parsed,
+          plan: initialPlan,
+          bundle: initialBundle,
+          ...(initialDesign ? { designId: initialDesign } : {}),
+        }));
       }
     } catch {}
   }, []);

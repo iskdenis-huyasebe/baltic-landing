@@ -2,6 +2,7 @@ import { Hero } from "@/components/sections/Hero";
 import { TrustStrip } from "@/components/sections/TrustStrip";
 import { WhatsIncluded } from "@/components/sections/WhatsIncluded";
 import { Pricing } from "@/components/sections/Pricing";
+import { Templates } from "@/components/sections/Templates";
 import { Comparison } from "@/components/sections/Comparison";
 import { Process } from "@/components/sections/Process";
 import { ForWhom } from "@/components/sections/ForWhom";
@@ -34,8 +35,8 @@ export default async function LandingPage({
     },
     offers: [
       { "@type": "Offer", name: "Setup", price: "200", priceCurrency: "EUR", category: "OneTime" },
-      { "@type": "Offer", name: "Care", price: "15", priceCurrency: "EUR", category: "Subscription" },
-      { "@type": "Offer", name: "Growth", price: "30", priceCurrency: "EUR", category: "Subscription" },
+      { "@type": "Offer", name: "Setup Pro", price: "500", priceCurrency: "EUR", category: "OneTime" },
+      { "@type": "Offer", name: "Custom", price: "1200", priceCurrency: "EUR", category: "OneTime" },
     ],
   };
 
@@ -49,6 +50,7 @@ export default async function LandingPage({
       <TrustStrip />
       <WhatsIncluded />
       <Pricing />
+      <Templates />
       <Comparison />
       <Process />
       <ForWhom />

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Aurora — template demo · €200</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--accent:#bef264;--bg:#0a0a0a;--surface:#141414;--surface2:#1c1c1c;--border:rgba(255,255,255,.1);--fg:#fafafa;--muted:#a1a1aa;--subtle:#71717a}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--fg);font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Inter,system-ui,sans-serif;line-height:1.5;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1100px;margin:0 auto;padding:0 24px}
+.demo-bar{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(10,10,10,.85);backdrop-filter:blur(10px);border-bottom:1px solid var(--border);font-size:13px;color:var(--muted)}
+.demo-bar .wrap{display:flex;align-items:center;justify-content:space-between;height:44px}
+.demo-bar b{color:var(--fg)}
+.demo-bar .badge{background:color-mix(in srgb,var(--accent) 16%,transparent);color:var(--accent);padding:3px 10px;border-radius:999px;font-weight:600}
+header.site{position:sticky;top:44px;z-index:50;background:rgba(10,10,10,.7);backdrop-filter:blur(8px);border-bottom:1px solid var(--border)}
+header.site .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{display:flex;align-items:center;gap:8px;font-weight:600}
+.logo .dot{width:18px;height:18px;border-radius:6px;background:var(--accent)}
+nav{display:flex;gap:28px;font-size:14px;color:var(--muted)}
+nav a:hover{color:var(--fg)}
+.btn{display:inline-flex;align-items:center;gap:8px;background:var(--accent);color:#0a0a0a;font-weight:600;padding:11px 20px;border-radius:12px;font-size:14px;transition:.2s}
+.btn:hover{opacity:.9;transform:translateY(-1px)}
+.btn.ghost{background:transparent;color:var(--fg);border:1px solid rgba(255,255,255,.2)}
+.eyebrow{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);font-weight:600;margin-bottom:20px}
+.muted{color:var(--muted)}
+section{padding:90px 0}
+.feature{background:var(--surface);border:1px solid var(--border);border-radius:18px;padding:28px}
+.feature .ico{width:40px;height:40px;border-radius:10px;background:color-mix(in srgb,var(--accent) 18%,transparent);margin-bottom:16px}
+.feature h3{font-size:18px;margin-bottom:8px}
+.feature p{font-size:14px;color:var(--muted)}
+footer.cta{text-align:center;background:linear-gradient(180deg,var(--surface),var(--bg));border-top:1px solid var(--border)}
+footer.cta h2{font-size:clamp(28px,4vw,44px);margin-bottom:16px}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+@media(max-width:760px){.grid3{grid-template-columns:1fr}nav{display:none}}
+</style>
+</head><body>
+<div class="demo-bar"><div class="wrap"><span><b>Aurora</b> · Minimal & airy — demo template</span><span class="badge">€200</span></div></div><header class="site"><div class="wrap">
+<div class="logo"><span class="dot"></span> YourBrand</div>
+<nav><a href="#">Product</a><a href="#">Pricing</a><a href="#">About</a><a href="#">Contact</a></nav>
+<a class="btn" href="#">Get started</a>
+</div></header><section style="text-align:center;padding-top:150px"><div class="wrap" style="max-width:760px">
+<div class="eyebrow">Minimal template</div>
+<h1 style="font-size:clamp(40px,6vw,68px);line-height:1.05;letter-spacing:-.02em;font-weight:600;margin-bottom:24px">One clear message.<br>Nothing in the way.</h1>
+<p class="muted" style="font-size:19px;max-width:520px;margin:0 auto 36px">Lots of whitespace, a single focus, a calm path to one button. Perfect when the offer speaks for itself.</p>
+<a class="btn" href="#" style="padding:15px 30px;font-size:16px">Get started →</a>
+</div></section><section><div class="wrap">
+<div class="grid3">
+<div class="feature"><div class="ico"></div><h3>Fast delivery</h3><p>Your page goes live in three business days, fixed scope, fixed price.</p></div>
+<div class="feature"><div class="ico"></div><h3>Built to convert</h3><p>Clear hierarchy, one strong call to action, mobile-first layout.</p></div>
+<div class="feature"><div class="ico"></div><h3>Yours to keep</h3><p>Own the domain and the code. No lock-in, no surprises.</p></div>
+</div>
+</div></section><footer class="cta"><section><div class="wrap">
+<div class="eyebrow">Ready when you are</div>
+<h2>Let's build your landing page</h2>
+<p class="muted" style="max-width:520px;margin:0 auto 28px">This is the <b style="color:var(--fg)">Aurora</b> template. We fill it with your brand, content and language — live in 3 business days for €200.</p>
+<a class="btn" href="#" style="padding:14px 28px;font-size:16px">Order this template →</a>
+</div></section></footer>
+</body></html>

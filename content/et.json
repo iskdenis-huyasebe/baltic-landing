@@ -7,7 +7,7 @@
     "title": "Müüv maandumisleht 200 € eest. Valmis 3 tööpäevaga.",
     "subtitle": "Täielik veebisait, kontaktivorm, domeen, majutus ja tugi. Ilma varjatud tasudeta, ilma viivitusteta.",
     "ctaPrimary": "Telli veebisait",
-    "ctaSecondary": "Vaata näiteid",
+    "ctaSecondary": "Vaata malle",
     "trustNote": "35+ veebilehte käivitatud Baltikumis"
   },
   "trust": {
@@ -134,28 +134,32 @@
       "cta": "Arutada projekti"
     }
   },
-  "portfolio": {
-    "h2": "Näited päris projektidest",
-    "subtitle": "Kõik maandumislehed käivitati 3 tööpäevaga. Kõik töötavad täna.",
-    "moreLink": "+ rohkem projekte näitan isikliku vestluse käigus",
+  "templates": {
+    "h2": "Viis malli. Üks hind — 200 €.",
+    "subtitle": "Vali meelepärane paigutus — täidame selle sinu brändi, sisu ja keelega. Sama 200 €, sama 3 tööpäeva.",
+    "preview": "Eelvaade",
+    "choose": "Vali",
+    "note": "Iga mall on responsiivne, mitmekeelne ja konversioonile suunatud. Värvid ja sisu kohandame briifi käigus.",
     "items": [
       {
-        "name": "Terratech",
-        "niche": "B2B seadmed",
-        "days": "3 tp.",
-        "url": "terratech.lt"
+        "name": "Aurora",
+        "tagline": "Minimalistlik ja õhuline — palju ruumi, üks selge sõnum."
       },
       {
-        "name": "IPOOLGO",
-        "niche": "Täispuhutavad basseinid",
-        "days": "3 tp.",
-        "url": "ipoolgo.lt"
+        "name": "Monolith",
+        "tagline": "Klassikaline ja struktureeritud — korporatiivne usaldus, selge hierarhia."
       },
       {
-        "name": "Applecitylab",
-        "niche": "Kohalikud teenused",
-        "days": "2 tp.",
-        "url": "applecitylab.lt"
+        "name": "Halo",
+        "tagline": "Suur tüpograafia — pealkiri müüb ise."
+      },
+      {
+        "name": "Mosaic",
+        "tagline": "Moodulkaartide ruudustik — sobib mitme pakkumise või eelise jaoks."
+      },
+      {
+        "name": "Split",
+        "tagline": "Poolitatud ekraan, toimetuslik — tekst ühel pool, visuaal teisel."
       }
     ]
   },

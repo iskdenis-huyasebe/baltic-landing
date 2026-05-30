@@ -7,7 +7,7 @@
     "title": "Pārdodošs landing page par 200 €. Gatavs 3 darba dienās.",
     "subtitle": "Pilna mājas lapa, kontaktforma, domēns, hostings un atbalsts. Bez slēptām maksām, bez kavēšanās.",
     "ctaPrimary": "Pasūtīt mājas lapu",
-    "ctaSecondary": "Skatīt piemērus",
+    "ctaSecondary": "Skatīt šablonus",
     "trustNote": "35+ mājas lapas palaistas Baltijā"
   },
   "trust": {
@@ -134,28 +134,32 @@
       "cta": "Apspriest projektu"
     }
   },
-  "portfolio": {
-    "h2": "Piemēri no reāliem projektiem",
-    "subtitle": "Visi landing pages palaisti 3 darba dienās. Visi darbojas šodien.",
-    "moreLink": "+ vairāk projektu parādīšu personīgā sarunā",
+  "templates": {
+    "h2": "Pieci šabloni. Viena cena — 200 €.",
+    "subtitle": "Izvēlies sev tīkamo izkārtojumu — piepildīsim to ar tavu zīmolu, saturu un valodu. Tie paši 200 €, tās pašas 3 d.d.",
+    "preview": "Priekšskatījums",
+    "choose": "Izvēlēties",
+    "note": "Katrs šablons ir adaptīvs, daudzvalodu un orientēts uz konversiju. Krāsas un saturu pielāgojam brīfā.",
     "items": [
       {
-        "name": "Terratech",
-        "niche": "B2B tehnika",
-        "days": "3 d.d.",
-        "url": "terratech.lt"
+        "name": "Aurora",
+        "tagline": "Minimālistisks un gaisīgs — daudz brīvas vietas, viens skaidrs vēstījums."
       },
       {
-        "name": "IPOOLGO",
-        "niche": "Piepūšamie baseini",
-        "days": "3 d.d.",
-        "url": "ipoolgo.lt"
+        "name": "Monolith",
+        "tagline": "Klasisks un strukturēts — korporatīva uzticība, skaidra hierarhija."
       },
       {
-        "name": "Applecitylab",
-        "niche": "Vietējie pakalpojumi",
-        "days": "2 d.d.",
-        "url": "applecitylab.lt"
+        "name": "Halo",
+        "tagline": "Liela tipogrāfija — pārdod pats virsraksts."
+      },
+      {
+        "name": "Mosaic",
+        "tagline": "Moduļu karšu režģis — noder vairākiem piedāvājumiem vai priekšrocībām."
+      },
+      {
+        "name": "Split",
+        "tagline": "Dalīts ekrāns, redakcionāls — teksts vienā pusē, vizuālis otrā."
       }
     ]
   },

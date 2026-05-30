@@ -7,7 +7,7 @@
     "title": "A landing page that brings real leads. €200. 3 business days.",
     "subtitle": "Full website, contact form, domain, hosting and support. No hidden fees, no delays.",
     "ctaPrimary": "Order your website",
-    "ctaSecondary": "See examples",
+    "ctaSecondary": "See templates",
     "trustNote": "35+ landings launched in the Baltics"
   },
   "trust": {
@@ -134,28 +134,32 @@
       "cta": "Discuss the project"
     }
   },
-  "portfolio": {
-    "h2": "Examples from real projects",
-    "subtitle": "All landing pages launched within 3 business days. All live today.",
-    "moreLink": "+ more projects — I'll show them on a call",
+  "templates": {
+    "h2": "Five templates. One price — €200.",
+    "subtitle": "Pick a layout you like — we fill it with your brand, content and language. Same €200, same 3-day delivery.",
+    "preview": "Preview",
+    "choose": "Choose",
+    "note": "Every template is fully responsive, multilingual and conversion-focused. Colors and content are tailored during the brief.",
     "items": [
       {
-        "name": "Terratech",
-        "niche": "B2B Equipment",
-        "days": "3 days",
-        "url": "terratech.lt"
+        "name": "Aurora",
+        "tagline": "Minimal and airy — maximum whitespace, one clear message."
       },
       {
-        "name": "IPOOLGO",
-        "niche": "Inflatable Pools",
-        "days": "3 days",
-        "url": "ipoolgo.lt"
+        "name": "Monolith",
+        "tagline": "Classic and structured — corporate trust, clear hierarchy."
       },
       {
-        "name": "Applecitylab",
-        "niche": "Local Services",
-        "days": "2 days",
-        "url": "applecitylab.lt"
+        "name": "Halo",
+        "tagline": "Bold typography — the headline does the selling."
+      },
+      {
+        "name": "Mosaic",
+        "tagline": "Modular card grid — great for several offers or features."
+      },
+      {
+        "name": "Split",
+        "tagline": "Split-screen, editorial — text on one side, visual on the other."
       }
     ]
   },

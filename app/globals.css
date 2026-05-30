@@ -18,6 +18,9 @@
   --success:           #86efac;
   --warning:           #fde047;
   --danger:            #fca5a5;
+
+  --font-geist-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", "Inter", system-ui, sans-serif;
+  --font-geist-mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
 }
 
 @theme inline {
