@@ -49,7 +49,7 @@ a{{color:inherit;text-decoration:none}}
 .demo-bar .wrap{{display:flex;align-items:center;justify-content:space-between;height:44px}}
 .demo-bar b{{color:var(--fg)}}
 .demo-bar .badge{{background:color-mix(in srgb,var(--accent) 18%,transparent);color:var(--accent);padding:3px 10px;border-radius:999px;font-weight:700}}
-header.site{{position:sticky;top:44px;z-index:50;background:color-mix(in srgb,var(--bg) 80%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--border)}}
+header.site{{position:sticky;top:0;z-index:50;background:color-mix(in srgb,var(--bg) 80%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--border)}}
 header.site .wrap{{display:flex;align-items:center;justify-content:space-between;height:64px}}
 .logo{{display:flex;align-items:center;gap:8px;font-weight:700}}
 .logo .dot{{width:18px;height:18px;border-radius:6px;background:var(--accent)}}
@@ -153,7 +153,7 @@ def hero(style):
 def build(slug, name, style, desc, theme):
     t = dict(theme); t["style"] = style
     css = base_css(t)
-    body = DEMO_BAR.format(name=name, desc=desc) + HEADER + hero(style) + FEATURES + FOOTER.format(name=name)
+    body = HEADER + hero(style) + FEATURES + FOOTER.format(name=name)
     html = f"""<!DOCTYPE html>
 <html lang="en"><head>
 <meta charset="utf-8">
