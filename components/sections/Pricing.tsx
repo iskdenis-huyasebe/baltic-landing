@@ -2,7 +2,7 @@
 
 import { useTranslations, useLocale } from "next-intl";
 import { useState } from "react";
-import { Check, ArrowRight } from "lucide-react";
+import { Check, ArrowRight, ShieldCheck } from "lucide-react";
 import { FadeIn } from "@/components/ui/FadeIn";
 
 type PlanData = {
@@ -160,7 +160,14 @@ export function Pricing() {
           />
         </div>
 
-        <p className="text-center text-sm text-[var(--subtle)] mt-8 max-w-2xl mx-auto italic">
+        <div className="mt-8 flex justify-center">
+          <div className="inline-flex items-center gap-2 rounded-full border border-[var(--accent)]/30 bg-[var(--accent-muted)] px-4 py-2 text-sm text-[var(--foreground)]">
+            <ShieldCheck className="size-4 text-[var(--accent)] shrink-0" aria-hidden="true" />
+            <span>{t("guarantee")}</span>
+          </div>
+        </div>
+
+        <p className="text-center text-sm text-[var(--subtle)] mt-5 max-w-2xl mx-auto italic">
           {t("note")}
         </p>
       </div>

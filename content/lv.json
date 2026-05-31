@@ -8,7 +8,8 @@
     "subtitle": "Pilna mājas lapa, kontaktforma, hostings un atbalsts. Bez slēptām maksām, bez kavēšanās.",
     "ctaPrimary": "Pasūtīt mājas lapu",
     "ctaSecondary": "Skatīt šablonus",
-    "trustNote": "35+ mājas lapas palaistas Baltijā"
+    "trustNote": "35+ mājas lapas palaistas Baltijā",
+    "guarantee": "Nepatiks — atmaksājam naudu 7 dienās"
   },
   "trust": {
     "eyebrow": "RADĪTS BALTIJĀ — BALTIJAI",
@@ -132,7 +133,8 @@
         "90 dienu tehniskais atbalsts"
       ],
       "cta": "Apspriest projektu"
-    }
+    },
+    "guarantee": "Nepatiks — atmaksājam naudu 7 dienās"
   },
   "templates": {
     "h2": "Seši šabloni. Viena cena — 200 €.",
@@ -165,7 +167,9 @@
         "name": "Pulse",
         "tagline": "Moderns SaaS uzsvars — gradienta mirdzums, produkts centrā."
       }
-    ]
+    ],
+    "tryColor": "Pielaiko savu krāsu",
+    "tryColorReset": "Atiestatīt"
   },
   "process": {
     "h2": "Kā tas notiek 3 darba dienās",

@@ -8,7 +8,8 @@
     "subtitle": "Täielik veebisait, kontaktivorm, majutus ja tugi. Ilma varjatud tasudeta, ilma viivitusteta.",
     "ctaPrimary": "Telli veebisait",
     "ctaSecondary": "Vaata malle",
-    "trustNote": "35+ veebilehte käivitatud Baltikumis"
+    "trustNote": "35+ veebilehte käivitatud Baltikumis",
+    "guarantee": "Ei meeldi? Raha tagasi 7 päeva jooksul"
   },
   "trust": {
     "eyebrow": "TEHTUD BALTIKUMIS — BALTIKUMILE",
@@ -132,7 +133,8 @@
         "90 päeva tehniline tugi"
       ],
       "cta": "Arutada projekti"
-    }
+    },
+    "guarantee": "Ei meeldi? Raha tagasi 7 päeva jooksul"
   },
   "templates": {
     "h2": "Kuus malli. Üks hind — 200 €.",
@@ -165,7 +167,9 @@
         "name": "Pulse",
         "tagline": "Kaasaegne SaaS esiletõst — gradientne kuma, toode keskmes."
       }
-    ]
+    ],
+    "tryColor": "Proovi oma värvi",
+    "tryColorReset": "Algne"
   },
   "process": {
     "h2": "Kuidas see toimub 3 tööpäevaga",

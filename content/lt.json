@@ -8,7 +8,8 @@
     "subtitle": "Pilna svetainė, užklausos forma, hostingas ir palaikymas. Be paslėptų mokesčių, be vilkinimo terminų.",
     "ctaPrimary": "Užsisakyti svetainę",
     "ctaSecondary": "Žiūrėti šablonus",
-    "trustNote": "35+ landingai paleisti Baltijoje"
+    "trustNote": "35+ landingai paleisti Baltijoje",
+    "guarantee": "Nepatiks — grąžinam pinigus per 7 dienas"
   },
   "trust": {
     "eyebrow": "SUKURTA BALTIJOJE — BALTIJAI",
@@ -132,7 +133,8 @@
         "90 dienų techninė pagalba"
       ],
       "cta": "Aptarti projektą"
-    }
+    },
+    "guarantee": "Nepatiks — grąžinam pinigus per 7 dienas"
   },
   "templates": {
     "h2": "Šeši šablonai. Viena kaina — 200 €.",
@@ -165,7 +167,9 @@
         "name": "Pulse",
         "tagline": "Modernus SaaS dėmesio centras — gradientinis švytėjimas, produktas pirmame plane."
       }
-    ]
+    ],
+    "tryColor": "Pritaikyk savo spalvą",
+    "tryColorReset": "Originalas"
   },
   "process": {
     "h2": "Kaip tai vyksta per 3 darbo dienas",

@@ -8,7 +8,8 @@
     "subtitle": "Full website, contact form, hosting and support. No hidden fees, no delays.",
     "ctaPrimary": "Order your website",
     "ctaSecondary": "See templates",
-    "trustNote": "35+ landings launched in the Baltics"
+    "trustNote": "35+ landings launched in the Baltics",
+    "guarantee": "Don't like it? Money back within 7 days"
   },
   "trust": {
     "eyebrow": "MADE IN THE BALTICS, FOR THE BALTICS",
@@ -132,7 +133,8 @@
         "90 days of technical support"
       ],
       "cta": "Discuss the project"
-    }
+    },
+    "guarantee": "Don't like it? Money back within 7 days"
   },
   "templates": {
     "h2": "Six templates. One price — €200.",
@@ -165,7 +167,9 @@
         "name": "Pulse",
         "tagline": "Modern SaaS spotlight — gradient glow, product front and center."
       }
-    ]
+    ],
+    "tryColor": "Try your color",
+    "tryColorReset": "Reset"
   },
   "process": {
     "h2": "How it works in 3 business days",

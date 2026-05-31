@@ -1,5 +1,5 @@
 import { useTranslations, useLocale } from "next-intl";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, ShieldCheck } from "lucide-react";
 import { TEMPLATES } from "@/components/templates/templates";
 import { TemplatePreview } from "@/components/templates/TemplatePreview";
 
@@ -52,6 +52,11 @@ export function Hero() {
             >
               {t("ctaSecondary")}
             </a>
+          </div>
+          {/* Guarantee */}
+          <div className="inline-flex items-center gap-2 text-sm text-[var(--muted)] mb-6 rounded-full border border-[var(--border)] bg-[var(--surface)]/50 px-3.5 py-1.5">
+            <ShieldCheck className="size-4 text-[var(--accent)] shrink-0" aria-hidden="true" />
+            <span>{t("guarantee")}</span>
           </div>
           {/* Trust note */}
           <div className="flex items-center gap-3 text-sm text-[var(--muted)]">

@@ -154,6 +154,13 @@ def build(slug, name, style, desc, theme):
     t = dict(theme); t["style"] = style
     css = base_css(t)
     body = HEADER + hero(style) + FEATURES + FOOTER.format(name=name)
+    accent_script = (
+        "<script>(function(){function s(c){if(c){"
+        "document.documentElement.style.setProperty('--accent',c);}}"
+        "try{var p=new URLSearchParams(location.search);s(p.get('accent'));}catch(e){}"
+        "window.addEventListener('message',function(e){var d=e.data;"
+        "if(d&&d.type==='tpl-accent'){s(d.accent);}});})();</script>"
+    )
     html = f"""<!DOCTYPE html>
 <html lang="en"><head>
 <meta charset="utf-8">
@@ -163,6 +170,7 @@ def build(slug, name, style, desc, theme):
 <style>{css}</style>
 </head><body>
 {body}
+{accent_script}
 </body></html>"""
     with open(os.path.join(OUT, f"{slug}.html"), "w", encoding="utf-8") as f:
         f.write(html)
