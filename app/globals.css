@@ -36,6 +36,10 @@
 
 html {
   scroll-behavior: smooth;
+  /* keep anchored sections clear of the fixed header */
+  scroll-padding-top: 80px;
+  /* avoid horizontal overflow / sideways scroll on mobile */
+  overflow-x: hidden;
 }
 
 body {

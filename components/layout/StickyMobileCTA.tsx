@@ -32,7 +32,7 @@ export function StickyMobileCTA() {
   if (!visible) return null;
 
   return (
-    <div className="fixed bottom-0 left-0 right-0 z-50 md:hidden bg-[var(--background)]/90 backdrop-blur-lg border-t border-[var(--border)] px-4 py-3 flex items-center justify-between gap-3">
+    <div className="fixed bottom-0 left-0 right-0 z-50 md:hidden bg-[var(--background)]/90 backdrop-blur-lg border-t border-[var(--border)] px-4 pt-3 pb-[calc(0.75rem+env(safe-area-inset-bottom))] flex items-center justify-between gap-3">
       <div className="flex flex-col">
         <span className="text-base font-medium text-[var(--foreground)]">
           {t("price")}

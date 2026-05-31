@@ -49,9 +49,58 @@ export function Comparison() {
           </div>
         </FadeIn>
 
+        {/* Mobile: stacked cards (no horizontal scroll) */}
         <FadeIn delay={0.1}>
-          <div className="overflow-x-auto -mx-6 md:mx-0 px-6 md:px-0">
-          <div className="min-w-[560px] bg-[var(--surface)] border border-[var(--border)] rounded-2xl overflow-hidden">
+          <div className="md:hidden space-y-3">
+            {rows.map((row, i) => {
+              const cols: Array<{ key: keyof typeof row; label: string; us?: boolean }> = [
+                { key: "us", label: t("us"), us: true },
+                { key: "diy", label: "DIY" },
+                { key: "freelancer", label: t("freelancer") },
+                { key: "agency", label: t("agency") },
+              ];
+              return (
+                <div
+                  key={i}
+                  className="bg-[var(--surface)] border border-[var(--border)] rounded-2xl p-4"
+                >
+                  <p className="text-sm font-medium text-[var(--foreground)] mb-3">
+                    {row.label}
+                  </p>
+                  <div className="grid grid-cols-2 gap-2">
+                    {cols.map((c) => (
+                      <div
+                        key={c.key}
+                        className={`rounded-xl px-3 py-2.5 flex flex-col gap-1 ${
+                          c.us
+                            ? "bg-[var(--accent-muted)] border border-[var(--accent)]/30"
+                            : "bg-[var(--background)] border border-[var(--border)]"
+                        }`}
+                      >
+                        <span
+                          className={`text-[10px] uppercase tracking-widest flex items-center gap-1 ${
+                            c.us ? "text-[var(--accent)] font-semibold" : "text-[var(--subtle)]"
+                          }`}
+                        >
+                          {c.us && <Zap className="size-3 shrink-0" aria-hidden="true" />}
+                          {c.label}
+                        </span>
+                        <span className="min-h-[24px] flex items-center">
+                          <Cell value={row[c.key] as CellValue} highlight={c.us} />
+                        </span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </FadeIn>
+
+        {/* Desktop: full table */}
+        <FadeIn delay={0.1}>
+          <div className="hidden md:block">
+          <div className="bg-[var(--surface)] border border-[var(--border)] rounded-2xl overflow-hidden">
             {/* Header row */}
             <div className="grid grid-cols-5 border-b border-[var(--border)]">
               <div className="p-4 md:p-5 text-xs uppercase tracking-widest text-[var(--subtle)]">
