@@ -5,7 +5,7 @@
   "hero": {
     "eyebrow": "MĀJAS LAPAS BALTIJAS UZŅĒMUMIEM",
     "title": "Pārdodošs landing page par 200 €. Gatavs 3 darba dienās.",
-    "subtitle": "Pilna mājas lapa, kontaktforma, domēns, hostings un atbalsts. Bez slēptām maksām, bez kavēšanās.",
+    "subtitle": "Pilna mājas lapa, kontaktforma, hostings un atbalsts. Bez slēptām maksām, bez kavēšanās.",
     "ctaPrimary": "Pasūtīt mājas lapu",
     "ctaSecondary": "Skatīt šablonus",
     "trustNote": "35+ mājas lapas palaistas Baltijā"
@@ -46,7 +46,7 @@
       },
       {
         "title": "Domēna pievienošana",
-        "body": ".lt, .lv, .ee, .com — kāds nepieciešams."
+        "body": ".lt, .lv, .ee, .com — kāds nepieciešams. Domēna maksa (~€10–15/gadā) tiek apmaksāta atsevišķi."
       },
       {
         "title": "Hostings pirmo mēnesi — bez maksas",
@@ -92,7 +92,7 @@
       "tagline": "Sāc šeit",
       "bullets": [
         "Aizpildām pārbaudītu izkārtojumu ar tavu saturu un brendu",
-        "Domēns + pirmā mēneša hostings iekļauti",
+        "Pirmā mēneša hostings iekļauts · domēnu pievienojam (apmaksā atsevišķi)",
         "Forma + paziņojumi Telegram/e-pastā",
         "Iebūvēts SEO pamats",
         "5 valodas no kastes",
@@ -247,7 +247,7 @@
       },
       {
         "q": "Kam pieder domēns?",
-        "a": "Tev no pirmās dienas. Reģistrējam uz tava vārda vai uzņēmuma. Ja domēns jau ir — vienkārši pievienojam. Gada atjaunošana (~10–15 €) iekļauta Care/Growth abonementā."
+        "a": "Tavs no pirmās dienas — reģistrējam uz tavu vai uzņēmuma vārdu. Ja domēns jau ir — vienkārši pieslēdzam. Domēna maksa (~€10–15/gadā) tiek maksāta reģistratoram un nav iekļauta ne €200, ne abonementā."
       },
       {
         "q": "Ko darīt, ja landing page nedarbosies — maz pieprasījumu?",
@@ -316,8 +316,8 @@
   },
   "comparison": {
     "eyebrow": "KĀPĒC MĒS",
-    "h2": "Salīdziniet: tuvākas alternatīvas nav",
-    "subtitle": "4 ceļi uz landing page. Mēs esam vienīgajā pareizajā vietā.",
+    "h2": "Kā mēs izskatāmies salīdzinājumā",
+    "subtitle": "Četri veidi, kā iegūt landing page. Mēs neder vienmēr — godīgi parādām, kur mūsu formāts ir stiprāks un kur labāk aģentūra.",
     "colHead": "Ko jūs saņemat",
     "freelancer": "Freelanceris",
     "agency": "Aģentūra",
@@ -352,7 +352,7 @@
         "us": true
       },
       {
-        "label": "Hostings + domēns",
+        "label": "Hostings (1. mēnesis)",
         "diy": false,
         "freelancer": false,
         "agency": "Dažreiz",
@@ -371,9 +371,23 @@
         "freelancer": false,
         "agency": "€100+/mēn",
         "us": true
+      },
+      {
+        "label": "Pilnībā unikāls dizains no nulles",
+        "diy": false,
+        "freelancer": "Reizēm",
+        "agency": true,
+        "us": "no €500"
+      },
+      {
+        "label": "Daudzlapu vietne / interneta veikals",
+        "diy": false,
+        "freelancer": "Reizēm",
+        "agency": true,
+        "us": false
       }
     ],
-    "footnote": "Nav parādīts: 24 nedēļas nogales ar 'atbildēšu pirmdien' Upwork."
+    "footnote": "Godīgs salīdzinājums — pilnīgi unikālam dizainam vai sarežģītiem projektiem labāk noderēs aģentūra."
   },
   "order": {
     "step": "Solis",

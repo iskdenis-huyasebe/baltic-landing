@@ -5,7 +5,7 @@
   "hero": {
     "eyebrow": "LANDINGAI BALTIJOS VERSLUI",
     "title": "Parduodantis landingas už 200 €. Paruoštas per 3 darbo dienas.",
-    "subtitle": "Pilna svetainė, užklausos forma, domenas, hostingas ir palaikymas. Be paslėptų mokesčių, be vilkinimo terminų.",
+    "subtitle": "Pilna svetainė, užklausos forma, hostingas ir palaikymas. Be paslėptų mokesčių, be vilkinimo terminų.",
     "ctaPrimary": "Užsisakyti svetainę",
     "ctaSecondary": "Žiūrėti šablonus",
     "trustNote": "35+ landingai paleisti Baltijoje"
@@ -46,7 +46,7 @@
       },
       {
         "title": "Domeno prijungimas",
-        "body": ".lt, .lv, .ee, .com — koks tau reikia."
+        "body": ".lt, .lv, .ee, .com — koks tau reikia. Domeno mokestis (~€10–15/m.) apmokamas atskirai."
       },
       {
         "title": "Hostingas pirmą mėnesį — nemokamai",
@@ -92,7 +92,7 @@
       "tagline": "Pradėk čia",
       "bullets": [
         "Užpildom patikrintą šabloną tavo turiniu ir brandu",
-        "Domenas + hostingas pirmą mėnesį įskaičiuoti",
+        "Pirmo mėnesio hostingas įskaičiuotas · domeną prijungiam (apmokamas atskirai)",
         "Forma + pranešimai į Telegram/el. paštą",
         "Įdiegti SEO nustatymai",
         "5 kalbos iš dėžutės",
@@ -247,7 +247,7 @@
       },
       {
         "q": "Kam priklauso domenas?",
-        "a": "Tau nuo pirmo dienos. Registruojam ant tavo vardo arba įmonės. Jeigu domenas jau tavo — tiesiog prijungiam. Po metų pratęsimas (~10–15 €) — įtrauktas į Care/Growth prenumeratą."
+        "a": "Tavo nuo pirmos dienos — registruojam tavo ar įmonės vardu. Jei domenas jau turimas — tiesiog prijungiam. Domeno mokestis (~€10–15/m.) mokamas registratoriui ir neįeina nei į 200 €, nei į prenumeratą."
       },
       {
         "q": "Kas, jeigu landingas neveiks — bus mažai užklausų?",
@@ -316,8 +316,8 @@
   },
   "comparison": {
     "eyebrow": "KODĖL MES",
-    "h2": "Palyginkite: arčiau alternatyvos nėra",
-    "subtitle": "4 keliai gauti landingą. Mes esame vienintelėje teisingoje vietoje.",
+    "h2": "Kaip atrodome palyginus",
+    "subtitle": "Keturi būdai gauti landingą. Tinkam ne visada — sąžiningai rodom, kur mūsų formatas stipresnis, o kur geriau agentūra.",
     "colHead": "Ką gaunate",
     "freelancer": "Freelanceris",
     "agency": "Agentūra",
@@ -352,7 +352,7 @@
         "us": true
       },
       {
-        "label": "Hostingas + domenas",
+        "label": "Hostingas (1-as mėnuo)",
         "diy": false,
         "freelancer": false,
         "agency": "Kartais",
@@ -371,9 +371,23 @@
         "freelancer": false,
         "agency": "€100+/mėn",
         "us": true
+      },
+      {
+        "label": "Unikalus dizainas nuo nulio",
+        "diy": false,
+        "freelancer": "Kartais",
+        "agency": true,
+        "us": "nuo €500"
+      },
+      {
+        "label": "Daugiapuslė svetainė / el. parduotuvė",
+        "diy": false,
+        "freelancer": "Kartais",
+        "agency": true,
+        "us": false
       }
     ],
-    "footnote": "Neparodyta: 24 savaitgaliai 'atsakysiu pirmadienį' Upwork platformoje."
+    "footnote": "Sąžiningas palyginimas — unikaliam dizainui ar sudėtingiems projektams geriau tiks agentūra."
   },
   "order": {
     "step": "Žingsnis",

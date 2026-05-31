@@ -5,7 +5,7 @@
   "hero": {
     "eyebrow": "MAANDUMISLEHED BALTI ETTEVÕTETELE",
     "title": "Müüv maandumisleht 200 € eest. Valmis 3 tööpäevaga.",
-    "subtitle": "Täielik veebisait, kontaktivorm, domeen, majutus ja tugi. Ilma varjatud tasudeta, ilma viivitusteta.",
+    "subtitle": "Täielik veebisait, kontaktivorm, majutus ja tugi. Ilma varjatud tasudeta, ilma viivitusteta.",
     "ctaPrimary": "Telli veebisait",
     "ctaSecondary": "Vaata malle",
     "trustNote": "35+ veebilehte käivitatud Baltikumis"
@@ -46,7 +46,7 @@
       },
       {
         "title": "Domeeni ühendamine",
-        "body": ".lt, .lv, .ee, .com — milline vajad."
+        "body": ".lt, .lv, .ee, .com — milline vajad. Domeeni tasu (~€10–15/a) makstakse eraldi."
       },
       {
         "title": "Majutus esimesel kuul — tasuta",
@@ -92,7 +92,7 @@
       "tagline": "Alusta siit",
       "bullets": [
         "Täidame tõestatud paigutuse sinu sisu ja brendiga",
-        "Domeen + esimese kuu majutus sisalduvad",
+        "Esimese kuu majutus sisaldub · domeeni ühendame (makstakse eraldi)",
         "Vorm + teated Telegrami/e-posti teel",
         "Sisseehitatud SEO alus",
         "5 keelt karbist välja",
@@ -247,7 +247,7 @@
       },
       {
         "q": "Kellele kuulub domeen?",
-        "a": "Sulle esimesest päevast. Registreerime sinu või sinu ettevõtte nimele. Kui domeen on juba olemas — lihtsalt ühendame. Aastane uuendus (~10–15 €) sisaldub Care/Growth tellimuses."
+        "a": "Sinu oma esimesest päevast — registreerime sinu või ettevõtte nimele. Kui domeen on juba olemas — lihtsalt ühendame. Domeeni tasu (~€10–15/a) makstakse registripidajale ja see ei sisaldu ei 200 €-s ega tellimuses."
       },
       {
         "q": "Mis siis, kui maandumisleht ei toimi — vähe päringuid?",
@@ -316,8 +316,8 @@
   },
   "comparison": {
     "eyebrow": "MIKS MEIE",
-    "h2": "Võrdle: lähemat alternatiivi pole",
-    "subtitle": "4 teed maandumisleheni. Meie oleme ainsas õiges kohas.",
+    "h2": "Kuidas me võrdluses paistame",
+    "subtitle": "Neli viisi maandumislehe saamiseks. Me ei sobi alati — näitame ausalt, kus meie formaat on tugevam ja kus sobib paremini agentuur.",
     "colHead": "Mida saate",
     "freelancer": "Vabakutseline",
     "agency": "Agentuur",
@@ -352,7 +352,7 @@
         "us": true
       },
       {
-        "label": "Majutus + domeen",
+        "label": "Majutus (1. kuu)",
         "diy": false,
         "freelancer": false,
         "agency": "Mõnikord",
@@ -371,9 +371,23 @@
         "freelancer": false,
         "agency": "€100+/k",
         "us": true
+      },
+      {
+        "label": "Täisunikaalne disain nullist",
+        "diy": false,
+        "freelancer": "Mõnikord",
+        "agency": true,
+        "us": "alates €500"
+      },
+      {
+        "label": "Mitmeleheline sait / e-pood",
+        "diy": false,
+        "freelancer": "Mõnikord",
+        "agency": true,
+        "us": false
       }
     ],
-    "footnote": "Pole näidatud: 24 nädalavahetust 'vastan esmaspäeval' Upworkis."
+    "footnote": "Aus võrdlus — täisunikaalse disaini või keerukate projektide jaoks sobib paremini agentuur."
   },
   "order": {
     "step": "Samm",

@@ -5,7 +5,7 @@
   "hero": {
     "eyebrow": "LANDING PAGES FOR BALTIC BUSINESSES",
     "title": "A landing page that brings real leads. €200. 3 business days.",
-    "subtitle": "Full website, contact form, domain, hosting and support. No hidden fees, no delays.",
+    "subtitle": "Full website, contact form, hosting and support. No hidden fees, no delays.",
     "ctaPrimary": "Order your website",
     "ctaSecondary": "See templates",
     "trustNote": "35+ landings launched in the Baltics"
@@ -46,7 +46,7 @@
       },
       {
         "title": "Domain connection",
-        "body": ".lt, .lv, .ee, .com — whatever you need."
+        "body": ".lt, .lv, .ee, .com — whatever you need. The domain fee (~€10–15/yr) is paid separately."
       },
       {
         "title": "First month of hosting — free",
@@ -92,7 +92,7 @@
       "tagline": "Start here",
       "bullets": [
         "We fill a proven layout with your content + brand",
-        "Domain + first month hosting included",
+        "First month hosting included · domain connected (paid separately)",
         "Form + Telegram/email notifications",
         "Built-in SEO foundation",
         "5 languages out of the box",
@@ -247,7 +247,7 @@
       },
       {
         "q": "Who owns the domain?",
-        "a": "You do, from day one. We register it in your name or your company's. If you already have a domain — we just connect it. Annual renewal (~€10–15) included in Care/Growth subscription."
+        "a": "Yours from day one — registered in your name or company. If you already have a domain, we just connect it. The domain fee (~€10–15/yr) is billed to you by the registrar; it is not part of the €200 or the subscription."
       },
       {
         "q": "What if the landing page doesn't work — too few leads?",
@@ -316,8 +316,8 @@
   },
   "comparison": {
     "eyebrow": "WHY US",
-    "h2": "Compare: there's no closer alternative",
-    "subtitle": "All 4 paths to a landing page. We sit in the only sweet spot.",
+    "h2": "How we compare",
+    "subtitle": "Four ways to get a landing page. We're not always the answer — here's where our format wins and where an agency is the better call.",
     "colHead": "What you get",
     "freelancer": "Freelancer",
     "agency": "Agency",
@@ -352,7 +352,7 @@
         "us": true
       },
       {
-        "label": "Includes hosting + domain",
+        "label": "Hosting included (1st month)",
         "diy": false,
         "freelancer": false,
         "agency": "Sometimes",
@@ -371,9 +371,23 @@
         "freelancer": false,
         "agency": "€100+/mo",
         "us": true
+      },
+      {
+        "label": "Fully bespoke design from scratch",
+        "diy": false,
+        "freelancer": "Sometimes",
+        "agency": true,
+        "us": "From €500"
+      },
+      {
+        "label": "Multi-page site / online store",
+        "diy": false,
+        "freelancer": "Sometimes",
+        "agency": true,
+        "us": false
       }
     ],
-    "footnote": "Not pictured: 24 weekends of 'I'll get back to you next Monday' on Upwork."
+    "footnote": "Honest comparison — for fully bespoke design or complex builds, an agency is the better fit."
   },
   "order": {
     "step": "Step",
