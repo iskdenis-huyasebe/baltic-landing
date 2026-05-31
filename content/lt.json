@@ -260,8 +260,8 @@
     ]
   },
   "cta": {
-    "h2": "Nesate pasiruošęs užsisakyti? Pakalbėkime.",
-    "subtitle": "Jei nesate tikri dėl tarifo arba norite pirmiausia parodyti esamą svetainę — rezervuokite 15 min. pokalbį.",
+    "h2": "Liko klausimų? Parašyk.",
+    "subtitle": "Palik užklausą — atsakysim su pasiūlymu per valandą. Arba parašyk tiesiai į mesendžerį.",
     "formTitle": "Palik kontaktus",
     "fields": {
       "name": {
@@ -294,7 +294,9 @@
       "name": "Denisas · Vilnius",
       "email": "denis@terratech.eu",
       "telegram": "@terratech"
-    }
+    },
+    "directTitle": "Parašyk tiesiogiai",
+    "directSubtitle": "Pasirink patogų kanalą — atsakom per valandą darbo metu."
   },
   "sticky": {
     "price": "200 €",

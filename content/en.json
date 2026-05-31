@@ -260,8 +260,8 @@
     ]
   },
   "cta": {
-    "h2": "Not ready? Let's talk.",
-    "subtitle": "If you're not sure which tier fits, or want to show me your existing site first — book a 15-min call.",
+    "h2": "Questions? Get in touch.",
+    "subtitle": "Leave a request — we reply with a quote within an hour. Or message us directly.",
     "formTitle": "Leave your contact",
     "fields": {
       "name": {
@@ -294,7 +294,9 @@
       "name": "Denis · Vilnius",
       "email": "denis@terratech.eu",
       "telegram": "@terratech"
-    }
+    },
+    "directTitle": "Message us directly",
+    "directSubtitle": "Pick the channel you prefer — we reply within an hour during work hours."
   },
   "sticky": {
     "price": "€200",

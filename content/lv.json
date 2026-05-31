@@ -260,8 +260,8 @@
     ]
   },
   "cta": {
-    "h2": "Nav gatavs pasūtīt? Parunāsim.",
-    "subtitle": "Ja neesat pārliecināts par tarifu vai vēlaties vispirms parādīt esošo mājas lapu — rezervējiet 15 min. sarunu.",
+    "h2": "Ir jautājumi? Sazinies.",
+    "subtitle": "Atstāj pieprasījumu — atbildēsim ar aprēķinu stundas laikā. Vai raksti uzreiz mesendžerī.",
     "formTitle": "Atstāj kontaktus",
     "fields": {
       "name": {
@@ -294,7 +294,9 @@
       "name": "Deniss · Viļņa",
       "email": "denis@terratech.eu",
       "telegram": "@terratech"
-    }
+    },
+    "directTitle": "Raksti tieši",
+    "directSubtitle": "Izvēlies ērtu kanālu — atbildam stundas laikā darba laikā."
   },
   "sticky": {
     "price": "200 €",

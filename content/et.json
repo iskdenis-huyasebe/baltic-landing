@@ -260,8 +260,8 @@
     ]
   },
   "cta": {
-    "h2": "Pole valmis tellima? Räägime.",
-    "subtitle": "Kui pole kindel, milline tariif sobib, või soovid esmalt oma praegust saiti näidata — broneeri 15-minutiline kõne.",
+    "h2": "Küsimusi? Võta ühendust.",
+    "subtitle": "Jäta päring — vastame pakkumisega tunni jooksul. Või kirjuta otse messengeri.",
     "formTitle": "Jäta kontaktid",
     "fields": {
       "name": {
@@ -294,7 +294,9 @@
       "name": "Denis · Vilnius",
       "email": "denis@terratech.eu",
       "telegram": "@terratech"
-    }
+    },
+    "directTitle": "Kirjuta otse",
+    "directSubtitle": "Vali sobiv kanal — vastame tunni jooksul tööajal."
   },
   "sticky": {
     "price": "200 €",
