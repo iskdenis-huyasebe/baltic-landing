@@ -158,18 +158,6 @@ export function ContactCTA() {
                 ))}
               </div>
             </div>
-
-            {/* Signature */}
-            <div className="mt-6 p-4 flex items-center gap-4">
-              <div className="w-12 h-12 rounded-full bg-[var(--surface)] border border-[var(--border)] flex items-center justify-center text-lg font-medium text-[var(--accent)]">
-                D
-              </div>
-              <div>
-                <p className="text-sm font-medium text-[var(--foreground)]">{t("signature.name")}</p>
-                <p className="text-xs text-[var(--subtle)]">{t("signature.email")}</p>
-                <p className="text-xs text-[var(--subtle)]">{t("signature.telegram")}</p>
-              </div>
-            </div>
           </div>
         </div>
       </div>
