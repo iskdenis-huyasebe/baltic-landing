@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next";
 import { routing } from "@/i18n/routing";
 
-const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://balticlanding.com";
+const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://unoweb.eu";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   return routing.locales.map((locale) => ({

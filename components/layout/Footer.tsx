@@ -8,8 +8,9 @@ export function Footer() {
       <div className="max-w-6xl mx-auto px-6 md:px-8">
         <div className="flex flex-col md:flex-row md:items-center justify-between gap-6">
           <div>
-            <p className="text-sm font-medium text-[var(--foreground)] mb-1">
-              Terratech
+            <p className="text-sm font-semibold tracking-tight mb-1">
+              <span className="text-[var(--foreground)]">Uno</span>
+              <span className="text-[var(--accent)]">web</span>
             </p>
             <p className="text-xs text-[var(--subtle)]">{t("legal")}</p>
           </div>

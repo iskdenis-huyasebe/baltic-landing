@@ -46,7 +46,7 @@ export async function POST(request: Request) {
       return NextResponse.json({ error: "Invalid plan" }, { status: 400 });
     }
 
-    const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://balticlanding.com";
+    const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://unoweb.eu";
     const stripeLocale = (["lt", "lv", "et", "ru"].includes(locale) ? locale : "en") as
       import("stripe").Stripe.Checkout.SessionCreateParams.Locale;
 

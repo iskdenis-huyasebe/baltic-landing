@@ -25,9 +25,9 @@ export async function generateMetadata({
       locale,
     },
     alternates: {
-      canonical: `https://balticlanding.com/${locale}`,
+      canonical: `https://unoweb.eu/${locale}`,
       languages: Object.fromEntries(
-        routing.locales.map((l) => [l, `https://balticlanding.com/${l}`])
+        routing.locales.map((l) => [l, `https://unoweb.eu/${l}`])
       ),
     },
   };

@@ -18,10 +18,10 @@ export default async function CookiesPage() {
         <p>
           For questions:{" "}
           <a
-            href="mailto:denis@balticlanding.com"
+            href="mailto:denis@unoweb.eu"
             className="text-[var(--accent)] hover:underline"
           >
-            denis@balticlanding.com
+            denis@unoweb.eu
           </a>
         </p>
       </div>

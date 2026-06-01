@@ -77,7 +77,7 @@ export async function POST(request: Request) {
             <p><b>Contact:</b> ${safe.contact}</p>
             ${safe.site ? `<p><b>Current site:</b> <a href="${safe.site}">${safe.site}</a></p>` : ""}
             <hr/>
-            <p style="color:#999;font-size:12px">Sent via balticlanding.com contact form</p>
+            <p style="color:#999;font-size:12px">Sent via unoweb.eu contact form</p>
           `,
         })
         .catch((err) => console.error("Resend error:", err));

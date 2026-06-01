@@ -190,7 +190,7 @@ export async function POST(request: Request) {
       lineItems.push({ price: process.env.STRIPE_PRICE_CARE_6MO!, quantity: 1 });
     }
 
-    const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://terratech.eu";
+    const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://unoweb.eu";
     const stripeLocale = (["lt", "lv", "et"].includes(data.locale) ? data.locale : "en") as
       import("stripe").Stripe.Checkout.SessionCreateParams.Locale;
 

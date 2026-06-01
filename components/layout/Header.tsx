@@ -26,16 +26,19 @@ export function Header() {
       <div className="max-w-6xl mx-auto px-6 md:px-8 h-16 flex items-center justify-between">
         <a
           href={`/${locale}`}
-          className="flex items-center gap-2.5 text-base font-medium text-[var(--foreground)] hover:text-[var(--accent)] transition-colors group"
+          className="flex items-center gap-2.5 text-base font-semibold tracking-tight group"
+          aria-label="Unoweb"
         >
-          <span
-            className="flex items-center justify-center rounded-lg text-sm font-bold text-[var(--accent-foreground)] leading-none select-none transition-transform duration-200 group-hover:scale-105"
-            style={{ width: "30px", height: "30px", background: "var(--accent)", fontFamily: "var(--font-geist-sans)" }}
+          <img
+            src="/unoweb-mark.svg"
+            alt=""
             aria-hidden="true"
-          >
-            T
+            className="h-7 w-auto transition-transform duration-200 group-hover:scale-105"
+          />
+          <span>
+            <span className="text-[var(--foreground)]">Uno</span>
+            <span className="text-[var(--accent)]">web</span>
           </span>
-          Terratech
         </a>
 
         <div className="flex items-center gap-6">

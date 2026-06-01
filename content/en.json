@@ -288,7 +288,7 @@
     "submit": "Get proposal within 1 hr",
     "submitting": "Sending...",
     "successMsg": "Thank you! I'll reach out within 1 hour.",
-    "errorMsg": "Something went wrong. Write to me directly: @terratech",
+    "errorMsg": "Something went wrong. Write to me directly: @unoweb",
     "replyNote": "We reply within 1 hour during business hours (9:00–18:00 EET). After hours — next morning.",
     "required": "This field is required",
     "callTitle": "Want to talk first?",
@@ -296,8 +296,8 @@
     "callCta": "Book a 15-min call",
     "signature": {
       "name": "Denis · Vilnius",
-      "email": "denis@terratech.eu",
-      "telegram": "@terratech"
+      "email": "denis@unoweb.eu",
+      "telegram": "@unoweb"
     },
     "directTitle": "Message us directly",
     "directSubtitle": "Pick the channel you prefer — we reply within an hour during work hours."
@@ -308,16 +308,16 @@
     "cta": "Order"
   },
   "footer": {
-    "copy": "© 2026 Terratech · Made in Vilnius",
+    "copy": "© 2026 Unoweb · Made in Vilnius",
     "links": {
       "privacy": "Privacy Policy",
       "terms": "Terms of Use",
       "cookies": "Cookies"
     },
-    "contact": "Questions? Telegram: @terratech"
+    "contact": "Questions? Telegram: @unoweb"
   },
   "seo": {
-    "title": "Landing page for €200 in 3 days · Terratech",
+    "title": "Landing page for €200 in 3 days · Unoweb",
     "description": "Converting landing pages for Baltic businesses. Full site, form, domain and support for €200. Ready in 3 business days."
   },
   "comparison": {
@@ -327,7 +327,7 @@
     "colHead": "What you get",
     "freelancer": "Freelancer",
     "agency": "Agency",
-    "us": "Terratech",
+    "us": "Unoweb",
     "rows": [
       {
         "label": "Price",
@@ -473,7 +473,7 @@
       "payButton": "Pay now",
       "redirecting": "Redirecting to Stripe...",
       "secure": "Secure payment. Refundable if we can't take the order.",
-      "error": "Something went wrong. Write @terratech on Telegram.",
+      "error": "Something went wrong. Write @unoweb on Telegram.",
       "files": "Files",
       "submitButton": "Submit brief",
       "sending": "Sending...",
