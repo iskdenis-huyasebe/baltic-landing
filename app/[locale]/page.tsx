@@ -3,6 +3,7 @@ import { TrustStrip } from "@/components/sections/TrustStrip";
 import { WhatsIncluded } from "@/components/sections/WhatsIncluded";
 import { Pricing } from "@/components/sections/Pricing";
 import { Templates } from "@/components/sections/Templates";
+import { Subscriptions } from "@/components/sections/Subscriptions";
 import { Comparison } from "@/components/sections/Comparison";
 import { Process } from "@/components/sections/Process";
 import { ForWhom } from "@/components/sections/ForWhom";
@@ -51,6 +52,7 @@ export default async function LandingPage({
       <WhatsIncluded />
       <Pricing />
       <Templates />
+      <Subscriptions />
       <Comparison />
       <Process />
       <ForWhom />

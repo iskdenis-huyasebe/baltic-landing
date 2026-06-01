@@ -494,5 +494,40 @@
       "step3": "Sinu leht on live. Saad domeeni + juurdepääsud.",
       "backHome": "Avaleht"
     }
+  },
+  "subscriptions": {
+    "eyebrow": "PÄRAST KÄIVITAMIST",
+    "h2": "Sait elab ja kasvab",
+    "subtitle": "Käivitamine pole lõpp. Alates 2. kuust vali plaan: majutus, parandused ja täiendused — meie mure.",
+    "note": "Tellimus algab 2. kuust. Tühista millal tahes — sait ja domeen jäävad sulle.",
+    "care": {
+      "title": "Care",
+      "price": "15",
+      "period": "/kuus",
+      "tagline": "Lihtsalt töötab",
+      "bullets": [
+        "Majutus, SSL ja domeenihaldus",
+        "Saadavuse jälgimine — märkame enne sind",
+        "Kuni 30 min parandusi kuus",
+        "Vastus 48 h jooksul"
+      ],
+      "cta": "Telli koos Care'iga"
+    },
+    "growth": {
+      "title": "Growth",
+      "price": "30",
+      "period": "/kuus",
+      "tagline": "Täiendame iga kuu",
+      "badge": "★ Populaarseim",
+      "bullets": [
+        "Kõik Care'ist",
+        "Kuni 2 h parandusi kuus",
+        "Uued sektsioonid ja plokid soovi korral",
+        "Kuuaruanne: liiklus ja päringud",
+        "1 SEO täiendus kuus",
+        "Prioriteetne tugi 12 h jooksul"
+      ],
+      "cta": "Telli koos Growthiga"
+    }
   }
 }

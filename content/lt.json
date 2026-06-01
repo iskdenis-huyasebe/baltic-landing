@@ -494,5 +494,40 @@
       "step3": "Tavo landingas jau gyvas. Gauni domeną + prisijungimą.",
       "backHome": "Į pagrindinį"
     }
+  },
+  "subscriptions": {
+    "eyebrow": "PO PALEIDIMO",
+    "h2": "Svetainė gyvuoja ir auga",
+    "subtitle": "Paleidimas — ne pabaiga. Nuo 2-o mėnesio renkiesi planą: hostingas, taisymai ir tobulinimai — mūsų rūpestis.",
+    "note": "Prenumerata — nuo 2-o mėnesio. Atšauk bet kada, svetainė ir domenas lieka tau.",
+    "care": {
+      "title": "Care",
+      "price": "15",
+      "period": "/mėn",
+      "tagline": "Tiesiog veikia",
+      "bullets": [
+        "Hostingas, SSL ir domeno valdymas",
+        "Pasiekiamumo stebėjimas — pastebim anksčiau už tave",
+        "Iki 30 min. taisymų per mėnesį",
+        "Atsakymas per 48 val."
+      ],
+      "cta": "Užsisakyti su Care"
+    },
+    "growth": {
+      "title": "Growth",
+      "price": "30",
+      "period": "/mėn",
+      "tagline": "Tobulinam kas mėnesį",
+      "badge": "★ Populiariausias",
+      "bullets": [
+        "Viskas iš Care",
+        "Iki 2 val. taisymų per mėnesį",
+        "Naujos sekcijos ir blokai pagal poreikį",
+        "Mėnesinė ataskaita: srautas ir užklausos",
+        "1 SEO patobulinimas per mėnesį",
+        "Prioritetinė pagalba per 12 val."
+      ],
+      "cta": "Užsisakyti su Growth"
+    }
   }
 }

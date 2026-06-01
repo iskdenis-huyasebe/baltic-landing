@@ -494,5 +494,40 @@
       "step3": "Tava mājas lapa ir dzīva. Saņem domēnu + piekļuves.",
       "backHome": "Uz sākumlapu"
     }
+  },
+  "subscriptions": {
+    "eyebrow": "PĒC PALAIŠANAS",
+    "h2": "Vietne dzīvo un aug",
+    "subtitle": "Palaišana nav beigas. No 2. mēneša izvēlies plānu: hostings, labojumi un uzlabojumi — mūsu ziņā.",
+    "note": "Abonements — no 2. mēneša. Atcel jebkurā brīdī, vietne un domēns paliek tev.",
+    "care": {
+      "title": "Care",
+      "price": "15",
+      "period": "/mēn",
+      "tagline": "Vienkārši strādā",
+      "bullets": [
+        "Hostings, SSL un domēna pārvaldība",
+        "Pieejamības uzraudzība — pamanām ātrāk par tevi",
+        "Līdz 30 min. labojumu mēnesī",
+        "Atbilde 48 h laikā"
+      ],
+      "cta": "Pasūtīt ar Care"
+    },
+    "growth": {
+      "title": "Growth",
+      "price": "30",
+      "period": "/mēn",
+      "tagline": "Uzlabojam katru mēnesi",
+      "badge": "★ Populārākais",
+      "bullets": [
+        "Viss no Care",
+        "Līdz 2 h labojumu mēnesī",
+        "Jaunas sadaļas un bloki pēc pieprasījuma",
+        "Mēneša atskaite: datplūsma un pieprasījumi",
+        "1 SEO uzlabojums mēnesī",
+        "Prioritārs atbalsts 12 h laikā"
+      ],
+      "cta": "Pasūtīt ar Growth"
+    }
   }
 }

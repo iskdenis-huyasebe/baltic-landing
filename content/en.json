@@ -494,5 +494,40 @@
       "step3": "Your landing is live. You get domain + admin access.",
       "backHome": "Back to homepage"
     }
+  },
+  "subscriptions": {
+    "eyebrow": "AFTER LAUNCH",
+    "h2": "Keep it live. Keep it growing.",
+    "subtitle": "Your site doesn't stop at launch. From month two, pick a plan — hosting, edits and improvements, handled.",
+    "note": "Subscription starts from month 2. Cancel anytime — your site and domain stay yours.",
+    "care": {
+      "title": "Care",
+      "price": "15",
+      "period": "/mo",
+      "tagline": "Stay online, stress-free",
+      "bullets": [
+        "Hosting, SSL & domain management",
+        "Uptime monitoring — we notice before you do",
+        "Up to 30 min of edits per month",
+        "Support reply within 48h"
+      ],
+      "cta": "Order with Care"
+    },
+    "growth": {
+      "title": "Growth",
+      "price": "30",
+      "period": "/mo",
+      "tagline": "Keep improving every month",
+      "badge": "★ Most popular",
+      "bullets": [
+        "Everything in Care",
+        "Up to 2 hours of edits per month",
+        "New sections & blocks on request",
+        "Monthly report: traffic & leads",
+        "1 SEO improvement per month",
+        "Priority support within 12h"
+      ],
+      "cta": "Order with Growth"
+    }
   }
 }
