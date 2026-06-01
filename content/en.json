@@ -481,7 +481,9 @@
       "sentSubtitle": "We'll review within 24h and reach out via Telegram or email — whether we take it and what it costs.",
       "backHome": "Back to home",
       "noPaymentYet": "Payment only after approval.",
-      "contact": "Contact"
+      "contact": "Contact",
+      "promoLabel": "Promo code (optional)",
+      "promoPlaceholder": "Enter code"
     },
     "success": {
       "title": "Order received. Let's build.",

@@ -22,6 +22,7 @@ export type OrderState = {
   headline: string;
   bullets: string;
   leadEmail: string;
+  promo: string;
   locale: string;
 };
 
@@ -49,6 +50,7 @@ function OrderPageInner() {
     bundle: initialBundle,
     name: "", business: "", contact: "", siteLocale: locale,
     designId: initialDesign, designNote: "", headline: "", bullets: "", leadEmail: "",
+    promo: "",
     locale,
   });
 

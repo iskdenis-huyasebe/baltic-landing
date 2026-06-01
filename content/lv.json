@@ -481,7 +481,9 @@
       "sentSubtitle": "Pārskatīsim 24 st. laikā un rakstīsim Telegram vai e-pastā — vai ņemam un cik maksā.",
       "backHome": "Atpakaļ uz sākumu",
       "noPaymentYet": "Maksājums tikai pēc apstiprināšanas.",
-      "contact": "Kontakts"
+      "contact": "Kontakts",
+      "promoLabel": "Promokods (ja ir)",
+      "promoPlaceholder": "Ievadi kodu"
     },
     "success": {
       "title": "Pasūtījums saņemts. Sākam.",

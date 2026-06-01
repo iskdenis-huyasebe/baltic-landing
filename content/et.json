@@ -481,7 +481,9 @@
       "sentSubtitle": "Vaatame 24 tunni jooksul üle ja kirjutame Telegrami või e-posti teel — kas võtame ja mis see maksab.",
       "backHome": "Tagasi avalehele",
       "noPaymentYet": "Makse alles pärast kinnitamist.",
-      "contact": "Kontakt"
+      "contact": "Kontakt",
+      "promoLabel": "Sooduskood (kui on)",
+      "promoPlaceholder": "Sisesta kood"
     },
     "success": {
       "title": "Tellimus vastu võetud. Alustame.",

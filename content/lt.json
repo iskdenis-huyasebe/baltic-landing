@@ -481,7 +481,9 @@
       "sentSubtitle": "Peržiūrėsim per 24 val. ir parašysim į Telegram arba el. paštą — ar imamės, ir kiek kainuos.",
       "backHome": "Grįžti į pradžią",
       "noPaymentYet": "Mokėjimas tik po patvirtinimo.",
-      "contact": "Kontaktas"
+      "contact": "Kontaktas",
+      "promoLabel": "Nuolaidos kodas (jei turi)",
+      "promoPlaceholder": "Įvesk kodą"
     },
     "success": {
       "title": "Užsakymas gautas. Pradedame.",

@@ -112,6 +112,20 @@ export function StepReview({
         </div>
       </div>
 
+      <div className="mb-4">
+        <label className="block text-sm font-medium text-[var(--foreground)] mb-2">
+          {t("promoLabel")}
+        </label>
+        <input
+          type="text"
+          value={state.promo}
+          onChange={(e) => update({ promo: e.target.value.trim() })}
+          placeholder={t("promoPlaceholder")}
+          autoCapitalize="characters"
+          className="w-full bg-[var(--surface)] border border-[var(--border)] rounded-xl px-4 py-3 text-base text-[var(--foreground)] uppercase tracking-wide placeholder:normal-case placeholder:tracking-normal placeholder:text-[var(--subtle)] transition-colors hover:border-[var(--border-strong)] focus:outline-none focus:border-[var(--accent)] focus:ring-2 focus:ring-[var(--accent)]/20 min-h-[48px]"
+        />
+      </div>
+
       {error && <p className="text-sm text-red-400 mb-4">{error}</p>}
 
       <button

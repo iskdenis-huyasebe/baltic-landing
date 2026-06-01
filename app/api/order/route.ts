@@ -13,6 +13,7 @@ const OrderSchema = z.object({
   headline: z.string().min(2).max(500),
   bullets: z.string().min(2).max(2000),
   leadEmail: z.string().email().optional().or(z.literal("")),
+  promo: z.string().max(64).optional(),
   locale: z.string(),
 });
 
@@ -99,15 +100,19 @@ async function attachFileToTrello(cardId: string, file: File, name: string) {
 async function notifyTelegram(
   data: z.infer<typeof OrderSchema>,
   cardId: string | null,
-  checkoutUrl: string
+  checkoutUrl: string,
+  isTest = false
 ) {
   const botToken = process.env.TELEGRAM_BOT_TOKEN;
   const chatId = process.env.TELEGRAM_CHAT_ID;
   if (!botToken || !chatId) return;
 
   const planLabel = data.plan === "setup" ? "Setup €200" : "Setup Pro €500";
+  const header = isTest
+    ? `🧪 <b>ТЕСТОВЫЙ ЗАКАЗ — ${planLabel}${data.bundle ? " + Care" : ""}</b>`
+    : `🔥 <b>НОВЫЙ ЗАКАЗ — ${planLabel}${data.bundle ? " + Care" : ""}</b>`;
 
-  const text = `🔥 <b>НОВЫЙ ЗАКАЗ — ${planLabel}${data.bundle ? " + Care" : ""}</b>
+  const text = `${header}
 
 👤 ${esc(data.name)}
 💼 ${esc(data.business)}
@@ -116,7 +121,7 @@ async function notifyTelegram(
 🎨 Дизайн: ${data.designId}
 
 ${cardId ? `📋 Trello: https://trello.com/c/${cardId}` : "⚠️ Trello не настроен"}
-💳 Статус: <i>Ожидает оплаты</i>`;
+💳 Статус: <i>${isTest ? "ТЕСТ — без оплаты (промокод)" : "Ожидает оплаты"}</i>`;
 
   fetch(`https://api.telegram.org/bot${botToken}/sendMessage`, {
     method: "POST",
@@ -131,11 +136,6 @@ ${cardId ? `📋 Trello: https://trello.com/c/${cardId}` : "⚠️ Trello не �
 }
 
 export async function POST(request: Request) {
-  const stripeKey = process.env.STRIPE_SECRET_KEY;
-  if (!stripeKey) {
-    return NextResponse.json({ error: "Stripe not configured" }, { status: 503 });
-  }
-
   try {
     const formData = await request.formData();
     const raw = formData.get("data");
@@ -174,7 +174,21 @@ export async function POST(request: Request) {
       }
     }
 
-    // 3. Stripe Checkout
+    const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://unoweb.eu";
+
+    // 3. Internal test promo — skip payment, jump straight to success (full client journey)
+    const TEST_CODE = (process.env.TEST_PROMO_CODE || "UNOWEB-TEST").toUpperCase();
+    if (data.promo && data.promo.trim().toUpperCase() === TEST_CODE) {
+      const successUrl = `${baseUrl}/${data.locale}/order/success?test=1`;
+      notifyTelegram(data, trelloCardId, successUrl, true);
+      return NextResponse.json({ checkoutUrl: successUrl });
+    }
+
+    // 4. Stripe Checkout (real payment)
+    const stripeKey = process.env.STRIPE_SECRET_KEY;
+    if (!stripeKey) {
+      return NextResponse.json({ error: "Stripe not configured" }, { status: 503 });
+    }
     const Stripe = (await import("stripe")).default;
     const stripe = new Stripe(stripeKey, {
       apiVersion: "2025-01-27.acacia" as import("stripe").Stripe.LatestApiVersion,
@@ -190,7 +204,6 @@ export async function POST(request: Request) {
       lineItems.push({ price: process.env.STRIPE_PRICE_CARE_6MO!, quantity: 1 });
     }
 
-    const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://unoweb.eu";
     const stripeLocale = (["lt", "lv", "et"].includes(data.locale) ? data.locale : "en") as
       import("stripe").Stripe.Checkout.SessionCreateParams.Locale;
 
