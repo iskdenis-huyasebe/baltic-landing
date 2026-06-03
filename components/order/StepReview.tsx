@@ -21,14 +21,21 @@ export function StepReview({
 
   const prices: Record<string, number> = { setup: 200, pro: 500 };
   const total = prices[state.plan] || 200;
-  const fmtPrice = (p: number) => `${p} €`;
+  const fmtPrice = (p: number) => (locale === "en" ? `€${p}` : `${p} €`);
 
   const subOptions = [
     { id: "care" as const, label: t("subCare") },
     { id: "growth" as const, label: t("subGrowth") },
     { id: "none" as const, label: t("subNone") },
   ];
-  const showCycle = state.subPlan === "care" || state.subPlan === "growth";
+  const hasSub = state.subPlan === "care" || state.subPlan === "growth";
+  const subMonthly: Record<string, number> = { care: 15, growth: 30 };
+  const recurAmount = hasSub
+    ? state.subCycle === "year"
+      ? Math.round(subMonthly[state.subPlan] * 12 * 0.7)
+      : subMonthly[state.subPlan]
+    : 0;
+  const recurPer = state.subCycle === "year" ? t("perYear") : t("perMonth");
 
   const handlePay = async () => {
     setLoading(true);
@@ -121,7 +128,7 @@ export function StepReview({
             })}
           </div>
 
-          {showCycle && (
+          {hasSub && (
             <div className="grid grid-cols-2 gap-2 mt-2">
               {(["month", "year"] as const).map((c) => {
                 const active = state.subCycle === c;
@@ -146,9 +153,29 @@ export function StepReview({
           <p className="text-xs text-[var(--subtle)] mt-2">{t("subNoLock")}</p>
         </div>
 
-        <div className="pt-4 border-t border-[var(--border)] flex justify-between text-lg">
-          <span className="font-medium">{t("total")}</span>
-          <span className="font-medium text-[var(--accent)]">{fmtPrice(total)}</span>
+        <div className="pt-4 border-t border-[var(--border)] space-y-2.5">
+          <div className="flex justify-between items-baseline">
+            <div>
+              <span className="font-medium text-lg">{t("total")}</span>
+              <span className="block text-xs text-[var(--subtle)]">{t("todayHint")}</span>
+            </div>
+            <span className="font-medium text-lg text-[var(--accent)]">{fmtPrice(total)}</span>
+          </div>
+
+          {hasSub && (
+            <div className="flex justify-between items-baseline pt-2.5 border-t border-[var(--border)]">
+              <div>
+                <span className="text-sm text-[var(--foreground)]">
+                  {t("subFrom")} · {state.subPlan === "care" ? "Care" : "Growth"}
+                </span>
+                <span className="block text-xs text-[var(--accent)]">{t("free1")}</span>
+              </div>
+              <span className="text-sm font-medium text-[var(--foreground)]">
+                {fmtPrice(recurAmount)}
+                <span className="text-[var(--muted)]">{recurPer}</span>
+              </span>
+            </div>
+          )}
         </div>
       </div>
 

@@ -497,7 +497,12 @@
       "subCycleMonth": "Mėn",
       "subCycleYear": "Metai −30%",
       "subNoLock": "Be įsipareigojimų — kodas tavo, atšauk bet kada.",
-      "subTrial": "Care/Growth: pirmas mėnuo nemokamas, vėliau nuskaitymas."
+      "subTrial": "Care/Growth: pirmas mėnuo nemokamas, vėliau nuskaitymas.",
+      "subFrom": "Nuo 2-o mėnesio",
+      "free1": "pirmas mėnuo nemokamas",
+      "perMonth": "/mėn",
+      "perYear": "/m.",
+      "todayHint": "svetainė, vienkartinis"
     },
     "success": {
       "title": "Užsakymas gautas. Pradedame.",

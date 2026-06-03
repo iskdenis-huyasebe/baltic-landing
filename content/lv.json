@@ -497,7 +497,12 @@
       "subCycleMonth": "Mēn",
       "subCycleYear": "Gads −30%",
       "subNoLock": "Bez piesaistes — kods tavs, atcel jebkurā brīdī.",
-      "subTrial": "Care/Growth: pirmais mēnesis bez maksas, pēc tam maksa."
+      "subTrial": "Care/Growth: pirmais mēnesis bez maksas, pēc tam maksa.",
+      "subFrom": "No 2. mēneša",
+      "free1": "pirmais mēnesis bez maksas",
+      "perMonth": "/mēn",
+      "perYear": "/gadā",
+      "todayHint": "vietne, vienreizējs"
     },
     "success": {
       "title": "Pasūtījums saņemts. Sākam.",

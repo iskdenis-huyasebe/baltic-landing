@@ -497,7 +497,12 @@
       "subCycleMonth": "Kuu",
       "subCycleYear": "Aasta −30%",
       "subNoLock": "Ilma seoseta — kood on sinu, tühista millal tahes.",
-      "subTrial": "Care/Growth: esimene kuu tasuta, siis maksed."
+      "subTrial": "Care/Growth: esimene kuu tasuta, siis maksed.",
+      "subFrom": "Alates 2. kuust",
+      "free1": "esimene kuu tasuta",
+      "perMonth": "/kuus",
+      "perYear": "/a",
+      "todayHint": "sait, ühekordne"
     },
     "success": {
       "title": "Tellimus vastu võetud. Alustame.",

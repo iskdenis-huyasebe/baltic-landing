@@ -497,7 +497,12 @@
       "subCycleMonth": "Monthly",
       "subCycleYear": "Year −30%",
       "subNoLock": "No lock-in — you own the code, cancel anytime.",
-      "subTrial": "Care/Growth: first month free, then billed."
+      "subTrial": "Care/Growth: first month free, then billed.",
+      "subFrom": "From month 2",
+      "free1": "first month free",
+      "perMonth": "/mo",
+      "perYear": "/yr",
+      "todayHint": "site, one-time"
     },
     "success": {
       "title": "Order received. Let's build.",
