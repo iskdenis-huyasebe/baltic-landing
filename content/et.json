@@ -483,7 +483,12 @@
       "noPaymentYet": "Makse alles pärast kinnitamist.",
       "contact": "Kontakt",
       "promoLabel": "Sooduskood (kui on)",
-      "promoPlaceholder": "Sisesta kood"
+      "promoPlaceholder": "Sisesta kood",
+      "subTitle": "Tellimus alates 2. kuust",
+      "subNote": "Esimene kuu sisaldub. Maksed algavad 2. kuust, tühista millal tahes.",
+      "subCare": "Care · 15 €/kuus",
+      "subGrowth": "Growth · 30 €/kuus",
+      "subLater": "Otsustan hiljem"
     },
     "success": {
       "title": "Tellimus vastu võetud. Alustame.",

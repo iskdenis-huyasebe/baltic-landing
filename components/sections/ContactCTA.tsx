@@ -5,7 +5,7 @@ import { useState } from "react";
 import { Send, Check, Mail, MessageCircle, Instagram, Phone, ArrowUpRight } from "lucide-react";
 
 // Fill in to show each channel (empty = hidden). Telegram & Email come from the signature below.
-const WHATSAPP = ""; // phone digits incl. country code, e.g. "37061234567"
+const WHATSAPP = "37065288897"; // phone digits incl. country code
 const MESSENGER = ""; // facebook page/username for m.me/<username>
 const VIBER = ""; // phone digits incl. country code, e.g. "37061234567"
 const INSTAGRAM = ""; // instagram username for ig.me/m/<username>

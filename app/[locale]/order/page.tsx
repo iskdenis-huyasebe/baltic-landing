@@ -13,6 +13,7 @@ import { StepReview } from "@/components/order/StepReview";
 export type OrderState = {
   plan: "setup" | "pro";
   bundle: boolean;
+  subPlan: "care" | "growth" | "later";
   name: string;
   business: string;
   contact: string;
@@ -48,6 +49,7 @@ function OrderPageInner() {
   const [state, setState] = useState<OrderState>({
     plan: initialPlan,
     bundle: initialBundle,
+    subPlan: "care",
     name: "", business: "", contact: "", siteLocale: locale,
     designId: initialDesign, designNote: "", headline: "", bullets: "", leadEmail: "",
     promo: "",

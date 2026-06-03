@@ -14,8 +14,12 @@ const OrderSchema = z.object({
   bullets: z.string().min(2).max(2000),
   leadEmail: z.string().email().optional().or(z.literal("")),
   promo: z.string().max(64).optional(),
+  subPlan: z.enum(["care", "growth", "later"]).optional(),
   locale: z.string(),
 });
+
+const subLabel = (s?: string) =>
+  s === "care" ? "Care €15/мес" : s === "growth" ? "Growth €30/мес" : "Решит позже";
 
 function esc(s: string): string {
   return s.replace(/[<>&"']/g, (c) =>
@@ -37,6 +41,7 @@ async function createTrelloCard(data: z.infer<typeof OrderSchema>): Promise<stri
   const planLabel = data.plan === "setup" ? "Setup €200" : "Setup Pro €500";
 
   const desc = `**План:** ${planLabel}${data.bundle ? " + 6 мес. Care" : ""}
+**Подписка (2-й мес):** ${subLabel(data.subPlan)}
 **Язык клиента:** ${data.locale.toUpperCase()} · **Язык сайта:** ${data.siteLocale.toUpperCase()}
 
 ---
@@ -119,6 +124,7 @@ async function notifyTelegram(
 📞 ${esc(data.contact)}
 🌍 ${data.locale.toUpperCase()} → сайт: ${data.siteLocale.toUpperCase()}
 🎨 Дизайн: ${data.designId}
+🔁 Подписка (2-й мес): ${subLabel(data.subPlan)}
 
 ${cardId ? `📋 Trello: https://trello.com/c/${cardId}` : "⚠️ Trello не настроен"}
 💳 Статус: <i>${isTest ? "ТЕСТ — без оплаты (промокод)" : "Ожидает оплаты"}</i>`;
@@ -220,6 +226,7 @@ export async function POST(request: Request) {
         trelloCardId: trelloCardId || "",
         plan: data.plan,
         bundle: data.bundle ? "yes" : "no",
+        subPlan: data.subPlan || "later",
         locale: data.locale,
         clientName: data.name,
       },

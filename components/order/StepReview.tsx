@@ -20,10 +20,14 @@ export function StepReview({
   const [error, setError] = useState("");
 
   const prices: Record<string, number> = { setup: 200, pro: 500 };
-  const basePrice = prices[state.plan] || 200;
-  const bundlePrice = state.bundle ? 60 : 0;
-  const total = basePrice + bundlePrice;
+  const total = prices[state.plan] || 200;
   const fmtPrice = (p: number) => `${p} €`;
+
+  const subOptions = [
+    { id: "care" as const, label: t("subCare") },
+    { id: "growth" as const, label: t("subGrowth") },
+    { id: "later" as const, label: t("subLater") },
+  ];
 
   const handlePay = async () => {
     setLoading(true);
@@ -93,18 +97,29 @@ export function StepReview({
           </div>
         )}
 
-        <label className="flex items-start gap-3 cursor-pointer pt-4 border-t border-[var(--border)]">
-          <input
-            type="checkbox"
-            checked={state.bundle}
-            onChange={(e) => update({ bundle: e.target.checked })}
-            className="mt-1 size-4 accent-[#bef264]"
-          />
-          <div>
-            <div className="text-sm font-medium">{t("bundle")}</div>
-            <div className="text-xs text-[var(--muted)] mt-0.5">{t("bundleNote")}</div>
+        <div className="pt-4 border-t border-[var(--border)]">
+          <div className="text-sm font-medium mb-1">{t("subTitle")}</div>
+          <div className="text-xs text-[var(--muted)] mb-3">{t("subNote")}</div>
+          <div className="grid grid-cols-3 gap-2">
+            {subOptions.map((o) => {
+              const active = state.subPlan === o.id;
+              return (
+                <button
+                  key={o.id}
+                  type="button"
+                  onClick={() => update({ subPlan: o.id })}
+                  className={`rounded-lg border px-2 py-2.5 text-xs font-medium transition-all ${
+                    active
+                      ? "border-[var(--accent)] bg-[var(--accent-muted)] text-[var(--foreground)]"
+                      : "border-[var(--border)] text-[var(--muted)] hover:border-[var(--border-strong)]"
+                  }`}
+                >
+                  {o.label}
+                </button>
+              );
+            })}
           </div>
-        </label>
+        </div>
 
         <div className="pt-4 border-t border-[var(--border)] flex justify-between text-lg">
           <span className="font-medium">{t("total")}</span>

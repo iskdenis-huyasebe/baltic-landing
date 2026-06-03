@@ -483,7 +483,12 @@
       "noPaymentYet": "Payment only after approval.",
       "contact": "Contact",
       "promoLabel": "Promo code (optional)",
-      "promoPlaceholder": "Enter code"
+      "promoPlaceholder": "Enter code",
+      "subTitle": "Subscription from month 2",
+      "subNote": "First month included. Billing starts month 2, cancel anytime.",
+      "subCare": "Care · €15/mo",
+      "subGrowth": "Growth · €30/mo",
+      "subLater": "Decide later"
     },
     "success": {
       "title": "Order received. Let's build.",

@@ -483,7 +483,12 @@
       "noPaymentYet": "Mokėjimas tik po patvirtinimo.",
       "contact": "Kontaktas",
       "promoLabel": "Nuolaidos kodas (jei turi)",
-      "promoPlaceholder": "Įvesk kodą"
+      "promoPlaceholder": "Įvesk kodą",
+      "subTitle": "Prenumerata nuo 2-o mėnesio",
+      "subNote": "Pirmas mėnuo įskaičiuotas. Nuskaitymai nuo 2-o mėnesio, atšauk bet kada.",
+      "subCare": "Care · 15 €/mėn",
+      "subGrowth": "Growth · 30 €/mėn",
+      "subLater": "Nuspręsiu vėliau"
     },
     "success": {
       "title": "Užsakymas gautas. Pradedame.",

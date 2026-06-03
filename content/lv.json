@@ -483,7 +483,12 @@
       "noPaymentYet": "Maksājums tikai pēc apstiprināšanas.",
       "contact": "Kontakts",
       "promoLabel": "Promokods (ja ir)",
-      "promoPlaceholder": "Ievadi kodu"
+      "promoPlaceholder": "Ievadi kodu",
+      "subTitle": "Abonements no 2. mēneša",
+      "subNote": "Pirmais mēnesis iekļauts. Maksājumi no 2. mēneša, atcel jebkurā brīdī.",
+      "subCare": "Care · 15 €/mēn",
+      "subGrowth": "Growth · 30 €/mēn",
+      "subLater": "Izlemšu vēlāk"
     },
     "success": {
       "title": "Pasūtījums saņemts. Sākam.",
