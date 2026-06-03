@@ -531,5 +531,23 @@
       ],
       "cta": "Užsisakyti su Growth"
     }
+  },
+  "subscribe": {
+    "h1": "Užsisakyti prenumeratą",
+    "subtitle": "Klientams su veikiančia svetaine. Įvesk kliento numerį — jį priskyrėm po svetainės užsakymo.",
+    "planLabel": "Planas",
+    "clientLabel": "Kliento / sutarties numeris",
+    "clientPlaceholder": "Pvz., UW-1042",
+    "clientHint": "Yra sutartyje arba atsiųstas Telegram po užsakymo.",
+    "emailLabel": "El. paštas",
+    "emailPlaceholder": "tu@email.com",
+    "contactLabel": "Telegram arba telefonas (neprivaloma)",
+    "contactPlaceholder": "@vardas arba +370...",
+    "submit": "Pereiti prie apmokėjimo",
+    "submitting": "Nukreipiame…",
+    "error": "Kažkas nepavyko. Parašyk mums Telegram.",
+    "back": "Į pradžią",
+    "secure": "Saugus mokėjimas per Stripe. Atšauk bet kada.",
+    "noClient": "Dar neturi kliento numerio? Pirma užsisakyk svetainę."
   }
 }

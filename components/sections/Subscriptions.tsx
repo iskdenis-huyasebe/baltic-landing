@@ -74,7 +74,6 @@ export function Subscriptions() {
   const locale = useLocale();
   const care = t.raw("care") as PlanData;
   const growth = t.raw("growth") as PlanData;
-  const orderHref = `/${locale}/order?plan=setup`;
 
   return (
     <section id="subscriptions" className="py-16 md:py-24 px-6 md:px-8 bg-[var(--surface)]/30">
@@ -93,8 +92,8 @@ export function Subscriptions() {
         </FadeIn>
 
         <div className="grid sm:grid-cols-2 gap-4 md:gap-6 md:items-stretch">
-          <PlanCard data={care} href={orderHref} />
-          <PlanCard data={growth} href={orderHref} highlight />
+          <PlanCard data={care} href={`/${locale}/subscribe?plan=care`} />
+          <PlanCard data={growth} href={`/${locale}/subscribe?plan=growth`} highlight />
         </div>
 
         <p className="text-center text-sm text-[var(--subtle)] mt-8 max-w-2xl mx-auto">{t("note")}</p>

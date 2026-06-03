@@ -531,5 +531,23 @@
       ],
       "cta": "Pasūtīt ar Growth"
     }
+  },
+  "subscribe": {
+    "h1": "Noformēt abonementu",
+    "subtitle": "Klientiem ar gatavu vietni. Ievadi klienta numuru — to piešķīrām pēc vietnes pasūtījuma.",
+    "planLabel": "Plāns",
+    "clientLabel": "Klienta / līguma numurs",
+    "clientPlaceholder": "Piem., UW-1042",
+    "clientHint": "Atrodams līgumā vai tika nosūtīts Telegram pēc pasūtījuma.",
+    "emailLabel": "E-pasts",
+    "emailPlaceholder": "tu@email.com",
+    "contactLabel": "Telegram vai tālrunis (nav obligāti)",
+    "contactPlaceholder": "@vards vai +370...",
+    "submit": "Turpināt uz apmaksu",
+    "submitting": "Pāradresējam…",
+    "error": "Kaut kas nogāja greizi. Raksti mums Telegram.",
+    "back": "Uz sākumu",
+    "secure": "Droša apmaksa caur Stripe. Atcel jebkurā brīdī.",
+    "noClient": "Vēl nav klienta numura? Vispirms pasūti vietni."
   }
 }

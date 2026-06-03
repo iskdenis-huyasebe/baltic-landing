@@ -2,6 +2,36 @@ import { NextResponse } from "next/server";
 
 type Plan = "setup" | "care" | "growth" | "setup+care" | "setup+growth";
 
+function esc(s: string): string {
+  return s.replace(/[<>&"']/g, (c) =>
+    ({ "<": "&lt;", ">": "&gt;", "&": "&amp;", '"': "&quot;", "'": "&#039;" }[c] ?? c)
+  );
+}
+
+async function notifySubscription(
+  plan: string,
+  clientRef: string,
+  email: string,
+  contact: string,
+  locale: string
+) {
+  const botToken = process.env.TELEGRAM_BOT_TOKEN;
+  const chatId = process.env.TELEGRAM_CHAT_ID;
+  if (!botToken || !chatId) return;
+  const text = `🔁 <b>НОВАЯ ПОДПИСКА — ${plan.toUpperCase()}</b>
+
+🆔 Клиент: ${esc(clientRef) || "—"}
+✉️ ${esc(email) || "—"}
+📞 ${esc(contact) || "—"}
+🌍 ${locale.toUpperCase()}
+💳 Статус: <i>Ожидает оплаты</i>`;
+  fetch(`https://api.telegram.org/bot${botToken}/sendMessage`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ chat_id: chatId, text, parse_mode: "HTML", disable_web_page_preview: true }),
+  }).catch(() => {});
+}
+
 export async function POST(request: Request) {
   const stripeKey = process.env.STRIPE_SECRET_KEY;
   if (!stripeKey) {
@@ -14,9 +44,18 @@ export async function POST(request: Request) {
       apiVersion: "2025-01-27.acacia" as import("stripe").Stripe.LatestApiVersion,
     });
 
-    const { plan, locale = "lt" } = (await request.json()) as {
+    const {
+      plan,
+      locale = "lt",
+      clientRef = "",
+      email = "",
+      contact = "",
+    } = (await request.json()) as {
       plan: Plan;
       locale?: string;
+      clientRef?: string;
+      email?: string;
+      contact?: string;
     };
 
     const lineItems: import("stripe").Stripe.Checkout.SessionCreateParams.LineItem[] = [];
@@ -50,16 +89,25 @@ export async function POST(request: Request) {
     const stripeLocale = (["lt", "lv", "et", "ru"].includes(locale) ? locale : "en") as
       import("stripe").Stripe.Checkout.SessionCreateParams.Locale;
 
+    const metadata = { plan, clientRef, locale, type: "subscription" };
+
     const session = await stripe.checkout.sessions.create({
       mode,
       line_items: lineItems,
       success_url: `${baseUrl}/${locale}/success?session_id={CHECKOUT_SESSION_ID}`,
-      cancel_url: `${baseUrl}/${locale}#pricing`,
+      cancel_url: `${baseUrl}/${locale}/subscribe?plan=${plan}`,
       locale: stripeLocale,
       automatic_tax: { enabled: true },
       tax_id_collection: { enabled: true },
       billing_address_collection: "required",
+      ...(email ? { customer_email: email } : {}),
+      metadata,
+      ...(mode === "subscription" ? { subscription_data: { metadata } } : {}),
     });
+
+    if (mode === "subscription") {
+      notifySubscription(plan, clientRef, email, contact, locale);
+    }
 
     return NextResponse.json({ url: session.url });
   } catch (error) {

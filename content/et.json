@@ -531,5 +531,23 @@
       ],
       "cta": "Telli koos Growthiga"
     }
+  },
+  "subscribe": {
+    "h1": "Vormista tellimus",
+    "subtitle": "Klientidele, kellel on valmis sait. Sisesta kliendinumber — määrasime selle pärast saidi tellimust.",
+    "planLabel": "Plaan",
+    "clientLabel": "Kliendi / lepingu number",
+    "clientPlaceholder": "Nt UW-1042",
+    "clientHint": "Leiad lepingust või saadeti Telegramis pärast tellimust.",
+    "emailLabel": "E-post",
+    "emailPlaceholder": "sina@email.com",
+    "contactLabel": "Telegram või telefon (valikuline)",
+    "contactPlaceholder": "@kasutaja või +370...",
+    "submit": "Jätka maksega",
+    "submitting": "Suuname…",
+    "error": "Midagi läks valesti. Kirjuta meile Telegramis.",
+    "back": "Avalehele",
+    "secure": "Turvaline makse Stripe kaudu. Tühista millal tahes.",
+    "noClient": "Pole veel kliendinumbrit? Telli esmalt sait."
   }
 }

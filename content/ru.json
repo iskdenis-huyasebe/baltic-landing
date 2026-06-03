@@ -531,5 +531,23 @@
       ],
       "cta": "Заказать с Growth"
     }
+  },
+  "subscribe": {
+    "h1": "Оформить подписку",
+    "subtitle": "Для клиентов с готовым сайтом. Введи номер клиента — мы присвоили его после заказа сайта.",
+    "planLabel": "План",
+    "clientLabel": "Номер клиента / контракта",
+    "clientPlaceholder": "Например, UW-1042",
+    "clientHint": "Есть в договоре или приходил в Telegram после заказа.",
+    "emailLabel": "Email",
+    "emailPlaceholder": "you@email.com",
+    "contactLabel": "Telegram или телефон (необязательно)",
+    "contactPlaceholder": "@username или +370...",
+    "submit": "Перейти к оплате",
+    "submitting": "Перенаправляем…",
+    "error": "Что-то пошло не так. Напиши нам в Telegram.",
+    "back": "На главную",
+    "secure": "Безопасная оплата через Stripe. Отмена в любой момент.",
+    "noClient": "Ещё нет номера клиента? Сначала закажи сайт."
   }
 }

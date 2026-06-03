@@ -531,5 +531,23 @@
       ],
       "cta": "Order with Growth"
     }
+  },
+  "subscribe": {
+    "h1": "Start a subscription",
+    "subtitle": "For clients with a live site. Enter your client number — we assigned it after your site order.",
+    "planLabel": "Plan",
+    "clientLabel": "Client / contract number",
+    "clientPlaceholder": "e.g. UW-1042",
+    "clientHint": "It's in your contract or was sent on Telegram after your order.",
+    "emailLabel": "Email",
+    "emailPlaceholder": "you@email.com",
+    "contactLabel": "Telegram or phone (optional)",
+    "contactPlaceholder": "@username or +370...",
+    "submit": "Continue to payment",
+    "submitting": "Redirecting…",
+    "error": "Something went wrong. Message us on Telegram.",
+    "back": "Back home",
+    "secure": "Secure payment via Stripe. Cancel anytime.",
+    "noClient": "No client number yet? Order a site first."
   }
 }
