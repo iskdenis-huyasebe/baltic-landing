@@ -260,6 +260,10 @@
       {
         "q": "How much of my time does this require?",
         "a": "Realistically — 3–4 hours total: Brief (1 hr), copy review (1 hr), design review (30 min), final check (1 hr). Everything via Telegram + 2 short Zoom calls."
+      },
+      {
+        "q": "Is the subscription mandatory?",
+        "a": "No. €200 is one-time, no lock-in. Care/Growth are optional: take one if you want hosting and edits handled by us (first month free). If not, we hand over all the code and help you put the site on your own hosting. You can add a plan anytime later."
       }
     ]
   },
@@ -488,7 +492,12 @@
       "subNote": "First month included. Billing starts month 2, cancel anytime.",
       "subCare": "Care · €15/mo",
       "subGrowth": "Growth · €30/mo",
-      "subLater": "Decide later"
+      "subLater": "Decide later",
+      "subNone": "Own hosting",
+      "subCycleMonth": "Monthly",
+      "subCycleYear": "Year −30%",
+      "subNoLock": "No lock-in — you own the code, cancel anytime.",
+      "subTrial": "Care/Growth: first month free, then billed."
     },
     "success": {
       "title": "Order received. Let's build.",
@@ -535,7 +544,14 @@
         "Priority support within 12h"
       ],
       "cta": "Order with Growth"
-    }
+    },
+    "cycleMonth": "Monthly",
+    "cycleYear": "Yearly · −30%",
+    "save": "−30%",
+    "perYear": "/yr",
+    "monthlyEquiv": "≈ {price}/mo",
+    "noLock": "No lock-in: you own the code, cancel anytime.",
+    "trial": "First month free"
   },
   "subscribe": {
     "h1": "Start a subscription",
@@ -553,6 +569,8 @@
     "error": "Something went wrong. Message us on Telegram.",
     "back": "Back home",
     "secure": "Secure payment via Stripe. Cancel anytime.",
-    "noClient": "No client number yet? Order a site first."
+    "noClient": "No client number yet? Order a site first.",
+    "cycleMonth": "Monthly",
+    "cycleYear": "Yearly · −30%"
   }
 }

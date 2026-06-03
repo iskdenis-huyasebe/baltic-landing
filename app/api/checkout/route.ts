@@ -47,16 +47,21 @@ export async function POST(request: Request) {
     const {
       plan,
       locale = "lt",
+      cycle = "month",
       clientRef = "",
       email = "",
       contact = "",
     } = (await request.json()) as {
       plan: Plan;
       locale?: string;
+      cycle?: "month" | "year";
       clientRef?: string;
       email?: string;
       contact?: string;
     };
+
+    const carePrice = cycle === "year" ? process.env.STRIPE_PRICE_CARE_YEAR : process.env.STRIPE_PRICE_CARE;
+    const growthPrice = cycle === "year" ? process.env.STRIPE_PRICE_GROWTH_YEAR : process.env.STRIPE_PRICE_GROWTH;
 
     const lineItems: import("stripe").Stripe.Checkout.SessionCreateParams.LineItem[] = [];
     let mode: "payment" | "subscription" = "payment";
@@ -64,10 +69,10 @@ export async function POST(request: Request) {
     if (plan === "setup") {
       lineItems.push({ price: process.env.STRIPE_PRICE_SETUP!, quantity: 1 });
     } else if (plan === "care") {
-      lineItems.push({ price: process.env.STRIPE_PRICE_CARE!, quantity: 1 });
+      lineItems.push({ price: carePrice!, quantity: 1 });
       mode = "subscription";
     } else if (plan === "growth") {
-      lineItems.push({ price: process.env.STRIPE_PRICE_GROWTH!, quantity: 1 });
+      lineItems.push({ price: growthPrice!, quantity: 1 });
       mode = "subscription";
     } else if (plan === "setup+care") {
       lineItems.push(
@@ -89,7 +94,7 @@ export async function POST(request: Request) {
     const stripeLocale = (["lt", "lv", "et", "ru"].includes(locale) ? locale : "en") as
       import("stripe").Stripe.Checkout.SessionCreateParams.Locale;
 
-    const metadata = { plan, clientRef, locale, type: "subscription" };
+    const metadata = { plan, cycle, clientRef, locale, type: "subscription" };
 
     const session = await stripe.checkout.sessions.create({
       mode,

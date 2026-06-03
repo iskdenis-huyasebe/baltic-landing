@@ -260,6 +260,10 @@
       {
         "q": "Cik daudz laika man pašam jāvelta?",
         "a": "Reāli — 3–4 stundas visam procesam: Briefings (1 st.), tekstu pārskats (1 st.), dizaina pārskats (30 min.), gala pārskats (1 st.). Viss caur Telegram + 2 īsi Zoom zvani."
+      },
+      {
+        "q": "Vai abonements ir obligāts?",
+        "a": "Nē. 200 € ir vienreizējs, bez piesaistes. Care/Growth pēc izvēles: ja vēlies, lai hostings un labojumi būtu mūsu ziņā, izvēlies abonementu (pirmais mēnesis bez maksas). Ja nē — atdodam visu kodu un palīdzam uzlikt vietni uz tava hostinga. Abonementu var pievienot jebkurā brīdī vēlāk."
       }
     ]
   },
@@ -488,7 +492,12 @@
       "subNote": "Pirmais mēnesis iekļauts. Maksājumi no 2. mēneša, atcel jebkurā brīdī.",
       "subCare": "Care · 15 €/mēn",
       "subGrowth": "Growth · 30 €/mēn",
-      "subLater": "Izlemšu vēlāk"
+      "subLater": "Izlemšu vēlāk",
+      "subNone": "Savs hostings",
+      "subCycleMonth": "Mēn",
+      "subCycleYear": "Gads −30%",
+      "subNoLock": "Bez piesaistes — kods tavs, atcel jebkurā brīdī.",
+      "subTrial": "Care/Growth: pirmais mēnesis bez maksas, pēc tam maksa."
     },
     "success": {
       "title": "Pasūtījums saņemts. Sākam.",
@@ -535,7 +544,14 @@
         "Prioritārs atbalsts 12 h laikā"
       ],
       "cta": "Pasūtīt ar Growth"
-    }
+    },
+    "cycleMonth": "Ikmēneša",
+    "cycleYear": "Gada · −30%",
+    "save": "−30%",
+    "perYear": "/gadā",
+    "monthlyEquiv": "≈ {price}/mēn",
+    "noLock": "Bez piesaistes: kods tavs, atcel jebkurā brīdī.",
+    "trial": "Pirmais mēnesis bez maksas"
   },
   "subscribe": {
     "h1": "Noformēt abonementu",
@@ -553,6 +569,8 @@
     "error": "Kaut kas nogāja greizi. Raksti mums Telegram.",
     "back": "Uz sākumu",
     "secure": "Droša apmaksa caur Stripe. Atcel jebkurā brīdī.",
-    "noClient": "Vēl nav klienta numura? Vispirms pasūti vietni."
+    "noClient": "Vēl nav klienta numura? Vispirms pasūti vietni.",
+    "cycleMonth": "Ikmēneša",
+    "cycleYear": "Gada · −30%"
   }
 }

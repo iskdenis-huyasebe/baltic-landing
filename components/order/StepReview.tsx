@@ -26,8 +26,9 @@ export function StepReview({
   const subOptions = [
     { id: "care" as const, label: t("subCare") },
     { id: "growth" as const, label: t("subGrowth") },
-    { id: "later" as const, label: t("subLater") },
+    { id: "none" as const, label: t("subNone") },
   ];
+  const showCycle = state.subPlan === "care" || state.subPlan === "growth";
 
   const handlePay = async () => {
     setLoading(true);
@@ -119,6 +120,30 @@ export function StepReview({
               );
             })}
           </div>
+
+          {showCycle && (
+            <div className="grid grid-cols-2 gap-2 mt-2">
+              {(["month", "year"] as const).map((c) => {
+                const active = state.subCycle === c;
+                return (
+                  <button
+                    key={c}
+                    type="button"
+                    onClick={() => update({ subCycle: c })}
+                    className={`rounded-lg border px-2 py-2 text-xs font-medium transition-all ${
+                      active
+                        ? "border-[var(--accent)] bg-[var(--accent-muted)] text-[var(--foreground)]"
+                        : "border-[var(--border)] text-[var(--muted)] hover:border-[var(--border-strong)]"
+                    }`}
+                  >
+                    {c === "month" ? t("subCycleMonth") : t("subCycleYear")}
+                  </button>
+                );
+              })}
+            </div>
+          )}
+
+          <p className="text-xs text-[var(--subtle)] mt-2">{t("subNoLock")}</p>
         </div>
 
         <div className="pt-4 border-t border-[var(--border)] flex justify-between text-lg">

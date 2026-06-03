@@ -260,6 +260,10 @@
       {
         "q": "Kiek laiko man pačiam reikės skirti?",
         "a": "Realiai — 3–4 valandos per visą procesą: Brief'as (1 val.), tekstų peržiūra (1 val.), dizaino peržiūra (30 min.), galutinė peržiūra (1 val.). Viskas per Telegram + 2 trumpi Zoom skambučiai."
+      },
+      {
+        "q": "Ar prenumerata privaloma?",
+        "a": "Ne. 200 € — vienkartinis, be įsipareigojimų. Care/Growth — pasirinktinai: jei nori, kad hostingas ir taisymai būtų mūsų rūpestis, renkis prenumeratą (pirmas mėnuo nemokamas). Jei ne — atiduodam visą kodą ir padedam perkelti svetainę į tavo hostingą. Prenumeratą gali įjungti bet kada vėliau."
       }
     ]
   },
@@ -488,7 +492,12 @@
       "subNote": "Pirmas mėnuo įskaičiuotas. Nuskaitymai nuo 2-o mėnesio, atšauk bet kada.",
       "subCare": "Care · 15 €/mėn",
       "subGrowth": "Growth · 30 €/mėn",
-      "subLater": "Nuspręsiu vėliau"
+      "subLater": "Nuspręsiu vėliau",
+      "subNone": "Savas hostingas",
+      "subCycleMonth": "Mėn",
+      "subCycleYear": "Metai −30%",
+      "subNoLock": "Be įsipareigojimų — kodas tavo, atšauk bet kada.",
+      "subTrial": "Care/Growth: pirmas mėnuo nemokamas, vėliau nuskaitymas."
     },
     "success": {
       "title": "Užsakymas gautas. Pradedame.",
@@ -535,7 +544,14 @@
         "Prioritetinė pagalba per 12 val."
       ],
       "cta": "Užsisakyti su Growth"
-    }
+    },
+    "cycleMonth": "Mėnesinis",
+    "cycleYear": "Metinis · −30%",
+    "save": "−30%",
+    "perYear": "/m.",
+    "monthlyEquiv": "≈ {price}/mėn",
+    "noLock": "Be įsipareigojimų: kodas tavo, atšauk bet kada.",
+    "trial": "Pirmas mėnuo nemokamas"
   },
   "subscribe": {
     "h1": "Užsisakyti prenumeratą",
@@ -553,6 +569,8 @@
     "error": "Kažkas nepavyko. Parašyk mums Telegram.",
     "back": "Į pradžią",
     "secure": "Saugus mokėjimas per Stripe. Atšauk bet kada.",
-    "noClient": "Dar neturi kliento numerio? Pirma užsisakyk svetainę."
+    "noClient": "Dar neturi kliento numerio? Pirma užsisakyk svetainę.",
+    "cycleMonth": "Mėnesinis",
+    "cycleYear": "Metinis · −30%"
   }
 }

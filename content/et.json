@@ -260,6 +260,10 @@
       {
         "q": "Kui palju aega mul endal kulub?",
         "a": "Reaalselt — 3–4 tundi kogu protsessi jaoks: Briifing (1 t.), tekstide ülevaatus (1 t.), disaini ülevaatus (30 min.), lõplik ülevaatus (1 t.). Kõik Telegrami + 2 lühikese Zoomi kõne kaudu."
+      },
+      {
+        "q": "Kas tellimus on kohustuslik?",
+        "a": "Ei. 200 € on ühekordne, ilma seoseta. Care/Growth on valikulised: võta, kui soovid, et majutus ja parandused oleksid meie mure (esimene kuu tasuta). Kui ei — anname üle kogu koodi ja aitame saidi panna sinu enda majutusse. Plaani saab igal ajal hiljem lisada."
       }
     ]
   },
@@ -488,7 +492,12 @@
       "subNote": "Esimene kuu sisaldub. Maksed algavad 2. kuust, tühista millal tahes.",
       "subCare": "Care · 15 €/kuus",
       "subGrowth": "Growth · 30 €/kuus",
-      "subLater": "Otsustan hiljem"
+      "subLater": "Otsustan hiljem",
+      "subNone": "Oma majutus",
+      "subCycleMonth": "Kuu",
+      "subCycleYear": "Aasta −30%",
+      "subNoLock": "Ilma seoseta — kood on sinu, tühista millal tahes.",
+      "subTrial": "Care/Growth: esimene kuu tasuta, siis maksed."
     },
     "success": {
       "title": "Tellimus vastu võetud. Alustame.",
@@ -535,7 +544,14 @@
         "Prioriteetne tugi 12 h jooksul"
       ],
       "cta": "Telli koos Growthiga"
-    }
+    },
+    "cycleMonth": "Kuine",
+    "cycleYear": "Aastane · −30%",
+    "save": "−30%",
+    "perYear": "/a",
+    "monthlyEquiv": "≈ {price}/kuus",
+    "noLock": "Ilma seoseta: kood on sinu, tühista millal tahes.",
+    "trial": "Esimene kuu tasuta"
   },
   "subscribe": {
     "h1": "Vormista tellimus",
@@ -553,6 +569,8 @@
     "error": "Midagi läks valesti. Kirjuta meile Telegramis.",
     "back": "Avalehele",
     "secure": "Turvaline makse Stripe kaudu. Tühista millal tahes.",
-    "noClient": "Pole veel kliendinumbrit? Telli esmalt sait."
+    "noClient": "Pole veel kliendinumbrit? Telli esmalt sait.",
+    "cycleMonth": "Kuine",
+    "cycleYear": "Aastane · −30%"
   }
 }

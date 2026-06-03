@@ -13,7 +13,8 @@ import { StepReview } from "@/components/order/StepReview";
 export type OrderState = {
   plan: "setup" | "pro";
   bundle: boolean;
-  subPlan: "care" | "growth" | "later";
+  subPlan: "care" | "growth" | "none";
+  subCycle: "month" | "year";
   name: string;
   business: string;
   contact: string;
@@ -33,7 +34,7 @@ export type OrderFiles = {
   texts?: File;
 };
 
-const STORAGE_KEY = "baltic-order-v1";
+const STORAGE_KEY = "unoweb-order-v2";
 const TOTAL_STEPS = 5;
 
 function OrderPageInner() {
@@ -50,6 +51,7 @@ function OrderPageInner() {
     plan: initialPlan,
     bundle: initialBundle,
     subPlan: "care",
+    subCycle: "month",
     name: "", business: "", contact: "", siteLocale: locale,
     designId: initialDesign, designNote: "", headline: "", bullets: "", leadEmail: "",
     promo: "",

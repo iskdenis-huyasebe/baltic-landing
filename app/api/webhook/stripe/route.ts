@@ -85,6 +85,64 @@ export async function POST(request: Request) {
           body: JSON.stringify({ chat_id: chatId, text, parse_mode: "HTML", disable_web_page_preview: true }),
         }).catch(() => {});
       }
+
+      // 3. Auto-start Care/Growth subscription with a 30-day free trial (first month free).
+      //    Only for site orders (mode=payment) where the client picked a plan and the card was saved.
+      const subPlan = session.metadata?.subPlan;
+      const subCycle = session.metadata?.subCycle === "year" ? "year" : "month";
+      const customerId = typeof session.customer === "string" ? session.customer : session.customer?.id;
+      if (
+        session.mode === "payment" &&
+        (subPlan === "care" || subPlan === "growth") &&
+        customerId
+      ) {
+        const priceEnv: Record<string, string | undefined> = {
+          care_month: process.env.STRIPE_PRICE_CARE,
+          care_year: process.env.STRIPE_PRICE_CARE_YEAR,
+          growth_month: process.env.STRIPE_PRICE_GROWTH,
+          growth_year: process.env.STRIPE_PRICE_GROWTH_YEAR,
+        };
+        const priceId = priceEnv[`${subPlan}_${subCycle}`];
+        if (priceId) {
+          try {
+            // ensure the saved card is the customer's default payment method
+            let pmId: string | undefined;
+            if (typeof session.payment_intent === "string") {
+              const pi = await stripe.paymentIntents.retrieve(session.payment_intent);
+              pmId = (pi.payment_method as string) || undefined;
+            }
+            if (pmId) {
+              await stripe.customers.update(customerId, {
+                invoice_settings: { default_payment_method: pmId },
+              });
+            }
+            await stripe.subscriptions.create({
+              customer: customerId,
+              items: [{ price: priceId }],
+              trial_period_days: 30,
+              metadata: {
+                plan: subPlan,
+                cycle: subCycle,
+                trelloCardId: trelloCardId || "",
+                source: "site-order",
+              },
+            });
+            if (token && chatId) {
+              await fetch(`https://api.telegram.org/bot${token}/sendMessage`, {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({
+                  chat_id: chatId,
+                  text: `🔁 <b>Подписка запланирована — ${subPlan.toUpperCase()} (${subCycle === "year" ? "год" : "мес"})</b>\n🎁 Первый месяц бесплатно, списание со 2-го.\n👤 ${clientName}`,
+                  parse_mode: "HTML",
+                }),
+              }).catch(() => {});
+            }
+          } catch (e) {
+            console.error("Auto-subscription error:", e);
+          }
+        }
+      }
     }
 
     return NextResponse.json({ received: true });

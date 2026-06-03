@@ -9,7 +9,7 @@ function SuccessInner() {
   const locale = useLocale();
 
   useEffect(() => {
-    try { localStorage.removeItem("baltic-order-v1"); } catch {}
+    try { localStorage.removeItem("unoweb-order-v2"); } catch {}
   }, []);
 
   return (

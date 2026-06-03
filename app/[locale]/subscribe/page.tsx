@@ -15,6 +15,7 @@ function SubscribeInner() {
 
   const initial = (params.get("plan") as Plan) === "growth" ? "growth" : "care";
   const [plan, setPlan] = useState<Plan>(initial);
+  const [cycle, setCycle] = useState<"month" | "year">(params.get("cycle") === "year" ? "year" : "month");
   const [clientRef, setClientRef] = useState("");
   const [email, setEmail] = useState("");
   const [contact, setContact] = useState("");
@@ -32,7 +33,7 @@ function SubscribeInner() {
       const res = await fetch("/api/checkout", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ plan, locale, clientRef: clientRef.trim(), email: email.trim(), contact: contact.trim() }),
+        body: JSON.stringify({ plan, cycle, locale, clientRef: clientRef.trim(), email: email.trim(), contact: contact.trim() }),
       });
       const data = await res.json();
       if (data.url) window.location.href = data.url;
@@ -57,12 +58,33 @@ function SubscribeInner() {
         <p className="text-[var(--muted)] mb-8">{t("subtitle")}</p>
 
         <form onSubmit={submit} className="space-y-5" noValidate>
+          {/* Billing cycle toggle */}
+          <div className="flex justify-center">
+            <div className="inline-flex items-center gap-1 p-1 rounded-full border border-[var(--border)] bg-[var(--surface)]">
+              {(["month", "year"] as const).map((c) => (
+                <button
+                  key={c}
+                  type="button"
+                  onClick={() => setCycle(c)}
+                  className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${
+                    cycle === c ? "bg-[var(--accent)] text-[var(--accent-foreground)]" : "text-[var(--muted)] hover:text-[var(--foreground)]"
+                  }`}
+                >
+                  {c === "month" ? ts("cycleMonth") : ts("cycleYear")}
+                </button>
+              ))}
+            </div>
+          </div>
+
           {/* Plan toggle */}
           <div>
             <label className="block text-sm font-medium mb-2">{t("planLabel")}</label>
             <div className="grid grid-cols-2 gap-2">
               {(["care", "growth"] as const).map((p) => {
                 const active = plan === p;
+                const monthly = parseInt(prices[p], 10);
+                const shown = cycle === "year" ? Math.round(monthly * 12 * 0.7) : monthly;
+                const per = cycle === "year" ? ts("perYear") : (ts.raw(p) as { period: string }).period;
                 return (
                   <button
                     key={p}
@@ -79,8 +101,8 @@ function SubscribeInner() {
                       {active && <Check className="size-4 text-[var(--accent)]" />}
                     </span>
                     <span className="text-sm text-[var(--muted)]">
-                      {locale === "en" ? `€${prices[p]}` : `${prices[p]} €`}
-                      {(ts.raw(p) as { period: string }).period}
+                      {locale === "en" ? `€${shown}` : `${shown} €`}
+                      {per}
                     </span>
                   </button>
                 );
