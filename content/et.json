@@ -502,7 +502,8 @@
       "free1": "esimene kuu tasuta",
       "perMonth": "/kuus",
       "perYear": "/a",
-      "todayHint": "sait, ühekordne"
+      "todayHint": "sait, ühekordne",
+      "subNoneDesc": "Anname kogu koodi, majutad ise. Ilma kuutasuta."
     },
     "success": {
       "title": "Tellimus vastu võetud. Alustame.",

@@ -502,7 +502,8 @@
       "free1": "first month free",
       "perMonth": "/mo",
       "perYear": "/yr",
-      "todayHint": "site, one-time"
+      "todayHint": "site, one-time",
+      "subNoneDesc": "We hand over the code, you host it yourself. No monthly fee."
     },
     "success": {
       "title": "Order received. Let's build.",

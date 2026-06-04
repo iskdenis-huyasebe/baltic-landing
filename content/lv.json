@@ -502,7 +502,8 @@
       "free1": "pirmais mēnesis bez maksas",
       "perMonth": "/mēn",
       "perYear": "/gadā",
-      "todayHint": "vietne, vienreizējs"
+      "todayHint": "vietne, vienreizējs",
+      "subNoneDesc": "Atdodam visu kodu, mitini pats. Bez ikmēneša maksas."
     },
     "success": {
       "title": "Pasūtījums saņemts. Sākam.",

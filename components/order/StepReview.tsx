@@ -15,6 +15,7 @@ export function StepReview({
   files: OrderFiles;
 }) {
   const t = useTranslations("order.review");
+  const ts = useTranslations("subscriptions");
   const locale = useLocale();
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
@@ -23,11 +24,6 @@ export function StepReview({
   const total = prices[state.plan] || 200;
   const fmtPrice = (p: number) => (locale === "en" ? `€${p}` : `${p} €`);
 
-  const subOptions = [
-    { id: "care" as const, label: t("subCare") },
-    { id: "growth" as const, label: t("subGrowth") },
-    { id: "none" as const, label: t("subNone") },
-  ];
   const hasSub = state.subPlan === "care" || state.subPlan === "growth";
   const subMonthly: Record<string, number> = { care: 15, growth: 30 };
   const recurAmount = hasSub
@@ -108,49 +104,85 @@ export function StepReview({
         <div className="pt-4 border-t border-[var(--border)]">
           <div className="text-sm font-medium mb-1">{t("subTitle")}</div>
           <div className="text-xs text-[var(--muted)] mb-3">{t("subNote")}</div>
-          <div className="grid grid-cols-3 gap-2">
-            {subOptions.map((o) => {
-              const active = state.subPlan === o.id;
-              return (
+
+          {/* Billing cycle */}
+          <div className="flex justify-center mb-3">
+            <div className="inline-flex items-center gap-1 p-1 rounded-full border border-[var(--border)] bg-[var(--background)]">
+              {(["month", "year"] as const).map((c) => (
                 <button
-                  key={o.id}
+                  key={c}
                   type="button"
-                  onClick={() => update({ subPlan: o.id })}
-                  className={`rounded-lg border px-2 py-2.5 text-xs font-medium transition-all ${
-                    active
-                      ? "border-[var(--accent)] bg-[var(--accent-muted)] text-[var(--foreground)]"
-                      : "border-[var(--border)] text-[var(--muted)] hover:border-[var(--border-strong)]"
+                  onClick={() => update({ subCycle: c })}
+                  className={`px-3 py-1.5 rounded-full text-xs font-medium transition-all ${
+                    state.subCycle === c
+                      ? "bg-[var(--accent)] text-[var(--accent-foreground)]"
+                      : "text-[var(--muted)] hover:text-[var(--foreground)]"
                   }`}
                 >
-                  {o.label}
+                  {c === "month" ? t("subCycleMonth") : t("subCycleYear")}
+                </button>
+              ))}
+            </div>
+          </div>
+
+          {/* Plan cards */}
+          <div className="grid sm:grid-cols-2 gap-2.5">
+            {(["care", "growth"] as const).map((p) => {
+              const plan = ts.raw(p) as { title: string; bullets: string[] };
+              const m = p === "care" ? 15 : 30;
+              const amount = state.subCycle === "year" ? Math.round(m * 12 * 0.7) : m;
+              const per = state.subCycle === "year" ? t("perYear") : t("perMonth");
+              const active = state.subPlan === p;
+              return (
+                <button
+                  key={p}
+                  type="button"
+                  onClick={() => update({ subPlan: p })}
+                  className={`text-left rounded-xl border p-3.5 transition-all ${
+                    active
+                      ? "border-[var(--accent)] bg-[var(--accent-muted)]"
+                      : "border-[var(--border)] hover:border-[var(--border-strong)]"
+                  }`}
+                >
+                  <div className="flex items-center justify-between mb-1">
+                    <span className="font-medium text-sm">{plan.title}</span>
+                    {active && <Check className="size-4 text-[var(--accent)]" />}
+                  </div>
+                  <div className="mb-2">
+                    <span className="text-xl font-medium text-[var(--foreground)]">{fmtPrice(amount)}</span>
+                    <span className="text-xs text-[var(--muted)]">{per}</span>
+                  </div>
+                  <ul className="space-y-1">
+                    {plan.bullets.slice(0, 3).map((b, i) => (
+                      <li key={i} className="flex gap-1.5 items-start text-[11px] text-[var(--muted)]">
+                        <Check className="size-3 text-[var(--accent)] shrink-0 mt-[3px]" />
+                        <span>{b}</span>
+                      </li>
+                    ))}
+                  </ul>
                 </button>
               );
             })}
           </div>
 
-          {hasSub && (
-            <div className="grid grid-cols-2 gap-2 mt-2">
-              {(["month", "year"] as const).map((c) => {
-                const active = state.subCycle === c;
-                return (
-                  <button
-                    key={c}
-                    type="button"
-                    onClick={() => update({ subCycle: c })}
-                    className={`rounded-lg border px-2 py-2 text-xs font-medium transition-all ${
-                      active
-                        ? "border-[var(--accent)] bg-[var(--accent-muted)] text-[var(--foreground)]"
-                        : "border-[var(--border)] text-[var(--muted)] hover:border-[var(--border-strong)]"
-                    }`}
-                  >
-                    {c === "month" ? t("subCycleMonth") : t("subCycleYear")}
-                  </button>
-                );
-              })}
+          {/* Own hosting (no subscription) */}
+          <button
+            type="button"
+            onClick={() => update({ subPlan: "none" })}
+            className={`w-full text-left rounded-xl border p-3.5 mt-2.5 transition-all ${
+              state.subPlan === "none"
+                ? "border-[var(--accent)] bg-[var(--accent-muted)]"
+                : "border-[var(--border)] hover:border-[var(--border-strong)]"
+            }`}
+          >
+            <div className="flex items-center justify-between">
+              <span className="font-medium text-sm">{t("subNone")}</span>
+              {state.subPlan === "none" && <Check className="size-4 text-[var(--accent)]" />}
             </div>
-          )}
+            <p className="text-[11px] text-[var(--muted)] mt-0.5">{t("subNoneDesc")}</p>
+          </button>
 
-          <p className="text-xs text-[var(--subtle)] mt-2">{t("subNoLock")}</p>
+          <p className="text-xs text-[var(--subtle)] mt-3">{t("subNoLock")}</p>
         </div>
 
         <div className="pt-4 border-t border-[var(--border)] space-y-2.5">

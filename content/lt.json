@@ -502,7 +502,8 @@
       "free1": "pirmas mėnuo nemokamas",
       "perMonth": "/mėn",
       "perYear": "/m.",
-      "todayHint": "svetainė, vienkartinis"
+      "todayHint": "svetainė, vienkartinis",
+      "subNoneDesc": "Atiduodam visą kodą, talpini pas save. Be mėnesinio mokesčio."
     },
     "success": {
       "title": "Užsakymas gautas. Pradedame.",
