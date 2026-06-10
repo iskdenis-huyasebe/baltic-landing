@@ -19,11 +19,11 @@ export function Templates() {
     <section id="templates" className="py-20 md:py-32 px-6 md:px-8">
       <div className="max-w-6xl mx-auto">
         <FadeIn>
-          <div className="mb-12 md:mb-16">
+          <div className="mb-12 md:mb-16 text-center">
             <h2 className="text-3xl md:text-5xl tracking-tight font-medium text-[var(--foreground)] mb-4">
               {t("h2")}
             </h2>
-            <p className="text-lg text-[var(--muted)] max-w-2xl">{t("subtitle")}</p>
+            <p className="text-lg text-[var(--muted)] max-w-2xl mx-auto">{t("subtitle")}</p>
 
             {/* Try-your-color swatches */}
             <div className="mt-6 flex flex-wrap items-center gap-2.5">
