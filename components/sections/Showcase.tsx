@@ -238,7 +238,7 @@ export function Showcase() {
         <div className="flex flex-wrap gap-2 mb-6">
           {tabs.map((tab, i) => (
             <button
-              key={tab.id ?? i}
+              key={i}
               type="button"
               onClick={() => setActive(i)}
               className={`inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium transition-all border ${
