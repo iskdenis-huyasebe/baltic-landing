@@ -17,11 +17,19 @@
     "stats": [
       {
         "value": "35+",
-        "label": "palaisti landing pages"
+        "label": "veidņu izvēle"
       },
       {
         "value": "3 d.d.",
         "label": "vidējais termiņš"
+      },
+      {
+        "value": "100%",
+        "label": "naudas atgriešanas garantija"
+      },
+      {
+        "value": "3 valstis",
+        "label": "Lietuva · Latvija · Igaunija"
       }
     ]
   },

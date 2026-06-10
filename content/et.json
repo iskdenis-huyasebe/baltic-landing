@@ -17,11 +17,19 @@
     "stats": [
       {
         "value": "35+",
-        "label": "käivitatud lehte"
+        "label": "mallide valik"
       },
       {
         "value": "3 tp.",
         "label": "keskmine tähtaeg"
+      },
+      {
+        "value": "100%",
+        "label": "raha tagastamise garantii"
+      },
+      {
+        "value": "3 riiki",
+        "label": "Leedu · Läti · Eesti"
       }
     ]
   },

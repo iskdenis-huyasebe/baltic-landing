@@ -17,11 +17,19 @@
     "stats": [
       {
         "value": "35+",
-        "label": "landingai paleisti"
+        "label": "šablonų pasirinkimas"
       },
       {
         "value": "3 d.d.",
         "label": "vidutinis terminas"
+      },
+      {
+        "value": "100%",
+        "label": "pinigų grąžinimo garantija"
+      },
+      {
+        "value": "3 šalys",
+        "label": "Lietuva · Latvija · Estija"
       }
     ]
   },

@@ -17,11 +17,19 @@
     "stats": [
       {
         "value": "35+",
-        "label": "landing pages launched"
+        "label": "landings launched"
       },
       {
         "value": "3 days",
-        "label": "average delivery"
+        "label": "average turnaround"
+      },
+      {
+        "value": "100%",
+        "label": "money-back guarantee"
+      },
+      {
+        "value": "3 countries",
+        "label": "Lithuania · Latvia · Estonia"
       }
     ]
   },
