@@ -3,135 +3,380 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex">
-<title>Lex Baltica — teisės konsultacijos</title>
+<title>Lex Baltica — teisinės paslaugos</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-:root{--bg:#faf8f3;--fg:#1b1a17;--muted:#6f6b61;--surface:#ffffff;--border:rgba(0,0,0,.08);--accent:#10b981;--accent2:#064e3b}
+:root{--bg:#faf8f3;--fg:#1b1a17;--muted:#706c5e;--subtle:#a8a390;--surface:#fff;--surface2:#f4f1eb;--border:rgba(0,0,0,.09);--border2:rgba(0,0,0,.15);--accent:#166534;--accent2:#15803d;--accentbg:rgba(22,101,52,.08);--accentborder:rgba(22,101,52,.2)}
 html{scroll-behavior:smooth}
 body{background:var(--bg);color:var(--fg);font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Inter,system-ui,sans-serif;line-height:1.55;-webkit-font-smoothing:antialiased}
+h1,h2,h3,h4{font-family:Georgia,'Times New Roman',serif}
 a{color:inherit;text-decoration:none}
-.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
-.eyebrow{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);font-weight:700;margin-bottom:14px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 28px}
+.eyebrow{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);font-weight:700;margin-bottom:14px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Inter,sans-serif}
 .muted{color:var(--muted)}
-.btn{display:inline-flex;align-items:center;gap:8px;background:var(--accent);color:#fff;font-weight:600;padding:13px 24px;border-radius:12px;font-size:15px;cursor:pointer;border:none}
-.btn:hover{filter:brightness(1.05)}
-.btn.ghost{background:transparent;border:1px solid var(--border);color:var(--fg)}
-header.site{position:sticky;top:0;z-index:50;background:color-mix(in srgb,var(--bg) 85%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--border)}
-header.site .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
-.logo{font-weight:700;font-size:17px;display:flex;align-items:center;gap:8px}
-.logo .dot{width:20px;height:20px;border-radius:6px;background:var(--accent)}
-nav{display:flex;gap:24px;font-size:14px;color:var(--muted)}
+.btn{display:inline-flex;align-items:center;gap:8px;background:var(--fg);color:#fff;font-weight:600;padding:13px 24px;border-radius:6px;font-size:14px;transition:.18s;border:none;cursor:pointer;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;letter-spacing:.01em}
+.btn:hover{background:#2d2c25;transform:translateY(-1px)}
+.btn.ghost{background:transparent;border:1px solid var(--border2);color:var(--fg)}
+.btn.ghost:hover{background:var(--surface2)}
+.btn.accent{background:var(--accent);color:#fff}
+.btn.accent:hover{background:var(--accent2)}
+header{position:sticky;top:0;z-index:80;background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(14px);border-bottom:1px solid var(--border)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:66px;gap:24px}
+.logo{display:flex;align-items:center;gap:10px;font-weight:700;font-size:17px;font-family:Georgia,serif}
+.logo-icon{width:34px;height:34px;border-radius:4px;background:var(--fg);display:flex;align-items:center;justify-content:center;color:#fff;font-size:14px;font-weight:700;font-family:Georgia,serif}
+nav{display:flex;gap:26px;font-size:14px;color:var(--muted);font-family:-apple-system,BlinkMacSystemFont,sans-serif}
 nav a:hover{color:var(--fg)}
-.disclaimer{position:fixed;bottom:12px;left:50%;transform:translateX(-50%);background:rgba(0,0,0,.7);color:#fff;font-size:11px;padding:5px 14px;border-radius:999px;z-index:100;white-space:nowrap;pointer-events:none}
-@media(max-width:700px){nav{display:none}}
-
-body{font-family:'Georgia','Times New Roman',serif}
-nav,header .btn,.eyebrow,.tag,.price,.trust-item{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Inter,system-ui,sans-serif}
-section{padding:80px 0}
-.hero{padding-top:0;min-height:86vh;display:grid;grid-template-columns:1fr 1fr}
-.hero-left{display:flex;flex-direction:column;justify-content:center;padding:80px 7vw 80px 7vw}
-.hero-right{background:linear-gradient(160deg,var(--accent2),#0a0a0a);position:relative;display:flex;align-items:center;justify-content:center}
-.hero-card{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-radius:18px;padding:32px;color:#fff;width:280px}
-.hero-card .label{font-family:-apple-system,sans-serif;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.5);margin-bottom:18px}
-.hero-card .item{display:flex;align-items:center;gap:10px;margin-bottom:12px;font-family:-apple-system,sans-serif;font-size:14px}
-.hero-card .item .dot{width:8px;height:8px;border-radius:50%;background:var(--accent);flex-shrink:0}
-.tag{display:inline-block;background:rgba(16,185,129,.1);color:#059669;font-size:12px;font-weight:600;padding:5px 14px;border-radius:6px;margin-bottom:18px;letter-spacing:.04em}
-h1{font-size:clamp(34px,4vw,52px);line-height:1.08;letter-spacing:-.01em;font-weight:400;margin-bottom:18px}
-.hero-left p{font-size:17px;color:var(--muted);margin-bottom:28px;max-width:380px;font-family:-apple-system,sans-serif;line-height:1.6}
-.services{display:grid;grid-template-columns:repeat(2,1fr);gap:0;border:1px solid var(--border);border-radius:16px;overflow:hidden;margin-top:40px}
-.svc{padding:28px;border-bottom:1px solid var(--border)}
-.svc:nth-child(odd){border-right:1px solid var(--border)}
-.svc:nth-last-child(-n+2){border-bottom:none}
-.svc h3{font-size:17px;font-weight:600;margin-bottom:8px;font-family:-apple-system,sans-serif}
-.svc p{font-size:14px;color:var(--muted);font-family:-apple-system,sans-serif}
-.svc .price{margin-top:10px;font-size:13px;font-weight:700;color:var(--accent);font-family:-apple-system,sans-serif}
-.cta-band{background:var(--accent2);color:#fff;padding:60px 0;text-align:center}
-.cta-band h2{font-size:clamp(26px,3vw,38px);font-weight:400;margin-bottom:14px;color:#fff}
-.cta-band p{font-size:16px;opacity:.75;max-width:440px;margin:0 auto 28px;font-family:-apple-system,sans-serif}
-.trust-row{display:flex;justify-content:center;gap:24px;margin-top:20px;flex-wrap:wrap}
-.trust-item{font-size:13px;opacity:.8;display:flex;align-items:center;gap:6px;font-family:-apple-system,sans-serif}
-.trust-item::before{content:"✓";color:var(--accent);font-weight:700;opacity:1}
-@media(max-width:700px){.hero{grid-template-columns:1fr;min-height:auto}.hero-right{height:260px}.services{grid-template-columns:1fr}.svc:nth-child(odd){border-right:none}}
+@media(max-width:720px){nav{display:none}}
+.hero{padding:100px 0 80px;border-bottom:1px solid var(--border)}
+.hero-inner{display:grid;grid-template-columns:1.1fr .9fr;gap:60px;align-items:center}
+.hero-label{display:inline-flex;align-items:center;gap:8px;font-family:-apple-system,BlinkMacSystemFont,sans-serif;font-size:12px;font-weight:600;color:var(--accent);text-transform:uppercase;letter-spacing:.15em;margin-bottom:24px;padding:6px 14px;border:1px solid var(--accentborder);border-radius:4px;background:var(--accentbg)}
+h1{font-size:clamp(32px,4.2vw,52px);line-height:1.06;letter-spacing:-.01em;font-weight:700;margin-bottom:24px}
+.hero-sub{font-size:17px;color:var(--muted);max-width:460px;line-height:1.7;margin-bottom:36px;font-family:-apple-system,BlinkMacSystemFont,sans-serif}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:36px}
+.hero-creds{display:flex;flex-wrap:wrap;gap:16px}
+.cred{display:flex;align-items:center;gap:7px;font-size:13px;color:var(--muted);font-family:-apple-system,BlinkMacSystemFont,sans-serif}
+.cred-dot{width:7px;height:7px;border-radius:50%;background:var(--accent);flex-shrink:0}
+.hero-card{background:var(--surface);border:1px solid var(--border);border-radius:12px;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,.08)}
+.hero-card-img{width:100%;aspect-ratio:4/3;background:linear-gradient(135deg,#d1fae5,#6ee7b7 60%,#166534);display:flex;align-items:center;justify-content:center;position:relative}
+.hero-card-img .scales{font-size:80px;opacity:.2}
+.hero-card-img .badge-overlay{position:absolute;bottom:16px;left:16px;background:rgba(255,255,255,.9);backdrop-filter:blur(8px);border-radius:8px;padding:10px 16px}
+.hero-card-img .badge-overlay span{display:block;font-size:11px;color:var(--muted);font-family:-apple-system,BlinkMacSystemFont,sans-serif;text-transform:uppercase;letter-spacing:.08em}
+.hero-card-img .badge-overlay strong{font-size:15px;color:var(--fg);font-family:Georgia,serif}
+.hero-card-body{padding:18px 20px;display:grid;grid-template-columns:repeat(3,1fr)}
+.hero-stat{text-align:center;padding:10px 6px;border-right:1px solid var(--border)}
+.hero-stat:last-child{border-right:none}
+.hero-stat strong{display:block;font-size:20px;font-weight:700;color:var(--accent);font-family:Georgia,serif}
+.hero-stat span{font-size:11px;color:var(--muted);font-family:-apple-system,BlinkMacSystemFont,sans-serif}
+@media(max-width:720px){.hero-inner{grid-template-columns:1fr}.hero-card{display:none}}
+section{padding:72px 0}
+h2.section-title{font-size:clamp(26px,3.5vw,40px);line-height:1.1;letter-spacing:-.01em;font-weight:700;margin-bottom:10px}
+.section-sub{font-size:16px;color:var(--muted);font-family:-apple-system,BlinkMacSystemFont,sans-serif;line-height:1.65}
+.areas-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:36px}
+.area{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:28px;transition:.2s;display:flex;flex-direction:column;gap:14px}
+.area:hover{border-color:var(--accentborder);box-shadow:0 4px 20px rgba(22,101,52,.06)}
+.area-ico{font-size:28px}
+.area h3{font-size:18px;font-weight:700;margin-bottom:4px;font-family:Georgia,serif}
+.area p{font-size:14px;color:var(--muted);line-height:1.65;font-family:-apple-system,BlinkMacSystemFont,sans-serif}
+.area-tags{display:flex;flex-wrap:wrap;gap:6px}
+.area-tag{font-size:11px;font-family:-apple-system,BlinkMacSystemFont,sans-serif;background:var(--accentbg);color:var(--accent);padding:3px 9px;border-radius:3px;font-weight:600}
+@media(max-width:600px){.areas-grid{grid-template-columns:1fr}}
+.partners-strip{background:var(--surface2);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:28px 0}
+.partners-inner{display:flex;align-items:center;gap:40px;justify-content:center;flex-wrap:wrap}
+.partner-label{font-size:11px;letter-spacing:.15em;text-transform:uppercase;color:var(--subtle);font-family:-apple-system,BlinkMacSystemFont,sans-serif}
+.partner{font-size:14px;font-weight:700;color:var(--muted);font-family:Georgia,serif;opacity:.55}
+.about-section{background:var(--fg);color:#fff}
+.about-inner{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.about-photo{width:100%;aspect-ratio:3/4;background:linear-gradient(160deg,#166534,#052e16);border-radius:10px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
+.about-photo .scales{font-size:80px;opacity:.12;position:absolute}
+.about-photo .partner-card{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.15);border-radius:10px;padding:18px 22px;margin:0 24px;position:relative;z-index:1}
+.about-photo .partner-card strong{display:block;font-size:17px;font-weight:700;color:#fff;font-family:Georgia,serif;margin-bottom:3px}
+.about-photo .partner-card span{font-size:12px;color:rgba(255,255,255,.6);font-family:-apple-system,BlinkMacSystemFont,sans-serif}
+.about-photo .years-badge{position:absolute;top:20px;right:20px;background:rgba(255,255,255,.12);border-radius:8px;padding:10px 16px;text-align:center}
+.about-photo .years-badge strong{display:block;font-size:28px;font-weight:700;color:#fff;font-family:Georgia,serif}
+.about-photo .years-badge span{font-size:11px;color:rgba(255,255,255,.5);font-family:-apple-system,BlinkMacSystemFont,sans-serif;text-transform:uppercase;letter-spacing:.08em}
+.about-text .eyebrow{color:rgba(255,255,255,.45)}
+.about-text h2{color:#fff;font-size:clamp(26px,3.5vw,40px);margin-bottom:20px;line-height:1.1}
+.about-text p{color:rgba(255,255,255,.6);font-size:15px;line-height:1.75;font-family:-apple-system,BlinkMacSystemFont,sans-serif;margin-bottom:14px}
+.about-feat{display:flex;align-items:center;gap:10px;font-size:14px;color:rgba(255,255,255,.55);font-family:-apple-system,BlinkMacSystemFont,sans-serif;margin-top:10px}
+.about-feat::before{content:"—";color:rgba(255,255,255,.25);font-family:Georgia,serif}
+@media(max-width:720px){.about-inner{grid-template-columns:1fr}}
+.process-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:44px;position:relative}
+.process-grid::before{content:"";position:absolute;top:17px;left:10%;right:10%;height:1px;background:var(--border)}
+.step{text-align:center;padding:0 10px}
+.step-num{width:36px;height:36px;border-radius:50%;background:var(--surface);border:1px solid var(--border2);display:flex;align-items:center;justify-content:center;margin:0 auto 20px;font-weight:700;color:var(--fg);font-size:13px;position:relative;z-index:1;font-family:Georgia,serif}
+.step-num.active{background:var(--fg);color:#fff;border-color:var(--fg)}
+.step h4{font-size:15px;font-weight:700;margin-bottom:7px}
+.step p{font-size:13px;color:var(--muted);line-height:1.6;font-family:-apple-system,BlinkMacSystemFont,sans-serif}
+@media(max-width:680px){.process-grid{grid-template-columns:1fr 1fr;gap:24px}.process-grid::before{display:none}}
+.reviews-section{background:var(--surface2);border-top:1px solid var(--border)}
+.reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:36px}
+.review{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:28px}
+.review-q{font-size:32px;color:var(--border2);font-family:Georgia,serif;line-height:1;margin-bottom:10px}
+.review-text{font-size:14px;color:var(--muted);line-height:1.7;font-family:-apple-system,BlinkMacSystemFont,sans-serif;margin-bottom:18px}
+.review-sep{height:1px;background:var(--border);margin-bottom:16px}
+.review-author{display:flex;align-items:center;gap:12px}
+.review-avatar{width:38px;height:38px;border-radius:50%;flex-shrink:0}
+.review-name{font-size:14px;font-weight:700;font-family:Georgia,serif}
+.review-meta{font-size:11px;color:var(--subtle);font-family:-apple-system,BlinkMacSystemFont,sans-serif}
+@media(max-width:720px){.reviews-grid{grid-template-columns:1fr}}
+.faq-list{margin-top:36px;border:1px solid var(--border);border-radius:10px;overflow:hidden}
+.faq-item{border-bottom:1px solid var(--border);background:var(--surface)}
+.faq-item:last-child{border-bottom:none}
+.faq-q{display:flex;align-items:center;justify-content:space-between;padding:20px 24px;font-weight:600;font-size:15px;cursor:pointer;gap:16px;font-family:Georgia,serif}
+.faq-q .plus{width:22px;height:22px;border-radius:50%;border:1px solid var(--border2);display:flex;align-items:center;justify-content:center;color:var(--muted);font-size:16px;font-weight:400;flex-shrink:0;font-family:-apple-system,BlinkMacSystemFont,sans-serif}
+.faq-a{padding:0 24px 18px;font-size:14px;color:var(--muted);line-height:1.7;font-family:-apple-system,BlinkMacSystemFont,sans-serif}
+.cta-box{border:1px solid var(--border);border-radius:12px;padding:64px 48px;background:var(--surface);text-align:center;position:relative;overflow:hidden}
+.cta-box::before{content:"§";position:absolute;font-size:220px;font-family:Georgia,serif;color:var(--surface2);top:-30px;right:-20px;line-height:1;z-index:0;pointer-events:none}
+.cta-box > *{position:relative;z-index:1}
+.cta-box h2{font-size:clamp(28px,4vw,44px);font-weight:700;margin-bottom:14px;line-height:1.1}
+.cta-box p{font-size:16px;color:var(--muted);font-family:-apple-system,BlinkMacSystemFont,sans-serif;max-width:460px;margin:0 auto 32px;line-height:1.65}
+.cta-actions{display:flex;justify-content:center;gap:14px;flex-wrap:wrap;margin-bottom:28px}
+.contact-info{display:flex;justify-content:center;gap:32px;flex-wrap:wrap}
+.contact-item{font-size:13px;color:var(--muted);font-family:-apple-system,BlinkMacSystemFont,sans-serif;display:flex;flex-direction:column;align-items:center;gap:3px}
+.contact-item strong{color:var(--fg);font-size:14px;font-weight:600}
+footer{border-top:1px solid var(--border);padding:40px 0;background:var(--surface)}
+.footer-inner{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:40px}
+.footer-col h5{font-size:11px;text-transform:uppercase;letter-spacing:.12em;color:var(--subtle);font-weight:700;margin-bottom:14px;font-family:-apple-system,BlinkMacSystemFont,sans-serif}
+.footer-col a{display:block;font-size:14px;color:var(--muted);margin-bottom:8px;font-family:-apple-system,BlinkMacSystemFont,sans-serif}
+.footer-col a:hover{color:var(--fg)}
+.footer-bottom{margin-top:28px;padding-top:20px;border-top:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;font-size:12px;color:var(--subtle);font-family:-apple-system,BlinkMacSystemFont,sans-serif}
+@media(max-width:700px){.footer-inner{grid-template-columns:1fr}.cta-box{padding:40px 24px}}
+.disclaimer{position:fixed;bottom:12px;left:50%;transform:translateX(-50%);background:rgba(27,26,23,.8);backdrop-filter:blur(8px);color:rgba(255,255,255,.7);font-size:11px;padding:5px 16px;border-radius:999px;z-index:100;white-space:nowrap;pointer-events:none;border:1px solid rgba(255,255,255,.08);font-family:-apple-system,BlinkMacSystemFont,sans-serif}
 </style>
 </head><body>
 
-<header class="site">
+<header>
   <div class="wrap">
-    <div class="logo" style="font-family:Georgia,serif;font-weight:400;font-size:18px"><span class="dot"></span> Lex Baltica</div>
-    <nav style="font-family:-apple-system,sans-serif">
-      <a href="#">Paslaugos</a>
-      <a href="#">Komanda</a>
-      <a href="#">Klientams</a>
-      <a href="#">Kontaktai</a>
-    </nav>
-    <a class="btn" href="#" style="padding:10px 20px;font-size:14px;font-family:-apple-system,sans-serif">Konsultacija</a>
+    <div class="logo"><div class="logo-icon">L</div> Lex Baltica</div>
+    <nav><a href="#">Praktikos sritys</a><a href="#">Komanda</a><a href="#">Apie mus</a><a href="#">Kontaktai</a></nav>
+    <a class="btn" href="#" style="padding:10px 18px;font-size:14px">Konsultacija</a>
   </div>
 </header>
 
 <section class="hero">
-  <div class="hero-left">
-    <div class="tag">Advokatų kontora · Vilnius</div>
-    <h1>Teisė<br>jūsų pusėje</h1>
-    <p>Verslo ir darbo teisės konsultacijos. Greiti atsakymai, aiški kaina, patikimi rezultatai.</p>
-    <div style="display:flex;gap:12px;flex-wrap:wrap">
-      <a class="btn" href="#" style="font-family:-apple-system,sans-serif">Gauti konsultaciją →</a>
-      <a class="btn ghost" href="#" style="font-family:-apple-system,sans-serif">Apie mus</a>
-    </div>
-  </div>
-  <div class="hero-right">
-    <div class="hero-card">
-      <div class="label">Mūsų specializacija</div>
-      <div class="item"><span class="dot"></span> Verslo teisė ir sutartys</div>
-      <div class="item"><span class="dot"></span> Darbo ginčai</div>
-      <div class="item"><span class="dot"></span> NT sandoriai</div>
-      <div class="item"><span class="dot"></span> Įmonių steigimas</div>
-      <div class="item"><span class="dot"></span> Duomenų apsauga (BDAR)</div>
+  <div class="wrap">
+    <div class="hero-inner">
+      <div>
+        <div class="hero-label">Advokatų kontora · Vilnius · est. 2009</div>
+        <h1>Teisinis patikimumas —<br>jūsų verslo pagrindas</h1>
+        <p class="hero-sub">Specializuojamės verslo, nekilnojamo turto ir darbo teisės srityse. Dirbame su Lietuvos ir tarptautinėmis įmonėmis jau 15 metų.</p>
+        <div class="hero-actions">
+          <a class="btn accent" href="#">Gauti konsultaciją →</a>
+          <a class="btn ghost" href="#">Apie kontorą</a>
+        </div>
+        <div class="hero-creds">
+          <div class="cred"><span class="cred-dot"></span>Lietuvos advokatūros nariai</div>
+          <div class="cred"><span class="cred-dot"></span>ISO 9001:2015 sertifikuota</div>
+          <div class="cred"><span class="cred-dot"></span>Konfidencialumas garantuojamas</div>
+        </div>
+      </div>
+      <div class="hero-card">
+        <div class="hero-card-img">
+          <div class="scales">⚖</div>
+          <div class="badge-overlay">
+            <span>Kasmetinis apdovanojimas</span>
+            <strong>Top 10 advokatų kontorų LT</strong>
+          </div>
+        </div>
+        <div class="hero-card-body">
+          <div class="hero-stat"><strong>15+</strong><span>metų patirtis</span></div>
+          <div class="hero-stat"><strong>450+</strong><span>laimėtų bylų</span></div>
+          <div class="hero-stat"><strong>98%</strong><span>pasitikėjimas</span></div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
 <section>
   <div class="wrap">
-    <div class="eyebrow" style="font-family:-apple-system,sans-serif">Paslaugos</div>
-    <h2 style="font-size:clamp(26px,3.5vw,38px);margin-bottom:8px;font-weight:400">Teikiamos paslaugos</h2>
-    <p class="muted" style="font-size:16px;font-family:-apple-system,sans-serif;max-width:500px">Dirbame greitai ir skaidriai. Pirma konsultacija — jau rytoj.</p>
-    <div class="services">
-      <div class="svc">
-        <h3>Verslo teisė</h3>
-        <p>Sutarčių rengimas ir peržiūra, komerciniai ginčai, partnerystės susitarimai.</p>
-        <div class="price">nuo 60 €/val.</div>
+    <div class="eyebrow">Praktikos sritys</div>
+    <h2 class="section-title">Mūsų specializacijos</h2>
+    <p class="section-sub">Sprendžiame sudėtingas teisines situacijas — nuo sutarčių iki teismų.</p>
+    <div class="areas-grid">
+      <div class="area">
+        <div class="area-ico">🏢</div>
+        <div>
+          <h3>Verslo ir įmonių teisė</h3>
+          <p>Įmonių steigimas, restruktūrizacija, M&A sandoriai, akcijų pirkimas-pardavimas, korporatyviniai ginčai.</p>
+        </div>
+        <div class="area-tags"><span class="area-tag">M&A</span><span class="area-tag">Korporatyvinė</span><span class="area-tag">Restruktūrizacija</span></div>
       </div>
-      <div class="svc">
-        <h3>Darbo ginčai</h3>
-        <p>Atleidimas, diskriminacija, darbo sutarčių ginčai. Atstovaujame darbuotojams ir darbdaviams.</p>
-        <div class="price">nuo 60 €/val.</div>
+      <div class="area">
+        <div class="area-ico">🏘</div>
+        <div>
+          <h3>Nekilnojamas turtas</h3>
+          <p>NT pirkimo-pardavimo sandoriai, nuomos sutartys, statybos teisė, žemės bylos ir registracija.</p>
+        </div>
+        <div class="area-tags"><span class="area-tag">Pirkimas</span><span class="area-tag">Nuoma</span><span class="area-tag">Statybos teisė</span></div>
       </div>
-      <div class="svc">
-        <h3>NT sandoriai</h3>
-        <p>Pirkimo-pardavimo sutartys, hipotekos, nuoma. Greitai tikriname dokumentus.</p>
-        <div class="price">nuo 80 €</div>
+      <div class="area">
+        <div class="area-ico">👔</div>
+        <div>
+          <h3>Darbo teisė</h3>
+          <p>Darbo sutartys, atleidimas iš darbo, darbo ginčai, kolektyviniai santykiai ir darbdavio interesai.</p>
+        </div>
+        <div class="area-tags"><span class="area-tag">Ginčai</span><span class="area-tag">Sutartys</span><span class="area-tag">Atleidimai</span></div>
       </div>
-      <div class="svc">
-        <h3>Įmonių steigimas</h3>
-        <p>MB, UAB ar kitos formos įsteigimas per 3 d.d. Pilnas dokumentų paketas.</p>
-        <div class="price">nuo 150 €</div>
+      <div class="area">
+        <div class="area-ico">⚖️</div>
+        <div>
+          <h3>Ginčų sprendimas</h3>
+          <p>Komerciniai ginčai, arbitražas, tarpininkavimas. Atstovaujame teisme ir tarptautiniuose arbitražo procesuose.</p>
+        </div>
+        <div class="area-tags"><span class="area-tag">Arbitražas</span><span class="area-tag">Teismas</span><span class="area-tag">Mediacija</span></div>
       </div>
     </div>
   </div>
 </section>
 
-<section class="cta-band">
+<div class="partners-strip">
   <div class="wrap">
-    <h2>Rezervuokite konsultaciją</h2>
-    <p>Pirmoji konsultacija — 30 min. Atsakysime į pagrindinius klausimus ir įvertinsime situaciją.</p>
-    <a class="btn" href="#" style="background:var(--accent);padding:15px 32px;font-size:16px;font-family:-apple-system,sans-serif">Registruotis →</a>
-    <div class="trust-row">
-      <div class="trust-item">Konfidencialumas</div>
-      <div class="trust-item">Aiški kaina iš anksto</div>
-      <div class="trust-item">Gedimino pr. 1, Vilnius</div>
+    <div class="partners-inner">
+      <div class="partner-label">Dirbame su</div>
+      <div class="partner">Swedbank</div>
+      <div class="partner">Ignitis Group</div>
+      <div class="partner">Maxima LT</div>
+      <div class="partner">SEB bankas</div>
+      <div class="partner">Avia Solutions</div>
+      <div class="partner">Lietuvos Paštas</div>
+    </div>
+  </div>
+</div>
+
+<section class="about-section">
+  <div class="wrap">
+    <div class="about-inner">
+      <div>
+        <div class="about-photo">
+          <div class="scales">⚖</div>
+          <div class="partner-card">
+            <strong>Adv. dr. Andrius Kavaliauskas</strong>
+            <span>Vyresnysis partneris · 15 m. patirtis</span>
+          </div>
+          <div class="years-badge"><strong>15</strong><span>metų rinkoje</span></div>
+        </div>
+      </div>
+      <div class="about-text">
+        <div class="eyebrow">Apie kontorą</div>
+        <h2>Patikimumas, kurį rodo rezultatai</h2>
+        <p>Lex Baltica — tai viena iš patikimiausių advokatų kontorų Vilniuje. Nuo 2009 metų padedame įmonėms ir privatiems asmenims spręsti sudėtingas teisines situacijas.</p>
+        <p>Mūsų komandą sudaro 8 advokatai ir 4 teisiniai konsultantai, turintys specializuotų žinių tarptautinėje ir Lietuvos teisėje.</p>
+        <div class="about-feat">Lietuvos advokatūros nariai nuo 2009 m.</div>
+        <div class="about-feat">Tarptautinė patirtis — darbas su ES klientais</div>
+        <div class="about-feat">Konfidencialumas — visos bylos saugomos</div>
+        <div class="about-feat">Aiški kainodara — žinote, kiek mokėsite</div>
+        <a class="btn" href="#" style="margin-top:28px;background:rgba(255,255,255,.12);color:#fff;border:1px solid rgba(255,255,255,.2);border-radius:6px">Susipažinkite su komanda →</a>
+      </div>
     </div>
   </div>
 </section>
+
+<section>
+  <div class="wrap">
+    <div style="text-align:center">
+      <div class="eyebrow" style="text-align:center">Kaip dirbame</div>
+      <h2 class="section-title" style="text-align:center">Aiškus ir skaidrus procesas</h2>
+    </div>
+    <div class="process-grid">
+      <div class="step"><div class="step-num active">I</div><h4>Kreipimasis</h4><p>Susisiekite telefonu arba užpildykite formą. Atsakome per 24 val.</p></div>
+      <div class="step"><div class="step-num">II</div><h4>Konsultacija</h4><p>Pirminė konsultacija 30–60 min. Įvertiname situaciją.</p></div>
+      <div class="step"><div class="step-num">III</div><h4>Pasiūlymas</h4><p>Aiškus veiksmų planas ir kainų pasiūlymas. Jokių paslėptų išlaidų.</p></div>
+      <div class="step"><div class="step-num">IV</div><h4>Vykdymas</h4><p>Dirbame pagal sutartą planą, reguliariai informuodami apie progresą.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="reviews-section">
+  <div class="wrap">
+    <div class="eyebrow">Atsiliepimai</div>
+    <h2 class="section-title">Klientai apie mus</h2>
+    <div class="reviews-grid">
+      <div class="review">
+        <div class="review-q">"</div>
+        <p class="review-text">Lex Baltica padėjo mums sėkmingai užbaigti įmonės pirkimo sandorį. Visas procesas buvo skaidrus, dokumentai parengti laiku, advokatai pasiekiami visada.</p>
+        <div class="review-sep"></div>
+        <div class="review-author">
+          <div class="review-avatar" style="background:linear-gradient(135deg,#166534,#14532d)"></div>
+          <div><div class="review-name">Gintaras Vaitkus</div><div class="review-meta">UAB „Baltic Tech" · M&A sandoris</div></div>
+        </div>
+      </div>
+      <div class="review">
+        <div class="review-q">"</div>
+        <p class="review-text">Darbo ginčas buvo išspręstas profesionaliai. Advokatė Rasa Stonkutė aiškiai paaiškino žingsnius ir puikiai atstovavo mūsų interesus teisme.</p>
+        <div class="review-sep"></div>
+        <div class="review-author">
+          <div class="review-avatar" style="background:linear-gradient(135deg,#15803d,#166534)"></div>
+          <div><div class="review-name">Vilma Kazlauskienė</div><div class="review-meta">Mažmeninės prekybos įmonė · Darbo teisė</div></div>
+        </div>
+      </div>
+      <div class="review">
+        <div class="review-q">"</div>
+        <p class="review-text">Perkant komercinį NT Vilniuje reikėjo patikimo teisininko. Lex Baltica atitikrino dokumentus ir sandoris buvo sėkmingai užbaigtas per 3 savaites.</p>
+        <div class="review-sep"></div>
+        <div class="review-author">
+          <div class="review-avatar" style="background:linear-gradient(135deg,#4d7c0f,#3f6212)"></div>
+          <div><div class="review-name">Darius Petrauskas</div><div class="review-meta">Privatus investuotojas · NT sandoris</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div style="display:grid;grid-template-columns:1fr 1.4fr;gap:60px;align-items:start">
+      <div>
+        <div class="eyebrow">DUK</div>
+        <h2 class="section-title">Dažnai užduodami klausimai</h2>
+        <p class="muted" style="margin-top:14px;font-size:15px;font-family:-apple-system,BlinkMacSystemFont,sans-serif">Kitas klausimas? Susisiekite su mumis.</p>
+        <a class="btn accent" href="#" style="margin-top:22px">Rašyti mums →</a>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item">
+          <div class="faq-q">Kiek kainuoja pirminė konsultacija?<span class="plus">+</span></div>
+          <div class="faq-a">Pirminė konsultacija (30 min.) — 40 €. Jei pasirašote sutartį dėl tolesnių paslaugų, pirminės konsultacijos kaina įskaitoma į bendrą sumą.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Kaip ilgai trunka verslo ginčo sprendimas?<span class="plus">+</span></div>
+          <div class="faq-a">Derybinis sprendimas — 2–6 savaitės. Teisminiai procesai — 6–18 mėnesių. Tikslų terminą pasakome po pirminės konsultacijos.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Ar dirbate su tarptautiniais klientais?<span class="plus">+</span></div>
+          <div class="faq-a">Taip. Konsultuojame ir atstovaujame užsienio investuotojus Lietuvoje. Dirbiname lietuvių, anglų ir rusų kalbomis.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Kaip užtikrinamas konfidencialumas?<span class="plus">+</span></div>
+          <div class="faq-a">Visi advokatai laikosi advokatų etikos kodekso. Su kiekvienu klientu sudarome konfidencialumo sutartį.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="cta-box">
+      <div class="eyebrow">Kontaktai</div>
+      <h2>Susisiekite su mumis</h2>
+      <p>Pirminė konsultacija — per 24 val. Papasakokite apie savo situaciją ir mes patarsime tinkamiausią sprendimą.</p>
+      <div class="cta-actions">
+        <a class="btn accent" href="#" style="padding:15px 32px;font-size:16px">Gauti konsultaciją →</a>
+        <a class="btn ghost" href="#" style="padding:15px 26px;font-size:15px">+370 5 210 0000</a>
+      </div>
+      <div class="contact-info">
+        <div class="contact-item"><strong>Adresas</strong>Gedimino pr. 44, Vilnius</div>
+        <div class="contact-item"><strong>El. paštas</strong>info@lexbaltica.lt</div>
+        <div class="contact-item"><strong>Darbo laikas</strong>Pn–Pt 9:00–18:00</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-inner">
+      <div class="footer-col">
+        <div class="logo" style="margin-bottom:12px"><div class="logo-icon" style="width:28px;height:28px;font-size:13px">L</div><span style="font-size:15px;font-family:Georgia,serif">Lex Baltica</span></div>
+        <p style="font-size:13px;color:var(--muted);line-height:1.65;font-family:-apple-system,BlinkMacSystemFont,sans-serif">Advokatų kontora Vilniuje. Verslo, NT ir darbo teisė nuo 2009 m.</p>
+        <p style="font-size:12px;color:var(--subtle);margin-top:8px;font-family:-apple-system,BlinkMacSystemFont,sans-serif">Lic. Nr. LAT-001-2009</p>
+      </div>
+      <div class="footer-col">
+        <h5>Praktikos sritys</h5>
+        <a href="#">Verslo teisė</a><a href="#">Nekilnojamas turtas</a><a href="#">Darbo teisė</a><a href="#">Ginčų sprendimas</a>
+      </div>
+      <div class="footer-col">
+        <h5>Kontaktai</h5>
+        <a href="#">Gedimino pr. 44, Vilnius</a><a href="#">+370 5 210 0000</a><a href="#">info@lexbaltica.lt</a>
+        <div style="margin-top:8px;font-size:13px;color:var(--subtle);font-family:-apple-system,BlinkMacSystemFont,sans-serif">Pn–Pt 9:00–18:00</div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2024 Lex Baltica. Visos teisės saugomos.</span>
+      <span>Privatumo politika · Advokatų etikos kodeksas</span>
+    </div>
+  </div>
+</footer>
 
 <div class="disclaimer">Pavyzdys · Fiktyvus verslas</div>
 </body></html>

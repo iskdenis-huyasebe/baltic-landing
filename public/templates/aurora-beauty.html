@@ -6,58 +6,157 @@
 <title>Glow Studio — grožio studija Vilniuje</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-:root{--bg:#f6f6f1;--fg:#1a1a17;--muted:#6b6b63;--surface:#ffffff;--border:rgba(0,0,0,.09);--accent:#65a30d;--accent2:#84cc16}
+:root{--bg:#faf9f5;--fg:#1c1c18;--muted:#6b6b5a;--subtle:#a8a898;--surface:#fff;--surface2:#f2f1ec;--border:rgba(0,0,0,.09);--border2:rgba(0,0,0,.14);--accent:#65a30d;--accent2:#84cc16;--accentbg:rgba(101,163,13,.1);--soft:rgba(101,163,13,.12)}
 html{scroll-behavior:smooth}
 body{background:var(--bg);color:var(--fg);font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Inter,system-ui,sans-serif;line-height:1.55;-webkit-font-smoothing:antialiased}
 a{color:inherit;text-decoration:none}
-.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
-.eyebrow{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);font-weight:700;margin-bottom:14px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 28px}
+.eyebrow{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);font-weight:700;margin-bottom:14px}
 .muted{color:var(--muted)}
-.btn{display:inline-flex;align-items:center;gap:8px;background:var(--accent);color:#fff;font-weight:600;padding:13px 24px;border-radius:12px;font-size:15px;cursor:pointer;border:none}
-.btn:hover{filter:brightness(1.05)}
-.btn.ghost{background:transparent;border:1px solid var(--border);color:var(--fg)}
-header.site{position:sticky;top:0;z-index:50;background:color-mix(in srgb,var(--bg) 85%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--border)}
-header.site .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
-.logo{font-weight:700;font-size:17px;display:flex;align-items:center;gap:8px}
-.logo .dot{width:20px;height:20px;border-radius:6px;background:var(--accent)}
-nav{display:flex;gap:24px;font-size:14px;color:var(--muted)}
-nav a:hover{color:var(--fg)}
-.disclaimer{position:fixed;bottom:12px;left:50%;transform:translateX(-50%);background:rgba(0,0,0,.7);color:#fff;font-size:11px;padding:5px 14px;border-radius:999px;z-index:100;white-space:nowrap;pointer-events:none}
-@media(max-width:700px){nav{display:none}}
+.btn{display:inline-flex;align-items:center;gap:8px;background:var(--accent);color:#fff;font-weight:600;padding:13px 24px;border-radius:999px;font-size:15px;transition:.18s;border:none;cursor:pointer}
+.btn:hover{filter:brightness(1.06);transform:translateY(-1px)}
+.btn.ghost{background:transparent;border:1px solid var(--border2);color:var(--fg);border-radius:999px}
+.btn.ghost:hover{background:var(--surface2)}
 
-section{padding:80px 0}
-.hero{padding-top:140px;padding-bottom:60px;text-align:center}
-.tag{display:inline-block;background:rgba(101,163,13,.1);color:#4d7c0f;font-size:12px;font-weight:600;padding:5px 14px;border-radius:999px;margin-bottom:20px;letter-spacing:.06em;text-transform:uppercase}
-h1{font-size:clamp(38px,5.5vw,62px);line-height:1.06;letter-spacing:-.02em;font-weight:600;margin-bottom:18px;max-width:640px;margin-left:auto;margin-right:auto}
-.hero p{font-size:18px;color:var(--muted);max-width:460px;margin:0 auto 32px}
-.hero-row{display:flex;justify-content:center;gap:28px;margin-top:40px;flex-wrap:wrap}
-.hero-stat{text-align:center}
-.hero-stat strong{display:block;font-size:22px;font-weight:700;color:var(--fg)}
-.hero-stat span{font-size:13px;color:var(--muted)}
-.services{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:36px}
-.svc{background:var(--surface);border:1px solid var(--border);border-radius:20px;padding:28px;text-align:center;transition:.2s}
-.svc:hover{border-color:var(--accent);transform:translateY(-3px)}
-.svc .emoji{font-size:28px;margin-bottom:14px}
-.svc h3{font-size:17px;font-weight:600;margin-bottom:8px}
-.svc p{font-size:14px;color:var(--muted);margin-bottom:14px}
-.svc .price{font-size:13px;font-weight:700;color:var(--accent)}
-.team{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:36px}
-.member{text-align:center}
-.member .avatar{width:80px;height:80px;border-radius:50%;background:linear-gradient(135deg,var(--accent),var(--accent2));margin:0 auto 12px}
-.member h4{font-size:15px;font-weight:600;margin-bottom:4px}
-.member span{font-size:13px;color:var(--muted)}
-.cta-wrap{background:var(--surface);border:1px solid var(--border);border-radius:24px;padding:60px;text-align:center;margin-top:0}
-.cta-wrap h2{font-size:clamp(26px,3.5vw,38px);font-weight:600;margin-bottom:12px}
-@media(max-width:700px){.services,.team{grid-template-columns:1fr}.cta-wrap{padding:36px 24px}}
+/* ─── HEADER ──────────────────────────────── */
+header{position:sticky;top:0;z-index:80;background:color-mix(in srgb,var(--bg) 90%,transparent);backdrop-filter:blur(14px);border-bottom:1px solid var(--border)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:66px;gap:24px}
+.logo{display:flex;align-items:center;gap:10px;font-weight:700;font-size:17px;letter-spacing:-.01em}
+.logo-mark{width:32px;height:32px;border-radius:50%;background:var(--accent);display:flex;align-items:center;justify-content:center;font-size:16px}
+nav{display:flex;gap:26px;font-size:14px;color:var(--muted)}
+nav a:hover{color:var(--fg)}
+@media(max-width:720px){nav{display:none}}
+
+/* ─── HERO ──────────────────────────────── */
+.hero{padding:80px 0 60px;text-align:center}
+.hero-tag{display:inline-flex;align-items:center;gap:6px;background:var(--accentbg);border:1px solid rgba(101,163,13,.22);color:#4d7c0f;font-size:12px;font-weight:600;padding:5px 16px;border-radius:999px;margin-bottom:28px;letter-spacing:.04em}
+.hero h1{font-size:clamp(40px,6vw,68px);line-height:1.04;letter-spacing:-.03em;font-weight:700;margin-bottom:22px;max-width:700px;margin-left:auto;margin-right:auto}
+.hero h1 em{font-style:normal;color:var(--accent)}
+.hero-sub{font-size:18px;color:var(--muted);max-width:500px;margin:0 auto 36px;line-height:1.65}
+.hero-cta{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-bottom:52px}
+.hero-stats{display:flex;justify-content:center;gap:0;border:1px solid var(--border);border-radius:18px;overflow:hidden;background:var(--surface);max-width:600px;margin:0 auto}
+.h-stat{flex:1;padding:18px 16px;text-align:center;border-right:1px solid var(--border)}
+.h-stat:last-child{border-right:none}
+.h-stat strong{display:block;font-size:24px;font-weight:700;color:var(--accent);letter-spacing:-.02em}
+.h-stat span{font-size:12px;color:var(--muted)}
+
+/* ─── PHOTO STRIP ──────────────────────────────── */
+.photo-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:40px 0}
+.photo-block{border-radius:16px;overflow:hidden;position:relative}
+.photo-block .img{width:100%;aspect-ratio:3/4;background:var(--surface2)}
+.photo-block:nth-child(1) .img{background:linear-gradient(160deg,#dcfce7,#bbf7d0)}
+.photo-block:nth-child(2) .img{aspect-ratio:3/5;background:linear-gradient(160deg,#d1fae5,#a7f3d0);margin-top:20px}
+.photo-block:nth-child(3) .img{background:linear-gradient(160deg,#ecfccb,#d9f99d)}
+.photo-block:nth-child(4) .img{aspect-ratio:3/5;background:linear-gradient(160deg,#f7fee7,#ecfccb);margin-top:-20px}
+.photo-tag{position:absolute;bottom:12px;left:12px;background:rgba(255,255,255,.85);backdrop-filter:blur(6px);font-size:11px;font-weight:600;color:var(--fg);padding:4px 10px;border-radius:999px}
+@media(max-width:700px){.photo-strip{grid-template-columns:repeat(2,1fr)}.photo-block:nth-child(2) .img,.photo-block:nth-child(4) .img{margin:0;aspect-ratio:3/4}}
+
+/* ─── SERVICES ──────────────────────────────── */
+section{padding:72px 0}
+h2.section-title{font-size:clamp(26px,3.5vw,40px);line-height:1.1;letter-spacing:-.025em;font-weight:700;margin-bottom:10px}
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:36px}
+.svc{background:var(--surface);border:1px solid var(--border);border-radius:18px;padding:24px;transition:.2s}
+.svc:hover{border-color:rgba(101,163,13,.35);box-shadow:0 4px 20px rgba(101,163,13,.08)}
+.svc-ico{font-size:28px;margin-bottom:14px}
+.svc h3{font-size:16px;font-weight:600;margin-bottom:7px}
+.svc p{font-size:13px;color:var(--muted);line-height:1.6;margin-bottom:12px}
+.svc-price{font-size:15px;font-weight:700;color:var(--accent)}
+.svc-tag{display:inline-block;background:var(--accentbg);color:#4d7c0f;font-size:11px;padding:3px 9px;border-radius:999px;margin-top:6px;font-weight:600}
+@media(max-width:720px){.services-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:500px){.services-grid{grid-template-columns:1fr}}
+
+/* ─── ABOUT / STUDIO ──────────────────────────────── */
+.studio-section{background:var(--surface2);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+.studio-inner{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.studio-img{border-radius:20px;overflow:hidden;position:relative}
+.studio-img .main-photo{width:100%;aspect-ratio:4/3;background:linear-gradient(135deg,#d1fae5 0%,#a7f3d0 40%,#bbf7d0 100%);position:relative}
+.studio-img .photo-overlay{position:absolute;bottom:0;left:0;right:0;background:linear-gradient(to top,rgba(28,28,24,.5),transparent);padding:20px;display:flex;align-items:flex-end}
+.studio-img .award{position:absolute;top:16px;right:16px;background:white;border-radius:14px;padding:10px 14px;text-align:center;box-shadow:0 4px 16px rgba(0,0,0,.1)}
+.studio-img .award strong{display:block;font-size:18px;font-weight:700;color:var(--accent)}
+.studio-img .award span{font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:.08em}
+.studio-text h2{font-size:clamp(26px,3.5vw,38px);font-weight:700;letter-spacing:-.02em;line-height:1.12;margin-bottom:18px}
+.studio-text p{font-size:15px;color:var(--muted);line-height:1.7;margin-bottom:14px}
+.studio-features{display:flex;flex-direction:column;gap:10px;margin-top:20px}
+.studio-feat{display:flex;align-items:center;gap:10px;font-size:14px;color:var(--muted)}
+.studio-feat::before{content:"✓";width:22px;height:22px;background:var(--accentbg);color:var(--accent);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;flex-shrink:0}
+@media(max-width:720px){.studio-inner{grid-template-columns:1fr}}
+
+/* ─── TEAM ──────────────────────────────── */
+.team-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:40px}
+.member{background:var(--surface);border:1px solid var(--border);border-radius:20px;overflow:hidden;transition:.2s}
+.member:hover{box-shadow:0 8px 32px rgba(0,0,0,.07)}
+.member-photo{width:100%;aspect-ratio:3/2;position:relative;overflow:hidden}
+.member-photo .face{width:100%;height:100%}
+.member-photo .face-overlay{position:absolute;bottom:12px;right:12px;background:white;border-radius:10px;padding:6px 12px;font-size:11px;font-weight:600;color:var(--fg);box-shadow:0 2px 8px rgba(0,0,0,.1)}
+.member-info{padding:18px 20px}
+.member-name{font-size:16px;font-weight:700;margin-bottom:3px}
+.member-role{font-size:13px;color:var(--muted);margin-bottom:8px}
+.member-exp{font-size:12px;background:var(--accentbg);color:#4d7c0f;padding:3px 10px;border-radius:999px;display:inline-block;font-weight:600}
+.member-note{font-size:13px;color:var(--muted);margin-top:10px;line-height:1.55}
+@media(max-width:700px){.team-grid{grid-template-columns:1fr}}
+
+/* ─── TESTIMONIALS ──────────────────────────────── */
+.reviews-section{background:var(--surface2);border-top:1px solid var(--border)}
+.reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:36px}
+.review{background:var(--surface);border:1px solid var(--border);border-radius:18px;padding:24px}
+.review-stars{color:#f59e0b;font-size:14px;margin-bottom:12px}
+.review-text{font-size:14px;color:var(--muted);line-height:1.65;margin-bottom:16px}
+.review-author{display:flex;align-items:center;gap:10px}
+.review-avatar{width:36px;height:36px;border-radius:50%;flex-shrink:0}
+.review-name{font-size:14px;font-weight:600}
+.review-meta{font-size:11px;color:var(--subtle)}
+@media(max-width:720px){.reviews-grid{grid-template-columns:1fr}}
+
+/* ─── PRICES ──────────────────────────────── */
+.prices-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:36px}
+.price-card{background:var(--surface);border:1px solid var(--border);border-radius:18px;padding:24px}
+.price-card.highlight{border-color:var(--accent);background:var(--accentbg)}
+.price-cat{font-size:11px;text-transform:uppercase;letter-spacing:.12em;color:var(--subtle);font-weight:700;margin-bottom:12px}
+.price-card h3{font-size:17px;font-weight:600;margin-bottom:4px}
+.price-card .range{font-size:14px;color:var(--muted);margin-bottom:14px}
+.price-items{list-style:none;display:flex;flex-direction:column;gap:7px}
+.price-items li{display:flex;justify-content:space-between;font-size:13px;color:var(--muted);padding-bottom:7px;border-bottom:1px solid var(--border)}
+.price-items li:last-child{border-bottom:none;padding-bottom:0}
+.price-items li b{color:var(--fg);font-weight:600}
+@media(max-width:720px){.prices-grid{grid-template-columns:1fr}}
+
+/* ─── CTA ──────────────────────────────── */
+.cta-box{text-align:center;padding:80px 40px;background:var(--fg);color:#fff;border-radius:24px;position:relative;overflow:hidden}
+.cta-box::before{content:"✦";position:absolute;font-size:200px;opacity:.04;top:-40px;left:-20px;color:#fff;line-height:1}
+.cta-box::after{content:"✦";position:absolute;font-size:200px;opacity:.04;bottom:-60px;right:-20px;color:#fff;line-height:1}
+.cta-box .eyebrow{color:var(--accent2)}
+.cta-box h2{font-size:clamp(28px,4vw,44px);font-weight:700;margin-bottom:14px;line-height:1.12;color:#fff}
+.cta-box p{font-size:16px;color:rgba(255,255,255,.6);max-width:440px;margin:0 auto 32px}
+.cta-actions{display:flex;justify-content:center;gap:14px;flex-wrap:wrap;margin-bottom:24px}
+.trust-row{display:flex;justify-content:center;gap:22px;flex-wrap:wrap}
+.trust-item{font-size:13px;color:rgba(255,255,255,.55);display:flex;align-items:center;gap:6px}
+.trust-item::before{content:"✓";color:var(--accent2);font-weight:700}
+.btn.white{background:#fff;color:var(--fg)}
+.btn.outline-white{background:transparent;border:1px solid rgba(255,255,255,.3);color:#fff;border-radius:999px}
+
+/* ─── FOOTER ──────────────────────────────── */
+footer{border-top:1px solid var(--border);padding:40px 0}
+.footer-inner{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:40px}
+.footer-col h5{font-size:11px;text-transform:uppercase;letter-spacing:.12em;color:var(--subtle);font-weight:700;margin-bottom:14px}
+.footer-col a{display:block;font-size:14px;color:var(--muted);margin-bottom:8px}
+.footer-col a:hover{color:var(--fg)}
+.footer-bottom{margin-top:28px;padding-top:20px;border-top:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;font-size:12px;color:var(--subtle)}
+@media(max-width:700px){.footer-inner{grid-template-columns:1fr}.cta-box{padding:48px 24px}}
+
+.disclaimer{position:fixed;bottom:12px;left:50%;transform:translateX(-50%);background:rgba(28,28,24,.8);backdrop-filter:blur(8px);color:rgba(255,255,255,.75);font-size:11px;padding:5px 16px;border-radius:999px;z-index:100;white-space:nowrap;pointer-events:none;border:1px solid rgba(255,255,255,.1)}
 </style>
 </head><body>
 
-<header class="site">
+<!-- HEADER -->
+<header>
   <div class="wrap">
-    <div class="logo"><span class="dot"></span> Glow Studio</div>
+    <div class="logo">
+      <div class="logo-mark">✦</div>
+      Glow Studio
+    </div>
     <nav>
       <a href="#">Paslaugos</a>
-      <a href="#">Komanada</a>
+      <a href="#">Komanda</a>
       <a href="#">Kainos</a>
       <a href="#">Kontaktai</a>
     </nav>
@@ -65,83 +164,269 @@ h1{font-size:clamp(38px,5.5vw,62px);line-height:1.06;letter-spacing:-.02em;font-
   </div>
 </header>
 
+<!-- HERO -->
 <section class="hero">
   <div class="wrap">
-    <div class="tag">✦ Grožio studija · Vilnius</div>
-    <h1>Grožis, kuris<br>kyla iš vidaus</h1>
-    <p>Profesionali veido ir kūno priežiūra Vilniaus Naujamiestyje. Registruokitės internetu — per 2 minutes.</p>
-    <a class="btn" href="#" style="padding:14px 30px;font-size:16px;border-radius:999px">Rezervuoti laiką →</a>
-    <div class="hero-row">
-      <div class="hero-stat"><strong>4.9 ★</strong><span>Google reitingas</span></div>
-      <div class="hero-stat"><strong>800+</strong><span>laimingų klientų</span></div>
-      <div class="hero-stat"><strong>5 m.</strong><span>patirtis</span></div>
+    <div class="hero-tag">✦ Grožio studija · Naujamiesčio g. 14, Vilnius</div>
+    <h1>Grožis, kuris<br>kyla <em>iš vidaus</em></h1>
+    <p class="hero-sub">Profesionali veido ir kūno priežiūra Vilniuje. Individualios procedūros, pasirinktinai — jūsų odai ir savijautai.</p>
+    <div class="hero-cta">
+      <a class="btn" href="#" style="padding:15px 30px;font-size:16px">Rezervuoti laiką →</a>
+      <a class="btn ghost" href="#" style="padding:15px 22px;font-size:15px">Žiūrėti paslaugas</a>
+    </div>
+    <div class="hero-stats">
+      <div class="h-stat"><strong>4.9 ★</strong><span>Google reitingas</span></div>
+      <div class="h-stat"><strong>1 200+</strong><span>laimingų klientų</span></div>
+      <div class="h-stat"><strong>6 m.</strong><span>patirtis</span></div>
+      <div class="h-stat"><strong>3</strong><span>specialistai</span></div>
     </div>
   </div>
 </section>
 
+<!-- PHOTO STRIP -->
+<div class="wrap">
+  <div class="photo-strip">
+    <div class="photo-block">
+      <div class="img" style="display:flex;align-items:center;justify-content:center;font-size:40px">🌿</div>
+      <div class="photo-tag">Veido procedūros</div>
+    </div>
+    <div class="photo-block">
+      <div class="img" style="display:flex;align-items:center;justify-content:center;font-size:40px">💆</div>
+      <div class="photo-tag">Masažai</div>
+    </div>
+    <div class="photo-block">
+      <div class="img" style="display:flex;align-items:center;justify-content:center;font-size:40px">💅</div>
+      <div class="photo-tag">Nagų priežiūra</div>
+    </div>
+    <div class="photo-block">
+      <div class="img" style="display:flex;align-items:center;justify-content:center;font-size:40px">✨</div>
+      <div class="photo-tag">Studija</div>
+    </div>
+  </div>
+</div>
+
+<!-- SERVICES -->
 <section>
   <div class="wrap">
-    <div class="eyebrow" style="text-align:center">Paslaugos</div>
-    <h2 style="font-size:clamp(26px,3.5vw,38px);font-weight:600;text-align:center;margin-bottom:8px">Jūsų grožio rutina</h2>
-    <p class="muted" style="text-align:center;font-size:16px;max-width:480px;margin:0 auto 0">Kiekviena procedūra — individuali programa jūsų odai ir savijautai.</p>
-    <div class="services">
+    <div class="eyebrow">Paslaugos</div>
+    <h2 class="section-title">Jūsų grožio rutina</h2>
+    <p class="muted">Kiekviena procedūra — individuali programa jūsų odai ir savijautai.</p>
+    <div class="services-grid">
       <div class="svc">
-        <div class="emoji">✨</div>
+        <div class="svc-ico">✨</div>
         <h3>Veido procedūros</h3>
-        <p>Giluminis valymas, drėkinimas, antisenėjimo programos. Individuali programa kiekvienai klientei.</p>
-        <div class="price">nuo 45 €</div>
+        <p>Giluminis valymas, drėkinimas, antisenėjimo programos. Pirmojo vizito metu — nemokama konsultacija.</p>
+        <div class="svc-price">nuo 45 €</div>
+        <div class="svc-tag">60–90 min</div>
       </div>
       <div class="svc">
-        <div class="emoji">💆</div>
+        <div class="svc-ico">💆</div>
         <h3>Masažai</h3>
-        <p>Relaksacinis, sportinis, akmens terapija. 60 arba 90 min. procedūros.</p>
-        <div class="price">nuo 55 €</div>
+        <p>Relaksacinis, sportinis ir akmens terapija. Individuali programa pagal jūsų poreikius ir įtampas.</p>
+        <div class="svc-price">nuo 55 €</div>
+        <div class="svc-tag">60 arba 90 min</div>
       </div>
       <div class="svc">
-        <div class="emoji">💅</div>
+        <div class="svc-ico">💅</div>
         <h3>Nagų priežiūra</h3>
-        <p>Manikiūras, pedikiūras, gelinis lakas. Ilgalaikis rezultatas iki 4 savaičių.</p>
-        <div class="price">nuo 25 €</div>
+        <p>Manikiūras, pedikiūras, gelinis lakas. Ilgalaikis rezultatas — iki 4 savaičių be atsilupimo.</p>
+        <div class="svc-price">nuo 25 €</div>
+        <div class="svc-tag">45–75 min</div>
+      </div>
+      <div class="svc">
+        <div class="svc-ico">🌿</div>
+        <h3>Kūno įvyniojimai</h3>
+        <p>Drėkinantys ir detoksikaciniai įvyniojimai su natūraliais komponentais. Puikus pirmajai procedūrai.</p>
+        <div class="svc-price">nuo 65 €</div>
+        <div class="svc-tag">75 min</div>
+      </div>
+      <div class="svc">
+        <div class="svc-ico">👁</div>
+        <h3>Blakstienų tvarkymas</h3>
+        <p>Blakstienų laminacija, dažymas, kirpimas. Natūralus rezultatas, ilgalaikis efektas.</p>
+        <div class="svc-price">nuo 30 €</div>
+        <div class="svc-tag">40–60 min</div>
+      </div>
+      <div class="svc">
+        <div class="svc-ico">🎁</div>
+        <h3>Dovanų kuponai</h3>
+        <p>Nustebinkite artimąjį. Kuponai išduodami bet kokiai sumai arba konkrečiai procedūrai.</p>
+        <div class="svc-price">nuo 25 €</div>
+        <div class="svc-tag">Visada tinkamas dovana</div>
       </div>
     </div>
   </div>
 </section>
 
-<section style="background:var(--surface);border-top:1px solid var(--border);border-bottom:1px solid var(--border)">
+<!-- STUDIO ABOUT -->
+<section class="studio-section">
   <div class="wrap">
-    <div class="eyebrow" style="text-align:center">Komanda</div>
-    <h2 style="font-size:clamp(24px,3vw,34px);font-weight:600;text-align:center;margin-bottom:36px">Jūsų meistrai</h2>
-    <div class="team">
-      <div class="member">
-        <div class="avatar"></div>
-        <h4>Aistė Petrauskienė</h4>
-        <span>Veido terapeutė · 7 m.</span>
+    <div class="studio-inner">
+      <div class="studio-img">
+        <div class="main-photo" style="display:flex;align-items:center;justify-content:center">
+          <div style="text-align:center">
+            <div style="font-size:64px;margin-bottom:12px">🌱</div>
+            <div style="font-size:16px;font-weight:600;color:#166534">Studijos interjeras</div>
+            <div style="font-size:13px;color:#4d7c0f;margin-top:4px">Naujamiesčio g. 14, Vilnius</div>
+          </div>
+        </div>
+        <div class="award">
+          <strong>2024</strong>
+          <span>Geriausių studijų<br>TOP 10 Vilniuje</span>
+        </div>
       </div>
-      <div class="member">
-        <div class="avatar" style="background:linear-gradient(135deg,#84cc16,#65a30d)"></div>
-        <h4>Rūta Kazlauskaitė</h4>
-        <span>Masažo terapeutė · 5 m.</span>
-      </div>
-      <div class="member">
-        <div class="avatar" style="background:linear-gradient(135deg,#a3e635,#84cc16)"></div>
-        <h4>Viktorija Jankauskaitė</h4>
-        <span>Nagų meistras · 4 m.</span>
+      <div class="studio-text">
+        <div class="eyebrow">Apie mus</div>
+        <h2>Jūsų grožis —<br>mūsų aistras</h2>
+        <p>Glow Studio — tai ne tik grožio procedūros. Tai vieta, kur jūs atsipalaiduojate, atpažįstate savo unikalumą ir išeisite jaučiantis geriausiai.</p>
+        <p>Mūsų specialistai nuolatos gilina žinias, naudojame tik sertifikuotus produktus ir medžiagas. Kiekviena procedūra — individuali programa, sukurta būtent jums.</p>
+        <div class="studio-features">
+          <div class="studio-feat">Tik sertifikuoti produktai ir priemonės</div>
+          <div class="studio-feat">Individuali programa kiekvienai klientei</div>
+          <div class="studio-feat">Nemokama konsultacija prieš pirmą vizitą</div>
+          <div class="studio-feat">Patogu parkuotis — nemokama vieta priekyje</div>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
+<!-- TEAM -->
 <section>
   <div class="wrap">
-    <div class="cta-wrap">
-      <div class="eyebrow">Registracija</div>
-      <h2>Rezervuokite laiką šiandien</h2>
-      <p class="muted" style="font-size:16px;max-width:400px;margin:0 auto 28px">Internetu — greita ir paprasta. Patvirtinsime per 30 min.</p>
-      <a class="btn" href="#" style="padding:15px 32px;font-size:16px;border-radius:999px">Registruotis dabar →</a>
-      <p class="muted" style="font-size:13px;margin-top:16px">Pylimo g. 4, Vilnius · 9:00–19:00, I–Š</p>
+    <div class="eyebrow">Komanda</div>
+    <h2 class="section-title">Jūsų meistrai</h2>
+    <p class="muted">Kiekvienas specialistas — tai metai patirties ir nuolatinis tobulinimasis.</p>
+    <div class="team-grid">
+      <div class="member">
+        <div class="member-photo">
+          <div class="face" style="background:linear-gradient(160deg,#d1fae5,#a7f3d0);display:flex;align-items:center;justify-content:center;font-size:56px">🧖‍♀️</div>
+          <div class="face-overlay">★ 5.0 · 340 apžvalgos</div>
+        </div>
+        <div class="member-info">
+          <div class="member-name">Aistė Petrauskienė</div>
+          <div class="member-role">Veido terapeutė</div>
+          <div class="member-exp">7 m. patirtis</div>
+          <p class="member-note">Specializuojasi anti-aging ir jautriai odai skirtose programose. Nuolatinė Dermalogica sertifikatų turėtoja.</p>
+        </div>
+      </div>
+      <div class="member">
+        <div class="member-photo">
+          <div class="face" style="background:linear-gradient(160deg,#ecfccb,#d9f99d);display:flex;align-items:center;justify-content:center;font-size:56px">💆‍♀️</div>
+          <div class="face-overlay">★ 4.9 · 218 apžvalgos</div>
+        </div>
+        <div class="member-info">
+          <div class="member-name">Rūta Kazlauskaitė</div>
+          <div class="member-role">Masažo terapeutė</div>
+          <div class="member-exp">5 m. patirtis</div>
+          <p class="member-note">Relaksacinis, sportinis ir limfinės drenažo masažas. Individuali programa kiekvienai procedūrai.</p>
+        </div>
+      </div>
+      <div class="member">
+        <div class="member-photo">
+          <div class="face" style="background:linear-gradient(160deg,#f0fdf4,#dcfce7);display:flex;align-items:center;justify-content:center;font-size:56px">💅</div>
+          <div class="face-overlay">★ 5.0 · 196 apžvalgos</div>
+        </div>
+        <div class="member-info">
+          <div class="member-name">Viktorija Jankauskaitė</div>
+          <div class="member-role">Nagų meistras</div>
+          <div class="member-exp">4 m. patirtis</div>
+          <p class="member-note">Manikiūras, pedikiūras, gelinis lakas ir nagų dizainas. Meistriška ir greita — be laukimo eilėje.</p>
+        </div>
+      </div>
     </div>
   </div>
 </section>
+
+<!-- TESTIMONIALS -->
+<section class="reviews-section">
+  <div class="wrap">
+    <div class="eyebrow">Atsiliepimai</div>
+    <h2 class="section-title">Klientės kalba</h2>
+    <div class="reviews-grid">
+      <div class="review">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">„Geriausios veido procedūros Vilniuje! Aistė labai tiksliai parinkė programą mano jautriai odai. Po trijų vizitų oda tapo visiškai kitokia. Grįžtu kiekvieną mėnesį."</p>
+        <div class="review-author">
+          <div class="review-avatar" style="background:linear-gradient(135deg,#65a30d,#4d7c0f)"></div>
+          <div><div class="review-name">Jolanta M.</div><div class="review-meta">Klientė nuo 2022 · Google</div></div>
+        </div>
+      </div>
+      <div class="review">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">„Atėjau su draugėmis dovanos kuponui. Tai buvo nuostabi patirtis! Masažas su akmens terapija — tiesiog sapnas. Studija jauki, meistrė profesionali. Tikrai grįšiu."</p>
+        <div class="review-author">
+          <div class="review-avatar" style="background:linear-gradient(135deg,#84cc16,#65a30d)"></div>
+          <div><div class="review-name">Inga T.</div><div class="review-meta">Klientė · Google, 2024</div></div>
+        </div>
+      </div>
+      <div class="review">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">„Viktorija — tiesiog superžvaigždė! Manikiūras laikosi keturias savaites — tai unikalus rezultatas. Tiksliai, gražiai ir su puikia nuotaika. Rekomenduoju visoms draugėms."</p>
+        <div class="review-author">
+          <div class="review-avatar" style="background:linear-gradient(135deg,#a3e635,#84cc16)"></div>
+          <div><div class="review-name">Sandra K.</div><div class="review-meta">Nuolatinė klientė · Google</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section>
+  <div class="wrap">
+    <div class="cta-box">
+      <div class="eyebrow">Rezervacija</div>
+      <h2>Rezervuokite laiką dabar</h2>
+      <p>Pasirinkite paslaugą ir patogų laiką. Patvirtinimas — per 30 min. Pirmam vizitui — nemokama konsultacija.</p>
+      <div class="cta-actions">
+        <a class="btn white" href="#" style="padding:15px 30px;font-size:16px">Rezervuoti laiką →</a>
+        <a class="btn outline-white" href="#" style="padding:15px 22px;font-size:15px">+370 600 55 555</a>
+      </div>
+      <div class="trust-row">
+        <div class="trust-item">Nemokama konsultacija</div>
+        <div class="trust-item">Tik sertifikuoti produktai</div>
+        <div class="trust-item">Dovanų kuponai</div>
+        <div class="trust-item">Dirbame 9:00–20:00</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="footer-inner">
+      <div class="footer-col">
+        <div class="logo" style="margin-bottom:12px"><div class="logo-mark" style="width:28px;height:28px;font-size:14px">✦</div><span style="font-size:15px">Glow Studio</span></div>
+        <p style="font-size:13px;color:var(--muted);line-height:1.65">Profesionali grožio studija Vilniaus Naujamiestyje. Veikia nuo 2018 m.</p>
+        <div style="margin-top:14px;display:flex;gap:8px">
+          <div style="width:32px;height:32px;border-radius:50%;background:var(--surface2);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:13px;cursor:pointer">ig</div>
+          <div style="width:32px;height:32px;border-radius:50%;background:var(--surface2);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:13px;cursor:pointer">fb</div>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h5>Paslaugos</h5>
+        <a href="#">Veido procedūros</a>
+        <a href="#">Masažai</a>
+        <a href="#">Nagų priežiūra</a>
+        <a href="#">Kūno įvyniojimai</a>
+        <a href="#">Dovanų kuponai</a>
+      </div>
+      <div class="footer-col">
+        <h5>Kontaktai</h5>
+        <a href="#">Naujamiesčio g. 14, Vilnius</a>
+        <a href="#">+370 600 55 555</a>
+        <a href="#">info@glowstudio.lt</a>
+        <div style="margin-top:8px;font-size:13px;color:var(--subtle)">Pn–Šeš 9:00–20:00<br>Sekmadienis 10:00–16:00</div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2024 Glow Studio. Visos teisės saugomos.</span>
+      <span>Privatumo politika</span>
+    </div>
+  </div>
+</footer>
 
 <div class="disclaimer">Pavyzdys · Fiktyvus verslas</div>
 </body></html>
