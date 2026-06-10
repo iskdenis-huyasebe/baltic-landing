@@ -40,7 +40,7 @@ export function StickyMobileCTA() {
         <span className="text-xs text-[var(--muted)]">{t("days")}</span>
       </div>
       <a
-        href={`/${locale}/order?plan=setup`}
+        href={`/${locale}/order`}
         className="inline-flex items-center justify-center bg-[var(--accent)] text-[var(--accent-foreground)] rounded-xl px-5 py-2.5 text-sm font-medium transition-all hover:opacity-90 active:scale-[0.98] min-h-[44px]"
       >
         {t("cta")}

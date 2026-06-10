@@ -112,11 +112,8 @@ export function Pricing() {
       window.location.href = "#contact";
       return;
     }
-    const params = new URLSearchParams({
-      plan,
-      ...(bundle && plan === "setup" ? { bundle: "care6" } : {}),
-    });
-    window.location.href = `/${locale}/order?${params.toString()}`;
+    // All order buttons lead to plan selection (step 0)
+    window.location.href = `/${locale}/order`;
   };
 
   return (

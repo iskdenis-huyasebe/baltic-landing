@@ -40,7 +40,7 @@ export function Hero() {
           </p>
           <div className="flex flex-col sm:flex-row gap-3 mb-8">
             <a
-              href={`/${locale}/order?plan=setup`}
+              href={`/${locale}/order`}
               className="inline-flex items-center justify-center gap-2 bg-[var(--accent)] text-[var(--accent-foreground)] rounded-xl px-8 py-4 text-base font-medium transition-all duration-200 hover:opacity-90 hover:scale-[1.02] active:scale-[0.98] min-h-[52px] focus-visible:ring-2 focus-visible:ring-[var(--accent)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--background)]"
             >
               {t("ctaPrimary")}

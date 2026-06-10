@@ -406,6 +406,37 @@
     "back": "Back",
     "backToPricing": "Back to pricing",
     "next": "Next →",
+    "plan": {
+      "title": "Choose your plan",
+      "subtitle": "You can change this at any time.",
+      "plans": [
+        {
+          "id": "setup",
+          "name": "Setup",
+          "price": "€200",
+          "desc": "Fast start — 3 business days",
+          "features": ["1 page", "Template + your colors", "Mobile-friendly", "7-day money-back guarantee"],
+          "cta": "Choose Setup"
+        },
+        {
+          "id": "pro",
+          "name": "Setup Pro",
+          "price": "€500",
+          "badge": "Most popular",
+          "desc": "Full solution",
+          "features": ["Up to 3 pages", "Custom design", "SEO + metadata", "Forms and integrations"],
+          "cta": "Choose Pro"
+        },
+        {
+          "id": "custom",
+          "name": "Custom",
+          "price": "from €1200",
+          "desc": "Complex projects",
+          "features": ["Custom functionality", "API integrations", "Multilingual", "We discuss personally"],
+          "cta": "Discuss project"
+        }
+      ]
+    },
     "basics": {
       "title": "Tell us about you",
       "subtitle": "Takes about 2 minutes.",

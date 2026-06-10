@@ -406,6 +406,37 @@
     "back": "Atpakaļ",
     "backToPricing": "Atpakaļ pie tarifiem",
     "next": "Tālāk →",
+    "plan": {
+      "title": "Izvēlieties paketi",
+      "subtitle": "Izvēli var mainīt jebkurā laikā.",
+      "plans": [
+        {
+          "id": "setup",
+          "name": "Setup",
+          "price": "200 €",
+          "desc": "Ātra iedarbināšana — 3 d. d.",
+          "features": ["1 lapa", "Veidne + jūsu krāsas", "Mobilajam pielāgots", "7 d. atgriešanas garantija"],
+          "cta": "Izvēlēties Setup"
+        },
+        {
+          "id": "pro",
+          "name": "Setup Pro",
+          "price": "500 €",
+          "badge": "Populārākais",
+          "desc": "Pilns risinājums",
+          "features": ["Līdz 3 lapām", "Individuāls dizains", "SEO + metadati", "Formas un integrācija"],
+          "cta": "Izvēlēties Pro"
+        },
+        {
+          "id": "custom",
+          "name": "Custom",
+          "price": "no 1200 €",
+          "desc": "Sarežģīti projekti",
+          "features": ["Individuāla funkcionalitāte", "API integrācija", "Vairākas valodas", "Apspriežam personīgi"],
+          "cta": "Apspriest projektu"
+        }
+      ]
+    },
     "basics": {
       "title": "Pastāsti par sevi",
       "subtitle": "Aizņems apmēram 2 minūtes.",

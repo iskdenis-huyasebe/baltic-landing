@@ -144,7 +144,7 @@ function SubscribeInner() {
             <ShieldCheck className="size-3.5" /> {t("secure")}
           </div>
           <p className="text-center text-xs text-[var(--subtle)]">
-            <a href={`/${locale}/order?plan=setup`} className="hover:text-[var(--accent)] transition-colors underline underline-offset-2">
+            <a href={`/${locale}/order`} className="hover:text-[var(--accent)] transition-colors underline underline-offset-2">
               {t("noClient")}
             </a>
           </p>

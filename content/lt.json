@@ -406,6 +406,37 @@
     "back": "Atgal",
     "backToPricing": "Grįžti prie tarifų",
     "next": "Toliau →",
+    "plan": {
+      "title": "Pasirinkite paketą",
+      "subtitle": "Pasirinkimas neįpareigoja — galite grįžti ir pakeisti.",
+      "plans": [
+        {
+          "id": "setup",
+          "name": "Setup",
+          "price": "200 €",
+          "desc": "Greitas startas — 3 d. d.",
+          "features": ["1 puslapis", "Šablonas + jūsų spalvos", "Mobiliai pritaikyta", "7 d. grąžinimo garantija"],
+          "cta": "Pasirinkti Setup"
+        },
+        {
+          "id": "pro",
+          "name": "Setup Pro",
+          "price": "500 €",
+          "badge": "Populiariausia",
+          "desc": "Pilnas sprendimas",
+          "features": ["Iki 3 puslapių", "Individualus dizainas", "SEO + metaduomenys", "Formos ir integracija"],
+          "cta": "Pasirinkti Pro"
+        },
+        {
+          "id": "custom",
+          "name": "Custom",
+          "price": "nuo 1200 €",
+          "desc": "Sudėtingi projektai",
+          "features": ["Individualus funkcionalumas", "API integracija", "Kelios kalbos", "Aptariame asmeniškai"],
+          "cta": "Aptarti projektą"
+        }
+      ]
+    },
     "basics": {
       "title": "Papasakok apie save",
       "subtitle": "Užtruks apie 2 minutes.",

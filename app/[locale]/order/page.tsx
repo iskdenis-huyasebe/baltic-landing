@@ -4,6 +4,7 @@ import { useState, useEffect, Suspense } from "react";
 import { useLocale, useTranslations } from "next-intl";
 import { useSearchParams } from "next/navigation";
 import { ArrowLeft } from "lucide-react";
+import { StepPlan } from "@/components/order/StepPlan";
 import { StepBasics } from "@/components/order/StepBasics";
 import { StepDesign } from "@/components/order/StepDesign";
 import { StepContent } from "@/components/order/StepContent";
@@ -42,13 +43,13 @@ function OrderPageInner() {
   const t = useTranslations("order");
   const params = useSearchParams();
 
-  const initialPlan = (params.get("plan") as "setup" | "pro") || "setup";
   const initialBundle = params.get("bundle") === "care6";
   const initialDesign = params.get("design") || "";
 
-  const [step, setStep] = useState(1);
+  // Step 0 = plan selection; steps 1-5 = form
+  const [step, setStep] = useState(0);
   const [state, setState] = useState<OrderState>({
-    plan: initialPlan,
+    plan: "setup",
     bundle: initialBundle,
     subPlan: "care",
     subCycle: "month",
@@ -69,7 +70,6 @@ function OrderPageInner() {
         setState((prev) => ({
           ...prev,
           ...parsed,
-          plan: initialPlan,
           bundle: initialBundle,
           ...(initialDesign ? { designId: initialDesign } : {}),
         }));
@@ -83,7 +83,8 @@ function OrderPageInner() {
 
   const update = (patch: Partial<OrderState>) => setState((s) => ({ ...s, ...patch }));
 
-  const progress = (step / TOTAL_STEPS) * 100;
+  const formStep = step; // 1–5 when in form
+  const progress = (formStep / TOTAL_STEPS) * 100;
 
   const canProceed = (() => {
     if (step === 1) return !!(state.name && state.business && state.contact);
@@ -95,56 +96,75 @@ function OrderPageInner() {
   return (
     <main className="min-h-screen bg-[var(--background)] text-[var(--foreground)] pt-24 pb-16 px-6 md:px-8">
       <div className="max-w-3xl mx-auto">
-        {/* Progress bar */}
-        <div className="mb-10">
-          <div className="flex items-center justify-between text-sm text-[var(--muted)] mb-2">
-            <span>{t("step")} {step} {t("of")} {TOTAL_STEPS}</span>
-            <span>{Math.round(progress)}%</span>
-          </div>
-          <div className="h-1 bg-[var(--surface)] rounded-full overflow-hidden">
-            <div
-              className="h-full rounded-full transition-all duration-500"
-              style={{ width: `${progress}%`, background: "var(--accent)" }}
-            />
-          </div>
-        </div>
 
-        {/* Step content */}
-        <div className="mb-10">
-          {step === 1 && <StepBasics state={state} update={update} />}
-          {step === 2 && <StepDesign state={state} update={update} />}
-          {step === 3 && <StepContent state={state} update={update} />}
-          {step === 4 && <StepFiles files={files} setFiles={setFiles} />}
-          {step === 5 && <StepReview state={state} update={update} files={files} />}
-        </div>
-
-        {/* Navigation */}
-        {step < TOTAL_STEPS && (
-          <div className="flex items-center justify-between gap-3">
-            {step > 1 ? (
-              <button
-                onClick={() => setStep((s) => s - 1)}
-                className="inline-flex items-center gap-2 text-[var(--muted)] hover:text-[var(--foreground)] transition-colors text-sm"
-              >
-                <ArrowLeft className="size-4" /> {t("back")}
-              </button>
-            ) : (
+        {/* Step 0 — Plan selection */}
+        {step === 0 && (
+          <>
+            <div className="mb-10">
+              <StepPlan state={state} update={update} />
+            </div>
+            <div className="flex items-center justify-between gap-3">
               <a
                 href={`/${locale}#pricing`}
                 className="inline-flex items-center gap-2 text-[var(--muted)] hover:text-[var(--foreground)] transition-colors text-sm"
               >
                 <ArrowLeft className="size-4" /> {t("backToPricing")}
               </a>
-            )}
+              <button
+                onClick={() => setStep(1)}
+                className="inline-flex items-center gap-2 bg-[var(--accent)] text-[var(--accent-foreground)] rounded-xl px-6 py-3 text-base font-medium transition-all hover:opacity-90 min-h-[44px]"
+              >
+                {t("next")}
+              </button>
+            </div>
+          </>
+        )}
 
-            <button
-              onClick={() => setStep((s) => s + 1)}
-              disabled={!canProceed}
-              className="inline-flex items-center gap-2 bg-[var(--accent)] text-[var(--accent-foreground)] rounded-xl px-6 py-3 text-base font-medium transition-all hover:opacity-90 disabled:opacity-50 disabled:cursor-not-allowed min-h-[44px]"
-            >
-              {t("next")}
-            </button>
-          </div>
+        {/* Steps 1–5 — Form */}
+        {step >= 1 && (
+          <>
+            {/* Progress bar */}
+            <div className="mb-10">
+              <div className="flex items-center justify-between text-sm text-[var(--muted)] mb-2">
+                <span>{t("step")} {formStep} {t("of")} {TOTAL_STEPS}</span>
+                <span>{Math.round(progress)}%</span>
+              </div>
+              <div className="h-1 bg-[var(--surface)] rounded-full overflow-hidden">
+                <div
+                  className="h-full rounded-full transition-all duration-500"
+                  style={{ width: `${progress}%`, background: "var(--accent)" }}
+                />
+              </div>
+            </div>
+
+            {/* Step content */}
+            <div className="mb-10">
+              {step === 1 && <StepBasics state={state} update={update} />}
+              {step === 2 && <StepDesign state={state} update={update} />}
+              {step === 3 && <StepContent state={state} update={update} />}
+              {step === 4 && <StepFiles files={files} setFiles={setFiles} />}
+              {step === 5 && <StepReview state={state} update={update} files={files} />}
+            </div>
+
+            {/* Navigation */}
+            {step < TOTAL_STEPS && (
+              <div className="flex items-center justify-between gap-3">
+                <button
+                  onClick={() => setStep((s) => s - 1)}
+                  className="inline-flex items-center gap-2 text-[var(--muted)] hover:text-[var(--foreground)] transition-colors text-sm"
+                >
+                  <ArrowLeft className="size-4" /> {t("back")}
+                </button>
+                <button
+                  onClick={() => setStep((s) => s + 1)}
+                  disabled={!canProceed}
+                  className="inline-flex items-center gap-2 bg-[var(--accent)] text-[var(--accent-foreground)] rounded-xl px-6 py-3 text-base font-medium transition-all hover:opacity-90 disabled:opacity-50 disabled:cursor-not-allowed min-h-[44px]"
+                >
+                  {t("next")}
+                </button>
+              </div>
+            )}
+          </>
         )}
       </div>
     </main>

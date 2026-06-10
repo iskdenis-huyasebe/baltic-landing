@@ -406,6 +406,37 @@
     "back": "Tagasi",
     "backToPricing": "Tagasi tariifide juurde",
     "next": "Edasi →",
+    "plan": {
+      "title": "Vali pakett",
+      "subtitle": "Valikut saab igal ajal muuta.",
+      "plans": [
+        {
+          "id": "setup",
+          "name": "Setup",
+          "price": "200 €",
+          "desc": "Kiire alustamine — 3 t. p.",
+          "features": ["1 leht", "Mall + teie värvid", "Mobiilisõbralik", "7 p. raha tagasi garantii"],
+          "cta": "Vali Setup"
+        },
+        {
+          "id": "pro",
+          "name": "Setup Pro",
+          "price": "500 €",
+          "badge": "Populaarseim",
+          "desc": "Täielik lahendus",
+          "features": ["Kuni 3 lehte", "Individuaalne disain", "SEO + metaandmed", "Vormid ja integratsioon"],
+          "cta": "Vali Pro"
+        },
+        {
+          "id": "custom",
+          "name": "Custom",
+          "price": "alates 1200 €",
+          "desc": "Keerukad projektid",
+          "features": ["Individuaalne funktsionaalsus", "API integratsioon", "Mitu keelt", "Arutame personaalselt"],
+          "cta": "Arutada projekti"
+        }
+      ]
+    },
     "basics": {
       "title": "Räägi meile endast",
       "subtitle": "Võtab umbes 2 minutit.",
