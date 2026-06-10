@@ -223,14 +223,14 @@ export function Showcase() {
     <section className="py-16 md:py-24 px-6 md:px-8">
       <div className="max-w-6xl mx-auto">
         <FadeIn>
-          <div className="mb-10 md:mb-12">
+          <div className="mb-10 md:mb-12 text-center">
             <p className="inline-flex items-center gap-2 text-xs uppercase tracking-widest text-[var(--accent)] mb-4 font-medium">
               {t("eyebrow")}
             </p>
             <h2 className="text-3xl md:text-5xl tracking-tight font-medium text-[var(--foreground)] mb-4">
               {t("h2")}
             </h2>
-            <p className="text-lg text-[var(--muted)] max-w-2xl">{t("subtitle")}</p>
+            <p className="text-lg text-[var(--muted)] max-w-2xl mx-auto">{t("subtitle")}</p>
           </div>
         </FadeIn>
 
