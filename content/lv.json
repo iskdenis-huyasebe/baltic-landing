@@ -20,14 +20,6 @@
         "label": "palaisti landing pages"
       },
       {
-        "value": "50+",
-        "label": "klienti Baltijā"
-      },
-      {
-        "value": "4.9★",
-        "label": "vidējais vērtējums"
-      },
-      {
         "value": "3 d.d.",
         "label": "vidējais termiņš"
       }
@@ -223,7 +215,7 @@
     "items": [
       {
         "q": "Ko darīt, ja nepatīk dizains?",
-        "a": "Tas ir visbiežākais bažas. Pirms programmēšanas izstrādājam dizainu Figmā — tur viegli mainīt. 200 € iekļautas 2 labojumu kārtas. Ja pēc tam joprojām neder — pilna atmaksa 7 dienu laikā, bez jautājumiem. Līdz šim tas nav bijis nepieciešams."
+        "a": "Tas ir visbiežākais bažas. Pirms programmēšanas izstrādājam dizainu Figmā — tur viegli mainīt. 200 € iekļautas 2 labojumu kārtas. Ja pēc tam joprojām neder — pilna atmaksa 7 dienu laikā, bez jautājumiem."
       },
       {
         "q": "Kas notiks, ja pārstāšu maksāt 15 € par Care?",
@@ -318,7 +310,8 @@
       "terms": "Lietošanas noteikumi",
       "cookies": "Sīkfaili"
     },
-    "contact": "Jautājumi? Telegram: @unoweb"
+    "contact": "Jautājumi? Telegram: @unoweb",
+    "legal": "Biznesa vietnes · Viļņa"
   },
   "seo": {
     "title": "Landing page par 200 € 3 dienās · Unoweb",
@@ -578,5 +571,32 @@
     "noClient": "Vēl nav klienta numura? Vispirms pasūti vietni.",
     "cycleMonth": "Ikmēneša",
     "cycleYear": "Gada · −30%"
+  },
+  "success": {
+    "title": "Maksājums saņemts!",
+    "body": "Paldies! Sazināsimies 1 stundas laikā, lai sāktu projektu.",
+    "back": "Atpakaļ uz sākumu"
+  },
+  "showcase": {
+    "eyebrow": "KĀ TAS IZSKATĀS",
+    "h2": "Veidne → jūsu vietne",
+    "subtitle": "Izvēlaties izkārtojumu — mēs to aizpildām ar jūsu zīmolu, tekstiem un krāsām. Lūk, trīs piemēri.",
+    "before": "Veidne",
+    "after": "Gatavs",
+    "disclaimer": "Piemēri ar izdomātiem uzņēmumiem — rādām iespējas, nevis īstus klientus.",
+    "tabs": [
+      {
+        "label": "Auto",
+        "tag": "autoserviss"
+      },
+      {
+        "label": "Skaistums",
+        "tag": "skaistumkopšana"
+      },
+      {
+        "label": "Tieslietas",
+        "tag": "advokātu birojs"
+      }
+    ]
   }
 }

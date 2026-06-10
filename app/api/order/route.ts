@@ -216,7 +216,7 @@ export async function POST(request: Request) {
       lineItems.push({ price: process.env.STRIPE_PRICE_CARE_6MO!, quantity: 1 });
     }
 
-    const stripeLocale = (["lt", "lv", "et"].includes(data.locale) ? data.locale : "en") as
+    const stripeLocale = (["lt", "lv", "et", "ru"].includes(data.locale) ? data.locale : "en") as
       import("stripe").Stripe.Checkout.SessionCreateParams.Locale;
 
     const session = await stripe.checkout.sessions.create({

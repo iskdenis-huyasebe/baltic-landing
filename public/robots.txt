@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://balticlanding.com/sitemap.xml
+Sitemap: https://baltic-landing.vercel.app/sitemap.xml

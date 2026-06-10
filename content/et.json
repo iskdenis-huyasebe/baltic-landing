@@ -20,14 +20,6 @@
         "label": "käivitatud lehte"
       },
       {
-        "value": "50+",
-        "label": "klienti Baltikumis"
-      },
-      {
-        "value": "4.9★",
-        "label": "keskmine hinnang"
-      },
-      {
         "value": "3 tp.",
         "label": "keskmine tähtaeg"
       }
@@ -223,7 +215,7 @@
     "items": [
       {
         "q": "Mis siis, kui disain ei meeldi?",
-        "a": "See on kõige levinum mure. Enne programmeerimist loome disaini Figmas — seal on lihtne muuta. 200 € sisaldab 2 parandusvooru. Kui pärast 2 vooru ikka ei sobi — täielik tagastus 7 päeva jooksul, ilma küsimusteta. Seni pole seda vaja läinud."
+        "a": "See on kõige levinum mure. Enne programmeerimist loome disaini Figmas — seal on lihtne muuta. 200 € sisaldab 2 parandusvooru. Kui pärast 2 vooru ikka ei sobi — täielik tagastus 7 päeva jooksul, ilma küsimusteta."
       },
       {
         "q": "Mis juhtub, kui lõpetan 15 € maksmise Care eest?",
@@ -318,7 +310,8 @@
       "terms": "Kasutustingimused",
       "cookies": "Küpsised"
     },
-    "contact": "Küsimused? Telegram: @unoweb"
+    "contact": "Küsimused? Telegram: @unoweb",
+    "legal": "Ärisaidid · Vilnius"
   },
   "seo": {
     "title": "Maandumisleht 200 € eest 3 päevaga · Unoweb",
@@ -578,5 +571,32 @@
     "noClient": "Pole veel kliendinumbrit? Telli esmalt sait.",
     "cycleMonth": "Kuine",
     "cycleYear": "Aastane · −30%"
+  },
+  "success": {
+    "title": "Makse vastu võetud!",
+    "body": "Aitäh! Võtame ühendust 1 tunni jooksul, et projekti alustada.",
+    "back": "Tagasi algusesse"
+  },
+  "showcase": {
+    "eyebrow": "KUIDAS SEE VÄLJA NÄEB",
+    "h2": "Mall → sinu veebileht",
+    "subtitle": "Vali kujundus — täidame selle sinu brändi, tekstide ja värvidega. Siin on kolm näidet.",
+    "before": "Mall",
+    "after": "Valmis",
+    "disclaimer": "Näited väljamõeldud ettevõtetega — näitame võimalusi, mitte päris kliente.",
+    "tabs": [
+      {
+        "label": "Auto",
+        "tag": "autoteenindus"
+      },
+      {
+        "label": "Ilu",
+        "tag": "ilusalong"
+      },
+      {
+        "label": "Õigus",
+        "tag": "advokaadibüroo"
+      }
+    ]
   }
 }

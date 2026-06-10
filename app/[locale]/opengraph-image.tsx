@@ -2,7 +2,7 @@ import { ImageResponse } from "next/og";
 import { getTranslations } from "next-intl/server";
 
 export const runtime = "edge";
-export const alt = "Baltic Landing";
+export const alt = "Unoweb";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -46,10 +46,10 @@ export default async function Image({
               fontWeight: 700,
             }}
           >
-            B
+            U
           </div>
           <span style={{ fontSize: "24px", fontWeight: 500 }}>
-            Baltic Landing
+            Unoweb
           </span>
         </div>
 

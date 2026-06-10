@@ -20,14 +20,6 @@
         "label": "landing pages launched"
       },
       {
-        "value": "50+",
-        "label": "clients in the Baltics"
-      },
-      {
-        "value": "4.9★",
-        "label": "average rating"
-      },
-      {
         "value": "3 days",
         "label": "average delivery"
       }
@@ -223,7 +215,7 @@
     "items": [
       {
         "q": "What if I don't like the design?",
-        "a": "That's the most common concern. Before any coding we create the design in Figma — easy to change there. 2 revision rounds are included in the €200. If it still doesn't fit after 2 rounds — full refund within 7 days, no questions asked. So far this has never happened."
+        "a": "That's the most common concern. Before any coding we create the design in Figma — easy to change there. 2 revision rounds are included in the €200. If it still doesn't fit after 2 rounds — full refund within 7 days, no questions asked."
       },
       {
         "q": "What happens if I stop paying €15 for Care?",
@@ -318,7 +310,8 @@
       "terms": "Terms of Use",
       "cookies": "Cookies"
     },
-    "contact": "Questions? Telegram: @unoweb"
+    "contact": "Questions? Telegram: @unoweb",
+    "legal": "Business websites · Vilnius"
   },
   "seo": {
     "title": "Landing page for €200 in 3 days · Unoweb",
@@ -578,5 +571,32 @@
     "noClient": "No client number yet? Order a site first.",
     "cycleMonth": "Monthly",
     "cycleYear": "Yearly · −30%"
+  },
+  "success": {
+    "title": "Payment received!",
+    "body": "Thank you! We'll reach out within 1 hour to schedule the kickoff call.",
+    "back": "Back to home"
+  },
+  "showcase": {
+    "eyebrow": "SEE HOW IT LOOKS",
+    "h2": "Template → your website",
+    "subtitle": "Pick a layout — we fill it with your brand, copy and colours. Three examples below.",
+    "before": "Template",
+    "after": "Ready",
+    "disclaimer": "Examples with fictional businesses — showing possibilities, not real clients.",
+    "tabs": [
+      {
+        "label": "Auto",
+        "tag": "car service"
+      },
+      {
+        "label": "Beauty",
+        "tag": "beauty studio"
+      },
+      {
+        "label": "Legal",
+        "tag": "law firm"
+      }
+    ]
   }
 }

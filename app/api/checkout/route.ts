@@ -107,7 +107,9 @@ export async function POST(request: Request) {
       billing_address_collection: "required",
       ...(email ? { customer_email: email } : {}),
       metadata,
-      ...(mode === "subscription" ? { subscription_data: { metadata } } : {}),
+      ...(mode === "subscription"
+        ? { subscription_data: { metadata, trial_period_days: 30 } }
+        : {}),
     });
 
     if (mode === "subscription") {

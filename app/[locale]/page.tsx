@@ -1,5 +1,6 @@
 import { Hero } from "@/components/sections/Hero";
 import { TrustStrip } from "@/components/sections/TrustStrip";
+import { Showcase } from "@/components/sections/Showcase";
 import { WhatsIncluded } from "@/components/sections/WhatsIncluded";
 import { Pricing } from "@/components/sections/Pricing";
 import { Templates } from "@/components/sections/Templates";
@@ -49,6 +50,7 @@ export default async function LandingPage({
       />
       <Hero />
       <TrustStrip />
+      <Showcase />
       <WhatsIncluded />
       <Pricing />
       <Templates />

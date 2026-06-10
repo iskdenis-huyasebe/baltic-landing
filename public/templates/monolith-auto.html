@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="lt"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>AutoPro Vilnius — autoservisas</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#0b1220;--fg:#e8eef8;--muted:#90a2c0;--surface:#131d30;--border:rgba(255,255,255,.09);--accent:#3b82f6;--accent2:#60a5fa}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--fg);font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Inter,system-ui,sans-serif;line-height:1.55;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+.eyebrow{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);font-weight:700;margin-bottom:14px}
+.muted{color:var(--muted)}
+.btn{display:inline-flex;align-items:center;gap:8px;background:var(--accent);color:#fff;font-weight:600;padding:13px 24px;border-radius:12px;font-size:15px;cursor:pointer;border:none}
+.btn:hover{filter:brightness(1.05)}
+.btn.ghost{background:transparent;border:1px solid var(--border);color:var(--fg)}
+header.site{position:sticky;top:0;z-index:50;background:color-mix(in srgb,var(--bg) 85%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--border)}
+header.site .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{font-weight:700;font-size:17px;display:flex;align-items:center;gap:8px}
+.logo .dot{width:20px;height:20px;border-radius:6px;background:var(--accent)}
+nav{display:flex;gap:24px;font-size:14px;color:var(--muted)}
+nav a:hover{color:var(--fg)}
+.disclaimer{position:fixed;bottom:12px;left:50%;transform:translateX(-50%);background:rgba(0,0,0,.7);color:#fff;font-size:11px;padding:5px 14px;border-radius:999px;z-index:100;white-space:nowrap;pointer-events:none}
+@media(max-width:700px){nav{display:none}}
+
+section{padding:80px 0}
+.hero{padding-top:120px;padding-bottom:60px}
+.badge{display:inline-flex;align-items:center;gap:6px;background:rgba(59,130,246,.12);border:1px solid rgba(59,130,246,.25);color:#93c5fd;font-size:12px;font-weight:600;padding:5px 14px;border-radius:999px;margin-bottom:22px;letter-spacing:.04em}
+h1{font-size:clamp(36px,5.5vw,58px);line-height:1.06;letter-spacing:-.02em;font-weight:700;margin-bottom:18px}
+.hero p{font-size:18px;color:var(--muted);max-width:520px;margin-bottom:30px}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--border);border:1px solid var(--border);border-radius:16px;overflow:hidden;margin-top:60px}
+.stat{background:var(--surface);padding:20px;text-align:center}
+.stat strong{display:block;font-size:26px;font-weight:700;color:var(--accent)}
+.stat span{font-size:13px;color:var(--muted)}
+.services-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:36px}
+.service-card{background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:24px}
+.service-card .ico{width:40px;height:40px;border-radius:10px;background:rgba(59,130,246,.15);margin-bottom:14px;display:flex;align-items:center;justify-content:center;font-size:18px}
+.service-card h3{font-size:17px;font-weight:600;margin-bottom:6px}
+.service-card p{font-size:14px;color:var(--muted);margin-bottom:12px}
+.service-card .price{font-size:13px;font-weight:700;color:var(--accent)}
+.cta-section{text-align:center;background:linear-gradient(135deg,rgba(59,130,246,.08),rgba(96,165,250,.04));border:1px solid rgba(59,130,246,.15);border-radius:24px;padding:60px 40px}
+.cta-section h2{font-size:clamp(28px,4vw,42px);font-weight:700;margin-bottom:14px}
+.trust-row{display:flex;justify-content:center;gap:28px;margin-top:22px;flex-wrap:wrap}
+.trust-item{font-size:13px;color:var(--muted);display:flex;align-items:center;gap:6px}
+.trust-item::before{content:"✓";color:var(--accent);font-weight:700}
+@media(max-width:700px){.stats{grid-template-columns:repeat(2,1fr)}.services-grid{grid-template-columns:1fr}}
+</style>
+</head><body>
+
+<header class="site">
+  <div class="wrap">
+    <div class="logo"><span class="dot"></span> AutoPro Vilnius</div>
+    <nav>
+      <a href="#">Paslaugos</a>
+      <a href="#">Kainos</a>
+      <a href="#">Apie mus</a>
+      <a href="#">Kontaktai</a>
+    </nav>
+    <a class="btn" href="#" style="padding:10px 20px;font-size:14px">Registruotis</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <div class="badge">⭐ 4.8 Google · Ozo g. 25, Vilnius</div>
+    <h1>Jūsų automobilis —<br>mūsų atsakomybė</h1>
+    <p>Diagnostika, remontas ir techninė priežiūra Vilniuje. Dirbame su visais markiais. Darbai su 12 mėn. garantija.</p>
+    <div class="hero-actions">
+      <a class="btn" href="#">Registruotis online →</a>
+      <a class="btn ghost" href="#">+370 600 00000</a>
+    </div>
+    <div class="stats">
+      <div class="stat"><strong>8+</strong><span>metų patirtis</span></div>
+      <div class="stat"><strong>2 400+</strong><span>klientų</span></div>
+      <div class="stat"><strong>12 mėn.</strong><span>garantija</span></div>
+      <div class="stat"><strong>1 d.d.</strong><span>vid. laikas</span></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="eyebrow">Paslaugos</div>
+    <h2 style="font-size:clamp(26px,3.5vw,38px);font-weight:700;margin-bottom:8px">Viskas vienoje vietoje</h2>
+    <p class="muted" style="font-size:16px;margin-bottom:0">Nuo diagnostikos iki pilno remonto — dirbame greitai ir skaidriai.</p>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="ico">🔧</div>
+        <h3>Kompiuterinė diagnostika</h3>
+        <p>Tikslus gedimų nustatymas per 30 min. Išduodame diagnostikos ataskaitą.</p>
+        <div class="price">nuo 25 €</div>
+      </div>
+      <div class="service-card">
+        <div class="ico">🛞</div>
+        <h3>Padangų keitimas ir balansavimas</h3>
+        <p>Greitai ir tiksliai. Saugome padangas sezono metu. Galima užsiregistruoti iš anksto.</p>
+        <div class="price">nuo 40 €</div>
+      </div>
+      <div class="service-card">
+        <div class="ico">🛑</div>
+        <h3>Stabdžių sistema</h3>
+        <p>Diskų, kaladėlių ir skysčio patikra bei keitimas. Saugumas pirmiausia.</p>
+        <div class="price">nuo 60 €</div>
+      </div>
+      <div class="service-card">
+        <div class="ico">📋</div>
+        <h3>Techninė apžiūra (TA)</h3>
+        <p>Paruošiame automobilį TA: tikriname visus mazgus, pašaliname gedimus.</p>
+        <div class="price">nuo 35 €</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="cta-section">
+      <div class="eyebrow">Registracija</div>
+      <h2>Rezervuokite laiką internetu</h2>
+      <p class="muted" style="font-size:16px;max-width:440px;margin:0 auto 28px">Pasirinkite paslaugą ir patogų laiką. Patvirtinimas per 15 min.</p>
+      <a class="btn" href="#" style="padding:15px 32px;font-size:16px">Registruotis dabar →</a>
+      <div class="trust-row">
+        <div class="trust-item">Darbai su garantija</div>
+        <div class="trust-item">Nemokama diagnostika</div>
+        <div class="trust-item">Skaidri kaina</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="disclaimer">Pavyzdys · Fiktyvus verslas</div>
+</body></html>

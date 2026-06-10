@@ -25,9 +25,9 @@ export async function generateMetadata({
       locale,
     },
     alternates: {
-      canonical: `https://unoweb.eu/${locale}`,
+      canonical: `${process.env.NEXT_PUBLIC_SITE_URL || "https://baltic-landing.vercel.app"}/${locale}`,
       languages: Object.fromEntries(
-        routing.locales.map((l) => [l, `https://unoweb.eu/${l}`])
+        routing.locales.map((l) => [l, `${process.env.NEXT_PUBLIC_SITE_URL || "https://baltic-landing.vercel.app"}/${l}`])
       ),
     },
   };

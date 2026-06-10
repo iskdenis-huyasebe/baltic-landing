@@ -20,14 +20,6 @@
         "label": "landingai paleisti"
       },
       {
-        "value": "50+",
-        "label": "klientų Baltijoje"
-      },
-      {
-        "value": "4.9★",
-        "label": "vidut. reitingas"
-      },
-      {
         "value": "3 d.d.",
         "label": "vidutinis terminas"
       }
@@ -223,7 +215,7 @@
     "items": [
       {
         "q": "O kas, jeigu nepatiks dizainas?",
-        "a": "Tai dažniausia baimė. Prieš programavimą kuriame dizainą Figma'oje — ten lengva keisti. Į 200 € įtraukti 2 taisymų raundai. Jeigu po jų vis tiek netinka — pilnas grąžinimas per 7 dienas, be klausimų. Iki šiol nė karto neprireikė."
+        "a": "Tai dažniausia baimė. Prieš programavimą kuriame dizainą Figma'oje — ten lengva keisti. Į 200 € įtraukti 2 taisymų raundai. Jeigu po jų vis tiek netinka — pilnas grąžinimas per 7 dienas, be klausimų."
       },
       {
         "q": "Kas atsitiks, jeigu nustosiu mokėti 15 € už Care?",
@@ -318,7 +310,8 @@
       "terms": "Naudojimo sąlygos",
       "cookies": "Slapukai"
     },
-    "contact": "Klausimai? Telegram: @unoweb"
+    "contact": "Klausimai? Telegram: @unoweb",
+    "legal": "Verslo svetainės · Vilnius"
   },
   "seo": {
     "title": "Landingas už 200 € per 3 dienas · Unoweb",
@@ -578,5 +571,32 @@
     "noClient": "Dar neturi kliento numerio? Pirma užsisakyk svetainę.",
     "cycleMonth": "Mėnesinis",
     "cycleYear": "Metinis · −30%"
+  },
+  "success": {
+    "title": "Mokėjimas gautas!",
+    "body": "Ačiū! Susisieksime per 1 valandą dėl projekto pradžios.",
+    "back": "Grįžti į pradžią"
+  },
+  "showcase": {
+    "eyebrow": "KAIP TAI ATRODO",
+    "h2": "Šablonas → jūsų svetainė",
+    "subtitle": "Pasirenkate maketą — mes jį užpildome jūsų prekės ženklu, tekstais ir spalvomis. Štai trys pavyzdžiai.",
+    "before": "Šablonas",
+    "after": "Paruošta",
+    "disclaimer": "Pavyzdžiai su fiktyviais verslais — rodome galimybes, ne realius klientus.",
+    "tabs": [
+      {
+        "label": "Automobiliai",
+        "tag": "autoservisas"
+      },
+      {
+        "label": "Grožis",
+        "tag": "grožio studija"
+      },
+      {
+        "label": "Teisė",
+        "tag": "advokatų kontora"
+      }
+    ]
   }
 }
