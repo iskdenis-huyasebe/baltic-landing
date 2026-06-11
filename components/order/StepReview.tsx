@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { useTranslations, useLocale } from "next-intl";
+import { useSearchParams } from "next/navigation";
 import { Check, ShieldCheck } from "lucide-react";
 import type { OrderState, OrderFiles } from "@/app/[locale]/order/page";
 
@@ -17,6 +18,8 @@ export function StepReview({
   const t = useTranslations("order.review");
   const ts = useTranslations("subscriptions");
   const locale = useLocale();
+  const searchParams = useSearchParams();
+  const isTestMode = process.env.NODE_ENV !== "production" || searchParams.get("test") === "1";
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
 
@@ -33,12 +36,13 @@ export function StepReview({
     : 0;
   const recurPer = state.subCycle === "year" ? t("perYear") : t("perMonth");
 
-  const handlePay = async () => {
+  const handlePay = async (promoOverride?: string) => {
     setLoading(true);
     setError("");
     try {
+      const payload = promoOverride ? { ...state, promo: promoOverride } : state;
       const formData = new FormData();
-      formData.append("data", JSON.stringify(state));
+      formData.append("data", JSON.stringify(payload));
 
       if (files.logo && files.logo.name !== "__skip__") {
         formData.append("logo", files.logo);
@@ -211,30 +215,27 @@ export function StepReview({
         </div>
       </div>
 
-      <div className="mb-4">
-        <label className="block text-sm font-medium text-[var(--foreground)] mb-2">
-          {t("promoLabel")}
-        </label>
-        <input
-          type="text"
-          value={state.promo}
-          onChange={(e) => update({ promo: e.target.value.trim() })}
-          placeholder={t("promoPlaceholder")}
-          autoCapitalize="characters"
-          className="w-full bg-[var(--surface)] border border-[var(--border)] rounded-xl px-4 py-3 text-base text-[var(--foreground)] uppercase tracking-wide placeholder:normal-case placeholder:tracking-normal placeholder:text-[var(--subtle)] transition-colors hover:border-[var(--border-strong)] focus:outline-none focus:border-[var(--accent)] focus:ring-2 focus:ring-[var(--accent)]/20 min-h-[48px]"
-        />
-      </div>
-
       {error && <p className="text-sm text-red-400 mb-4">{error}</p>}
 
       <button
-        onClick={handlePay}
+        onClick={() => handlePay()}
         disabled={loading}
         className="w-full inline-flex items-center justify-center gap-2 bg-[var(--accent)] text-[var(--accent-foreground)] rounded-xl px-6 py-4 text-base font-medium transition-all hover:opacity-90 disabled:opacity-50 min-h-[52px]"
       >
         <Check className="size-5" />
         {loading ? t("redirecting") : t("payButton")}
       </button>
+
+      {isTestMode && (
+        <button
+          type="button"
+          onClick={() => handlePay("UNOWEB-TEST")}
+          disabled={loading}
+          className="w-full mt-3 inline-flex items-center justify-center gap-2 border border-dashed border-[var(--border-strong)] text-[var(--muted)] rounded-xl px-6 py-3 text-sm transition-all hover:border-[var(--accent)] hover:text-[var(--accent)] disabled:opacity-40"
+        >
+          🧪 Тест — без оплаты
+        </button>
+      )}
 
       <div className="flex items-center justify-center gap-2 mt-4 text-xs text-[var(--subtle)]">
         <ShieldCheck className="size-3.5" />
