@@ -20,15 +20,14 @@ async function findTrelloCard(clientRef: string): Promise<string | null> {
   const boardId = process.env.TRELLO_BOARD_ID;
   if (!key || !token || !boardId) return null;
 
-  // Search cards on the board that contain the clientRef in their description
-  const url = `https://api.trello.com/1/search?query=${encodeURIComponent(`CLIENT: ${clientRef}`)}&idBoards=${boardId}&modelTypes=cards&card_fields=id,desc,name&key=${key}&token=${token}`;
+  // Fetch all cards on the board directly (no indexing delay unlike Search API)
+  const url = `https://api.trello.com/1/boards/${boardId}/cards?fields=id,desc&key=${key}&token=${token}`;
 
   try {
-    const res = await fetch(url, { next: { revalidate: 0 } });
+    const res = await fetch(url, { cache: "no-store" });
     if (!res.ok) return null;
-    const data = await res.json();
-    const cards: Array<{ id: string; desc: string }> = data.cards ?? [];
-    // Find card whose description contains the exact client ref
+    const cards: Array<{ id: string; desc: string }> = await res.json();
+    // Find card whose description contains the exact client ref on the first line
     const match = cards.find((c) =>
       c.desc.includes(`CLIENT: ${clientRef}`)
     );
