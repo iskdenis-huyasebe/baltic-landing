@@ -416,7 +416,12 @@
           "name": "Setup",
           "price": "200 €",
           "desc": "Kiire alustamine — 3 t. p.",
-          "features": ["1 leht", "Mall + teie värvid", "Mobiilisõbralik", "7 p. raha tagasi garantii"],
+          "features": [
+            "1 leht",
+            "Mall + teie värvid",
+            "Mobiilisõbralik",
+            "7 p. raha tagasi garantii"
+          ],
           "cta": "Vali Setup"
         },
         {
@@ -425,7 +430,12 @@
           "price": "500 €",
           "badge": "Populaarseim",
           "desc": "Täielik lahendus",
-          "features": ["Kuni 3 lehte", "Individuaalne disain", "SEO + metaandmed", "Vormid ja integratsioon"],
+          "features": [
+            "Kuni 3 lehte",
+            "Individuaalne disain",
+            "SEO + metaandmed",
+            "Vormid ja integratsioon"
+          ],
           "cta": "Vali Pro"
         },
         {
@@ -433,7 +443,12 @@
           "name": "Custom",
           "price": "alates 1200 €",
           "desc": "Keerukad projektid",
-          "features": ["Individuaalne funktsionaalsus", "API integratsioon", "Mitu keelt", "Arutame personaalselt"],
+          "features": [
+            "Individuaalne funktsionaalsus",
+            "API integratsioon",
+            "Mitu keelt",
+            "Arutame personaalselt"
+          ],
           "cta": "Arutada projekti"
         }
       ]
@@ -705,7 +720,12 @@
       "feedback": {
         "title": "Saada kommentaar",
         "subtitle": "Kirjelda, mida soovid muuta. Vaatame üle ja vastame sõnumirakenduses.",
-        "topics": ["Disain", "Tekstid", "Midagi ei tööta", "Muu"],
+        "topics": [
+          "Disain",
+          "Tekstid",
+          "Midagi ei tööta",
+          "Muu"
+        ],
         "messagePlaceholder": "Kirjelda, mida soovid muuta…",
         "upload": "Lisa ekraanipildid (kuni 5, JPG/PNG/WEBP, max 10 MB tk)",
         "submit": "Saada kommentaar",
@@ -728,9 +748,30 @@
         "approveHeading": "Makkett valmis — sinu sõna",
         "revisionLabel": "Muudatusvoorud: {used} / {total}",
         "stages": [
-          { "name": "1. päev — Brifing ja disain", "sub": ["Brifingu ülevaatus", "Maquette ja värvide valik", "Maquette ettevalmistus"] },
-          { "name": "2. päev — Veebilehe kokkupanek", "sub": ["Sektsioonide seadistamine", "Sisu täitmine", "Kontaktvormi lisamine"] },
-          { "name": "3. päev — Testimine ja käivitus", "sub": ["Lõplik testimine kõigis seadmetes", "Domeeni ühendamine", "Veebilehe avaldamine"] }
+          {
+            "name": "1. päev — Brifing ja disain",
+            "sub": [
+              "Brifingu ülevaatus",
+              "Maquette ja värvide valik",
+              "Maquette ettevalmistus"
+            ]
+          },
+          {
+            "name": "2. päev — Veebilehe kokkupanek",
+            "sub": [
+              "Sektsioonide seadistamine",
+              "Sisu täitmine",
+              "Kontaktvormi lisamine"
+            ]
+          },
+          {
+            "name": "3. päev — Testimine ja käivitus",
+            "sub": [
+              "Lõplik testimine kõigis seadmetes",
+              "Domeeni ühendamine",
+              "Veebilehe avaldamine"
+            ]
+          }
         ]
       },
       "pro": {
@@ -738,11 +779,44 @@
         "approveHeading": "Etapp valmis — sinu sõna",
         "revisionLabel": "Muudatusvoorud: {used} / {total} · +1 trükivigade voor",
         "stages": [
-          { "name": "1. päev — Brifing ja disain", "sub": ["Brifingu ülevaatus", "Fontide ja värvide valik", "Esimene makkett"] },
-          { "name": "2. päev — Brändi kohandamine", "sub": ["Identiteedi kohandamine", "Disaini kinnitamine"] },
-          { "name": "3. päev — Unikaalsed sektsioonid", "sub": ["Unikaalsete sektsioonide loomine", "Animatsioonid ja interaktsioonid", "Mobiilioptimeerimine"] },
-          { "name": "4. päev — Veebilehe kokkupanek", "sub": ["Kokkupanek ja sisu", "Vorm ja integratsioonid"] },
-          { "name": "5. päev — Testimine ja käivitus", "sub": ["Täielik QA kõigis seadmetes", "Domeeni ühendamine", "Veebilehe avaldamine"] }
+          {
+            "name": "1. päev — Brifing ja disain",
+            "sub": [
+              "Brifingu ülevaatus",
+              "Fontide ja värvide valik",
+              "Esimene makkett"
+            ]
+          },
+          {
+            "name": "2. päev — Brändi kohandamine",
+            "sub": [
+              "Identiteedi kohandamine",
+              "Disaini kinnitamine"
+            ]
+          },
+          {
+            "name": "3. päev — Unikaalsed sektsioonid",
+            "sub": [
+              "Unikaalsete sektsioonide loomine",
+              "Animatsioonid ja interaktsioonid",
+              "Mobiilioptimeerimine"
+            ]
+          },
+          {
+            "name": "4. päev — Veebilehe kokkupanek",
+            "sub": [
+              "Kokkupanek ja sisu",
+              "Vorm ja integratsioonid"
+            ]
+          },
+          {
+            "name": "5. päev — Testimine ja käivitus",
+            "sub": [
+              "Täielik QA kõigis seadmetes",
+              "Domeeni ühendamine",
+              "Veebilehe avaldamine"
+            ]
+          }
         ]
       },
       "custom": {
@@ -750,12 +824,45 @@
         "approveHeading": "Voor valmis — sinu sõna",
         "revisionLabel": "Disainivoor: {used} / {total}",
         "stages": [
-          { "name": "Audit ja kontseptsioon", "sub": ["Nõuete analüüs", "Kontseptsiooni ettevalmistus"] },
-          { "name": "Disainivoorud", "sub": ["Esimene variant", "Kommentaarid ja parandused", "Lõplik kinnitus"] },
-          { "name": "Kokkupanek", "sub": ["Arendus", "Integratsioonid"] },
-          { "name": "Testimine ja käivitus", "sub": ["QA kõigis seadmetes", "Domeeni ühendamine", "Veebilehe avaldamine"] }
+          {
+            "name": "Audit ja kontseptsioon",
+            "sub": [
+              "Nõuete analüüs",
+              "Kontseptsiooni ettevalmistus"
+            ]
+          },
+          {
+            "name": "Disainivoorud",
+            "sub": [
+              "Esimene variant",
+              "Kommentaarid ja parandused",
+              "Lõplik kinnitus"
+            ]
+          },
+          {
+            "name": "Kokkupanek",
+            "sub": [
+              "Arendus",
+              "Integratsioonid"
+            ]
+          },
+          {
+            "name": "Testimine ja käivitus",
+            "sub": [
+              "QA kõigis seadmetes",
+              "Domeeni ühendamine",
+              "Veebilehe avaldamine"
+            ]
+          }
         ]
       }
     }
+  },
+  "statusCheck": {
+    "eyebrow": "JUBA KLIENT?",
+    "title": "Kontrollige tellimuse olekut",
+    "subtitle": "Sisestage oma klientinumber ja jälgige projekti arengut.",
+    "placeholder": "UW-XXXXXX",
+    "button": "Ava olek"
   }
 }

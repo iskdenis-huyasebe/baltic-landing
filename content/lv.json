@@ -416,7 +416,12 @@
           "name": "Setup",
           "price": "200 €",
           "desc": "Ātra iedarbināšana — 3 d. d.",
-          "features": ["1 lapa", "Veidne + jūsu krāsas", "Mobilajam pielāgots", "7 d. atgriešanas garantija"],
+          "features": [
+            "1 lapa",
+            "Veidne + jūsu krāsas",
+            "Mobilajam pielāgots",
+            "7 d. atgriešanas garantija"
+          ],
           "cta": "Izvēlēties Setup"
         },
         {
@@ -425,7 +430,12 @@
           "price": "500 €",
           "badge": "Populārākais",
           "desc": "Pilns risinājums",
-          "features": ["Līdz 3 lapām", "Individuāls dizains", "SEO + metadati", "Formas un integrācija"],
+          "features": [
+            "Līdz 3 lapām",
+            "Individuāls dizains",
+            "SEO + metadati",
+            "Formas un integrācija"
+          ],
           "cta": "Izvēlēties Pro"
         },
         {
@@ -433,7 +443,12 @@
           "name": "Custom",
           "price": "no 1200 €",
           "desc": "Sarežģīti projekti",
-          "features": ["Individuāla funkcionalitāte", "API integrācija", "Vairākas valodas", "Apspriežam personīgi"],
+          "features": [
+            "Individuāla funkcionalitāte",
+            "API integrācija",
+            "Vairākas valodas",
+            "Apspriežam personīgi"
+          ],
           "cta": "Apspriest projektu"
         }
       ]
@@ -705,7 +720,12 @@
       "feedback": {
         "title": "Nosūtīt komentāru",
         "subtitle": "Aprakstiet, ko vēlaties mainīt. Izskatīsim un atbildēsim mesendžerī.",
-        "topics": ["Dizains", "Teksti", "Kaut kas nestrādā", "Cits"],
+        "topics": [
+          "Dizains",
+          "Teksti",
+          "Kaut kas nestrādā",
+          "Cits"
+        ],
         "messagePlaceholder": "Aprakstiet, ko vēlaties mainīt…",
         "upload": "Pievienot ekrānuzņēmumus (līdz 5, JPG/PNG/WEBP, max 10 MB katrs)",
         "submit": "Nosūtīt komentāru",
@@ -728,9 +748,30 @@
         "approveHeading": "Makets gatavs — jūsu vārds",
         "revisionLabel": "Labojumu kārtas: {used} no {total}",
         "stages": [
-          { "name": "1. diena — Īsais un dizains", "sub": ["Īsā pārskatīšana", "Maketa un krāsu izvēle", "Maketa sagatavošana"] },
-          { "name": "2. diena — Vietnes montāža", "sub": ["Sadaļu iestatīšana", "Satura aizpildīšana", "Kontaktformas pievienošana"] },
-          { "name": "3. diena — Pārbaude un palaišana", "sub": ["Galīgā pārbaude visās ierīcēs", "Domēna pievienošana", "Vietnes publicēšana"] }
+          {
+            "name": "1. diena — Īsais un dizains",
+            "sub": [
+              "Īsā pārskatīšana",
+              "Maketa un krāsu izvēle",
+              "Maketa sagatavošana"
+            ]
+          },
+          {
+            "name": "2. diena — Vietnes montāža",
+            "sub": [
+              "Sadaļu iestatīšana",
+              "Satura aizpildīšana",
+              "Kontaktformas pievienošana"
+            ]
+          },
+          {
+            "name": "3. diena — Pārbaude un palaišana",
+            "sub": [
+              "Galīgā pārbaude visās ierīcēs",
+              "Domēna pievienošana",
+              "Vietnes publicēšana"
+            ]
+          }
         ]
       },
       "pro": {
@@ -738,11 +779,44 @@
         "approveHeading": "Posms gatavs — jūsu vārds",
         "revisionLabel": "Labojumu kārtas: {used} no {total} · +1 tipogrāfijas kārta",
         "stages": [
-          { "name": "1. diena — Īsais un dizains", "sub": ["Īsā pārskatīšana", "Fontu un krāsu izvēle", "Pirmais makets"] },
-          { "name": "2. diena — Zīmola adaptācija", "sub": ["Identitātes pielāgošana", "Dizaina apstiprināšana"] },
-          { "name": "3. diena — Unikālās sadaļas", "sub": ["Unikālu sadaļu izveide", "Animācijas un interakcijas", "Mobilā optimizācija"] },
-          { "name": "4. diena — Vietnes montāža", "sub": ["Montāža un saturs", "Forma un integrācijas"] },
-          { "name": "5. diena — Pārbaude un palaišana", "sub": ["Pilna QA visās ierīcēs", "Domēna pievienošana", "Vietnes publicēšana"] }
+          {
+            "name": "1. diena — Īsais un dizains",
+            "sub": [
+              "Īsā pārskatīšana",
+              "Fontu un krāsu izvēle",
+              "Pirmais makets"
+            ]
+          },
+          {
+            "name": "2. diena — Zīmola adaptācija",
+            "sub": [
+              "Identitātes pielāgošana",
+              "Dizaina apstiprināšana"
+            ]
+          },
+          {
+            "name": "3. diena — Unikālās sadaļas",
+            "sub": [
+              "Unikālu sadaļu izveide",
+              "Animācijas un interakcijas",
+              "Mobilā optimizācija"
+            ]
+          },
+          {
+            "name": "4. diena — Vietnes montāža",
+            "sub": [
+              "Montāža un saturs",
+              "Forma un integrācijas"
+            ]
+          },
+          {
+            "name": "5. diena — Pārbaude un palaišana",
+            "sub": [
+              "Pilna QA visās ierīcēs",
+              "Domēna pievienošana",
+              "Vietnes publicēšana"
+            ]
+          }
         ]
       },
       "custom": {
@@ -750,12 +824,45 @@
         "approveHeading": "Kārta gatava — jūsu vārds",
         "revisionLabel": "Dizaina kārta: {used} no {total}",
         "stages": [
-          { "name": "Audits un koncepcija", "sub": ["Prasību analīze", "Koncepcijas sagatavošana"] },
-          { "name": "Dizaina kārtas", "sub": ["Pirmais variants", "Komentāri un korekcijas", "Galīgais apstiprinājums"] },
-          { "name": "Montāža", "sub": ["Izstrāde", "Integrācijas"] },
-          { "name": "Pārbaude un palaišana", "sub": ["QA visās ierīcēs", "Domēna pievienošana", "Vietnes publicēšana"] }
+          {
+            "name": "Audits un koncepcija",
+            "sub": [
+              "Prasību analīze",
+              "Koncepcijas sagatavošana"
+            ]
+          },
+          {
+            "name": "Dizaina kārtas",
+            "sub": [
+              "Pirmais variants",
+              "Komentāri un korekcijas",
+              "Galīgais apstiprinājums"
+            ]
+          },
+          {
+            "name": "Montāža",
+            "sub": [
+              "Izstrāde",
+              "Integrācijas"
+            ]
+          },
+          {
+            "name": "Pārbaude un palaišana",
+            "sub": [
+              "QA visās ierīcēs",
+              "Domēna pievienošana",
+              "Vietnes publicēšana"
+            ]
+          }
         ]
       }
     }
+  },
+  "statusCheck": {
+    "eyebrow": "JAU KLIENTS?",
+    "title": "Pārbaudiet pasūtījuma statusu",
+    "subtitle": "Ievadiet savu klienta numuru un sekojiet projekta gaitai.",
+    "placeholder": "UW-XXXXXX",
+    "button": "Atvērt statusu"
   }
 }

@@ -416,7 +416,12 @@
           "name": "Setup",
           "price": "200 €",
           "desc": "Greitas startas — 3 d. d.",
-          "features": ["1 puslapis", "Šablonas + jūsų spalvos", "Mobiliai pritaikyta", "7 d. grąžinimo garantija"],
+          "features": [
+            "1 puslapis",
+            "Šablonas + jūsų spalvos",
+            "Mobiliai pritaikyta",
+            "7 d. grąžinimo garantija"
+          ],
           "cta": "Pasirinkti Setup"
         },
         {
@@ -425,7 +430,12 @@
           "price": "500 €",
           "badge": "Populiariausia",
           "desc": "Pilnas sprendimas",
-          "features": ["Iki 3 puslapių", "Individualus dizainas", "SEO + metaduomenys", "Formos ir integracija"],
+          "features": [
+            "Iki 3 puslapių",
+            "Individualus dizainas",
+            "SEO + metaduomenys",
+            "Formos ir integracija"
+          ],
           "cta": "Pasirinkti Pro"
         },
         {
@@ -433,7 +443,12 @@
           "name": "Custom",
           "price": "nuo 1200 €",
           "desc": "Sudėtingi projektai",
-          "features": ["Individualus funkcionalumas", "API integracija", "Kelios kalbos", "Aptariame asmeniškai"],
+          "features": [
+            "Individualus funkcionalumas",
+            "API integracija",
+            "Kelios kalbos",
+            "Aptariame asmeniškai"
+          ],
           "cta": "Aptarti projektą"
         }
       ]
@@ -705,7 +720,12 @@
       "feedback": {
         "title": "Siųsti pastabą",
         "subtitle": "Aprašykite, ką norėtumėte pakeisti. Peržiūrėsime ir atsakysime susirašinėjimo programoje.",
-        "topics": ["Dizainas", "Tekstai", "Kažkas neveikia", "Kita"],
+        "topics": [
+          "Dizainas",
+          "Tekstai",
+          "Kažkas neveikia",
+          "Kita"
+        ],
         "messagePlaceholder": "Aprašykite, ką norite pakeisti…",
         "upload": "Pridėti ekrano kopijas (iki 5, JPG/PNG/WEBP, max 10 MB kiekviena)",
         "submit": "Siųsti pastabą",
@@ -730,15 +750,27 @@
         "stages": [
           {
             "name": "1 diena — Trumpinis ir dizainas",
-            "sub": ["Trumpinio peržiūra", "Maketo ir spalvų pasirinkimas", "Maketo parengimas"]
+            "sub": [
+              "Trumpinio peržiūra",
+              "Maketo ir spalvų pasirinkimas",
+              "Maketo parengimas"
+            ]
           },
           {
             "name": "2 diena — Svetainės surinkimas",
-            "sub": ["Sekcijų nustatymas", "Turinio užpildymas", "Kontaktų formos prijungimas"]
+            "sub": [
+              "Sekcijų nustatymas",
+              "Turinio užpildymas",
+              "Kontaktų formos prijungimas"
+            ]
           },
           {
             "name": "3 diena — Patikrinimas ir paleidimas",
-            "sub": ["Galutinis patikrinimas visuose įrenginiuose", "Domeno prijungimas", "Svetainės paskelbimas"]
+            "sub": [
+              "Galutinis patikrinimas visuose įrenginiuose",
+              "Domeno prijungimas",
+              "Svetainės paskelbimas"
+            ]
           }
         ]
       },
@@ -749,23 +781,41 @@
         "stages": [
           {
             "name": "1 diena — Trumpinis ir dizainas",
-            "sub": ["Trumpinio peržiūra", "Šriftų ir spalvų parinkimas", "Pirmasis maketas"]
+            "sub": [
+              "Trumpinio peržiūra",
+              "Šriftų ir spalvų parinkimas",
+              "Pirmasis maketas"
+            ]
           },
           {
             "name": "2 diena — Prekės ženklo adaptacija",
-            "sub": ["Tapatybės pritaikymas", "Dizaino patvirtinimas"]
+            "sub": [
+              "Tapatybės pritaikymas",
+              "Dizaino patvirtinimas"
+            ]
           },
           {
             "name": "3 diena — Unikalios sekcijos",
-            "sub": ["Unikalių sekcijų kūrimas", "Animacijos ir interakcijos", "Mobilusis optimizavimas"]
+            "sub": [
+              "Unikalių sekcijų kūrimas",
+              "Animacijos ir interakcijos",
+              "Mobilusis optimizavimas"
+            ]
           },
           {
             "name": "4 diena — Svetainės surinkimas",
-            "sub": ["Surinkimas ir turinys", "Forma ir integracijos"]
+            "sub": [
+              "Surinkimas ir turinys",
+              "Forma ir integracijos"
+            ]
           },
           {
             "name": "5 diena — Patikrinimas ir paleidimas",
-            "sub": ["Pilnas QA visuose įrenginiuose", "Domeno prijungimas", "Svetainės paskelbimas"]
+            "sub": [
+              "Pilnas QA visuose įrenginiuose",
+              "Domeno prijungimas",
+              "Svetainės paskelbimas"
+            ]
           }
         ]
       },
@@ -776,22 +826,43 @@
         "stages": [
           {
             "name": "Auditas ir koncepcija",
-            "sub": ["Reikalavimų analizė", "Koncepcijos parengimas"]
+            "sub": [
+              "Reikalavimų analizė",
+              "Koncepcijos parengimas"
+            ]
           },
           {
             "name": "Dizaino raundai",
-            "sub": ["Pirmasis variantas", "Komentarai ir korekcijos", "Galutinis patvirtinimas"]
+            "sub": [
+              "Pirmasis variantas",
+              "Komentarai ir korekcijos",
+              "Galutinis patvirtinimas"
+            ]
           },
           {
             "name": "Surinkimas",
-            "sub": ["Kūrimas", "Integracijos"]
+            "sub": [
+              "Kūrimas",
+              "Integracijos"
+            ]
           },
           {
             "name": "Patikrinimas ir paleidimas",
-            "sub": ["QA visuose įrenginiuose", "Domeno prijungimas", "Svetainės paskelbimas"]
+            "sub": [
+              "QA visuose įrenginiuose",
+              "Domeno prijungimas",
+              "Svetainės paskelbimas"
+            ]
           }
         ]
       }
     }
+  },
+  "statusCheck": {
+    "eyebrow": "JAU KLIENTAS?",
+    "title": "Patikrinkite užsakymo statusą",
+    "subtitle": "Įveskite savo kliento numerį ir sekite projekto eigą.",
+    "placeholder": "UW-XXXXXX",
+    "button": "Atidaryti statusą"
   }
 }

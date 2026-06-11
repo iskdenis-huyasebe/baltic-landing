@@ -9,6 +9,7 @@ import { Comparison } from "@/components/sections/Comparison";
 import { Process } from "@/components/sections/Process";
 import { ForWhom } from "@/components/sections/ForWhom";
 import { FAQ } from "@/components/sections/FAQ";
+import { StatusCheck } from "@/components/sections/StatusCheck";
 import { ContactCTA } from "@/components/sections/ContactCTA";
 
 const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://unoweb.eu";
@@ -59,6 +60,7 @@ export default async function LandingPage({
       <Process />
       <ForWhom />
       <FAQ />
+      <StatusCheck />
       <ContactCTA />
     </>
   );

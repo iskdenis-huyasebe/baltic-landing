@@ -210,7 +210,7 @@ export async function POST(request: Request) {
       }
     }
 
-    const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://unoweb.eu";
+    const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://www.unoweb.eu";
 
     // 3. Internal test promo — skip payment, jump straight to success (full client journey)
     const TEST_CODE = (process.env.TEST_PROMO_CODE || "UNOWEB-TEST").toUpperCase();

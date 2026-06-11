@@ -416,7 +416,12 @@
           "name": "Setup",
           "price": "€200",
           "desc": "Fast start — 3 business days",
-          "features": ["1 page", "Template + your colors", "Mobile-friendly", "7-day money-back guarantee"],
+          "features": [
+            "1 page",
+            "Template + your colors",
+            "Mobile-friendly",
+            "7-day money-back guarantee"
+          ],
           "cta": "Choose Setup"
         },
         {
@@ -425,7 +430,12 @@
           "price": "€500",
           "badge": "Most popular",
           "desc": "Full solution",
-          "features": ["Up to 3 pages", "Custom design", "SEO + metadata", "Forms and integrations"],
+          "features": [
+            "Up to 3 pages",
+            "Custom design",
+            "SEO + metadata",
+            "Forms and integrations"
+          ],
           "cta": "Choose Pro"
         },
         {
@@ -433,7 +443,12 @@
           "name": "Custom",
           "price": "from €1200",
           "desc": "Complex projects",
-          "features": ["Custom functionality", "API integrations", "Multilingual", "We discuss personally"],
+          "features": [
+            "Custom functionality",
+            "API integrations",
+            "Multilingual",
+            "We discuss personally"
+          ],
           "cta": "Discuss project"
         }
       ]
@@ -705,7 +720,12 @@
       "feedback": {
         "title": "Send a comment",
         "subtitle": "Describe what you'd like to change. We'll review and reply in the messenger.",
-        "topics": ["Design", "Texts", "Something's broken", "Other"],
+        "topics": [
+          "Design",
+          "Texts",
+          "Something's broken",
+          "Other"
+        ],
         "messagePlaceholder": "Describe what you want to change…",
         "upload": "Attach screenshots (up to 5, JPG/PNG/WEBP, max 10 MB each)",
         "submit": "Send comment",
@@ -730,15 +750,27 @@
         "stages": [
           {
             "name": "Day 1 — Brief & design",
-            "sub": ["Reviewing the brief", "Choosing layout and colours", "Preparing the layout"]
+            "sub": [
+              "Reviewing the brief",
+              "Choosing layout and colours",
+              "Preparing the layout"
+            ]
           },
           {
             "name": "Day 2 — Building the site",
-            "sub": ["Setting up sections", "Filling in content", "Connecting the contact form"]
+            "sub": [
+              "Setting up sections",
+              "Filling in content",
+              "Connecting the contact form"
+            ]
           },
           {
             "name": "Day 3 — Review & launch",
-            "sub": ["Final check on all devices", "Connecting the domain", "Publishing the site"]
+            "sub": [
+              "Final check on all devices",
+              "Connecting the domain",
+              "Publishing the site"
+            ]
           }
         ]
       },
@@ -749,23 +781,41 @@
         "stages": [
           {
             "name": "Day 1 — Brief & design",
-            "sub": ["Reviewing the brief", "Selecting fonts and colours", "First layout draft"]
+            "sub": [
+              "Reviewing the brief",
+              "Selecting fonts and colours",
+              "First layout draft"
+            ]
           },
           {
             "name": "Day 2 — Brand adaptation",
-            "sub": ["Adapting brand identity", "Design approval"]
+            "sub": [
+              "Adapting brand identity",
+              "Design approval"
+            ]
           },
           {
             "name": "Day 3 — Custom sections",
-            "sub": ["Building unique sections", "Animations and interactions", "Mobile optimisation"]
+            "sub": [
+              "Building unique sections",
+              "Animations and interactions",
+              "Mobile optimisation"
+            ]
           },
           {
             "name": "Day 4 — Building the site",
-            "sub": ["Assembly and content", "Form and integrations"]
+            "sub": [
+              "Assembly and content",
+              "Form and integrations"
+            ]
           },
           {
             "name": "Day 5 — Review & launch",
-            "sub": ["Full QA on all devices", "Connecting the domain", "Publishing the site"]
+            "sub": [
+              "Full QA on all devices",
+              "Connecting the domain",
+              "Publishing the site"
+            ]
           }
         ]
       },
@@ -776,22 +826,43 @@
         "stages": [
           {
             "name": "Audit & concept",
-            "sub": ["Analysing requirements", "Preparing concept"]
+            "sub": [
+              "Analysing requirements",
+              "Preparing concept"
+            ]
           },
           {
             "name": "Design rounds",
-            "sub": ["First draft", "Feedback & revisions", "Final approval"]
+            "sub": [
+              "First draft",
+              "Feedback & revisions",
+              "Final approval"
+            ]
           },
           {
             "name": "Build",
-            "sub": ["Development", "Integrations"]
+            "sub": [
+              "Development",
+              "Integrations"
+            ]
           },
           {
             "name": "Review & launch",
-            "sub": ["QA on all devices", "Connecting the domain", "Publishing the site"]
+            "sub": [
+              "QA on all devices",
+              "Connecting the domain",
+              "Publishing the site"
+            ]
           }
         ]
       }
     }
+  },
+  "statusCheck": {
+    "eyebrow": "ALREADY A CLIENT?",
+    "title": "Check your order status",
+    "subtitle": "Enter your client reference number to track your project.",
+    "placeholder": "UW-XXXXXX",
+    "button": "Open status"
   }
 }
