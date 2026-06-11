@@ -19,7 +19,10 @@ export function StepReview({
   const ts = useTranslations("subscriptions");
   const locale = useLocale();
   const searchParams = useSearchParams();
-  const isTestMode = process.env.NODE_ENV !== "production" || searchParams.get("test") === "1";
+  const isTestMode =
+    process.env.NODE_ENV !== "production" ||
+    searchParams.get("test") === "1" ||
+    (typeof window !== "undefined" && sessionStorage.getItem("test_mode") === "1");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
 

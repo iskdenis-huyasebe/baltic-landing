@@ -7,6 +7,7 @@ import { Footer } from "@/components/layout/Footer";
 import { StickyMobileCTA } from "@/components/layout/StickyMobileCTA";
 import "../globals.css";
 import { Analytics } from "@vercel/analytics/next";
+import { TestModeProvider } from "@/components/TestModeProvider";
 import type { Metadata } from "next";
 
 export async function generateMetadata({
@@ -56,6 +57,7 @@ export default async function LocaleLayout({
     <html lang={locale} suppressHydrationWarning>
       <body className="min-h-screen flex flex-col bg-[var(--background)] text-[var(--foreground)]">
         <NextIntlClientProvider messages={messages} locale={locale}>
+          <TestModeProvider />
           <Header />
           <main className="flex-1">{children}</main>
           <Footer />
