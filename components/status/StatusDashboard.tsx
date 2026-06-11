@@ -329,6 +329,9 @@ export function StatusDashboard({ locale }: { locale: string }) {
     }
   }, [errorType, locale, router]);
 
+  // ⚠️ Must be called before any early returns (Rules of Hooks)
+  const tPlan = useTranslationsForPlan((data?.plan ?? "setup") as any);
+
   async function handleLogout() {
     await fetch("/api/status/logout", { method: "POST" });
     router.push(`/${locale}/status`);
@@ -362,7 +365,6 @@ export function StatusDashboard({ locale }: { locale: string }) {
   }
 
   const plan = PLANS[data.plan];
-  const tPlan = useTranslationsForPlan(data.plan);
   const isDone = data.stage > plan.stages.length;
   const isAccepted = data.stage === 0;
   const daysLeft = supportDaysLeft(data.dueDate, plan.supportDays);
