@@ -373,7 +373,7 @@ export function StatusDashboard({ locale }: { locale: string }) {
 
   return (
     <main className="min-h-screen bg-[var(--background)] pb-20">
-      <div className="max-w-2xl mx-auto px-4 pt-8 space-y-6">
+      <div className="max-w-2xl mx-auto px-4 pt-24 space-y-6">
 
         {/* ── Header ── */}
         <div className="bg-[var(--surface)] border border-[var(--border)] rounded-2xl p-5 space-y-3">
