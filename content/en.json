@@ -316,7 +316,8 @@
     "links": {
       "privacy": "Privacy Policy",
       "terms": "Terms of Use",
-      "cookies": "Cookies"
+      "cookies": "Cookies",
+      "status": "Order status"
     },
     "contact": "Questions? Telegram: @unoweb",
     "legal": "Business websites · Vilnius"
@@ -637,5 +638,160 @@
         "tag": "law firm"
       }
     ]
+  },
+  "status": {
+    "login": {
+      "eyebrow": "ORDER STATUS",
+      "title": "Track your project",
+      "subtitle": "Enter your client number to see the current stage.",
+      "label": "Client number",
+      "placeholder": "UW-XXXXXX",
+      "hint": "You received this number after placing your order.",
+      "submit": "Open status",
+      "notFound": "Number not found. Check the spelling or write to us.",
+      "rateLimited": "Too many attempts. Please wait 10 minutes.",
+      "error": "Something went wrong. Please try again.",
+      "writeUs": "Write to us"
+    },
+    "page": {
+      "updatedAt": "Updated",
+      "accepted": "Order accepted — starting the next business day",
+      "acceptedSub": "We'll begin shortly. You'll receive a message when we start.",
+      "progressLabel": "Start → Launch",
+      "now": "now",
+      "done": "Done",
+      "confetti": "🎉 Your website is live!",
+      "doneSub": "The site is published. Congratulations!",
+      "openSite": "Open my website",
+      "supportLeft": "Technical support: {n} days left",
+      "upsell": "Keep the site healthy — Care from €15/mo",
+      "upsellLink": "Subscribe",
+      "waitTitle": {
+        "texts": "We need your texts",
+        "photos": "We need your photos / logo",
+        "approve": "Please review the design",
+        "domain": "We need domain access"
+      },
+      "waitText": {
+        "texts": "Send us the texts for the site — descriptions, services, contacts.",
+        "photos": "Send your logo and photos. A few good shots are enough.",
+        "approve": "The layout is ready. Take a look and let us know.",
+        "domain": "We need access to your domain registrar to connect the site."
+      },
+      "waitAction": {
+        "texts": "Send texts",
+        "photos": "Send photos",
+        "approve": "Review design",
+        "domain": "Send access"
+      },
+      "approve": {
+        "yes": "✓ Looks good, continue",
+        "no": "I have comments",
+        "confirmed": "✓ Confirmed! We'll continue work.",
+        "sending": "Sending…"
+      },
+      "materials": {
+        "design": "Current design",
+        "designHint": "Will appear after Day 1",
+        "preview": "Preview site",
+        "previewHint": "Will appear after Day 2",
+        "live": "Your website",
+        "liveHint": "Will appear after launch",
+        "open": "Open →"
+      },
+      "revisions": "Revision rounds: {used} of {total}",
+      "revisionsTypo": "Revision rounds: {used} of {total} · +1 typography round",
+      "revisionsCustom": "Design round: {used} of {total}",
+      "feedback": {
+        "title": "Send a comment",
+        "subtitle": "Describe what you'd like to change. We'll review and reply in the messenger.",
+        "topics": ["Design", "Texts", "Something's broken", "Other"],
+        "messagePlaceholder": "Describe what you want to change…",
+        "upload": "Attach screenshots (up to 5, JPG/PNG/WEBP, max 10 MB each)",
+        "submit": "Send comment",
+        "sending": "Sending…",
+        "successTitle": "Received!",
+        "successText": "We'll review and reply in the messenger.",
+        "errorTitle": "Failed to send",
+        "errorText": "Something went wrong. Write to us directly in the messenger.",
+        "cooldown": "You can send another comment in {s} seconds.",
+        "validationTopic": "Please select a topic.",
+        "validationMessage": "Message must be between 10 and 2000 characters.",
+        "validationFiles": "Max 5 files, JPG/PNG/WEBP, up to 10 MB each."
+      },
+      "contact": "Urgent question? Write directly",
+      "logout": "Not your order? Enter a different number"
+    },
+    "plans": {
+      "setup": {
+        "chip": "SETUP",
+        "approveHeading": "Layout ready — your call",
+        "revisionLabel": "Revision rounds: {used} of {total}",
+        "stages": [
+          {
+            "name": "Day 1 — Brief & design",
+            "sub": ["Reviewing the brief", "Choosing layout and colours", "Preparing the layout"]
+          },
+          {
+            "name": "Day 2 — Building the site",
+            "sub": ["Setting up sections", "Filling in content", "Connecting the contact form"]
+          },
+          {
+            "name": "Day 3 — Review & launch",
+            "sub": ["Final check on all devices", "Connecting the domain", "Publishing the site"]
+          }
+        ]
+      },
+      "pro": {
+        "chip": "SETUP PRO",
+        "approveHeading": "Stage ready — your call",
+        "revisionLabel": "Revision rounds: {used} of {total} · +1 typography round",
+        "stages": [
+          {
+            "name": "Day 1 — Brief & design",
+            "sub": ["Reviewing the brief", "Selecting fonts and colours", "First layout draft"]
+          },
+          {
+            "name": "Day 2 — Brand adaptation",
+            "sub": ["Adapting brand identity", "Design approval"]
+          },
+          {
+            "name": "Day 3 — Custom sections",
+            "sub": ["Building unique sections", "Animations and interactions", "Mobile optimisation"]
+          },
+          {
+            "name": "Day 4 — Building the site",
+            "sub": ["Assembly and content", "Form and integrations"]
+          },
+          {
+            "name": "Day 5 — Review & launch",
+            "sub": ["Full QA on all devices", "Connecting the domain", "Publishing the site"]
+          }
+        ]
+      },
+      "custom": {
+        "chip": "CUSTOM",
+        "approveHeading": "Round ready — your call",
+        "revisionLabel": "Design round: {used} of {total}",
+        "stages": [
+          {
+            "name": "Audit & concept",
+            "sub": ["Analysing requirements", "Preparing concept"]
+          },
+          {
+            "name": "Design rounds",
+            "sub": ["First draft", "Feedback & revisions", "Final approval"]
+          },
+          {
+            "name": "Build",
+            "sub": ["Development", "Integrations"]
+          },
+          {
+            "name": "Review & launch",
+            "sub": ["QA on all devices", "Connecting the domain", "Publishing the site"]
+          }
+        ]
+      }
+    }
   }
 }

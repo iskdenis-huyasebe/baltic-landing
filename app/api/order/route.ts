@@ -1,5 +1,18 @@
 import { NextResponse } from "next/server";
 import { z } from "zod";
+import { randomBytes } from "crypto";
+
+// Generate crypto-random client reference: UW-XXXXXX
+// Alphabet excludes 0/O/1/I/L to avoid visual confusion
+const CLIENT_REF_ALPHABET = "ABCDEFGHJKMNPQRSTUVWXYZ23456789";
+
+function generateClientRef(): string {
+  const bytes = randomBytes(6);
+  const chars = Array.from(bytes).map(
+    (b) => CLIENT_REF_ALPHABET[b % CLIENT_REF_ALPHABET.length]
+  );
+  return `UW-${chars.join("")}`;
+}
 
 const OrderSchema = z.object({
   plan: z.enum(["setup", "pro"]),
@@ -33,7 +46,10 @@ function esc(s: string): string {
   );
 }
 
-async function createTrelloCard(data: z.infer<typeof OrderSchema>): Promise<string | null> {
+async function createTrelloCard(
+  data: z.infer<typeof OrderSchema>,
+  clientRef: string
+): Promise<string | null> {
   const key = process.env.TRELLO_API_KEY;
   const token = process.env.TRELLO_TOKEN;
   const listId = process.env.TRELLO_LIST_NEW;
@@ -46,7 +62,10 @@ async function createTrelloCard(data: z.infer<typeof OrderSchema>): Promise<stri
 
   const planLabel = data.plan === "setup" ? "Setup €200" : "Setup Pro €500";
 
-  const desc = `**План:** ${planLabel}${data.bundle ? " + 6 мес. Care" : ""}
+  const desc = `CLIENT: ${clientRef}
+PLAN: ${data.plan}
+
+**План:** ${planLabel}${data.bundle ? " + 6 мес. Care" : ""}
 **Подписка (2-й мес):** ${subLabel(data.subPlan, data.subCycle)}
 **Язык клиента:** ${data.locale.toUpperCase()} · **Язык сайта:** ${data.siteLocale.toUpperCase()}
 
@@ -112,7 +131,8 @@ async function notifyTelegram(
   data: z.infer<typeof OrderSchema>,
   cardId: string | null,
   checkoutUrl: string,
-  isTest = false
+  isTest = false,
+  clientRef = ""
 ) {
   const botToken = process.env.TELEGRAM_BOT_TOKEN;
   const chatId = process.env.TELEGRAM_CHAT_ID;
@@ -125,6 +145,7 @@ async function notifyTelegram(
 
   const text = `${header}
 
+🔑 ${clientRef || "—"}
 👤 ${esc(data.name)}
 💼 ${esc(data.business)}
 📞 ${esc(data.contact)}
@@ -164,8 +185,11 @@ export async function POST(request: Request) {
     }
     const data = parsed.data;
 
+    // 0. Generate client reference number
+    const clientRef = generateClientRef();
+
     // 1. Создать карточку в Trello
-    const trelloCardId = await createTrelloCard(data);
+    const trelloCardId = await createTrelloCard(data, clientRef);
 
     // 2. Прикрепить файлы к карточке
     if (trelloCardId) {
@@ -191,9 +215,9 @@ export async function POST(request: Request) {
     // 3. Internal test promo — skip payment, jump straight to success (full client journey)
     const TEST_CODE = (process.env.TEST_PROMO_CODE || "UNOWEB-TEST").toUpperCase();
     if (data.promo && data.promo.trim().toUpperCase() === TEST_CODE) {
-      const successUrl = `${baseUrl}/${data.locale}/order/success?test=1`;
-      notifyTelegram(data, trelloCardId, successUrl, true);
-      return NextResponse.json({ checkoutUrl: successUrl });
+      const successUrl = `${baseUrl}/${data.locale}/order/success?test=1&ref=${clientRef}`;
+      notifyTelegram(data, trelloCardId, successUrl, true, clientRef);
+      return NextResponse.json({ checkoutUrl: successUrl, clientRef });
     }
 
     // 4. Stripe Checkout (real payment)
@@ -233,6 +257,7 @@ export async function POST(request: Request) {
       payment_intent_data: { setup_future_usage: "off_session" },
       metadata: {
         trelloCardId: trelloCardId || "",
+        clientRef,
         plan: data.plan,
         bundle: data.bundle ? "yes" : "no",
         subPlan: data.subPlan || "none",
@@ -244,9 +269,9 @@ export async function POST(request: Request) {
     });
 
     // 4. Уведомить в Telegram
-    notifyTelegram(data, trelloCardId, session.url || "");
+    notifyTelegram(data, trelloCardId, session.url || "", false, clientRef);
 
-    return NextResponse.json({ checkoutUrl: session.url });
+    return NextResponse.json({ checkoutUrl: session.url, clientRef });
   } catch (e) {
     console.error("Order error:", e);
     return NextResponse.json({ error: "Internal error" }, { status: 500 });

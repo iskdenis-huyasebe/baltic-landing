@@ -2,11 +2,16 @@
 
 import { useEffect, Suspense } from "react";
 import { useLocale, useTranslations } from "next-intl";
-import { Check } from "lucide-react";
+import { Check, ExternalLink } from "lucide-react";
+import { useSearchParams } from "next/navigation";
 
 function SuccessInner() {
   const t = useTranslations("order.success");
   const locale = useLocale();
+  const params = useSearchParams();
+  // clientRef is passed via ?ref= (test flow) or stored in session storage by the order form
+  const refFromUrl = params.get("ref")?.toUpperCase() ?? "";
+  const clientRef = refFromUrl || "";
 
   useEffect(() => {
     try { localStorage.removeItem("unoweb-order-v2"); } catch {}
@@ -38,6 +43,27 @@ function SuccessInner() {
             </div>
           ))}
         </div>
+
+        {/* Client reference number block */}
+        {clientRef && (
+          <div className="bg-[var(--surface)] border border-[var(--accent)]/30 rounded-2xl p-5 mb-6 text-center space-y-3">
+            <p className="text-xs uppercase tracking-widest text-[var(--accent)] font-medium">
+              Твой номер клиента
+            </p>
+            <p className="text-2xl font-mono font-bold text-[var(--foreground)] tracking-wider">
+              {clientRef}
+            </p>
+            <p className="text-xs text-[var(--muted)]">
+              Сохрани его — по нему отслеживается заказ и оформляется подписка
+            </p>
+            <a
+              href={`/${locale}/status?c=${clientRef}`}
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-[var(--accent)] text-[var(--accent-foreground)] text-sm font-medium hover:opacity-90"
+            >
+              Открыть статус заказа <ExternalLink size={14} />
+            </a>
+          </div>
+        )}
 
         <a
           href={`/${locale}`}

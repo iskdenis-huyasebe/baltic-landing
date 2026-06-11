@@ -1,7 +1,8 @@
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 
 export function Footer() {
   const t = useTranslations("footer");
+  const locale = useLocale();
 
   return (
     <footer className="border-t border-[var(--border)] py-12 mt-auto">
@@ -24,6 +25,9 @@ export function Footer() {
               </a>
               <a href="/cookies" className="hover:text-[var(--muted)] transition-colors">
                 {t("links.cookies")}
+              </a>
+              <a href={`/${locale}/status`} className="hover:text-[var(--muted)] transition-colors">
+                {t("links.status")}
               </a>
             </div>
             <p className="text-xs text-[var(--subtle)]">{t("contact")}</p>

@@ -316,7 +316,8 @@
     "links": {
       "privacy": "Privātuma politika",
       "terms": "Lietošanas noteikumi",
-      "cookies": "Sīkfaili"
+      "cookies": "Sīkfaili",
+      "status": "Pasūtījuma statuss"
     },
     "contact": "Jautājumi? Telegram: @unoweb",
     "legal": "Biznesa vietnes · Viļņa"
@@ -637,5 +638,124 @@
         "tag": "advokātu birojs"
       }
     ]
+  },
+  "status": {
+    "login": {
+      "eyebrow": "PASŪTĪJUMA STATUSS",
+      "title": "Sekojiet savam projektam",
+      "subtitle": "Ievadiet klienta numuru, lai redzētu pašreizējo posmu.",
+      "label": "Klienta numurs",
+      "placeholder": "UW-XXXXXX",
+      "hint": "Šo numuru saņēmāt pēc pasūtījuma veikšanas.",
+      "submit": "Atvērt statusu",
+      "notFound": "Numurs nav atrasts. Pārbaudiet pareizrakstību vai rakstiet mums.",
+      "rateLimited": "Pārāk daudz mēģinājumu. Lūdzu, uzgaidiet 10 minūtes.",
+      "error": "Kaut kas nogāja greizi. Mēģiniet vēlreiz.",
+      "writeUs": "Rakstīt mums"
+    },
+    "page": {
+      "updatedAt": "Atjaunināts",
+      "accepted": "Pasūtījums pieņemts — sākam nākamajā darba dienā",
+      "acceptedSub": "Drīzumā sāksim. Paziņosim, kad sāksim.",
+      "progressLabel": "Sākums → Palaišana",
+      "now": "tagad",
+      "done": "Izpildīts",
+      "confetti": "🎉 Jūsu vietne darbojas!",
+      "doneSub": "Vietne ir publicēta. Apsveicam!",
+      "openSite": "Atvērt manu vietni",
+      "supportLeft": "Tehniskais atbalsts: atlikušas {n} dienas",
+      "upsell": "Uzturiet vietni — Care no €15/mēn.",
+      "upsellLink": "Abonēt",
+      "waitTitle": {
+        "texts": "Gaidām jūsu tekstus",
+        "photos": "Gaidām fotogrāfijas / logotipu",
+        "approve": "Lūdzu apskatiet dizainu",
+        "domain": "Nepieciešama piekļuve domēnam"
+      },
+      "waitText": {
+        "texts": "Nosūtiet tekstus vietnei — aprakstus, pakalpojumus, kontaktus.",
+        "photos": "Nosūtiet logotipu un fotogrāfijas. Pietiks ar dažām labām bildēm.",
+        "approve": "Makets ir gatavs. Apskatiet un paziņojiet.",
+        "domain": "Nepieciešama piekļuve domēna reģistratoram, lai savienotu vietni."
+      },
+      "waitAction": {
+        "texts": "Sūtīt tekstus",
+        "photos": "Sūtīt fotogrāfijas",
+        "approve": "Apskatīt dizainu",
+        "domain": "Sūtīt piekļuvi"
+      },
+      "approve": {
+        "yes": "✓ Izskatās labi, turpiniet",
+        "no": "Man ir komentāri",
+        "confirmed": "✓ Apstiprināts! Turpināsim darbu.",
+        "sending": "Nosūta…"
+      },
+      "materials": {
+        "design": "Pašreizējais dizains",
+        "designHint": "Parādīsies pēc 1. dienas",
+        "preview": "Testa vietne",
+        "previewHint": "Parādīsies pēc 2. dienas",
+        "live": "Jūsu vietne",
+        "liveHint": "Parādīsies pēc palaišanas",
+        "open": "Atvērt →"
+      },
+      "revisions": "Labojumu kārtas: {used} no {total}",
+      "revisionsTypo": "Labojumu kārtas: {used} no {total} · +1 tipogrāfijas kārta",
+      "revisionsCustom": "Dizaina kārta: {used} no {total}",
+      "feedback": {
+        "title": "Nosūtīt komentāru",
+        "subtitle": "Aprakstiet, ko vēlaties mainīt. Izskatīsim un atbildēsim mesendžerī.",
+        "topics": ["Dizains", "Teksti", "Kaut kas nestrādā", "Cits"],
+        "messagePlaceholder": "Aprakstiet, ko vēlaties mainīt…",
+        "upload": "Pievienot ekrānuzņēmumus (līdz 5, JPG/PNG/WEBP, max 10 MB katrs)",
+        "submit": "Nosūtīt komentāru",
+        "sending": "Nosūta…",
+        "successTitle": "Saņēmām!",
+        "successText": "Izskatīsim un atbildēsim mesendžerī.",
+        "errorTitle": "Neizdevās nosūtīt",
+        "errorText": "Kaut kas nogāja greizi. Rakstiet mums tieši mesendžerī.",
+        "cooldown": "Nākamo komentāru varēsiet nosūtīt pēc {s} sekundēm.",
+        "validationTopic": "Lūdzu izvēlieties tēmu.",
+        "validationMessage": "Ziņojumam jābūt no 10 līdz 2000 simboliem.",
+        "validationFiles": "Maks. 5 faili, JPG/PNG/WEBP, līdz 10 MB katrs."
+      },
+      "contact": "Steidzams jautājums? Rakstiet tieši",
+      "logout": "Nav jūsu pasūtījums? Ievadīt citu numuru"
+    },
+    "plans": {
+      "setup": {
+        "chip": "SETUP",
+        "approveHeading": "Makets gatavs — jūsu vārds",
+        "revisionLabel": "Labojumu kārtas: {used} no {total}",
+        "stages": [
+          { "name": "1. diena — Īsais un dizains", "sub": ["Īsā pārskatīšana", "Maketa un krāsu izvēle", "Maketa sagatavošana"] },
+          { "name": "2. diena — Vietnes montāža", "sub": ["Sadaļu iestatīšana", "Satura aizpildīšana", "Kontaktformas pievienošana"] },
+          { "name": "3. diena — Pārbaude un palaišana", "sub": ["Galīgā pārbaude visās ierīcēs", "Domēna pievienošana", "Vietnes publicēšana"] }
+        ]
+      },
+      "pro": {
+        "chip": "SETUP PRO",
+        "approveHeading": "Posms gatavs — jūsu vārds",
+        "revisionLabel": "Labojumu kārtas: {used} no {total} · +1 tipogrāfijas kārta",
+        "stages": [
+          { "name": "1. diena — Īsais un dizains", "sub": ["Īsā pārskatīšana", "Fontu un krāsu izvēle", "Pirmais makets"] },
+          { "name": "2. diena — Zīmola adaptācija", "sub": ["Identitātes pielāgošana", "Dizaina apstiprināšana"] },
+          { "name": "3. diena — Unikālās sadaļas", "sub": ["Unikālu sadaļu izveide", "Animācijas un interakcijas", "Mobilā optimizācija"] },
+          { "name": "4. diena — Vietnes montāža", "sub": ["Montāža un saturs", "Forma un integrācijas"] },
+          { "name": "5. diena — Pārbaude un palaišana", "sub": ["Pilna QA visās ierīcēs", "Domēna pievienošana", "Vietnes publicēšana"] }
+        ]
+      },
+      "custom": {
+        "chip": "CUSTOM",
+        "approveHeading": "Kārta gatava — jūsu vārds",
+        "revisionLabel": "Dizaina kārta: {used} no {total}",
+        "stages": [
+          { "name": "Audits un koncepcija", "sub": ["Prasību analīze", "Koncepcijas sagatavošana"] },
+          { "name": "Dizaina kārtas", "sub": ["Pirmais variants", "Komentāri un korekcijas", "Galīgais apstiprinājums"] },
+          { "name": "Montāža", "sub": ["Izstrāde", "Integrācijas"] },
+          { "name": "Pārbaude un palaišana", "sub": ["QA visās ierīcēs", "Domēna pievienošana", "Vietnes publicēšana"] }
+        ]
+      }
+    }
   }
 }

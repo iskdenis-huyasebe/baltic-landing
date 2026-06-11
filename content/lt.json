@@ -316,7 +316,8 @@
     "links": {
       "privacy": "Privatumo politika",
       "terms": "Naudojimo sąlygos",
-      "cookies": "Slapukai"
+      "cookies": "Slapukai",
+      "status": "Užsakymo statusas"
     },
     "contact": "Klausimai? Telegram: @unoweb",
     "legal": "Verslo svetainės · Vilnius"
@@ -637,5 +638,160 @@
         "tag": "advokatų kontora"
       }
     ]
+  },
+  "status": {
+    "login": {
+      "eyebrow": "UŽSAKYMO STATUSAS",
+      "title": "Sekite savo projektą",
+      "subtitle": "Įveskite kliento numerį, kad pamatytumėte dabartinį etapą.",
+      "label": "Kliento numeris",
+      "placeholder": "UW-XXXXXX",
+      "hint": "Šį numerį gavote pateikę užsakymą.",
+      "submit": "Atidaryti statusą",
+      "notFound": "Numeris nerastas. Patikrinkite rašybą arba parašykite mums.",
+      "rateLimited": "Per daug bandymų. Palaukite 10 minučių.",
+      "error": "Kažkas nutiko. Bandykite dar kartą.",
+      "writeUs": "Rašyti mums"
+    },
+    "page": {
+      "updatedAt": "Atnaujinta",
+      "accepted": "Užsakymas priimtas — pradedame artimiausią darbo dieną",
+      "acceptedSub": "Netrukus pradėsime. Kai pradėsime — pranešime.",
+      "progressLabel": "Pradžia → Paleidimas",
+      "now": "dabar",
+      "done": "Atlikta",
+      "confetti": "🎉 Jūsų svetainė veikia!",
+      "doneSub": "Svetainė paskelbta. Sveikiname!",
+      "openSite": "Atidaryti mano svetainę",
+      "supportLeft": "Techninė pagalba: liko {n} dienų",
+      "upsell": "Palaikykite svetainę — Care nuo 15 €/mėn.",
+      "upsellLink": "Prenumeruoti",
+      "waitTitle": {
+        "texts": "Laukiame jūsų tekstų",
+        "photos": "Laukiame nuotraukų / logotipo",
+        "approve": "Prašome peržiūrėti dizainą",
+        "domain": "Reikalinga prieiga prie domeno"
+      },
+      "waitText": {
+        "texts": "Atsiųskite tekstus svetainei — aprašymus, paslaugas, kontaktus.",
+        "photos": "Atsiųskite logotipą ir nuotraukas. Kelios geros nuotraukos pakaks.",
+        "approve": "Maketas paruoštas. Peržiūrėkite ir praneškite.",
+        "domain": "Reikalinga prieiga prie domeno registratoriaus, kad galėtume prijungti svetainę."
+      },
+      "waitAction": {
+        "texts": "Siųsti tekstus",
+        "photos": "Siųsti nuotraukas",
+        "approve": "Peržiūrėti dizainą",
+        "domain": "Siųsti prieigą"
+      },
+      "approve": {
+        "yes": "✓ Tinka, tęskite",
+        "no": "Turiu pastabų",
+        "confirmed": "✓ Patvirtinta! Tęsime darbą.",
+        "sending": "Siunčiama…"
+      },
+      "materials": {
+        "design": "Dabartinis dizainas",
+        "designHint": "Atsiras po 1-os dienos",
+        "preview": "Bandomoji versija",
+        "previewHint": "Atsiras po 2-os dienos",
+        "live": "Jūsų svetainė",
+        "liveHint": "Atsiras po paleidimo",
+        "open": "Atidaryti →"
+      },
+      "revisions": "Taisymų raundai: {used} iš {total}",
+      "revisionsTypo": "Taisymų raundai: {used} iš {total} · +1 tipografikos raundas",
+      "revisionsCustom": "Dizaino raundas: {used} iš {total}",
+      "feedback": {
+        "title": "Siųsti pastabą",
+        "subtitle": "Aprašykite, ką norėtumėte pakeisti. Peržiūrėsime ir atsakysime susirašinėjimo programoje.",
+        "topics": ["Dizainas", "Tekstai", "Kažkas neveikia", "Kita"],
+        "messagePlaceholder": "Aprašykite, ką norite pakeisti…",
+        "upload": "Pridėti ekrano kopijas (iki 5, JPG/PNG/WEBP, max 10 MB kiekviena)",
+        "submit": "Siųsti pastabą",
+        "sending": "Siunčiama…",
+        "successTitle": "Gavome!",
+        "successText": "Peržiūrėsime ir atsakysime susirašinėjimo programoje.",
+        "errorTitle": "Nepavyko išsiųsti",
+        "errorText": "Kažkas nutiko. Parašykite mums tiesiogiai susirašinėjimo programoje.",
+        "cooldown": "Kitą pastabą galėsite siųsti po {s} sekundžių.",
+        "validationTopic": "Pasirinkite temą.",
+        "validationMessage": "Žinutė turi būti nuo 10 iki 2000 simbolių.",
+        "validationFiles": "Maks. 5 failai, JPG/PNG/WEBP, iki 10 MB kiekvienas."
+      },
+      "contact": "Skubus klausimas? Rašykite tiesiogiai",
+      "logout": "Ne jūsų užsakymas? Įveskite kitą numerį"
+    },
+    "plans": {
+      "setup": {
+        "chip": "SETUP",
+        "approveHeading": "Maketas paruoštas — jūsų žodis",
+        "revisionLabel": "Taisymų raundai: {used} iš {total}",
+        "stages": [
+          {
+            "name": "1 diena — Trumpinis ir dizainas",
+            "sub": ["Trumpinio peržiūra", "Maketo ir spalvų pasirinkimas", "Maketo parengimas"]
+          },
+          {
+            "name": "2 diena — Svetainės surinkimas",
+            "sub": ["Sekcijų nustatymas", "Turinio užpildymas", "Kontaktų formos prijungimas"]
+          },
+          {
+            "name": "3 diena — Patikrinimas ir paleidimas",
+            "sub": ["Galutinis patikrinimas visuose įrenginiuose", "Domeno prijungimas", "Svetainės paskelbimas"]
+          }
+        ]
+      },
+      "pro": {
+        "chip": "SETUP PRO",
+        "approveHeading": "Etapas paruoštas — jūsų žodis",
+        "revisionLabel": "Taisymų raundai: {used} iš {total} · +1 tipografikos raundas",
+        "stages": [
+          {
+            "name": "1 diena — Trumpinis ir dizainas",
+            "sub": ["Trumpinio peržiūra", "Šriftų ir spalvų parinkimas", "Pirmasis maketas"]
+          },
+          {
+            "name": "2 diena — Prekės ženklo adaptacija",
+            "sub": ["Tapatybės pritaikymas", "Dizaino patvirtinimas"]
+          },
+          {
+            "name": "3 diena — Unikalios sekcijos",
+            "sub": ["Unikalių sekcijų kūrimas", "Animacijos ir interakcijos", "Mobilusis optimizavimas"]
+          },
+          {
+            "name": "4 diena — Svetainės surinkimas",
+            "sub": ["Surinkimas ir turinys", "Forma ir integracijos"]
+          },
+          {
+            "name": "5 diena — Patikrinimas ir paleidimas",
+            "sub": ["Pilnas QA visuose įrenginiuose", "Domeno prijungimas", "Svetainės paskelbimas"]
+          }
+        ]
+      },
+      "custom": {
+        "chip": "CUSTOM",
+        "approveHeading": "Raundas paruoštas — jūsų žodis",
+        "revisionLabel": "Dizaino raundas: {used} iš {total}",
+        "stages": [
+          {
+            "name": "Auditas ir koncepcija",
+            "sub": ["Reikalavimų analizė", "Koncepcijos parengimas"]
+          },
+          {
+            "name": "Dizaino raundai",
+            "sub": ["Pirmasis variantas", "Komentarai ir korekcijos", "Galutinis patvirtinimas"]
+          },
+          {
+            "name": "Surinkimas",
+            "sub": ["Kūrimas", "Integracijos"]
+          },
+          {
+            "name": "Patikrinimas ir paleidimas",
+            "sub": ["QA visuose įrenginiuose", "Domeno prijungimas", "Svetainės paskelbimas"]
+          }
+        ]
+      }
+    }
   }
 }

@@ -316,7 +316,8 @@
     "links": {
       "privacy": "Privaatsuspoliitika",
       "terms": "Kasutustingimused",
-      "cookies": "Küpsised"
+      "cookies": "Küpsised",
+      "status": "Tellimuse staatus"
     },
     "contact": "Küsimused? Telegram: @unoweb",
     "legal": "Ärisaidid · Vilnius"
@@ -637,5 +638,124 @@
         "tag": "advokaadibüroo"
       }
     ]
+  },
+  "status": {
+    "login": {
+      "eyebrow": "TELLIMUSE STAATUS",
+      "title": "Jälgi oma projekti",
+      "subtitle": "Sisesta kliendi number, et näha praegust etappi.",
+      "label": "Kliendi number",
+      "placeholder": "UW-XXXXXX",
+      "hint": "Selle numbri said tellimuse esitamise järel.",
+      "submit": "Ava staatus",
+      "notFound": "Numbrit ei leitud. Kontrolli kirjaviisi või kirjuta meile.",
+      "rateLimited": "Liiga palju katseid. Oota 10 minutit.",
+      "error": "Midagi läks valesti. Proovi uuesti.",
+      "writeUs": "Kirjuta meile"
+    },
+    "page": {
+      "updatedAt": "Uuendatud",
+      "accepted": "Tellimus vastu võetud — alustame järgmisel tööpäeval",
+      "acceptedSub": "Alustame varsti. Teavitame, kui töö algab.",
+      "progressLabel": "Algus → Käivitus",
+      "now": "praegu",
+      "done": "Valmis",
+      "confetti": "🎉 Sinu veebileht töötab!",
+      "doneSub": "Veebileht on avaldatud. Palju õnne!",
+      "openSite": "Ava minu veebileht",
+      "supportLeft": "Tehniline tugi: jäänud {n} päeva",
+      "upsell": "Hoia veebilehte korras — Care alates €15/kuu",
+      "upsellLink": "Telli",
+      "waitTitle": {
+        "texts": "Ootame sinu tekste",
+        "photos": "Ootame fotosid / logo",
+        "approve": "Palun vaata disain üle",
+        "domain": "Vajame juurdepääsu domeenile"
+      },
+      "waitText": {
+        "texts": "Saada veebilehe tekstid — kirjeldused, teenused, kontaktid.",
+        "photos": "Saada logo ja fotod. Piisab mõnest heast pildist.",
+        "approve": "Makkett on valmis. Vaata üle ja anna teada.",
+        "domain": "Vajame juurdepääsu domeeniregistraatorile, et veebileht ühendada."
+      },
+      "waitAction": {
+        "texts": "Saada tekstid",
+        "photos": "Saada fotod",
+        "approve": "Vaata disain üle",
+        "domain": "Saada juurdepääs"
+      },
+      "approve": {
+        "yes": "✓ Näeb hea välja, jätkake",
+        "no": "Mul on kommentaarid",
+        "confirmed": "✓ Kinnitatud! Jätkame tööd.",
+        "sending": "Saadan…"
+      },
+      "materials": {
+        "design": "Praegune disain",
+        "designHint": "Ilmub pärast 1. päeva",
+        "preview": "Testiserver",
+        "previewHint": "Ilmub pärast 2. päeva",
+        "live": "Sinu veebileht",
+        "liveHint": "Ilmub pärast käivitust",
+        "open": "Ava →"
+      },
+      "revisions": "Muudatusvoorud: {used} / {total}",
+      "revisionsTypo": "Muudatusvoorud: {used} / {total} · +1 trükivigade voor",
+      "revisionsCustom": "Disainivoor: {used} / {total}",
+      "feedback": {
+        "title": "Saada kommentaar",
+        "subtitle": "Kirjelda, mida soovid muuta. Vaatame üle ja vastame sõnumirakenduses.",
+        "topics": ["Disain", "Tekstid", "Midagi ei tööta", "Muu"],
+        "messagePlaceholder": "Kirjelda, mida soovid muuta…",
+        "upload": "Lisa ekraanipildid (kuni 5, JPG/PNG/WEBP, max 10 MB tk)",
+        "submit": "Saada kommentaar",
+        "sending": "Saadan…",
+        "successTitle": "Kätte saadud!",
+        "successText": "Vaatame üle ja vastame sõnumirakenduses.",
+        "errorTitle": "Saatmine ebaõnnestus",
+        "errorText": "Midagi läks valesti. Kirjuta meile otse sõnumirakenduses.",
+        "cooldown": "Järgmise kommentaari saad saata {s} sekundi pärast.",
+        "validationTopic": "Palun vali teema.",
+        "validationMessage": "Sõnum peab olema 10–2000 tähemärki.",
+        "validationFiles": "Maks 5 faili, JPG/PNG/WEBP, kuni 10 MB tk."
+      },
+      "contact": "Kiire küsimus? Kirjuta otse",
+      "logout": "Pole sinu tellimus? Sisesta teine number"
+    },
+    "plans": {
+      "setup": {
+        "chip": "SETUP",
+        "approveHeading": "Makkett valmis — sinu sõna",
+        "revisionLabel": "Muudatusvoorud: {used} / {total}",
+        "stages": [
+          { "name": "1. päev — Brifing ja disain", "sub": ["Brifingu ülevaatus", "Maquette ja värvide valik", "Maquette ettevalmistus"] },
+          { "name": "2. päev — Veebilehe kokkupanek", "sub": ["Sektsioonide seadistamine", "Sisu täitmine", "Kontaktvormi lisamine"] },
+          { "name": "3. päev — Testimine ja käivitus", "sub": ["Lõplik testimine kõigis seadmetes", "Domeeni ühendamine", "Veebilehe avaldamine"] }
+        ]
+      },
+      "pro": {
+        "chip": "SETUP PRO",
+        "approveHeading": "Etapp valmis — sinu sõna",
+        "revisionLabel": "Muudatusvoorud: {used} / {total} · +1 trükivigade voor",
+        "stages": [
+          { "name": "1. päev — Brifing ja disain", "sub": ["Brifingu ülevaatus", "Fontide ja värvide valik", "Esimene makkett"] },
+          { "name": "2. päev — Brändi kohandamine", "sub": ["Identiteedi kohandamine", "Disaini kinnitamine"] },
+          { "name": "3. päev — Unikaalsed sektsioonid", "sub": ["Unikaalsete sektsioonide loomine", "Animatsioonid ja interaktsioonid", "Mobiilioptimeerimine"] },
+          { "name": "4. päev — Veebilehe kokkupanek", "sub": ["Kokkupanek ja sisu", "Vorm ja integratsioonid"] },
+          { "name": "5. päev — Testimine ja käivitus", "sub": ["Täielik QA kõigis seadmetes", "Domeeni ühendamine", "Veebilehe avaldamine"] }
+        ]
+      },
+      "custom": {
+        "chip": "CUSTOM",
+        "approveHeading": "Voor valmis — sinu sõna",
+        "revisionLabel": "Disainivoor: {used} / {total}",
+        "stages": [
+          { "name": "Audit ja kontseptsioon", "sub": ["Nõuete analüüs", "Kontseptsiooni ettevalmistus"] },
+          { "name": "Disainivoorud", "sub": ["Esimene variant", "Kommentaarid ja parandused", "Lõplik kinnitus"] },
+          { "name": "Kokkupanek", "sub": ["Arendus", "Integratsioonid"] },
+          { "name": "Testimine ja käivitus", "sub": ["QA kõigis seadmetes", "Domeeni ühendamine", "Veebilehe avaldamine"] }
+        ]
+      }
+    }
   }
 }
