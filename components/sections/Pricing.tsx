@@ -1,7 +1,6 @@
 "use client";
 
 import { useTranslations, useLocale } from "next-intl";
-import { useState } from "react";
 import { Check, ArrowRight, ShieldCheck } from "lucide-react";
 import { FadeIn } from "@/components/ui/FadeIn";
 
@@ -20,12 +19,10 @@ function PricingCard({
   data,
   highlight,
   onAction,
-  bundleToggle,
 }: {
   data: PlanData;
   highlight?: boolean;
   onAction: () => void;
-  bundleToggle?: React.ReactNode;
 }) {
   const locale = useLocale();
   const isCustom = data.price.includes("+");
@@ -70,24 +67,17 @@ function PricingCard({
       <ul className="space-y-3 mb-8 flex-1">
         {data.bullets.map((b, i) => (
           <li key={i} className="flex gap-3 items-start text-sm">
-            <Check
-              className="size-4 text-[var(--accent)] shrink-0 mt-0.5"
-              aria-hidden="true"
-            />
+            <Check className="size-4 text-[var(--accent)] shrink-0 mt-0.5" aria-hidden="true" />
             <span className="text-[var(--muted)]">{b}</span>
           </li>
         ))}
       </ul>
-
-      {bundleToggle}
 
       <button
         onClick={onAction}
         className={`inline-flex items-center justify-center gap-2 rounded-xl px-6 py-3.5 text-base font-medium transition-all duration-200 hover:scale-[1.02] active:scale-[0.98] min-h-[48px] ${
           highlight
             ? "bg-[var(--accent)] text-[var(--accent-foreground)] hover:opacity-90"
-            : isCustom
-            ? "bg-transparent text-[var(--foreground)] border border-[var(--border-strong)] hover:bg-[var(--surface-elevated)]"
             : "bg-transparent text-[var(--foreground)] border border-[var(--border-strong)] hover:bg-[var(--surface-elevated)]"
         }`}
       >
@@ -101,7 +91,6 @@ function PricingCard({
 export function Pricing() {
   const t = useTranslations("pricing");
   const locale = useLocale();
-  const [bundle, setBundle] = useState(false);
 
   const setup = t.raw("setup") as PlanData;
   const pro = t.raw("pro") as PlanData;
@@ -112,7 +101,6 @@ export function Pricing() {
       window.location.href = "#contact";
       return;
     }
-    // All order buttons lead to plan selection (step 0)
     window.location.href = `/${locale}/order`;
   };
 
@@ -129,32 +117,9 @@ export function Pricing() {
         </FadeIn>
 
         <div className="grid md:grid-cols-3 gap-4 md:gap-6 md:items-stretch">
-          <PricingCard
-            data={setup}
-            onAction={() => goOrder("setup")}
-            bundleToggle={
-              <label className="flex items-start gap-2.5 mb-5 cursor-pointer group">
-                <input
-                  type="checkbox"
-                  checked={bundle}
-                  onChange={(e) => setBundle(e.target.checked)}
-                  className="mt-0.5 size-4 accent-[#bef264]"
-                />
-                <span className="text-xs text-[var(--muted)] group-hover:text-[var(--foreground)] transition-colors leading-relaxed">
-                  {t("bundleToggleLabel")}
-                </span>
-              </label>
-            }
-          />
-          <PricingCard
-            data={pro}
-            highlight
-            onAction={() => goOrder("pro")}
-          />
-          <PricingCard
-            data={custom}
-            onAction={() => goOrder("custom")}
-          />
+          <PricingCard data={setup} onAction={() => goOrder("setup")} />
+          <PricingCard data={pro} highlight onAction={() => goOrder("pro")} />
+          <PricingCard data={custom} onAction={() => goOrder("custom")} />
         </div>
 
         <div className="mt-8 flex justify-center">
