@@ -3,7 +3,6 @@ import { z } from "zod";
 import { randomBytes } from "crypto";
 
 // Generate crypto-random client reference: UW-XXXXXX
-// Alphabet excludes 0/O/1/I/L to avoid visual confusion
 const CLIENT_REF_ALPHABET = "ABCDEFGHJKMNPQRSTUVWXYZ23456789";
 
 function generateClientRef(): string {
@@ -16,7 +15,6 @@ function generateClientRef(): string {
 
 const OrderSchema = z.object({
   plan: z.enum(["setup", "pro"]),
-  bundle: z.boolean(),
   name: z.string().min(1).max(100),
   business: z.string().min(1).max(500),
   contact: z.string().min(1).max(100),
@@ -65,7 +63,7 @@ async function createTrelloCard(
   const desc = `CLIENT: ${clientRef}
 PLAN: ${data.plan}
 
-**План:** ${planLabel}${data.bundle ? " + 6 мес. Care" : ""}
+**План:** ${planLabel}
 **Подписка (2-й мес):** ${subLabel(data.subPlan, data.subCycle)}
 **Язык клиента:** ${data.locale.toUpperCase()} · **Язык сайта:** ${data.siteLocale.toUpperCase()}
 
@@ -140,8 +138,8 @@ async function notifyTelegram(
 
   const planLabel = data.plan === "setup" ? "Setup €200" : "Setup Pro €500";
   const header = isTest
-    ? `🧪 <b>ТЕСТОВЫЙ ЗАКАЗ — ${planLabel}${data.bundle ? " + Care" : ""}</b>`
-    : `🔥 <b>НОВЫЙ ЗАКАЗ — ${planLabel}${data.bundle ? " + Care" : ""}</b>`;
+    ? `🧪 <b>ТЕСТОВЫЙ ЗАКАЗ — ${planLabel}</b>`
+    : `🔥 <b>НОВЫЙ ЗАКАЗ — ${planLabel}</b>`;
 
   const text = `${header}
 
@@ -185,13 +183,10 @@ export async function POST(request: Request) {
     }
     const data = parsed.data;
 
-    // 0. Generate client reference number
     const clientRef = generateClientRef();
 
-    // 1. Создать карточку в Trello
     const trelloCardId = await createTrelloCard(data, clientRef);
 
-    // 2. Прикрепить файлы к карточке
     if (trelloCardId) {
       const logo = formData.get("logo");
       if (logo instanceof File) {
@@ -212,7 +207,6 @@ export async function POST(request: Request) {
 
     const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://www.unoweb.eu";
 
-    // 3. Internal test promo — skip payment, jump straight to success (full client journey)
     const TEST_CODE = (process.env.TEST_PROMO_CODE || "UNOWEB-TEST").toUpperCase();
     if (data.promo && data.promo.trim().toUpperCase() === TEST_CODE) {
       const successUrl = `${baseUrl}/${data.locale}/order/success?test=1&ref=${clientRef}`;
@@ -220,7 +214,6 @@ export async function POST(request: Request) {
       return NextResponse.json({ checkoutUrl: successUrl, clientRef });
     }
 
-    // 4. Stripe Checkout (real payment)
     const stripeKey = process.env.STRIPE_SECRET_KEY;
     if (!stripeKey) {
       return NextResponse.json({ error: "Stripe not configured" }, { status: 503 });
@@ -236,9 +229,6 @@ export async function POST(request: Request) {
     } else {
       lineItems.push({ price: process.env.STRIPE_PRICE_SETUP_PRO!, quantity: 1 });
     }
-    if (data.bundle) {
-      lineItems.push({ price: process.env.STRIPE_PRICE_CARE_6MO!, quantity: 1 });
-    }
 
     const stripeLocale = (["lt", "lv", "et", "ru"].includes(data.locale) ? data.locale : "en") as
       import("stripe").Stripe.Checkout.SessionCreateParams.Locale;
@@ -247,19 +237,17 @@ export async function POST(request: Request) {
       mode: "payment",
       line_items: lineItems,
       success_url: `${baseUrl}/${data.locale}/order/success?session_id={CHECKOUT_SESSION_ID}`,
-      cancel_url: `${baseUrl}/${data.locale}/order?plan=${data.plan}${data.bundle ? "&bundle=care6" : ""}`,
+      cancel_url: `${baseUrl}/${data.locale}/order?plan=${data.plan}`,
       locale: stripeLocale,
       automatic_tax: { enabled: true },
       tax_id_collection: { enabled: true },
       billing_address_collection: "required",
-      // save the card + create a customer so the webhook can auto-start the subscription with a trial
       customer_creation: "always",
       payment_intent_data: { setup_future_usage: "off_session" },
       metadata: {
         trelloCardId: trelloCardId || "",
         clientRef,
         plan: data.plan,
-        bundle: data.bundle ? "yes" : "no",
         subPlan: data.subPlan || "none",
         subCycle: data.subCycle || "month",
         locale: data.locale,
@@ -268,7 +256,6 @@ export async function POST(request: Request) {
       },
     });
 
-    // 4. Уведомить в Telegram
     notifyTelegram(data, trelloCardId, session.url || "", false, clientRef);
 
     return NextResponse.json({ checkoutUrl: session.url, clientRef });
